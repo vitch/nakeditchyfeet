@@ -2,7 +2,7 @@
   "name": "NakedItchyFeet",
   "description": "Around the world",
   "version": "0.1.0",
-  "homepage": "http://nakeditchyfeet.com/",
+  "homepage": "http://nakeditchyfeet.com",
   "author": {
     "name": "Kelvin Luck",
     "email": "kelvin+rtw@kelvinluck.com"
@@ -10,7 +10,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://nakeditchyfeet.com//blob/master/LICENSE-MIT"
+      "url": "http://nakeditchyfeet.com/blob/master/LICENSE-MIT"
     }
   ],
   "main": "Gruntfile.js",
