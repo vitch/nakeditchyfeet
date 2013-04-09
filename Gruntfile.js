@@ -26,6 +26,13 @@ module.exports = function(grunt) {
         ]
       }
     },
+    stylus: {
+      site: {
+        files: {
+          'out/styles/styles.css': 'src/styles/styles.stylus'
+        }
+      }
+    },
     haggerston: {
 
     },
@@ -37,6 +44,12 @@ module.exports = function(grunt) {
           'src/templates/**/*.html'
         ],
         tasks: 'build'
+      },
+      styles: {
+        files: [
+          'src/styles/**/*.stylus'
+        ],
+        tasks: 'stylus'
       }
     },
     connect: {
@@ -54,6 +67,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-haggerston');
+  grunt.loadNpmTasks('grunt-contrib-stylus');
 
   grunt.registerTask('build', ['clean', 'copy', 'stylus', 'haggerston']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
