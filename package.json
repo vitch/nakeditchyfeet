@@ -18,6 +18,7 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
+    "grunt": "~0.4.1",
     "grunt-haggerston": "git://github.com/haggerstonjs/grunt-haggerston.git",
     "grunt-contrib-clean": "~0.4.0",
     "grunt-contrib-copy": "~0.4.0",
@@ -26,9 +27,7 @@
     "grunt-contrib-stylus": "~0.4.1"
   },
   "devDependencies": {},
-  "peerDependencies": {
-    "grunt": "~0.4.1"
-  },
+  "peerDependencies": {},
   "keywords": [
     "haggerstonjs"
   ]
