@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+	<title>{% block title %}{{ title }}{% endblock %}</title>
+
+	<meta name="viewport" content="width=device-width"/>
+
+
+	<!--[if lt IE 9]>
+	<script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Styles -->
+	<link href='{{ page|basePath }}styles/styles.css' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+<div class="container">
+	<header id="site-header">
+		<hgroup>
+			<h1>Naked Itchy Feet</h1>
+			<h2>Mischief afoot</h2>
+		</hgroup>
+	</header>
+</div>
+<div id="map" class="{% if mapIsOpen %}is-open{% endif %}">
+	<p>Loading map</p>
+</div>
+<div id="map-toggle">
+	<a href="#">Map</a>
+</div>
+<div class="container">
+{% block bodyContent %}{% endblock %}
+</div>
+<div class="container">
+	<footer id="site-footer">
+		<div>
+			<p>&copy; Kelvin Luck &amp; Priscila Santos 2013</p>
+		</div>
+	</footer>
+</div>
+
+<script type="text/javascript" src="{{ page|basePath }}js/lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{{ page|basePath }}js/nif.js"></script>
+</body>
+</html>
