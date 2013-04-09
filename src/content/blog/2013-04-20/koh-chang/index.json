@@ -1,0 +1,9 @@
+{
+  "template": "blog-post.html",
+  "templateData": {
+    "title": "Koh Chang",
+    "date": "2013-04-20",
+    "headerImage": "IMG_0207.jpg",
+    "content": "koh-chang.md"
+  }
+}

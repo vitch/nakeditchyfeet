@@ -1,0 +1,9 @@
+{
+  "template": "blog-post.html",
+  "templateData": {
+    "title": "Bangkok",
+    "date": "2013-04-16",
+    "headerImage": "DSCF0117.jpg",
+    "content": "bangkok.md"
+  }
+}
