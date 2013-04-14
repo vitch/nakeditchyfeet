@@ -4,6 +4,8 @@
     "title": "Bangkok",
     "date": "2013-04-16",
     "headerImage": "DSCF0117.jpg",
-    "content": "bangkok.md"
+    "content": "bangkok.md",
+    "latitude": 13.7510,
+    "longitude": 100.4906
   }
 }

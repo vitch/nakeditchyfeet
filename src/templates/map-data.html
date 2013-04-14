@@ -1,0 +1,12 @@
+{
+	"posts": [
+		{% for child in pages|matches('prettyUrl','/blog/') %}
+			{
+				"link": "{{ page|linkTo(child) }}",
+				"title": "{{ child.templateData.title }}",
+				"latitude": {{ child.templateData.latitude }},
+				"longitude": {{ child.templateData.longitude }}
+			}{% if !loop.last %},{% endif %}
+		{% endfor %}
+	]
+}
