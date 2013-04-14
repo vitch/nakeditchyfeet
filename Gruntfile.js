@@ -10,6 +10,9 @@
 
 module.exports = function(grunt) {
 
+  var target = grunt.option('target') || 'dev';
+  var compress = target !== 'dev';
+
   // Project configuration.
   grunt.initConfig({
 
@@ -24,25 +27,32 @@ module.exports = function(grunt) {
             dest: 'out/'
           }
         ]
+      },
+      js: {
+        files: {
+          'out/js/nif.js': 'src/js/nif.js'
+        }
+      }
+    },
+    uglify: {
+      nif: {
+        src: ['src/js/nif.js'],
+        dest: 'out/js/nif.min.js'
       }
     },
     stylus: {
       site: {
+        options: {
+          compress: compress
+        },
         files: {
           'out/styles/styles.css': 'src/styles/styles.stylus'
         }
       }
     },
     haggerston: {
-      dev: {
-        options: {
-          minify: false
-        }
-      },
-      production: {
-        options: {
-          minify: true
-        }
+      options: {
+        minify: compress
       }
     },
     watch: {
@@ -77,10 +87,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-haggerston');
   grunt.loadNpmTasks('grunt-contrib-stylus');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  var target = grunt.option('target') || 'dev';
-
-  grunt.registerTask('build', ['clean', 'copy', 'stylus', 'haggerston:' + target]);
+  grunt.registerTask('build', ['clean', 'copy:main', (compress ? 'uglify' : 'copy:js'), 'stylus', 'haggerston']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
 
   grunt.registerTask('default', ['build']);
