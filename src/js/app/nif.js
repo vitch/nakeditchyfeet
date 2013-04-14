@@ -37,6 +37,14 @@ define(
         if ($('#map.is-open').length) {
           initMap();
         }
+
+        setTimeout(
+          function()
+          {
+            $('#map').addClass('is-animated');
+          },
+          1000
+        )
       }
     );
   }

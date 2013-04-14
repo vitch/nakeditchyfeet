@@ -38,7 +38,8 @@ a
   height: 0
   background: #555
 
-  transition: height .5s ease-in-out
+  &.is-animated
+    transition: height .5s ease-in-out
 
   &.is-open
     height: 400px
