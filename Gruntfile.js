@@ -16,7 +16,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
 
-    clean: ['out/'],
+    clean: ['out/*'],
     copy: {
       main: {
         files: [
