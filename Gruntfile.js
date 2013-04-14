@@ -34,7 +34,16 @@ module.exports = function(grunt) {
       }
     },
     haggerston: {
-
+      dev: {
+        options: {
+          minify: false
+        }
+      },
+      production: {
+        options: {
+          minify: true
+        }
+      }
     },
     watch: {
       content: {
@@ -69,7 +78,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-haggerston');
   grunt.loadNpmTasks('grunt-contrib-stylus');
 
-  grunt.registerTask('build', ['clean', 'copy', 'stylus', 'haggerston']);
+  var target = grunt.option('target') || 'dev';
+
+  grunt.registerTask('build', ['clean', 'copy', 'stylus', 'haggerston:' + target]);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
 
   grunt.registerTask('default', ['build']);
