@@ -64,6 +64,12 @@ module.exports = function(grunt) {
         ],
         tasks: 'build'
       },
+      js: {
+        files: [
+          'src/js/**/*.js'
+        ],
+        tasks: 'build'
+      },
       styles: {
         files: [
           'src/styles/**/*.stylus'
