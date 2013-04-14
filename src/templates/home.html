@@ -1,7 +1,7 @@
 {% extends 'wrapper.html' %}
 {% block bodyContent %}
 
-<ul>
+<ul class="article-list">
 	{% for child in pages|matches('prettyUrl','/blog/') %}
 		<li>
 			<a href="{{ page|linkTo(child) }}">
