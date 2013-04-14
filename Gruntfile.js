@@ -29,9 +29,14 @@ module.exports = function(grunt) {
         ]
       },
       js: {
-        files: {
-          'out/js/nif.js': 'src/js/nif.js'
-        }
+        files: [
+          {
+            expand: true,
+            cwd: 'src/js/app',
+            src: ['**/*.js'],
+            dest: 'out/js/app'
+          }
+        ]
       }
     },
     stylus: {
@@ -52,13 +57,13 @@ module.exports = function(grunt) {
     requirejs: {
       compile: {
         options: {
-          baseUrl: 'src/js',
+          baseUrl: 'src/js/app',
           appDir: '',
           wrap: true,
           insertRequire: ['nif'],
           name: 'nif',
           include: ['nif'],
-          out: 'out/js/nif.min.js'
+          out: 'out/js/app/nif.min.js'
         }
       }
     },
