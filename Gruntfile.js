@@ -34,12 +34,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    uglify: {
-      nif: {
-        src: ['src/js/nif.js'],
-        dest: 'out/js/nif.min.js'
-      }
-    },
     stylus: {
       site: {
         options: {
@@ -53,6 +47,19 @@ module.exports = function(grunt) {
     haggerston: {
       options: {
         minify: compress
+      }
+    },
+    requirejs: {
+      compile: {
+        options: {
+          baseUrl: 'src/js',
+          appDir: '',
+          wrap: true,
+          insertRequire: ['nif'],
+          name: 'nif',
+          include: ['nif'],
+          out: 'out/js/nif.min.js'
+        }
       }
     },
     watch: {
@@ -93,9 +100,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-haggerston');
   grunt.loadNpmTasks('grunt-contrib-stylus');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-requirejs');
 
-  grunt.registerTask('build', ['clean', 'copy:main', (compress ? 'uglify' : 'copy:js'), 'stylus', 'haggerston']);
+  grunt.registerTask('build', ['clean', 'copy:main', (compress ? 'requirejs:compile' : 'copy:js'), 'stylus', 'haggerston']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
 
   grunt.registerTask('default', ['build']);
