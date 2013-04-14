@@ -1,4 +1,14 @@
 {% extends 'wrapper.html' %}
 {% block bodyContent %}
-{{ content|raw }}
+
+<ul>
+	{% for child in pages|matches('prettyUrl','/blog/') %}
+		<li>
+			<a href="{{ page|linkTo(child) }}">
+				<img src="{{ page|relativePath(child) }}{{ child.templateData.headerImage }}" alt="{{ child.templateData.title }}" />
+			</a>
+		</li>
+	{% endfor %}
+</ul>
+
 {% endblock %}
