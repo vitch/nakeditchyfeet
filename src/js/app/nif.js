@@ -28,8 +28,8 @@ define(
           L.tileLayer(
             'http://{s}.tiles.mapbox.com/v3/{user}.{map}/{z}/{x}/{y}.png',
             {
-              user: 'vitch',
-              map: 'map-knaif0fn'
+              user: 'nakeditchyfeet',
+              map: 'map-9xnn0a7i'
             }
           ).addTo(map);
 
