@@ -17,7 +17,7 @@ define(
             this.initMap();
           }
 
-          // Wait until the page has rendered before allowing CSS animations on the
+          // Wait until the page has rendered before allowing CSS animations on the height of the #map div
           _.delay(
             _.bind(function () {
               this.$el.addClass('is-animated');
@@ -67,7 +67,8 @@ define(
           this.$el[this.isOpen ? 'addClass' : 'removeClass']('is-open');
 
           if (this.isOpen) {
-            this.initMap();
+            // Wait before initialising map so that it has the correct container height when it initialises
+            _.delay(_.bind(this.initMap, this), 1000);
           }
           return false;
         }
