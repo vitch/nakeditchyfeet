@@ -65,3 +65,20 @@ ul.article-list
 
   li
     margin: 1rem 0
+    overflow: hidden
+
+    a
+      position: relative
+      span
+        position: absolute
+        display: block
+        transition: bottom .3s ease-out
+        bottom: -50px
+        min-width: 100%
+        background: #000
+        background: rgba(0, 0, 0, .7)
+        padding: 5px
+
+      &:hover
+        span
+          bottom: 0
