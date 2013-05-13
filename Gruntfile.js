@@ -12,6 +12,12 @@ module.exports = function(grunt) {
 
   var target = grunt.option('target') || 'dev';
   var compress = target !== 'dev';
+  var jsLibs = [
+    'js/lib/underscore-1.4.4.js',
+    'js/lib/backbone-1.0.0.js',
+    'js/lib/leaflet-src.js'
+  ];
+
 
   // Project configuration.
   grunt.initConfig({
@@ -37,6 +43,16 @@ module.exports = function(grunt) {
             dest: 'out/js/app'
           }
         ]
+      },
+      libs: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/js/lib',
+            src: ['**/*.js'],
+            dest: 'out/js/lib'
+          }
+        ]
       }
     },
     stylus: {
@@ -51,7 +67,8 @@ module.exports = function(grunt) {
     },
     haggerston: {
       options: {
-        minify: compress
+        minify: compress,
+        jsLibs: compress ? ['js/libs.min.js'] : jsLibs
       }
     },
     requirejs: {
@@ -67,6 +84,15 @@ module.exports = function(grunt) {
         }
       }
     },
+    uglify: {
+      libs: {
+        files: {
+          'out/js/libs.min.js': jsLibs.map(function(path) {
+            return 'src/' + path
+          })
+        }
+      }
+    },
     watch: {
       content: {
         files: [
@@ -75,6 +101,12 @@ module.exports = function(grunt) {
           'src/templates/**/*.html'
         ],
         tasks: 'build'
+      },
+      assets: {
+        files: [
+          'assets/**/*'
+        ],
+        tasks: 'copy:main'
       },
       js: {
         files: [
@@ -106,8 +138,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-haggerston');
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('build', ['clean', 'copy:main', (compress ? 'requirejs:compile' : 'copy:js'), 'stylus', 'haggerston']);
+  grunt.registerTask('build', ['clean', 'copy:main', (compress ? 'uglify:libs' : 'copy:libs'), (compress ? 'requirejs:compile' : 'copy:js'), 'stylus', 'haggerston']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
 
   grunt.registerTask('default', ['build']);

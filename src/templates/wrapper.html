@@ -8,14 +8,14 @@
 
 	<meta name="viewport" content="width=device-width"/>
 
+	<!-- Styles -->
+	<link href='{{ page|basePath }}leaflet/leaflet.css' rel='stylesheet' type='text/css'>
+	<link href='{{ page|basePath }}styles/styles.css' rel='stylesheet' type='text/css'>
 
 	<!--[if lt IE 9]>
 	<script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<link href='{{ page|basePath }}leaflet/leaflet.ie.css' rel='stylesheet' type='text/css'>
 	<![endif]-->
-
-	<!-- Styles -->
-	<link href='{{ page|basePath }}styles/styles.css' rel='stylesheet' type='text/css'>
-	<link href='{{ page|basePath }}js/lib/leaflet/leaflet.css' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -44,7 +44,9 @@
 	</footer>
 </div>
 <script type="text/javascript" src="{{ page|basePath }}js/lib/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="{{ page|basePath }}js/lib/leaflet/leaflet.js"></script>
+{% for path in options.jsLibs -%}
+<script src="{{ page|basePath }}{{ path }}"></script>
+{% endfor %}
 <script type="text/javascript" src="{{ page|basePath }}js/lib/require.js" data-main="{{ page|basePath }}js/app/nif{% if options.minify %}.min{% endif %}.js"></script>
 </body>
 </html>
