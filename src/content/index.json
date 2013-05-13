@@ -1,6 +1,7 @@
 {
   "template": "home.html",
   "templateData": {
+    "title": "Naked Itchy Feet",
     "mapIsOpen": true
   }
 }
