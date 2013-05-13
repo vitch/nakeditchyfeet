@@ -33,30 +33,31 @@ a
   padding: 5px 0
   margin: 10px 0 0
 
-#map
-  overflow: hidden
-  height: 0
-  background: #555
+#map-panel
+  #map
+    overflow: hidden
+    height: 0
+    background: #555
 
-  &.is-animated
+  &.is-animated #map
     transition: height .5s ease-in-out
 
-  &.is-open
+  &.is-open #map
     height: 400px
 
-  &>p
-    text-transform: uppercase
-    text-align: center
-    margin: 190px 0 0
-    color: #ccc
+    &>p
+      text-transform: uppercase
+      text-align: center
+      margin: 190px 0 0
+      color: #ccc
 
-#map-toggle
-  @extend .container
-  overflow: hidden
-  padding: 5px 0 0
+  #map-toggle
+    @extend .container
+    overflow: hidden
+    padding: 5px 0 0
 
-  a
-    float: right
+    a
+      float: right
 
 ul.article-list
   padding: 0

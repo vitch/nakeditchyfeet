@@ -27,11 +27,13 @@
 		</hgroup>
 	</header>
 </div>
-<div id="map" class="{% if mapIsOpen %}is-open{% endif %}">
-	<p>Loading map</p>
-</div>
-<div id="map-toggle">
-	<a href="#">Map</a>
+<div id="map-panel" class="{% if mapIsOpen %}is-open{% endif %}">
+	<div id="map">
+		<p>Loading map</p>
+	</div>
+	<div id="map-toggle">
+		<a href="#">Map</a>
+	</div>
 </div>
 <div class="container">
 {% block bodyContent %}{% endblock %}
