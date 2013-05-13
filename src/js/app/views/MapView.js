@@ -10,20 +10,21 @@ define(
         events: {
           'click #map-toggle a': 'onMapToggle'
         },
-        initialize: function () {
+        initialize: function (options) {
+
+          _.bindAll(this, 'onPageInitialised', 'initMap', 'onMapItemsReady');
+
+          this.mapItems = options.mapItems;
 
           this.isOpen = this.$el.is('.is-open');
           if (this.isOpen) {
             this.initMap();
           }
 
+          this.mapItems.fetch({success: this.onMapItemsReady})
+
           // Wait until the page has rendered before allowing CSS animations on the height of the #map div
-          _.delay(
-            _.bind(function () {
-              this.$el.addClass('is-animated');
-            }, this),
-            1000
-          );
+          _.delay(this.onPageInitialised, 1000);
         },
         initMap: function () {
           if (this.isMapInitialised) {
@@ -31,8 +32,10 @@ define(
           }
           this.isMapInitialised = true;
 
-          var mapContainer = this.$('#map').empty()[0],
-              map = L.map(mapContainer).setView([0, 0], 2);
+          var mapContainer = this.$('#map').empty()[0];
+
+          L.Icon.Default.imagePath = '/leaflet/images/';
+          this.leafletMap = L.map(mapContainer).setView([0, 0], 2);
 
           L.tileLayer(
             'http://{s}.tiles.mapbox.com/v3/{user}.{map}/{z}/{x}/{y}.png',
@@ -40,7 +43,7 @@ define(
               user: 'nakeditchyfeet',
               map: 'map-9xnn0a7i'
             }
-          ).addTo(map);
+          ).addTo(this.leafletMap);
 
 //          L.tileLayer(
 //            'http://a.tiles.mapbox.com/v3/vitch.map-knaif0fn/{z}/{x}/{y}.png',
@@ -61,6 +64,30 @@ define(
 //              "webpage": "http://tiles.mapbox.com/vitch/map/map-knaif0fn"
 //            }
 //          ).addTo(map);
+          if (this.mapItems.length) {
+            this.onMapItemsReady();
+          }
+        },
+        onPageInitialised: function () {
+          this.$el.addClass('is-animated');
+        },
+        onMapItemsReady: function () {
+          if (!this.isMapInitialised) {
+            return;
+          }
+          var map = this.leafletMap;
+          this.mapItemMarkers = this.mapItems.map(function(mapItemModel) {
+            var marker = L.marker(
+              [mapItemModel.get('latitude'), mapItemModel.get('longitude')],
+              {
+                title: mapItemModel.get('title')
+                // icon
+              }
+            );
+            // TODO: Add click
+            map.addLayer(marker);
+            return marker;
+          });
         },
         onMapToggle: function (e) {
           this.isOpen = !this.isOpen;
@@ -68,7 +95,7 @@ define(
 
           if (this.isOpen) {
             // Wait before initialising map so that it has the correct container height when it initialises
-            _.delay(_.bind(this.initMap, this), 1000);
+            _.delay(this.initMap, 1000);
           }
           return false;
         }

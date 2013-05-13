@@ -1,7 +1,15 @@
 define(
-  ['views/MapView'],
-  function (MapView) {
+  [
+    'views/MapView',
+    'collections/MapItemsCollection'
+  ],
+  function (
+    MapView,
+    MapItemsCollection
+  ) {
     'use strict';
-    var mapView = new MapView();
+    var mapView = new MapView({
+      mapItems: new MapItemsCollection()
+    });
   }
 );
