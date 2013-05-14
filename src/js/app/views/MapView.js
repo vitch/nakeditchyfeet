@@ -94,7 +94,11 @@ define(
                     })
                   }
                 );
-            // TODO: Add click
+            if (!isCurrentPage) {
+              marker.on('click', function(e) {
+                document.location.href = '/' + mapItemModel.get('link');
+              });
+            }
             map.addLayer(marker);
             return marker;
           });
