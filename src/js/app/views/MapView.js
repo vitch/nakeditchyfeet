@@ -77,13 +77,23 @@ define(
           }
           var map = this.leafletMap;
           this.mapItemMarkers = this.mapItems.map(function(mapItemModel) {
-            var marker = L.marker(
-              [mapItemModel.get('latitude'), mapItemModel.get('longitude')],
-              {
-                title: mapItemModel.get('title')
-                // icon
-              }
-            );
+            var isCurrentPage = document.location.pathname.substr(1) == mapItemModel.get('link'),
+                marker = L.marker(
+                  [mapItemModel.get('latitude'), mapItemModel.get('longitude')],
+                  {
+                    title: mapItemModel.get('title'),
+                    icon: L.divIcon({
+                      className: 'map-icon' + (isCurrentPage ? ' is-active' : ''),
+                      iconSize: undefined // set in CSS
+                      /*
+                       iconAnchor: (Point)
+                       popupAnchor: (Point)
+                       html: (String)
+                       bgPos: (Point)
+                       */
+                    })
+                  }
+                );
             // TODO: Add click
             map.addLayer(marker);
             return marker;
