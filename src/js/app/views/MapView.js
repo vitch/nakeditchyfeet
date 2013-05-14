@@ -17,11 +17,12 @@ define(
           this.mapItems = options.mapItems;
 
           this.isOpen = this.$el.is('.is-open');
+
           if (this.isOpen) {
             this.initMap();
           }
 
-          this.mapItems.fetch({success: this.onMapItemsReady})
+          this.mapItems.fetch({success: this.onMapItemsReady});
 
           // Wait until the page has rendered before allowing CSS animations on the height of the #map div
           _.delay(this.onPageInitialised, 1000);
@@ -95,7 +96,7 @@ define(
                   }
                 );
             if (isCurrentPage) {
-              map.setView([mapItemModel.get('latitude'), mapItemModel.get('longitude')], 4);
+              map.setView([mapItemModel.get('latitude'), mapItemModel.get('longitude')], 4, true);
             } else {
               marker.on('click', function(e) {
                 document.location.href = '/' + mapItemModel.get('link');
