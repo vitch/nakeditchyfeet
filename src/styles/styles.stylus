@@ -38,6 +38,7 @@ p, li
   margin: 1rem 0 0
 
 @import 'marker-cluster.styl';
+@import 'leaflet.awesome-markers.styl';
 @import 'map.styl';
 
 ul.article-list

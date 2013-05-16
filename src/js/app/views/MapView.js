@@ -86,16 +86,20 @@ define(
                   [mapItemModel.get('latitude'), mapItemModel.get('longitude')],
                   {
                     title: mapItemModel.get('title'),
-                    icon: L.divIcon({
-                      className: 'map-icon' + (isCurrentPage ? ' is-active' : ''),
-                      iconSize: undefined // set in CSS
-                      /*
-                       iconAnchor: (Point)
-                       popupAnchor: (Point)
-                       html: (String)
-                       bgPos: (Point)
-                       */
-                    })
+                      icon: L.AwesomeMarkers.icon({
+                        icon: 'comments',
+                        color: isCurrentPage ? 'orange' : 'darkblue'
+                      })
+//                    icon: L.divIcon({
+//                      className: 'map-icon' + (isCurrentPage ? ' is-active' : ''),
+//                      iconSize: undefined // set in CSS
+//                      /*
+//                       iconAnchor: (Point)
+//                       popupAnchor: (Point)
+//                       html: (String)
+//                       bgPos: (Point)
+//                       */
+//                    })
                   }
                 );
             if (isCurrentPage) {
