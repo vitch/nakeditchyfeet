@@ -83,12 +83,14 @@ ul.article-list
 
     a
       position: relative
+      display: block
       span
         position: absolute
         display: block
         transition: bottom .3s ease-out
         bottom: -5rem
         min-width: 100%
+        box-sizing: border-box
         background: #000
         background: rgba(0, 0, 0, .7)
         padding: .5rem
