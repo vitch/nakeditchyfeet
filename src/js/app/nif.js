@@ -8,8 +8,10 @@ define(
     MapItemsCollection
   ) {
     'use strict';
-    var mapView = new MapView({
-      mapItems: new MapItemsCollection()
+    $(function() {
+      var mapView = new MapView({
+        mapItems: new MapItemsCollection()
+      });
     });
   }
 );
