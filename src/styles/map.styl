@@ -1,0 +1,41 @@
+#map-panel
+  #map
+    overflow: hidden
+    height: 0
+    background: #555
+
+  &.is-animated #map
+    transition: height .5s ease-in-out
+
+  &.is-open #map
+    height: 40rem
+
+    &>p
+      text-transform: uppercase
+      text-align: center
+      margin: 19rem 0 0
+      color: #ccc
+
+  #map-toggle
+    @extend .container
+    overflow: hidden
+    padding: .5rem 0 0
+
+    a
+      float: right
+
+.map-icon
+  width: 3rem
+  height: 3rem
+  border-radius: 3rem
+  //border: .1rem dotted #333
+  box-shadow: 0 0 .3rem rgba(0, 0, 0, .6)
+  background: white
+
+  &:hover
+    background: #f60
+
+  &.is-active
+    background: red
+
+@import 'marker-cluster.css';

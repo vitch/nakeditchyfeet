@@ -15,7 +15,8 @@ module.exports = function(grunt) {
   var jsLibs = [
     'js/lib/underscore-1.4.4.js',
     'js/lib/backbone-1.0.0.js',
-    'js/lib/leaflet-src.js'
+    'js/lib/leaflet-src.js',
+    'js/lib/leaflet.markercluster-src.js'
   ];
 
 

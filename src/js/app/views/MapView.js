@@ -76,7 +76,10 @@ define(
           if (!this.isMapInitialised) {
             return;
           }
-          var map = this.leafletMap;
+          var map = this.leafletMap,
+              mapItemClusters = new L.MarkerClusterGroup({
+                showCoverageOnHover: false
+              });
           this.mapItemMarkers = this.mapItems.map(function(mapItemModel) {
             var isCurrentPage = document.location.pathname.substr(1) == mapItemModel.get('link'),
                 marker = L.marker(
@@ -102,9 +105,11 @@ define(
                 document.location.href = '/' + mapItemModel.get('link');
               });
             }
-            map.addLayer(marker);
+            mapItemClusters.addLayer(marker);
             return marker;
           });
+
+          map.addLayer(mapItemClusters);
         },
         onMapToggle: function (e) {
           this.isOpen = !this.isOpen;
