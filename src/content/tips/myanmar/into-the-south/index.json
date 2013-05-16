@@ -1,0 +1,7 @@
+{
+  "template": "blog-post.html",
+  "templateData": {
+    "title": "Tips for the south of Burma",
+    "content": "content.md"
+  }
+}

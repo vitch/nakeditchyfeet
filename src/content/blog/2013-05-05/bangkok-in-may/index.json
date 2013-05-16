@@ -1,0 +1,12 @@
+{
+  "template": "blog-post.html",
+  "templateData": {
+    "title": "Bangkok in May",
+    "date": "2013-05-05",
+    "headerImage": "IMG_6818.jpg",
+    "content": "content.md",
+    "latitude": 13.7510,
+    "longitude": 100.4906,
+    "tags": ["bangkok", "thailand", "may", "air bnb"]
+  }
+}

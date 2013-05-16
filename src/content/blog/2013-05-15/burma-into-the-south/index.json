@@ -1,0 +1,12 @@
+{
+  "template": "blog-post.html",
+  "templateData": {
+    "title": "Burma - into the south",
+    "date": "2013-05-15",
+    "headerImage": "IMG_6818.jpg",
+    "content": "content.md",
+    "latitude": 12.444,
+    "longitude": 98.598,
+    "tags": ["burma", "myanmar", "trailblazing"]
+  }
+}

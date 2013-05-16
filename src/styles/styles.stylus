@@ -15,6 +15,10 @@ body
 a
   color: #eef
 
+p, li
+  font-size: 1.4rem;
+  line-height: 1.6;
+
 .container
   max-width: 100rem
   width: 90%
