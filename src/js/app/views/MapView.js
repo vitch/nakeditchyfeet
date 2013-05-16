@@ -96,7 +96,7 @@ define(
                   }
                 );
             if (isCurrentPage) {
-              map.setView([mapItemModel.get('latitude'), mapItemModel.get('longitude')], 4, true);
+              map.setView([mapItemModel.get('latitude'), mapItemModel.get('longitude')], 6, true);
             } else {
               marker.on('click', function(e) {
                 document.location.href = '/' + mapItemModel.get('link');
