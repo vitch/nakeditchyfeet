@@ -87,7 +87,7 @@ define(
                   {
                     title: mapItemModel.get('title'),
                       icon: L.AwesomeMarkers.icon({
-                        icon: 'comments',
+                        icon: 'bullseye',
                         color: isCurrentPage ? 'orange' : 'darkblue'
                       })
 //                    icon: L.divIcon({
