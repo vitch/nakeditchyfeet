@@ -8,7 +8,8 @@ define(
       {
         el: '#map-panel',
         events: {
-          'click #map-toggle a': 'onMapToggle'
+          'click #map-toggle a': 'onMapToggle',
+          'click #map-fullscreen a': 'onFullscreenToggle'
         },
         initialize: function (options) {
 
@@ -17,6 +18,7 @@ define(
           this.mapItems = options.mapItems;
 
           this.isOpen = this.$el.is('.is-open');
+          this.isFullscreen = false;
 
           if (this.isOpen) {
             this.initMap();
@@ -138,6 +140,12 @@ define(
             // Wait before initialising map so that it has the correct container height when it initialises
             _.delay(this.initMap, 1000);
           }
+          return false;
+        },
+        onFullscreenToggle: function(e) {
+          this.isFullscreen = !this.isFullscreen;
+          this.$('#map-fullscreen i').removeClass('icon-fullscreen icon-resize-small').addClass(this.isFullscreen ? 'icon-resize-small' : 'icon-fullscreen')
+          this.$el[this.isFullscreen ? 'addClass' : 'removeClass']('is-fullscreen');
           return false;
         }
       }
