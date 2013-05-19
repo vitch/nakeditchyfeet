@@ -1,0 +1,8 @@
+{
+  "template": "blog-post.html",
+  "templateData": {
+    "title": "About us",
+    "content": "about-us.md",
+    "headerImage": "us.jpg"
+  }
+}

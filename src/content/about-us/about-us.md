@@ -1,0 +1,3 @@
+We are Priscila and Kelvin and we have recently left our safe port in London to go travelling around the world. Why? Why not.
+
+We will aim to share our experience with this blog through writing and photography. Priscila is a keen writer and Kelvin is ace with a camera. Journeying through South East Asia, Australia, Fiji, New Zealand, Hawaii, South America and Cuba we hope our stories are inspirational and our research and advice is helpful to anyone wanting to do the same.

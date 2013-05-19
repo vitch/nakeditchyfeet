@@ -2,12 +2,17 @@
 {% block bodyContent %}
 <article>
 
-	<h1>{{ title }} <small>{{ date|date('jS M Y') }}</small>
-	<ul class="inline tags">
-		{% for tag in tags -%}
-		<li><a href="{{ page|basePath}}tags/{{tag|replace(' ', '-')}}.html" class="label"><i class="icon icon-tag"></i> {{tag}}</a></li>
-		{%- endfor %}
-	</ul></h1>
+	<h1>
+		{{ title }}
+		{% if date %}<small>{{ date|date('jS M Y') }}</small>{% endif %}
+		{% if tags -%}
+		<ul class="inline tags">
+			{% for tag in tags -%}
+			<li><a href="{{ page|basePath}}tags/{{tag|replace(' ', '-')}}.html" class="label"><i class="icon icon-tag"></i> {{tag}}</a></li>
+			{%- endfor %}
+		</ul>
+		{%- endif %}
+	</h1>
 
 	<img src="{{ headerImage }}" class="header-image" />
 	{{ content|raw }}
