@@ -24,6 +24,11 @@ Booking flights in Dawei
 
 ##Transport:
 
+| From | To | Type | Depart | Arrive | Price |
+| ---- | -- | ---- | ------ | ------ | ----- |
+| Mawlamyine | Dawei | Bus | 8pm | 5am | 13,000 Kyat |
+| Dawei | Yangon | Plane | 12:30pm | 2pm | USD105 |
+
 Bus from Mawlamyine to Dawei – 8pm arrives at 5am – 13000Kyat
 
 Flight from Dawei to Yangon $105 daily 12.30pm
