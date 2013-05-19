@@ -1,0 +1,31 @@
+#map-panel {
+	#map {
+		overflow: hidden;
+		height: 0;
+		background: #555;
+	}
+
+	&.is-animated #map {
+		transition: height .5s ease-in-out;
+	}
+
+	&.is-open #map {
+		height: 40rem;
+	}
+
+	&>p {
+		text-transform: uppercase;
+		text-align: center;
+		margin: 19rem 0 0;
+		color: #ccc;
+	}
+
+	#map-toggle {
+	    overflow: hidden;
+	    padding: .5rem 0 0;
+
+		a {
+			float: right;
+		}
+	}
+}

@@ -1,0 +1,76 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background: #333;
+	color: #eee;
+	font-family: arial, _sans;
+}
+
+a {
+	color: #eef;
+}
+
+p, li {
+	font-size: 1.4rem;
+	line-height: 1.6;
+}
+
+.container {
+	max-width: 100rem;
+	width: 90%;
+	margin: 0 auto;
+
+	img {
+		max-width: 100%;
+	}
+}
+
+#site-header {
+	border-bottom: 1px solid #eee;
+	padding: .5rem 0;
+	margin: 0 0 1rem;
+}
+
+#site-footer {
+	border-top: .1rem solid #eee;
+	padding: .5rem 0;
+	margin: 1rem 0 0;
+}
+
+@import "map.less";
+@import "leaflet.awesome-markers.less";
+@import "marker-cluster.less";
+
+ul.article-list {
+	padding: 0;
+	list-style: none;
+
+	li {
+		margin: 1rem 0;
+		overflow: hidden;
+
+		a {
+			position: relative;
+			display: block;
+			span {
+				position: absolute;
+				display: block;
+				transition: bottom .3s ease-out;
+				bottom: -5rem;
+				min-width: 100%;
+				box-sizing: border-box;
+				background: #000;
+				background: rgba(0, 0, 0, .7);
+				padding: .5rem;
+			}
+
+			&:hover {
+				span {
+					bottom: 0;
+				}
+			}
+		}
+	}
+}

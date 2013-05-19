@@ -57,13 +57,14 @@ module.exports = function(grunt) {
         ]
       }
     },
-    stylus: {
+    less: {
       site: {
         options: {
-          compress: compress
+          compress: compress,
+          paths: ['src/styles', 'src/styles/bootstrap']
         },
         files: {
-          'out/styles/styles.css': 'src/styles/styles.stylus'
+          'out/styles/styles.css': 'src/styles/styles.less'
         }
       }
     },
@@ -118,9 +119,9 @@ module.exports = function(grunt) {
       },
       styles: {
         files: [
-          'src/styles/**/*.stylus'
+          'src/styles/**/*.less'
         ],
-        tasks: 'stylus'
+        tasks: 'less'
       }
     },
     connect: {
@@ -138,11 +139,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-haggerston');
-  grunt.loadNpmTasks('grunt-contrib-stylus');
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('build', ['clean', 'copy:main', (compress ? 'uglify:libs' : 'copy:libs'), (compress ? 'requirejs:compile' : 'copy:js'), 'stylus', 'haggerston']);
+  grunt.registerTask('build', ['clean', 'copy:main', (compress ? 'uglify:libs' : 'copy:libs'), (compress ? 'requirejs:compile' : 'copy:js'), 'less', 'haggerston']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
 
   grunt.registerTask('default', ['build']);
