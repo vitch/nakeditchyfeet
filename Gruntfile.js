@@ -61,7 +61,7 @@ module.exports = function(grunt) {
       site: {
         options: {
           compress: compress,
-          paths: ['src/styles', 'src/styles/bootstrap']
+          paths: ['src/styles', 'src/styles/bootstrap', 'src/styles/font-awesome']
         },
         files: {
           'out/styles/styles.css': 'src/styles/styles.less'
