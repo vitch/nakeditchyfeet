@@ -98,7 +98,7 @@ define(
                 marker = L.marker(
                   [mapItemModel.get('latitude'), mapItemModel.get('longitude')],
                   {
-                    title: mapItemModel.get('title'),
+                    title: mapItemModel.get('title').replace(/&#39;/g, '\''),
                       icon: L.AwesomeMarkers.icon({
                         icon: 'bullseye',
                         color: isCurrentPage ? 'orange' : 'darkblue',
