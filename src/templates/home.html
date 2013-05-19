@@ -6,7 +6,7 @@
 		<li>
 			<a href="{{ page|linkTo(child) }}">
 				<img src="{{ page|relativePath(child) }}{{ child.templateData.headerImage }}" class="header-image" alt="{{ child.templateData.title }}" />
-				<span>{{ child.templateData.date|date('dS M Y') }} &ndash; {{ child.templateData.title }}</span>
+				<span>{{ child.templateData.date|date('jS M Y') }} &ndash; {{ child.templateData.title }}</span>
 			</a>
 		</li>
 	{% endfor %}
