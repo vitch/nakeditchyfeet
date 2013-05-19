@@ -12,7 +12,7 @@ define(
         },
         initialize: function (options) {
 
-          _.bindAll(this, 'onPageInitialised', 'initMap', 'onMapItemsReady');
+          _.bindAll(this, 'onPageInitialised', 'initMap', 'onMapItemsReady', 'initTooltips');
 
           this.mapItems = options.mapItems;
 
@@ -33,9 +33,9 @@ define(
           }
           this.isMapInitialised = true;
 
-          var mapContainer = this.$('#map').empty()[0];
+          var mapContainer = this.$('#map').empty()[0],
+              initTooltips = this.initTooltips;
 
-          L.Icon.Default.imagePath = '/leaflet/images/';
           this.leafletMap = L.map(mapContainer).setView([0, 0], 2);
 
           L.tileLayer(
@@ -45,6 +45,10 @@ define(
               map: 'map-9xnn0a7i'
             }
           ).addTo(this.leafletMap);
+
+          this.leafletMap.on('zoomend', function(){
+            _.defer(initTooltips);
+          });
 
 //          L.tileLayer(
 //            'http://a.tiles.mapbox.com/v3/vitch.map-knaif0fn/{z}/{x}/{y}.png',
@@ -69,6 +73,12 @@ define(
             this.onMapItemsReady();
           }
         },
+        initTooltips: function()
+        {
+          this.$('.awesome-marker').not('.awesome-marker-shadow').tooltip({
+            container: 'body'
+          });
+        },
         onPageInitialised: function () {
           this.$el.addClass('is-animated');
         },
@@ -88,7 +98,8 @@ define(
                     title: mapItemModel.get('title'),
                       icon: L.AwesomeMarkers.icon({
                         icon: 'bullseye',
-                        color: isCurrentPage ? 'orange' : 'darkblue'
+                        color: isCurrentPage ? 'orange' : 'darkblue',
+                        className: 'marker-tt awesome-marker'
                       })
 //                    icon: L.divIcon({
 //                      className: 'map-icon' + (isCurrentPage ? ' is-active' : ''),
@@ -114,6 +125,8 @@ define(
           });
 
           map.addLayer(mapItemClusters);
+
+          this.initTooltips();
         },
         onMapToggle: function (e) {
           this.isOpen = !this.isOpen;

@@ -17,7 +17,8 @@ module.exports = function(grunt) {
     'js/lib/backbone-1.0.0.js',
     'js/lib/leaflet-src.js',
     'js/lib/leaflet.markercluster-src.js',
-    'js/lib/leaflet.awesome-markers.js'
+    'js/lib/leaflet.awesome-markers.js',
+    'js/lib/bootstrap-tooltip.js'
   ];
 
 
