@@ -5,7 +5,7 @@
 	<h1>{{ title }} <small>{{ date|date('dS M Y') }}</small>
 	<ul class="inline tags">
 		{% for tag in tags -%}
-		<li><a href="{{ page|basePath}}tags/{{tag|escape}}" class="label"><i class="icon icon-tag"></i> {{tag}}</a></li>
+		<li><a href="{{ page|basePath}}tags/{{tag|escape}}.html" class="label"><i class="icon icon-tag"></i> {{tag}}</a></li>
 		{%- endfor %}
 	</ul></h1>
 

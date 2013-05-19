@@ -1,0 +1,6 @@
+{
+  "template": "tag-page.html",
+  "generate": {
+    "category": "tags"
+  }
+}
