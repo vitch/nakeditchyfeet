@@ -2,7 +2,12 @@
 {% block bodyContent %}
 <article>
 
-	<h1>{{ title }} <small>{{ date|date('dS M Y') }}</small></h1>
+	<h1>{{ title }} <small>{{ date|date('dS M Y') }}</small>
+	<ul class="inline tags">
+		{% for tag in tags -%}
+		<li><a href="{{ page|basePath}}tags/{{tag|escape}}" class="label"><i class="icon icon-tag"></i> {{tag}}</a></li>
+		{%- endfor %}
+	</ul></h1>
 
 	<img src="{{ headerImage }}" class="header-image" />
 	{{ content|raw }}

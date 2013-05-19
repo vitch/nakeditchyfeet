@@ -21,11 +21,11 @@
 <body>
 <div class="container">
 	<header id="site-header">
-		<h1><a href="{{ page|basePath }}">Naked Itchy Feet</a> <small>Mischief afoot</small></h1>
+		<h1><a href="{{ page|basePath }}">Naked Itchy Feet</a></h1>
 	</header>
 </div>
 <div id="map-panel" class="{% if mapIsOpen %}is-open{% endif %}">
-	<div id="map">
+	<div id="map" class="{% if mapIsOpen %}home-map{% endif %}">
 		<p>Loading map</p>
 	</div>
 	<div id="map-toggle">
@@ -38,7 +38,7 @@
 <div class="container">
 	<footer id="site-footer">
 		<div>
-			<p>&copy; Kelvin Luck &amp; Priscila Santos 2013</p>
+			<p class="muted">&copy; Kelvin Luck &amp; Priscila Santos 2013</p>
 		</div>
 	</footer>
 </div>
