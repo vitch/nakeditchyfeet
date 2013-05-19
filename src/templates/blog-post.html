@@ -1,9 +1,10 @@
 {% extends 'wrapper.html' %}
 {% block bodyContent %}
-<hgroup>
-	<h1>{{ title }}</h1>
-	<h2>{{ date|date('dS M Y') }}</h2>
-</hgroup>
-<img src="{{ headerImage }}" />
-{{ content|raw }}
+<article>
+
+	<h1>{{ title }} <small>{{ date|date('dS M Y') }}</small></h1>
+
+	<img src="{{ headerImage }}" class="header-image" />
+	{{ content|raw }}
+</article>
 {% endblock %}

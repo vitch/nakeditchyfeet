@@ -5,7 +5,7 @@
 	{% for child in pages|matches('prettyUrl','/blog/')|sort('date',true) %}
 		<li>
 			<a href="{{ page|linkTo(child) }}">
-				<img src="{{ page|relativePath(child) }}{{ child.templateData.headerImage }}" alt="{{ child.templateData.title }}" />
+				<img src="{{ page|relativePath(child) }}{{ child.templateData.headerImage }}" class="header-image" alt="{{ child.templateData.title }}" />
 				<span>{{ child.templateData.date|date('dS M Y') }} &ndash; {{ child.templateData.title }}</span>
 			</a>
 		</li>

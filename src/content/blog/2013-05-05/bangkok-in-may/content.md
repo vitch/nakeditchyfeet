@@ -1,4 +1,4 @@
-Bangkok in May is hot, and I mean very hot, too hot to do anything. You won't have much fun if your plan is to get lots of sightseeing done.
+<p class="lead">Bangkok in May is hot, and I mean very hot, too hot to do anything. You won't have much fun if your plan is to get lots of sightseeing done.</p>
 
 Our main purpose in Bangkok was to sort our Burmese visa and so we found ourselves a condo with air con where we could hide from the heat with a pool for 800bht in a suburban middle class condominium a little out of town with wifi on tap which we booked on air bnb. With the heat in mind we saved most sightseeing for the evenings when its a balmy 30c whenever possible.
 
