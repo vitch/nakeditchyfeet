@@ -119,6 +119,15 @@ define(
           this.isOpen = !this.isOpen;
           this.$el[this.isOpen ? 'addClass' : 'removeClass']('is-open');
 
+          if (!this.mapToggleText) {
+            this.mapToggleText = this.$('#map-toggle a span');
+          }
+
+          _.delay(_.bind(function() {
+            this.mapToggleText.text(this.isOpen ? 'Hide map' : 'Show map');
+          }, this), 400);
+
+
           if (this.isOpen) {
             // Wait before initialising map so that it has the correct container height when it initialises
             _.delay(this.initMap, 1000);
