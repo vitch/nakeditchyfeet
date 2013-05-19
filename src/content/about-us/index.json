@@ -1,8 +1,7 @@
 {
-  "template": "blog-post.html",
+  "template": "about-us.html",
   "templateData": {
     "title": "About us",
-    "content": "about-us.md",
-    "headerImage": "us.jpg"
+    "content": "about-us.md"
   }
 }
