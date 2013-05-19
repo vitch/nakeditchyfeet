@@ -22,6 +22,13 @@
 <div class="container">
 	<header id="site-header">
 		<h1><a href="{{ page|basePath }}">Naked Itchy Feet</a></h1>
+		<nav>
+			<ul class="nav nav-pills pull-right">
+				<li><a href="{{ page|basePath }}about-us/"><i class="icon icon-user"></i> About us</a></li>
+				<li><a href="{{ page|basePath }}photos/"><i class="icon icon-camera-retro"></i> Photos</a></li>
+				<li><a href="https://twitter.com/nakeditchyfeet"><i class="icon icon-twitter"></i> Twitter</a></li>
+			</ul>
+		</nav>
 	</header>
 </div>
 <div id="map-panel" class="{% if mapIsOpen %}is-open{% endif %}">
