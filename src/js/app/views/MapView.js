@@ -90,7 +90,10 @@ define(
               mapItemClusters = new L.MarkerClusterGroup({
                 showCoverageOnHover: false
               });
-          this.mapItemMarkers = this.mapItems.map(function(mapItemModel) {
+          this.mapItems.each(function(mapItemModel) {
+            if (mapItemModel.get('latitude') == false || mapItemModel.get('longitude') == false) {
+              return false;
+            }
             var isCurrentPage = document.location.pathname.substr(1) == mapItemModel.get('link'),
                 marker = L.marker(
                   [mapItemModel.get('latitude'), mapItemModel.get('longitude')],
@@ -99,18 +102,8 @@ define(
                       icon: L.AwesomeMarkers.icon({
                         icon: 'bullseye',
                         color: isCurrentPage ? 'orange' : 'darkblue',
-                        className: 'marker-tt awesome-marker'
+                        className: 'awesome-marker'
                       })
-//                    icon: L.divIcon({
-//                      className: 'map-icon' + (isCurrentPage ? ' is-active' : ''),
-//                      iconSize: undefined // set in CSS
-//                      /*
-//                       iconAnchor: (Point)
-//                       popupAnchor: (Point)
-//                       html: (String)
-//                       bgPos: (Point)
-//                       */
-//                    })
                   }
                 );
             if (isCurrentPage) {

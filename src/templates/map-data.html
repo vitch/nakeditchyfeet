@@ -4,8 +4,8 @@
 			"link": "{{ page|linkTo(child) }}",
 			"title": "{{ child.templateData.title }}",
 			"date": "{{ child.templateData.date|date('dS M Y' }}",
-			"latitude": {{ child.templateData.latitude }},
-			"longitude": {{ child.templateData.longitude }}
+			"latitude": {{ child.templateData.latitude|default(false) }},
+			"longitude": {{ child.templateData.longitude|default(false) }}
 		}{% if !loop.last %},{% endif %}
 	{%- endfor %}
 ]
