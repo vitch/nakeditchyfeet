@@ -1,0 +1,5 @@
+There isn’t one really….but thats how travelling is best done, right? Just wander around and see beautiful places, weird cultures, and see where the wind blows us. We have a rough itinerary booked consisting of a few intercontinental flights, which we can change the departure dates for so nothing is set in stone.
+
+We are starting in Thailand and will hopefully end up in Brazil in about 10 months time, just in time for Carnival. On the way there of course is the whole of south east asia where we plan to stay 3 months. After we move on to Australia, Fiji, New Zealand, Hawaii, LA and Bogota which is our gateway into South America. This might sound like a wyndy route to reach south america, but its actually saving us about £1000 each as a flight from New Zealand to Chile would be that much more expensive. Plus we get to go to Hawaii (where we will probably spend those £1000 we saved!).
+
+After we reach Brazil who knows. We would like to spend some time there, volunteering, teaching english, woofing, surfing and Kelvin might try to learn Portuguese.
