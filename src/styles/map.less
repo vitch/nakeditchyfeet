@@ -3,6 +3,12 @@
 		overflow: hidden;
 		height: 0;
 		background: #555;
+		&>p {
+			text-transform: uppercase;
+			text-align: center;
+			margin: 190px 0 0;
+			color: #ccc;
+		}
 	}
 
 	&.is-animated #map {
@@ -14,14 +20,10 @@
 
 		&.home-map {
 			height: 200px;
+			&>p {
+				margin-top: 90px;
+			}
 		}
-	}
-
-	&>p {
-		text-transform: uppercase;
-		text-align: center;
-		margin: 190px 0 0;
-		color: #ccc;
 	}
 
 	#map-toggle {
