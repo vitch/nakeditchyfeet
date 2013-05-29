@@ -6,7 +6,9 @@
 
 Until very recently the only way that you could get Kyat (<abbr class="initialism" title="Myanmar Kyat">MMK</abbr>) to spend in Myanmar was to bring US dollar notes with you and to make sure they matched some strict criteria:
 
-	Quote from lonely planet
+<blockquote>US dollar bills must be 2006 or later bills that have colour and are in absolutely perfect condition: no folds, stamps, stains, writing marks or tears.
+<small>Lonely Planet Myanmar</small>
+</blockquote>
 
 Additionally, the exchange rate for these notes was up to ten times worse at banks than it was on the black market so you had to change your money with unofficial money changers by the side of the street.
 
@@ -32,7 +34,7 @@ Note that sometimes the ATM is inside the bank (this happened to us in Mawlamyin
 
 All of the ATMs add a fee of 5000 MMK (about USD 5.60) for international withdrawals so it makes sense to withdraw large chunks of money infrequently rather than bit by bit as you go along.
 
-The actual conversion rate you get will depend on your credit/ debit card. On our card ([more info for UK residents](#)) we got between 1,382 and 1389 MMK per <abbr class="initialism" title="British Pound">GBP</abbr> which is close to the [official exchange rate on Google](https://www.google.co.uk/search?q=1+gbp+in+mmk) and definitely better than we would have got by converting GBP > USD > MMK (or GBP > THB > USD > MMK which is what we would have needed to do in Bangkok).
+The actual conversion rate you get will depend on your credit/ debit card. On our card ([more info for UK residents](/blog/2013-04-09/how-we-planned-our-rtw-trip)) we got between 1,382 and 1389 MMK per <abbr class="initialism" title="British Pound">GBP</abbr> which is close to the [official exchange rate on Google](https://www.google.co.uk/search?q=1+gbp+in+mmk) and definitely better than we would have got by converting GBP > USD > MMK (or GBP > THB > USD > MMK which is what we would have needed to do in Bangkok).
 
 ##Leftover Kyats
 
