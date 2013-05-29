@@ -1,10 +1,7 @@
 {% extends 'wrapper.html' %}
 {% block bodyContent %}
 <article>
-
-	<h1>
-		{{ title }}
-		{% if date %}<small class="article-date"><time datetime="{{ date|date('Y-m-d') }}" pubdate>{{ date|date('jS M Y') }}</time></small>{% endif %}
+	<header>
 		{% if tags -%}
 		<ul class="inline tags">
 			{% for tag in tags -%}
@@ -12,7 +9,11 @@
 			{%- endfor %}
 		</ul>
 		{%- endif %}
-	</h1>
+		<h1>
+			{{ title }}
+			{% if date %}<small class="article-date"><time datetime="{{ date|date('Y-m-d') }}" pubdate>{{ date|date('jS M Y') }}</time></small>{% endif %}
+		</h1>
+	</header>
 
 	<img src="{{ headerImage }}" class="header-image" />
 	{{ content|raw }}
