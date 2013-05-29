@@ -1,0 +1,7 @@
+{
+  "template": "tips-list.html",
+  "templateData": {
+    "title": "Tips",
+    "content": "intro.md"
+  }
+}

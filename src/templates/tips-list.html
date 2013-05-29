@@ -1,0 +1,20 @@
+{% extends 'wrapper.html' %}
+{% block bodyContent %}
+<article>
+
+	<h1><i class="icon icon-bullhorn"></i> {{ title }}</h1>
+
+	{{ content|raw }}
+
+	<ul class="article-list">
+		{% for child in pages|matches('prettyUrl','/tips/.+')|sort('date')|reverse %}
+		<li>
+			<a href="{{ page|linkTo(child) }}">
+				{{ child.templateData.date|date('jS M Y') }} &ndash; {{ child.templateData.title }}
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+
+</article>
+{% endblock %}
