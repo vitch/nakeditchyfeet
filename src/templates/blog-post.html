@@ -4,7 +4,7 @@
 
 	<h1>
 		{{ title }}
-		{% if date %}<small>{{ date|date('jS M Y') }}</small>{% endif %}
+		{% if date %}<small class="article-date">{{ date|date('jS M Y') }}</small>{% endif %}
 		{% if tags -%}
 		<ul class="inline tags">
 			{% for tag in tags -%}
