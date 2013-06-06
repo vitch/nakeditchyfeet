@@ -2,6 +2,6 @@
   "template": "photos.html",
   "templateData": {
     "title": "Photos",
-    "content": "content.md"
+    "content": "photos-intro.md"
   }
 }

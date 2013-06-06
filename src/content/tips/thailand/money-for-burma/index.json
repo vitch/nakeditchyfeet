@@ -2,7 +2,7 @@
   "template": "blog-post.html",
   "templateData": {
     "title": "Getting money for Burma in Bangkok",
-    "content": "content.md",
+    "content": "money-for-burma.md",
     "date": "2013-05-20",
     "tags": ["myanmar", "burma", "thailand", "bangkok", "money", "cash"]
   }

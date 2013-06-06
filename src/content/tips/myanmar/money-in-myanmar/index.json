@@ -2,7 +2,7 @@
   "template": "blog-post.html",
   "templateData": {
     "title": "Money in Myanmar",
-    "content": "content.md",
+    "content": "money-in-myanmar.md",
     "date": "2013-05-20",
     "headerImage": "cb-bank.jpg",
     "tags": ["myanmar", "burma", "planning", "money", "cash"]
