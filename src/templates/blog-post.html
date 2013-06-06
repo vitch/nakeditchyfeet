@@ -15,7 +15,7 @@
 		</h1>
 	</header>
 
-	<img src="{{ headerImage }}" class="header-image" />
+	{% if headerImage %}<img src="{{ headerImage }}" class="header-image" />{% endif %}
 	{{ content|raw }}
 </article>
 {% endblock %}
