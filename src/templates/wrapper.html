@@ -22,7 +22,13 @@
 <div id="wrap">
 	<div class="container">
 		<header id="site-header">
-			<h1><a href="{{ page|basePath }}">Naked Itchy Feet</a></h1>
+			<h1>
+				{% if page.prettyUrl === '/' -%}
+					Naked Itchy Feet
+				{%- else -%}
+					<a href="{{ page|basePath }}">Naked Itchy Feet</a>
+				{%- endif %}
+			</h1>
 			<nav>
 				<ul class="nav nav-pills pull-right">
 					<li><a href="{{ page|basePath }}tips/"><i class="icon icon-bullhorn"></i> Travel tips</a></li>
