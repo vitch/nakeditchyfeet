@@ -1,3 +1,23 @@
+@footer-height: 40px;
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -(@footer-height + 1);
+}
+#footer-space {
+	height: @footer-height;
+	clear: both;
+}
+
 .container {
 	max-width: 1000px;
 	width: 90%;
@@ -34,10 +54,16 @@
 }
 
 #site-footer {
-	border-top: 1px solid #eee;
-	padding: 5px 0;
-	margin: 10px 0 0;
-	clear: both;
+	height: @footer-height;
+
+	.container {
+		border-top: 1px solid #eee;
+		padding: 10px 0;
+
+		p {
+			margin: 0;
+		}
+	}
 }
 
 @import "map.less";

@@ -19,40 +19,41 @@
 
 </head>
 <body>
-<div class="container">
-	<header id="site-header">
-		<h1><a href="{{ page|basePath }}">Naked Itchy Feet</a></h1>
-		<nav>
-			<ul class="nav nav-pills pull-right">
-				<li><a href="{{ page|basePath }}tips/"><i class="icon icon-bullhorn"></i> Tips</a></li>
-				<li><a href="{{ page|basePath }}photos/"><i class="icon icon-camera-retro"></i> Photos</a></li>
-				<li><a href="https://twitter.com/nakeditchyfeet" target="_blank"><i class="icon icon-twitter"></i> Twitter</a></li>
-				<li><a href="{{ page|basePath }}about-us/"><i class="icon icon-user"></i> About us</a></li>
-			</ul>
-		</nav>
-	</header>
-</div>
-<div id="map-panel" class="{% if mapIsOpen %}is-open{% endif %}">
-	<div id="map" class="{% if mapIsOpen %}home-map{% endif %}">
-		<p>Loading map</p>
+<div id="wrap">
+	<div class="container">
+		<header id="site-header">
+			<h1><a href="{{ page|basePath }}">Naked Itchy Feet</a></h1>
+			<nav>
+				<ul class="nav nav-pills pull-right">
+					<li><a href="{{ page|basePath }}tips/"><i class="icon icon-bullhorn"></i> Tips</a></li>
+					<li><a href="{{ page|basePath }}photos/"><i class="icon icon-camera-retro"></i> Photos</a></li>
+					<li><a href="https://twitter.com/nakeditchyfeet" target="_blank"><i class="icon icon-twitter"></i> Twitter</a></li>
+					<li><a href="{{ page|basePath }}about-us/"><i class="icon icon-user"></i> About us</a></li>
+				</ul>
+			</nav>
+		</header>
 	</div>
-	<div id="map-fullscreen">
-		<a href="#" class="btn btn-inverse"><i class="icon icon-fullscreen" title="Expand map"></i></a>
-	</div>
-	<div id="map-toggle">
-		<a href="#" class="btn"><i class="icon-map-marker"></i> <span>{% if mapIsOpen %}Hide{% else %}Show{% endif %} map</span></a>
-	</div>
-</div>
-<div class="container">
-{% block bodyContent %}{% endblock %}
-</div>
-<div class="container">
-	<footer id="site-footer">
-		<div>
-			<p class="muted">&copy; Kelvin Luck &amp; Priscila Santos 2013</p>
+	<div id="map-panel" class="{% if mapIsOpen %}is-open{% endif %}">
+		<div id="map" class="{% if mapIsOpen %}home-map{% endif %}">
+			<p>Loading map</p>
 		</div>
-	</footer>
+		<div id="map-fullscreen">
+			<a href="#" class="btn btn-inverse"><i class="icon icon-fullscreen" title="Expand map"></i></a>
+		</div>
+		<div id="map-toggle">
+			<a href="#" class="btn"><i class="icon-map-marker"></i> <span>{% if mapIsOpen %}Hide{% else %}Show{% endif %} map</span></a>
+		</div>
+	</div>
+	<div class="container">
+	{% block bodyContent %}{% endblock %}
+	</div>
+	<div id="footer-space"></div>
 </div>
+<footer id="site-footer">
+	<div class="container">
+		<p class="muted">&copy; Kelvin Luck &amp; Priscila Santos 2013</p>
+	</div>
+</footer>
 <script type="text/javascript" src="{{ page|basePath }}js/lib/jquery-1.9.1.min.js"></script>
 {% for path in options.jsLibs -%}
 <script src="{{ page|basePath }}{{ path }}"></script>
