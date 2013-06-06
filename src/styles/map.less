@@ -52,10 +52,16 @@
 		width: 90%;
 		margin: 0 auto;
 	    overflow: hidden;
-	    padding: 5px 0 0;
 
 		a {
+			padding: 5px 10px;
+			.border-radius(0 0 @borderRadiusLarge @borderRadiusLarge);
 			float: right;
+			border-top: none;
+
+			&:hover {
+				text-decoration: none;
+			}
 		}
 	}
 
