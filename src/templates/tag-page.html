@@ -2,7 +2,7 @@
 {% block bodyContent %}
   <h1>Posts tagged with "{{category}}"</h1>
   <ul>
-    {% for child in subpages %}
+    {% for child in subpages|published %}
       <li><a href="{{ page|linkTo(child) }}">{{ child.templateData.title }}</a></li>
     {% endfor %}
   </ul>

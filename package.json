@@ -18,6 +18,7 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
+    "underscore": "~1.4.4",
     "grunt": "~0.4.1",
     "grunt-haggerston": "git://github.com/haggerstonjs/grunt-haggerston.git",
     "grunt-contrib-clean": "~0.4.0",

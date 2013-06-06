@@ -2,7 +2,7 @@
 {% block bodyContent %}
 
 <ul class="article-list">
-	{% for child in pages|matches('prettyUrl','/blog/')|sort('date')|reverse %}
+	{% for child in pages|matches('prettyUrl','/blog/')|published|sort('date')|reverse %}
 		<li>
 			<a href="{{ page|linkTo(child) }}">
 				<img src="{{ page|relativePath(child) }}{{ child.templateData.headerImage }}" class="header-image" alt="{{ child.templateData.title }}" />

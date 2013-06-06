@@ -10,6 +10,7 @@
 
 module.exports = function(grunt) {
 
+  var _ = require('underscore');
   var target = grunt.option('target') || 'dev';
   var compress = target !== 'dev';
   var jsLibs = [
@@ -72,7 +73,17 @@ module.exports = function(grunt) {
     haggerston: {
       options: {
         minify: compress,
-        jsLibs: compress ? ['js/libs.min.js'] : jsLibs
+        jsLibs: compress ? ['js/libs.min.js'] : jsLibs,
+        swigFilters: {
+          published: function(pages) {
+            if (compress) {
+              return _(pages).filter(function(page) {
+                return !page.isDraft;
+              });
+            }
+            return pages;
+          }
+        }
       }
     },
     requirejs: {

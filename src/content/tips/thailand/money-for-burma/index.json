@@ -1,5 +1,6 @@
 {
   "template": "blog-post.html",
+  "isDraft": true,
   "templateData": {
     "title": "Getting money for Burma in Bangkok",
     "content": "money-for-burma.md",

@@ -1,5 +1,6 @@
 {
   "template": "blog-post.html",
+  "isDraft": true,
   "templateData": {
     "title": "How we planned our Round the World trip",
     "date": "2013-04-09",

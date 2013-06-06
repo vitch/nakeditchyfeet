@@ -7,7 +7,7 @@
 	{{ content|raw }}
 
 	<ul class="article-list">
-		{% for child in pages|matches('prettyUrl','/tips/.+')|sort('date')|reverse %}
+		{% for child in pages|matches('prettyUrl','/tips/.+')|published|sort('date')|reverse %}
 		<li>
 			<a href="{{ page|linkTo(child) }}">
 				{{ child.templateData.date|date('jS M Y') }} &ndash; {{ child.templateData.title }}
