@@ -25,9 +25,18 @@
 			<h1><a href="{{ page|basePath }}">Naked Itchy Feet</a></h1>
 			<nav>
 				<ul class="nav nav-pills pull-right">
-					<li><a href="{{ page|basePath }}tips/"><i class="icon icon-bullhorn"></i> Tips</a></li>
+					<li><a href="{{ page|basePath }}tips/"><i class="icon icon-bullhorn"></i> Travel tips</a></li>
 					<li><a href="{{ page|basePath }}photos/"><i class="icon icon-camera-retro"></i> Photos</a></li>
-					<li><a href="https://twitter.com/nakeditchyfeet" target="_blank"><i class="icon icon-twitter"></i> Twitter</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<i class="icon icon-location-arrow"></i> Follow us <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+							<li><a tabindex="-1" href="https://twitter.com/nakeditchyfeet" target="_blank"><i class="icon icon-twitter"></i> Twitter</a></li>
+							<li><a tabindex="-1" href="{{ page|basePath }}/feed"><i class="icon icon-rss"></i> RSS</a></li>
+						</ul>
+
+					</li>
 					<li><a href="{{ page|basePath }}about-us/"><i class="icon icon-user"></i> About us</a></li>
 				</ul>
 			</nav>
