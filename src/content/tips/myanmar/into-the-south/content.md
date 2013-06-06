@@ -1,4 +1,4 @@
-On our [trip to the south or Myanmar](/blog/2013-05-15/burma-into-the-south/) we had to do quite a bit of investigation into the available options for accomodation and travel. This is the difficulty of travelling in an area before it's covered in the guidebook! The below is what we found out - hopefully it is useful to others.
+On our [trip to the south of Myanmar](/blog/2013-05-15/burma-into-the-south/) we had to do quite a bit of investigation into the available options for accomodation and travel. This is the difficulty of travelling in an area before it's covered in the guidebook! The below is what we found out - hopefully it is useful to others.
 
 ##Dawei
 
@@ -43,9 +43,9 @@ Booking flights in Dawei
 ###Accommodation:
 
  * **Dolphin guesthouse**  
-   Not in the centre but nice big rooms with air con and very clean – $40
+   Not in the centre but nice big rooms with air con and very clean – $40.
  * **Sun Guesthouse**  
-   Closer to the centre but expensive – $35 single/$50 double. Has Wifi.
+   Closer to the centre but expensive – $35 single/$50 double. Has Wifi. Reception staff really really didn't seem to want us to check in and changed the price repeatedly while we looked around.
  * **Kyai Pyan Hotel**  
    Dirty and overpriced with air con – $40. Good breakfast(included). Wifi opposite but too slow.
 
@@ -65,6 +65,6 @@ sakuramyeik@gmail.com
 
 | From | To | Type | Depart | Arrive | Price |
 | ---- | -- | ---- | ------ | ------ | ----- |
-| Dawei | Myeik | Bus | 5am | 3pm | 6,000 |
+| Dawei | Myeik | Bus | 5am | 3pm | 6,000 Kyat |
 | Dawei | Myeik | Speedboat | ? | ? (+4 hours) | 20,000 Kyat |
 | Myeik | Kawthoung | Speedboat | ? | ? (+4 hours) | 20,000 Kyat |
