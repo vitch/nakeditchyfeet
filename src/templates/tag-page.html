@@ -3,7 +3,10 @@
   <h1>Posts tagged with "{{category}}"</h1>
   <ul>
     {% for child in subpages|published %}
-      <li><a href="{{ page|linkTo(child) }}">{{ child.templateData.title }}</a></li>
+      <li>
+		  {% if child.isDraft -%}<span class="label label-info">Draft</span> {% endif %}
+		  <a href="{{ page|linkTo(child) }}">{{ child.templateData.title }}</a>
+	  </li>
     {% endfor %}
   </ul>
 {% endblock %}

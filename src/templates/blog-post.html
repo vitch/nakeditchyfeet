@@ -1,6 +1,9 @@
 {% extends 'wrapper.html' %}
 {% block bodyContent %}
 <article>
+	{% if page.isDraft -%}
+	<div class="alert alert-block alert-error" style="margin-top: 20px;"><strong>Warning</strong>: Draft post - will not be visible on live website</div>
+	{%- endif %}
 	<header>
 		{% if tags -%}
 		<ul class="inline tags">
