@@ -20,6 +20,8 @@ define(
           this.isOpen = this.$el.is('.is-open');
           this.isFullscreen = false;
 
+          this.fullscreenToggle = this.$('#map-fullscreen a');
+
           if (this.isOpen) {
             this.initMap();
           }
@@ -71,6 +73,9 @@ define(
 //              "webpage": "http://tiles.mapbox.com/vitch/map/map-knaif0fn"
 //            }
 //          ).addTo(map);
+
+          this.updateFullscreenTooltip();
+
           if (this.mapItems.length) {
             this.onMapItemsReady();
           }
@@ -143,10 +148,19 @@ define(
           return false;
         },
         onFullscreenToggle: function(e) {
+          this.fullscreenToggle.tooltip('destroy');
           this.isFullscreen = !this.isFullscreen;
+          this.updateFullscreenTooltip();
           this.$('#map-fullscreen i').removeClass('icon-fullscreen icon-resize-small').addClass(this.isFullscreen ? 'icon-resize-small' : 'icon-fullscreen')
           this.$el[this.isFullscreen ? 'addClass' : 'removeClass']('is-fullscreen');
           return false;
+        },
+        updateFullscreenTooltip: function() {
+          this.fullscreenToggle.tooltip({
+            title: this.isFullscreen ? 'Shrink map' : 'View map fullscreen',
+            container: 'body',
+            placement: 'bottom'
+          });
         }
       }
     );
