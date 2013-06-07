@@ -11,6 +11,8 @@
 module.exports = function(grunt) {
 
   var _ = require('underscore');
+  var cheerio = require('cheerio');
+
   var target = grunt.option('target') || 'dev';
   var compress = target !== 'dev';
   var jsLibs = [
@@ -83,6 +85,13 @@ module.exports = function(grunt) {
               });
             }
             return pages;
+          },
+          intro: function(page) {
+            if (page.intro) {
+              return page.intro;
+            }
+            var $ = cheerio.load(page.renderedTemplate);
+            return $('article>p').first().html();
           }
         }
       }
@@ -114,7 +123,8 @@ module.exports = function(grunt) {
         files: [
           'src/content/**/*.json',
           'src/content/**/*.md',
-          'src/templates/**/*.html'
+          'src/templates/**/*.html',
+          'src/templates/**/*.xml'
         ],
         tasks: 'build'
       },

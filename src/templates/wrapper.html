@@ -10,6 +10,8 @@
 
 	<meta name="Description" content="{{ page.templateData.metaDescription }}" />
 
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ page|basePath }}feed.rss" />
+
 	<!-- Styles -->
 	<link href='{{ page|basePath }}leaflet/leaflet.css' rel='stylesheet' type='text/css'>
 	<link href='{{ page|basePath }}styles/styles.css' rel='stylesheet' type='text/css'>
@@ -41,7 +43,7 @@
 						</a>
 						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
 							<li><a tabindex="-1" href="https://twitter.com/nakeditchyfeet" target="_blank"><i class="icon icon-twitter"></i> Twitter</a></li>
-							<li><a tabindex="-1" href="{{ page|basePath }}/feed"><i class="icon icon-rss"></i> RSS</a></li>
+							<li><a tabindex="-1" href="{{ page|basePath }}feed.rss"><i class="icon icon-rss"></i> RSS</a></li>
 						</ul>
 
 					</li>

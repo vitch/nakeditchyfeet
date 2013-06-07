@@ -1,0 +1,6 @@
+{
+  "template": "feed.xml",
+  "extension": ".rss",
+  "templateData": {
+  }
+}
