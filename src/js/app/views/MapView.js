@@ -152,7 +152,11 @@ define(
           this.isFullscreen = !this.isFullscreen;
           this.updateFullscreenTooltip();
           this.$('#map-fullscreen i').removeClass('icon-fullscreen icon-resize-small').addClass(this.isFullscreen ? 'icon-resize-small' : 'icon-fullscreen')
-          this.$el[this.isFullscreen ? 'addClass' : 'removeClass']('is-fullscreen');
+          this.$el.removeClass('is-animated');
+          var el = this.$el[this.isFullscreen ? 'addClass' : 'removeClass']('is-fullscreen');
+          _.defer(function() {
+            el.addClass('is-animated');
+          });
           return false;
         },
         updateFullscreenTooltip: function() {
