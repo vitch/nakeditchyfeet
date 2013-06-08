@@ -1,0 +1,10 @@
+{
+  "template": "blog-post.html",
+  "templateData": {
+    "title": "Guidebooks - a modern take",
+    "content": "guidebooks.md",
+    "date": "2013-04-09",
+    "category": "Planning",
+    "tags": ["planning", "information", "guides"]
+  }
+}
