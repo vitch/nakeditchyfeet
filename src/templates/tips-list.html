@@ -7,7 +7,7 @@
 	{{ content|raw }}
 
 	<ul class="">
-		{% for child in pages|matches('prettyUrl','/tips/.+')|published|sort('date')|reverse %}
+		{% for child in pages|matches('prettyUrl','/travel-tips/.+')|published|sort('date')|reverse %}
 		<li>
 			{% if child.isDraft -%}<span class="label label-info">Draft</span> {% endif %}
 			<a href="{{ page|linkTo(child) }}">

@@ -26,4 +26,4 @@ We did some more asking and found out that it was possible to go even further so
 
 After crossing a river as if the bus was some sort of all terrain vehicle and a short ferry across a large river we got to Myeik. We quickly found out that all accommodation was very expensive, and we weren't allowed on any boats, so we had a look around, visited the pagoda on the hill for great views over the city and booked a flight back to Yangon for the following day. Myeik failed to impress, for its walking-dead dogs and its stinky river front. Maybe this will change when the government allows foreigners to explore the islands, but for the time being venturing south of Dawei is only really worth for the lovely scenery on the way, if you can spare $140 for the flight back to Yangon.
 
-If you fancy heading south check out the practical information we found [here](/tips/myanmar/into-the-south/).
+If you fancy heading south check out the practical information we found [here](/travel-tips/myanmar/into-the-south/).
