@@ -1,0 +1,10 @@
+{
+  "template": "blog-post.html",
+  "templateData": {
+    "title": "Travel Money",
+    "content": "travel-money.md",
+    "date": "2013-06-08",
+    "category": "Planning",
+    "tags": ["planning", "money"]
+  }
+}
