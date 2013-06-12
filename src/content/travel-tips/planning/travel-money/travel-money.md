@@ -4,14 +4,14 @@ The days when taking money abroad with you meant travellers cheques or wads of c
 
 In our experience the best and easiest way to get foreign currency is straight from an ATM in the country you are visiting (yes - [even Myanmar](/travel-tips/myanmar/money-in-myanmar/)). This way you avoid the various fees and commissions that money changers will try to charge you. Be aware though that not all credit/ debit cards are equal in this respect - in fact, most will try to charge you fees and commissions of their own (either explictly or via a "loaded" exchange rate).
 
-We followed [the advice](#) of the ever-reliable [Money Saving Expert](http://www.moneysavingexpert.com) and got a [Halifax Clarity credit card](#). Not only does this give you a proper exchange rate but they also don't charge any fees on their side. There is however a fee from the bank whose ATM you use which varies by country (and sometimes bank within a country):
+We followed [the advice](http://www.moneysavingexpert.com/travel/cheap-travel-money) of the ever-reliable [Money Saving Expert](http://www.moneysavingexpert.com) and got a [Halifax Clarity credit card](http://www.halifax.co.uk/creditcards/Landing/clarity-card-all/). Not only does this give you a proper exchange rate but they also don't charge any fees on their side. There is however a fee from the bank whose ATM you use which varies by country (and sometimes bank within a country):
 
 | Country | Fee | Comments |
 | ------- | --- | -------- |
 | Indonesia | 0 | There is often a max withdrawal of INR 1,250,000 (approx £85) although we have been able to withdraw that twice in a row from the same machine |
 | Myanmar | 5000 MMK (approx £3.60) | [More info on ATMs in Myanmar](/travel-tips/myanmar/money-in-myanmar/) |
 | Singapore | 0 | We only used one ATM in the airport so this may vary |
-| Thailand | 150-180 THB (approx £3.50-£4) | [Aeon Bank](#) ATMs don't charge a fee but can be hard to find. We did manage to find one in the MBK Center (a mall in Siam Square, Bangkok) |
+| Thailand | 150-180 THB (approx £3.50-£4) | [Aeon Bank](http://www.aeon.co.th/en/customerservices_payment_atm.php) ATMs don't charge a fee but can be hard to find. We did manage to find one in the MBK Center (a mall in Siam Square, Bangkok) |
 
 Because of these fees it makes sense to withdraw bigger wadges of cash less frequently (and not £20 a time like you might at home). Although of course you don't want to carry too much incase it gets lost or stolen.
 
@@ -19,7 +19,7 @@ Note that Halifax charges interest on cash withdrawals (but not purchases) made 
 
 ## Plan B
 
-Of course we are hoping it will won't be necessary but we have also planned for what we will do if our main card gets lost or stolen. We have some backup [travel money cards](#) from the Post Office. These are prepaid debit cards - you can load them with money online or in the post office and then use them like normal debit cards. We have left the details back at home so in an emergency someone can load cash onto them for us. And we carry them in different places to the main card.
+Of course we are hoping it will won't be necessary but we have also planned for what we will do if our main card gets lost or stolen. We have some backup [travel money cards](http://www.postoffice.co.uk/travel-money-card) from the Post Office. These are prepaid debit cards - you can load them with money online or in the post office and then use them like normal debit cards. We have left the details back at home so in an emergency someone can load cash onto them for us. And we carry them in different places to the main card.
 
 ## Plan C
 

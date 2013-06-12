@@ -21,14 +21,14 @@ Note that some hotels still only accept USD as payment for rooms (and rates are 
 
 ##ATMs
 
-[CB Bank](#) has ATMs around the country and we used several of them without any problems. Convenient locations in Yangon include:
+[CB Bank](http://www.cbbankmm.com) has ATMs around the country and we used several of them without any problems. Convenient locations in Yangon include:
 
  * At the top of Shwedagon Paya!
  * 5 minutes down the road from Motherland 2
  * Half a block to the east of Sule Paya
  * In the international and domestic terminals of the airport
 
-You can find a complete list of locations with their online [branch finder](#). The only town we couldn't find one in was Myiek.
+You can find a complete list of locations with their online [branch finder](http://www.cbbankmm.com/branch.php). The only town we couldn't find one in was Myiek.
 
 Note that sometimes the ATM is inside the bank (this happened to us in Mawlamyine - it was still on a shipping pallet so maybe it just hadn't been installed properly yet). In these cases you will need to go when the bank is open.
 
