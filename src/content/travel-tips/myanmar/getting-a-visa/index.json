@@ -1,0 +1,11 @@
+{
+  "template": "blog-post.html",
+  "isDraft": true,
+  "templateData": {
+    "title": "Getting a Myanmar visa in Bangkok",
+    "content": "myanmar-visa.md",
+    "date": "2013-05-06",
+    "category": "Myanmar",
+    "tags": ["myanmar", "burma", "planning", "visa", "immigration"]
+  }
+}
