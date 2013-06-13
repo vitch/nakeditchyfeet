@@ -1,6 +1,6 @@
 {
   "template": "blog-post.html",
-  "isDraft": true,
+  "markdownPreprocessWithSwig": true,
   "templateData": {
     "title": "Getting a Myanmar visa in Bangkok",
     "content": "myanmar-visa.md",
