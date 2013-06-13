@@ -1,0 +1,7 @@
+{
+  "template": "blog-post.html",
+  "templateData": {
+    "title": "Follow Us",
+    "content": "follow-us.md"
+  }
+}

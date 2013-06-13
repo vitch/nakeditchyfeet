@@ -21,8 +21,7 @@ module.exports = function(grunt) {
     'js/lib/leaflet-src.js',
     'js/lib/leaflet.markercluster-src.js',
     'js/lib/leaflet.awesome-markers.js',
-    'js/lib/bootstrap-tooltip.js',
-    'js/lib/bootstrap-dropdown.js'
+    'js/lib/bootstrap-tooltip.js'
   ];
 
 
