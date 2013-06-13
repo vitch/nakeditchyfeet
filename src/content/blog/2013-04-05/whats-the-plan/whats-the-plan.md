@@ -1,4 +1,4 @@
-What is our plan.There isn't one really...but thats how travelling is best done, right? Just wander around and see beautiful places, weird cultures, and go where the wind blows us. We have a rough itinerary booked consisting of a few intercontinental flights - and we can change the dates of those so nothing is set in stone.
+What is our plan? There isn't one really...but thats how travelling is best done, right? Just wander around and see beautiful places, weird cultures, and go where the wind blows us. We have a rough itinerary booked consisting of a few intercontinental flights - and we can change the dates of those so nothing is set in stone.
 
 We are starting in Thailand and will hopefully end up in Brazil in about 10 months time, just in time for Carnival. On the way there of course is the whole of South East Asia where we plan to spend three months. So far we have visited Thailand, Myanmar and Indonesia. Ahead is Australia, Fiji, New Zealand, Hawaii, LA and Bogota which is our gateway into South America. 
 

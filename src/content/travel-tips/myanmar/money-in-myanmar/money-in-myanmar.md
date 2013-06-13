@@ -34,7 +34,7 @@ Note that sometimes the ATM is inside the bank (this happened to us in Mawlamyin
 
 All of the ATMs add a fee of 5000 MMK (about USD 5.60) for international withdrawals so it makes sense to withdraw large chunks of money infrequently rather than bit by bit as you go along.
 
-The actual conversion rate you get will depend on your credit/ debit card. On our card ([more info for UK residents](/blog/2013-04-09/how-we-planned-our-rtw-trip)) we got between 1,382 and 1389 MMK per <abbr class="initialism" title="British Pound">GBP</abbr> which is close to the [official exchange rate on Google](https://www.google.co.uk/search?q=1+gbp+in+mmk) and definitely better than we would have got by converting GBP > USD > MMK (or GBP > THB > USD > MMK which is what we would have needed to do in Bangkok).
+The actual conversion rate you get will depend on your credit/ debit card. On our card ([more info for UK residents](/travel-tips/planning/travel-money/)) we got between 1,382 and 1,389 MMK per <abbr class="initialism" title="British Pound">GBP</abbr> which is close to the [official exchange rate on Google](https://www.google.co.uk/search?q=1+gbp+in+mmk) and definitely better than we would have got by converting GBP > USD > MMK (or GBP > THB > USD > MMK which is what we would have needed to do in Bangkok).
 
 ##Leftover Kyats
 
