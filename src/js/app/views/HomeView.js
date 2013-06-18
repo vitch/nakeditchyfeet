@@ -19,7 +19,12 @@ define(
               return false;
             }
           });
-          window.scrollTo(0, this.$('#now-marker').position().top - $('#when-marker').position().top - 16);
+          var destPosition = this.$('#now-marker').position().top - $('#when-marker').position().top - 16;
+          window.scrollTo(0, destPosition);
+          // TODO: Cancel this listener if the user chooses to scroll manually in the meantime
+          $(window).on('load', function() {
+            window.scrollTo(0, destPosition);
+          });
         }
       }
     );
