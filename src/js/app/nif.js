@@ -1,17 +1,13 @@
 define(
   [
-    'views/MapView',
-    'collections/MapItemsCollection'
+    'views/HomeView'
   ],
   function (
-    MapView,
-    MapItemsCollection
+    HomeView
   ) {
     'use strict';
     $(function() {
-      var mapView = new MapView({
-        mapItems: new MapItemsCollection()
-      });
+      var homeView = new HomeView();
     });
   }
 );

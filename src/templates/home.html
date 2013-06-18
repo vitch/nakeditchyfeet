@@ -6,7 +6,7 @@
 		<li>
 			<i class="icon icon-{{ child.icon }}"> </i>
 			<div class="item">
-				<time>{{ child.date|date('jS M Y') }}</time>
+				<time datetime="{{ child.date|date('Y-m-d') }}">{{ child.date|date('jS M Y') }}</time>
 				{% if child.target %}<a href="{{ page|linkTo(child.target) }}">{% endif %}
 					<h1>
 						{% if child.target.isDraft -%}<span>[Draft]</span> {% endif %}
