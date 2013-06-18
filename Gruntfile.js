@@ -100,7 +100,13 @@ module.exports = function(grunt) {
                   image: page.templateData.headerImage
                 }
               });
-            return blogs.concat(tips).sort(function(a,b) {
+
+            var events = _(grunt.file.readJSON('src/data/events.json')).map(function(item) {
+              item.date = new Date(item.date);
+              return item;
+            });
+
+            return blogs.concat(tips).concat(events).sort(function(a,b) {
               return b.date.getTime() - a.date.getTime();
             });
           },

@@ -10,7 +10,7 @@
 				{% if child.target %}<a href="{{ page|linkTo(child.target) }}">{% endif %}
 					<h1>
 						{% if child.target.isDraft -%}<span>[Draft]</span> {% endif %}
-						{{ child.label }}
+						{{ child.label|raw }}
 					</h1>
 				{% if child.target %}</a>{% endif %}
 
