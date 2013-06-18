@@ -1,7 +1,0 @@
-{
-  "template": "tips-list.html",
-  "templateData": {
-    "title": "Travel Tips",
-    "content": "intro.md"
-  }
-}
