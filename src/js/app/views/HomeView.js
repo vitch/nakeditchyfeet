@@ -19,8 +19,7 @@ define(
               return false;
             }
           });
-
-          window.scrollTo(0, this.$('#now-marker').position().top - 200);
+          window.scrollTo(0, this.$('#now-marker').position().top - $('#when-marker').position().top - 16);
         }
       }
     );
