@@ -1,56 +1,60 @@
 
-// Core variables and mixins
-@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "variables.less";
 @import "mixins.less";
-
-	// CSS Reset
 @import "reset.less";
+@import "font-awesome";
 
-	// Grid system and page structure
-@import "scaffolding.less";
-//@import "grid.less";
-//@import "layouts.less";
+body {
+	font-family: Georgia, Times;
+}
 
-	// Base CSS
-@import "type.less";
-//@import "code.less";
-@import "forms.less";
-@import "tables.less";
+#site-header {
+	position: fixed;
+	width: 210px;
+	padding: 80px 20px 0 40px;
+	.box-sizing(border-box);
 
-	// Components: common
-@import "font-awesome.less"; //@import "sprites.less";
-//@import "dropdowns.less";
-@import "wells.less";
-@import "component-animations.less";
-//@import "close.less";
+	h1 {
+		font-size: 27px;
+		font-weight: normal;
 
-	// Components: Buttons & Alerts
-@import "buttons.less";
-@import "button-groups.less";
-@import "alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+		a {
+			text-decoration: none;
+			color: @headingsColor;
 
-	// Components: Nav
-@import "navs.less";
-@import "navbar.less";
-@import "breadcrumbs.less";
-@import "pagination.less";
-@import "pager.less";
+			&:hover {
+				color: @linkColorHover;
+			}
+		}
+	}
 
-	// Components: Popovers
-@import "modals.less";
-@import "tooltip.less";
-@import "popovers.less";
+	nav {
+		margin-top: 80px;
 
-	// Components: Misc
-@import "thumbnails.less";
-@import "media.less";
-@import "labels-badges.less";
-@import "progress-bars.less";
-@import "accordion.less";
-@import "carousel.less";
-@import "hero-unit.less";
+		ul {
+			list-style: none;
+			padding: 0;
 
-	// Utility classes
-@import "utilities.less"; // Has to be last to override when necessary
+			a {
+				text-decoration: none;
+				color: @headingsColor;
+				font-size: 21px;
 
-@import "site-specific.less";
+				&:hover {
+					color: @linkColorHover;
+				}
+			}
+		}
+	}
+}
+#site-content {
+	margin: 0 0 0 210px;
+}
+
+#home-list {
+	list-style: none;
+	padding: 0;
+	li {
+		margin: 0 0 25px;
+	}
+}

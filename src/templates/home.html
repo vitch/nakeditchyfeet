@@ -1,7 +1,7 @@
 {% extends 'wrapper.html' %}
 {% block bodyContent %}
 
-<ul class="article-list">
+<ul id="home-list">
 	{% for child in pages|matches('prettyUrl','/blog/')|published|sort('date')|reverse %}
 		<li>
 			<a href="{{ page|linkTo(child) }}">
