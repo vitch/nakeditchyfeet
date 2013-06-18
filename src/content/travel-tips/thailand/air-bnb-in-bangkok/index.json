@@ -1,0 +1,11 @@
+{
+  "template": "blog-post.html",
+  "isDraft": true,
+  "templateData": {
+    "title": "Air BnB in Bangkok",
+    "content": "air-bnb-in-bangkok.md",
+    "date": "2013-05-20",
+    "category": "Thailand",
+    "tags": ["thailand", "bangkok", "accommodation", "apartment", "airbnb"]
+  }
+}
