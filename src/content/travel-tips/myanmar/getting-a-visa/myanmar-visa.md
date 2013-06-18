@@ -1,6 +1,6 @@
 Our decision to [visit Myanmar](/blog/2013-05-15/burma-into-the-south/) was a bit last minute and we were already in Thailand so we needed to get our hands on a Myanmar visa whilst in Bangkok. This turned out to be pretty easy but we did have to do a bit of searching around to find out how to get to the embassy and what we needed to bring. Hopefully the information below will help others out...
 
-The {{ "Myanmar Embassy"|geoLink(0,0)|raw }} is in the Silom district of Bangkok (just down the road from the [robot building](#)). It is between two stations on the MRT (skytrain): Chong Nonsi (S3) and Surasak (S4) - Surasak is marginally closer. The embassy is open on weekdays from 11:00 - 13:00 for applying and dropping off your passport and from 15:00 - 17:00 for collecting your passport with it's shiny new visa.
+The {{ "Myanmar Embassy"|geoLink(13.72077,100.52449)|raw }} is in the Silom district of Bangkok (just down the road from the [robot building](http://www.flickr.com/photos/vitch/8709491872/in/set-72157633405886159)). It is between two stations on the MRT (skytrain): Chong Nonsi (S3) and Surasak (S5) - Surasak is marginally closer. The embassy is open on weekdays from 11:00 - 13:00 for applying and dropping off your passport and from 15:00 - 17:00 for collecting your passport with it's shiny new visa.
 
 To submit your visa application you need 5 things:
 
@@ -18,8 +18,8 @@ To submit your visa application you need 5 things:
 
 We arrived without the photocopy of our passports or the passport photos but luckily were able to find solutions within a couple of blocks of the embassy:
 
- * {{ "Small photo shop"|geoLink(0,0)|raw }} - These guys were really friendly and were able to very quickly take photos and print us 12 passport photos (6 each) for 240 THB (now we have some spares for next time!)
- * {{ "CopyX"|geoLink(0,0)|raw }} - Upstairs in this bookshop/ bank there is a copy shop who made copies of our passports for next to nothing.
+ * {{ "Small photo shop"|geoLink(13.71794,100.52689)|raw }} - These guys were really friendly and were able to very quickly take photos and print us 12 passport photos (6 each) for 240 THB (now we have some spares for next time!)
+ * {{ "Double A Book Tower"|geoLink(13.72094,100.52608)|raw }} - Upstairs in this bookshop/ bank there is a copy shop who made copies of our passports for next to nothing.
 
 On the application form you need to include information about your employment in recent times. We heard stories of people who had jobs related to journalism or photography being refused visas.
 
