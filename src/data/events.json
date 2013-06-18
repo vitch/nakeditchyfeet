@@ -2,17 +2,9 @@
   {
     "date": "2013-04-16",
     "icon": "plane",
-    "label": "LHR &ndash; MCT",
+    "label": "LHR &ndash; MCT &ndash; BKK",
     "from": "LHR",
     "to": "MCT",
-    "airline": "Oman Air"
-  },
-  {
-    "date": "2013-04-17",
-    "icon": "plane",
-    "label": "MCT &ndash; BKK",
-    "from": "MCT",
-    "to": "BKK",
     "airline": "Oman Air"
   },
   {
@@ -49,7 +41,7 @@
     "label": "Uploaded a new Photoset: <a href='http://www.flickr.com/photos/vitch/sets/72157633847610282/' target='_blank'>Mawlamyine</a>"
   },
   {
-    "date": "2013-05-20",
+    "date": "2013-05-20 10:00:00",
     "icon": "plane",
     "label": "MDL &ndash; DMK",
     "from": "MDL",
@@ -57,7 +49,7 @@
     "airline": "Air Asia"
   },
   {
-    "date": "2013-05-20",
+    "date": "2013-05-20 16:00:00",
     "icon": "plane",
     "label": "BKK &ndash; SIN",
     "from": "BKK",
@@ -67,15 +59,7 @@
   {
     "date": "2013-05-21",
     "icon": "plane",
-    "label": "SIN &ndash; CGK",
-    "from": "SIN",
-    "to": "CGK",
-    "airline": "Lion Air"
-  },
-  {
-    "date": "2013-05-22",
-    "icon": "plane",
-    "label": "CGK &ndash; MDC",
+    "label": "SIN &ndash; CGK &ndash; MDC",
     "from": "CGK",
     "to": "MDC",
     "airline": "Lion Air"
