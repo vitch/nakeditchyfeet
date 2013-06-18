@@ -2,15 +2,22 @@
 {% block bodyContent %}
 
 <ul id="home-list">
-	{% for child in pages|matches('prettyUrl','/blog/')|published|sort('date')|reverse %}
+	{% for child in pages|published|intersperseEvents %}
 		<li>
-			<a href="{{ page|linkTo(child) }}">
-				<img src="{{ page|relativePath(child) }}{{ child.templateData.headerImage }}" class="header-image" alt="{{ child.templateData.title }}" />
-				<span>
-					{% if child.isDraft -%}<span class="label label-info">Draft</span> {% endif %}
-					{{ child.templateData.date|date('jS M Y') }} &ndash; {{ child.templateData.title }}
-				</span>
-			</a>
+			<i class="icon icon-{{ child.icon }}"> </i>
+			<div class="item">
+				<time>{{ child.date|date('jS M Y') }}</time>
+				{% if child.target %}<a href="{{ page|linkTo(child.target) }}">{% endif %}
+					<h1>
+						{% if child.target.isDraft -%}<span>[Draft]</span> {% endif %}
+						{{ child.label }}
+					</h1>
+				{% if child.target %}</a>{% endif %}
+
+				{% if child.image -%}
+					<img src="{{ page|relativePath(child.target) }}{{ child.image }}" class="header-image" alt="{{ child.label }}">
+				{% endif %}
+			</div>
 		</li>
 	{% endfor %}
 </ul>

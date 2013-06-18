@@ -77,6 +77,33 @@ module.exports = function(grunt) {
         minify: compress,
         jsLibs: compress ? ['js/libs.min.js'] : jsLibs,
         swigFilters: {
+          intersperseEvents: function(pages) {
+            var blogs = _(pages).filter(function(page) {
+              return page.prettyUrl.indexOf('/blog/') === 0;
+            }).map(function(page) {
+              return {
+                icon: 'book',
+                target: page,
+                date: new Date(page.templateData.date),
+                label: page.templateData.title,
+                image: page.templateData.headerImage
+              }
+            });
+            var tips = _(pages).filter(function(page) {
+              return page.prettyUrl.match(/\/travel-tips\/.+/);
+            }).map(function(page) {
+                return {
+                  icon: 'eye-open',
+                  target: page,
+                  date: new Date(page.templateData.date),
+                  label: page.templateData.title,
+                  image: page.templateData.headerImage
+                }
+              });
+            return blogs.concat(tips).sort(function(a,b) {
+              return b.date.getTime() - a.date.getTime();
+            });
+          },
           published: function(pages) {
             if (compress) {
               return _(pages).filter(function(page) {
