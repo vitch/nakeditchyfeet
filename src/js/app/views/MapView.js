@@ -1,7 +1,8 @@
 define(
   [
+    'views/ListFilterView'
   ],
-  function () {
+  function (ListFilterView) {
     'use strict';
 
     return Backbone.View.extend(
@@ -11,7 +12,7 @@ define(
         },
         initialize: function (options) {
           if (this.$el.length) {
-            _.bindAll(this, 'sizeMap', 'onMapItemsReady', 'initTooltips', 'sizeMap');
+            _.bindAll(this, 'sizeMap', 'onMapItemsReady', 'initTooltips', 'sizeMap', 'onFilterChange');
 
             this.sizeMap();
             this.mapItems = options.mapItems;
@@ -97,6 +98,18 @@ define(
           $(window).on('resize', _.throttle(this.sizeMap, 200));
 
           this.initTooltips();
+          this.initFilters();
+        },
+        initFilters: function() {
+          this.listFilterView = new ListFilterView();
+          this.listFilterView.on('filterChange', this.onFilterChange);
+        },
+        onFilterChange: function(filter) {
+          if (filter) {
+            console.log('Filters changed to', filter);
+          } else {
+            console.log('Filters reset');
+          }
         },
         sizeMap: function() {
           this.$el.height($(window).innerHeight() - 20);
