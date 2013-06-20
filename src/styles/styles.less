@@ -14,7 +14,19 @@ h1,h2,h3,h4,h5 {
 	font-weight: normal;
 }
 
-blockquote {
+article>p:first-of-type {
+	margin-bottom: @baseLineHeight;
+	font-size: @baseFontSize * 1.5;
+	font-weight: 200;
+	line-height: @baseLineHeight * 1.5;
+}
+
+article table {
+	.table();
+	.table-striped();
+}
+
+article blockquote {
 	position: relative;
 	margin: 0 0 0 80px;
 
@@ -153,9 +165,4 @@ blockquote {
 			margin: 0 0 10px;
 		}
 	}
-}
-
-article table {
-	.table();
-	.table-striped();
 }
