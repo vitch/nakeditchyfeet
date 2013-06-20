@@ -77,38 +77,38 @@ module.exports = function(grunt) {
         minify: compress,
         jsLibs: compress ? ['js/libs.min.js'] : jsLibs,
         swigFilters: {
-          intersperseEvents: function(pages) {
+          listPageIconify: function(pages) {
             var blogs = _(pages).filter(function(page) {
               return page.prettyUrl.indexOf('/blog/') === 0;
             }).map(function(page) {
-              return {
-                icon: 'book',
-                target: page,
-                date: new Date(page.templateData.date),
-                label: page.templateData.title,
-                image: page.templateData.headerImage
-              }
-            });
-            var tips = _(pages).filter(function(page) {
-              return page.prettyUrl.match(/\/travel-tips\/.+/);
-            }).map(function(page) {
                 return {
-                  icon: 'eye-open',
+                  icon: 'book',
                   target: page,
                   date: new Date(page.templateData.date),
                   label: page.templateData.title,
                   image: page.templateData.headerImage
                 }
               });
+            var tips = _(pages).filter(function(page) {
+              return page.prettyUrl.match(/\/travel-tips\/.+/);
+            }).map(function(page) {
+                return {
+                  icon: 'info-sign',
+                  target: page,
+                  date: new Date(page.templateData.date),
+                  label: page.templateData.title
+                }
+              });
+            return blogs.concat(tips);
 
+          },
+          intersperseEvents: function(pages) {
             var events = _(grunt.file.readJSON('src/data/events.json')).map(function(item) {
               item.date = new Date(item.date);
               return item;
             });
 
-            return blogs.concat(tips).concat(events).sort(function(a,b) {
-              return b.date.getTime() - a.date.getTime();
-            });
+            return pages.concat(events);
           },
           published: function(pages) {
             if (compress) {

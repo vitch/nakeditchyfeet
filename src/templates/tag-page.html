@@ -1,12 +1,24 @@
 {% extends 'wrapper.html' %}
 {% block bodyContent %}
-  <h1>Posts tagged with "{{category}}"</h1>
-  <ul>
-    {% for child in subpages|published %}
-      <li>
-		  {% if child.isDraft -%}<span class="label label-info">Draft</span> {% endif %}
-		  <a href="{{ page|linkTo(child) }}">{{ child.templateData.title }}</a>
-	  </li>
-    {% endfor %}
-  </ul>
+	<h1>Posts tagged with "{{category}}"</h1>
+	<ul id="home-list">
+		{% for child in subpages|published|listPageIconify|sort('date')|reverse %}
+		<li>
+			<i class="icon icon-{{ child.icon }}"> </i>
+			<div class="item">
+				<time datetime="{{ child.date|date('Y-m-d') }}">{{ child.date|date('jS M Y') }}</time>
+				{% if child.target %}<a href="{{ page|linkTo(child.target) }}">{% endif %}
+				<h1>
+					{% if child.target.isDraft -%}<span>[Draft]</span> {% endif %}
+					{{ child.label|raw }}
+				</h1>
+				{% if child.target %}</a>{% endif %}
+
+				{% if child.image -%}
+				<img src="{{ page|relativePath(child.target) }}{{ child.image }}" class="header-image" alt="{{ child.label }}">
+				{% endif %}
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
 {% endblock %}

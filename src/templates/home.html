@@ -2,7 +2,7 @@
 {% block bodyContent %}
 
 <ul id="home-list">
-	{% for child in pages|published|intersperseEvents %}
+	{% for child in pages|published|listPageIconify|intersperseEvents|sort('date')|reverse %}
 		<li>
 			<i class="icon icon-{{ child.icon }}"> </i>
 			<div class="item">
