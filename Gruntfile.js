@@ -121,7 +121,8 @@ module.exports = function(grunt) {
                   target: page,
                   date: new Date(page.templateData.date),
                   label: page.templateData.title,
-                  image: page.templateData.headerImage
+                  image: page.templateData.headerImage,
+                  hasLink: true
                 }
               });
             var tips = _(pages).filter(function(page) {
@@ -132,7 +133,8 @@ module.exports = function(grunt) {
                   icon: 'info-sign',
                   target: page,
                   date: new Date(page.templateData.date),
-                  label: page.templateData.title
+                  label: page.templateData.title,
+                  hasLink: true
                 }
               });
             return blogs.concat(tips);
@@ -141,6 +143,7 @@ module.exports = function(grunt) {
           intersperseEvents: function(pages) {
             var events = _(grunt.file.readJSON('src/data/events.json')).map(function(item) {
               item.date = new Date(item.date);
+              item.hasLink = !!item.externalLink;
               return item;
             });
 

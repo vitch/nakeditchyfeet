@@ -11,19 +11,22 @@
     "date": "2013-05-05",
     "icon": "camera-retro",
     "type": "photo",
-    "label": "Uploaded a new Photoset: <a href='http://www.flickr.com/photos/vitch/sets/72157633405886159/' target='_blank'>Bangkok</a>"
+    "label": "New Photoset: Bangkok",
+    "externalLink": "http://www.flickr.com/photos/vitch/sets/72157633405886159/"
   },
   {
     "date": "2013-05-05",
     "icon": "camera-retro",
     "type": "photo",
-    "label": "Uploaded a new Photoset: <a href='http://www.flickr.com/photos/vitch/sets/72157633406038513/' target='_blank'>Koh Chang</a>"
+    "label": "New Photoset: Koh Chang",
+    "externalLink": "http://www.flickr.com/photos/vitch/sets/72157633406038513/"
   },
   {
     "date": "2013-05-05",
     "icon": "camera-retro",
     "type": "photo",
-    "label": "Uploaded a new Photoset: <a href='http://www.flickr.com/photos/vitch/sets/72157633406184851/' target='_blank'>Koh Mak</a>"
+    "label": "New Photoset: Koh Mak",
+    "externalLink": "http://www.flickr.com/photos/vitch/sets/72157633406184851/"
   },
   {
     "date": "2013-05-06",
@@ -37,13 +40,15 @@
     "date": "2013-05-18",
     "icon": "camera-retro",
     "type": "photo",
-    "label": "Uploaded a new Photoset: <a href='http://www.flickr.com/photos/vitch/sets/72157633545449079/' target='_blank'>Yangon</a>"
+    "label": "New Photoset: Yangon",
+    "externalLink": "http://www.flickr.com/photos/vitch/sets/72157633545449079/"
   },
   {
     "date": "2013-05-18",
     "icon": "camera-retro",
     "type": "photo",
-    "label": "Uploaded a new Photoset: <a href='http://www.flickr.com/photos/vitch/sets/72157633847610282/' target='_blank'>Mawlamyine</a>"
+    "label": "New Photoset: Mawlamyine",
+    "externalLink": "http://www.flickr.com/photos/vitch/sets/72157633847610282/"
   },
   {
     "date": "2013-05-20 10:00:00",

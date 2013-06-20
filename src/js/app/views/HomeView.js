@@ -59,7 +59,13 @@ define(
           this.updateNowMarkerMargin();
         },
         onClickLi: function(e) {
-          document.location = $(e.currentTarget).find('a').attr('href');
+          var link = $(e.currentTarget).find('a');
+          var destination = link.attr('href');
+          if (link.attr('target') === '_blank') {
+            window.open(destination)
+          } else {
+            document.location = destination;
+          }
           return false;
         }
       }
