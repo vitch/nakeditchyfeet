@@ -2,7 +2,7 @@
   {
     "date": "2013-04-16",
     "icon": "plane",
-    "label": "LHR &ndash; MCT &ndash; BKK",
+    "label": "<strong>LHR - MCT - BKK</strong> And we're off!",
     "from": "LHR",
     "to": "MCT",
     "airline": "Oman Air"
@@ -28,7 +28,7 @@
   {
     "date": "2013-05-06",
     "icon": "plane",
-    "label": "DMK &ndash; RGN",
+    "label": "<strong>DMK - RGN</strong> Thailand to Myanmar",
     "from": "DMK",
     "to": "RGN",
     "airline": "Air Asia"
@@ -48,7 +48,7 @@
   {
     "date": "2013-05-20 10:00:00",
     "icon": "plane",
-    "label": "MDL &ndash; DMK",
+    "label": "<strong>MDL - DMK</strong>",
     "from": "MDL",
     "to": "DMK",
     "airline": "Air Asia"
@@ -56,7 +56,7 @@
   {
     "date": "2013-05-20 16:00:00",
     "icon": "plane",
-    "label": "BKK &ndash; SIN",
+    "label": "<strong>BKK - SIN</strong>",
     "from": "BKK",
     "to": "SIN",
     "airline": "Tiger Airways"
@@ -64,7 +64,7 @@
   {
     "date": "2013-05-21",
     "icon": "plane",
-    "label": "SIN &ndash; CGK &ndash; MDC",
+    "label": "<strong>SIN - CGK - MDC</strong>",
     "from": "CGK",
     "to": "MDC",
     "airline": "Lion Air"
@@ -72,12 +72,12 @@
   {
     "date": "2013-06-19",
     "icon": "anchor",
-    "label": "Makassar &ndash; Maumere"
+    "label": "Pelni ship from Sulawesi to Flores"
   },
   {
     "date": "2013-08-07",
     "icon": "plane",
-    "label": "DPS &ndash; DRW",
+    "label": "<strong>DPS - DRW</strong>",
     "from": "DPS",
     "to": "DRW",
     "airline": "JetStar",
@@ -86,7 +86,7 @@
   {
     "date": "2013-09-17",
     "icon": "plane",
-    "label": "BNE &ndash; NAN",
+    "label": "<strong>BNE - NAN</strong>",
     "from": "BNE",
     "to": "NAN",
     "airline": "Air Pacific"
@@ -94,7 +94,7 @@
   {
     "date": "2013-10-18",
     "icon": "plane",
-    "label": "NAN &ndash; AKL",
+    "label": "<strong>NAN - AKL</strong>",
     "from": "NAN",
     "to": "AKL",
     "airline": "Air Pacific"
@@ -117,7 +117,7 @@
   {
     "date": "2014-01-21",
     "icon": "plane",
-    "label": "AKL &ndash; HNL",
+    "label": "<strong>AKL - HNL</strong>",
     "from": "AKL",
     "to": "HNL",
     "airline": "Air New Zealand"
@@ -125,7 +125,7 @@
   {
     "date": "2014-02-13",
     "icon": "plane",
-    "label": "HNL &ndash; LAX",
+    "label": "<strong>HNL - LAX</strong>",
     "from": "HNL",
     "to": "LAX",
     "airline": "American Airlines"
