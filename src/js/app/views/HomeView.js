@@ -11,8 +11,10 @@ define(
         events: {
         },
         initialize: function (options) {
-          this.initNowMarker();
-          this.initFilters();
+          if (this.$el.length) {
+            this.initNowMarker();
+            this.initFilters();
+          }
         },
         initNowMarker: function() {
           var now = Date.now();
