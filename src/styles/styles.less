@@ -6,12 +6,25 @@
 @import "alerts.less";
 @import "font-awesome";
 
+// Overrides
+@baseBorderRadius: 0;
+
+// Custom
+@nowMarkerColor: #333;
+
 body {
 	font-family: Georgia, Times;
 }
 
 h1,h2,h3,h4,h5 {
 	font-weight: normal;
+}
+
+a {
+	color: @linkColor;
+	&:hover {
+		color: @linkColorHover;
+	}
 }
 
 article>p:first-of-type {
@@ -72,7 +85,7 @@ article blockquote {
 
 	#when-marker {
 		margin-top: 40px;
-		border-top: 1px dashed #333;
+		border-top: 1px dashed @nowMarkerColor;
 	}
 
 	nav {
@@ -123,6 +136,7 @@ article blockquote {
 }
 #site-content {
 	margin: 0 0 0 210px;
+	max-width: 800px;
 }
 
 #home-list {
@@ -136,7 +150,7 @@ article blockquote {
 		width: 100%;
 
 		&#now-marker {
-			border-top: 1px dashed #333;
+			border-top: 1px dashed @nowMarkerColor;
 			margin: 40px 0;
 			padding: 0;
 		}
@@ -165,4 +179,36 @@ article blockquote {
 			margin: 0 0 10px;
 		}
 	}
+}
+
+article header {
+	border-bottom: 1px dashed @nowMarkerColor;
+	padding: 0 0 20px;
+	margin: 100px 0 0;
+	h1 {
+		margin: 5px 0 10px;
+	}
+	ul.tags {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+		li {
+			float: left;
+			margin: 0 10px 0 0;
+
+			a {
+				text-decoration: none;
+				color: @gray;
+
+				&:hover {
+					color: @linkColorHover;
+				}
+			}
+		}
+	}
+}
+
+.header-image {
+	margin: 20px 0 0;
 }
