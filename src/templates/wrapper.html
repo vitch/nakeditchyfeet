@@ -22,7 +22,7 @@
 	<![endif]-->
 
 </head>
-<body>
+<body{% if bodyId %} id="{{ bodyId }}-page"{% endif %}>
 <header id="site-header">
 	<h1>
 		{% if page.prettyUrl === '/' -%}
