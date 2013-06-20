@@ -1,11 +1,13 @@
 [
-	{% for child in pages|matches('prettyUrl','/blog/')|published -%}
+	{% for item in pages|matches('prettyUrl','/(blog|travel-tips)/')|listPageIconify|published -%}
+		{%- set child = item.target -%}
 		{
 			"link": "{{ page|linkTo(child) }}",
 			"title": "{{ child.templateData.title }}",
 			"date": "{{ child.templateData.date|date('dS M Y' }}",
 			"latitude": {{ child.templateData.latitude|default(false) }},
-			"longitude": {{ child.templateData.longitude|default(false) }}
+			"longitude": {{ child.templateData.longitude|default(false) }},
+			"icon": "{{ item.icon }}"
 		}{% if !loop.last %},{% endif %}
 	{%- endfor %}
 ]
