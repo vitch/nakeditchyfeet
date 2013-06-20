@@ -211,6 +211,12 @@ module.exports = function(grunt) {
         ],
         tasks: 'build'
       },
+      eventJson: {
+        files: [
+          'src/data/*.json'
+        ],
+        tasks: 'build'
+      },
       styles: {
         files: [
           'src/styles/**/*.less'
