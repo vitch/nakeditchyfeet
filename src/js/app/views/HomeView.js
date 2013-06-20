@@ -9,6 +9,7 @@ define(
       {
         el: '#home-list',
         events: {
+          'click li.has-link': 'onClickLi'
         },
         initialize: function (options) {
           if (this.$el.length) {
@@ -56,6 +57,10 @@ define(
             this.$('>li').show();
           }
           this.updateNowMarkerMargin();
+        },
+        onClickLi: function(e) {
+          document.location = $(e.currentTarget).find('a').attr('href');
+          return false;
         }
       }
     );
