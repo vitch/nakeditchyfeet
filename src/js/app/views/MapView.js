@@ -11,7 +11,7 @@ define(
         },
         initialize: function (options) {
           if (this.$el.length) {
-            _.bindAll(this, 'sizeMap', 'onMapItemsReady', 'initTooltips');
+            _.bindAll(this, 'sizeMap', 'onMapItemsReady', 'initTooltips', 'sizeMap');
 
             this.sizeMap();
             this.mapItems = options.mapItems;
@@ -93,6 +93,8 @@ define(
           });
 
           map.addLayer(mapItemClusters);
+
+          $(window).on('resize', _.throttle(this.sizeMap, 200));
 
           this.initTooltips();
         },
