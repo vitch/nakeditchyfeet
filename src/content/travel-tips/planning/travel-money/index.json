@@ -5,6 +5,8 @@
     "content": "travel-money.md",
     "date": "2013-06-08",
     "category": "Planning",
+    "latitude": 5,
+    "longitude": 10,
     "tags": ["planning", "money"]
   }
 }

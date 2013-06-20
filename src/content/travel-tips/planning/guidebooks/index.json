@@ -5,6 +5,8 @@
     "content": "guidebooks.md",
     "date": "2013-04-09",
     "category": "Planning",
+    "latitude": 0.1,
+    "longitude": 0.2,
     "tags": ["planning", "information", "guides"]
   }
 }
