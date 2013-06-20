@@ -7,14 +7,17 @@ require.config(
 );
 define(
   [
-    'views/HomeView'
+    'collections/MapItemsCollection',
+    'views/HomeView',
+    'views/MapView'
   ],
-  function (
-    HomeView
-  ) {
+  function (MapItemsCollection, HomeView, MapView) {
     'use strict';
     $(function() {
       var homeView = new HomeView();
+      var mapView = new MapView({
+        mapItems: new MapItemsCollection()
+      });
     });
   }
 );

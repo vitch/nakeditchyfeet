@@ -5,6 +5,8 @@
 @import "tables.less";
 @import "alerts.less";
 @import "font-awesome";
+@import "leaflet.awesome-markers";
+@import "marker-cluster";
 
 // Overrides
 @baseBorderRadius: 0;
@@ -15,6 +17,7 @@
 
 body {
 	font-family: Georgia, Times;
+	margin: 0;
 }
 
 h1,h2,h3,h4,h5 {
@@ -62,6 +65,10 @@ a {
 			padding: 0;
 			line-height: 1.3;
 
+			li.map-link {
+				margin-top: 20px;
+			}
+
 			a {
 				font-size: 21px;
 			}
@@ -97,7 +104,7 @@ a {
 	}
 }
 #site-content {
-	margin: 0 20px 0 210px;
+	margin: 0 10px 0 210px;
 	max-width: 800px;
 }
 
@@ -158,6 +165,7 @@ a {
 		}
 	}
 }
+
 
 article header {
 	border-bottom: 1px dashed @nowMarkerColor;
@@ -235,4 +243,10 @@ article header {
 #content img {
 	margin: 0 0 10px 10px;
 	float: right;
+}
+
+#map {
+	width: 100%;
+	height: 200px;
+	margin: 10px 0;
 }
