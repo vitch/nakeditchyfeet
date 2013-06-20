@@ -1,7 +1,0 @@
-{
-  "template": "photos.html",
-  "templateData": {
-    "title": "Photos",
-    "content": "photos-intro.md"
-  }
-}
