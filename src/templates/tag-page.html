@@ -1,6 +1,7 @@
 {% extends 'wrapper.html' %}
 {% block bodyContent %}
-	<h1>Posts tagged with "{{category}}"</h1>
+	{% set numSubpages = subpages|published|length %}
+	<h1>{{ numSubpages }} post{% if numSubpages > 1 %}s{% endif %} tagged with "{{category}}"</h1>
 	<ul id="home-list">
 		{% for child in subpages|published|listPageIconify|sort('date')|reverse %}
 		<li>
