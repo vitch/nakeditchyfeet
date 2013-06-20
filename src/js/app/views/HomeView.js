@@ -15,11 +15,18 @@ define(
             var time = $(this).find('time'),
                 d = new Date(time.attr('datetime')).getTime();
             if (d < now) {
-              $(this).parent('li').before('<li id="now-marker"></li>')
+              $(this).parent('li').before('<li id="now-marker"></li>');
               return false;
             }
           });
-          var destPosition = this.$('#now-marker').position().top - $('#when-marker').position().top - 16;
+          var nowMarker = this.$('#now-marker');
+          var nowMarkerTop = nowMarker.position().top;
+          var whenMarkerTop = $('#when-marker').position().top;
+          if (nowMarkerTop < whenMarkerTop) {
+            nowMarker.css('margin-top', parseInt(nowMarker.css('margin-top')) + whenMarkerTop - nowMarkerTop + 21);
+            nowMarkerTop = nowMarker.position().top;
+          }
+          var destPosition = nowMarkerTop - whenMarkerTop - 16;
           window.scrollTo(0, destPosition);
           // TODO: Cancel this listener if the user chooses to scroll manually in the meantime
           $(window).on('load', function() {
