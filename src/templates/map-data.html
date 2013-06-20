@@ -1,5 +1,5 @@
 [
-	{% for child in pages|matches('prettyUrl','/blog/') -%}
+	{% for child in pages|matches('prettyUrl','/blog/')|published -%}
 		{
 			"link": "{{ page|linkTo(child) }}",
 			"title": "{{ child.templateData.title }}",
