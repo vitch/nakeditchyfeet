@@ -25,6 +25,29 @@ module.exports = function(grunt) {
     'js/lib/bootstrap-tooltip.js'
   ];
 
+  var listFilterOptions = [
+    {
+      filter: 'post',
+      icon: 'book',
+      description: 'Blog posts'
+    },
+    {
+      filter: 'tip',
+      icon: 'info-sign',
+      description: 'Travel tips'
+    },
+    {
+      filter: 'photo',
+      icon: 'camera-retro',
+      description: 'Photos'
+    },
+    {
+      filter: '',
+      icon: 'undo',
+      description: 'Everything'
+    }
+  ];
+
 
   // Project configuration.
   grunt.initConfig({
@@ -87,6 +110,7 @@ module.exports = function(grunt) {
       options: {
         minify: compress,
         jsLibs: compress ? ['js/libs.min.js'] : jsLibs,
+        listFilterOptions: listFilterOptions,
         swigFilters: {
           listPageIconify: function(pages) {
             var blogs = _(pages).filter(function(page) {
