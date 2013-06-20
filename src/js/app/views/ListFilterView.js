@@ -9,6 +9,7 @@ define(
     return Backbone.View.extend(
       {
         tagName: 'div',
+        id: 'list-filter',
         events: {
           'click a': 'onFilterClicked'
         },
@@ -20,19 +21,23 @@ define(
             filters: [
               {
                 filter: 'post',
-                icon: 'book'
+                icon: 'book',
+                description: 'Blog posts'
               },
               {
                 filter: 'tip',
-                icon: 'info-sign'
+                icon: 'info-sign',
+                description: 'Travel tips'
               },
               {
                 filter: 'photo',
-                icon: 'camera-retro'
+                icon: 'camera-retro',
+                description: 'Photos'
               },
               {
                 filter: '',
-                icon: 'undo'
+                icon: 'undo',
+                description: 'Everything'
               }
             ]
           })).appendTo('#site-header');
@@ -45,6 +50,7 @@ define(
           if (chosenFilter) {
             clicked.addClass('active');
           }
+          return false;
         }
       }
     );
