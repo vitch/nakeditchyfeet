@@ -42,7 +42,7 @@ module.exports = function(grunt) {
     },
     {
       filter: '',
-      icon: 'undo',
+      icon: 'ban-circle',
       description: 'Everything'
     }
   ];
