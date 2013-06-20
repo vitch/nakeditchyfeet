@@ -24,19 +24,23 @@ define(
               return false;
             }
           });
-          var nowMarker = this.$('#now-marker');
-          var nowMarkerTop = nowMarker.position().top;
-          var whenMarkerTop = $('#when-marker').position().top;
-          if (nowMarkerTop < whenMarkerTop) {
-            nowMarker.css('margin-top', parseInt(nowMarker.css('margin-top')) + whenMarkerTop - nowMarkerTop + 21);
-            nowMarkerTop = nowMarker.position().top;
-          }
-          var destPosition = nowMarkerTop - whenMarkerTop - 16;
+          this.nowMarker = this.$('#now-marker');
+          var destPosition = this.updateNowMarkerMargin();
           window.scrollTo(0, destPosition);
           // TODO: Cancel this listener if the user chooses to scroll manually in the meantime
           $(window).on('load', function() {
             window.scrollTo(0, destPosition);
           });
+        },
+        updateNowMarkerMargin: function() {
+          this.nowMarker.css('margin-top', this.initialNowMargin || (this.initialNowMargin = parseInt(this.nowMarker.css('margin-top'))));
+          var nowMarkerTop = this.nowMarker.position().top;
+          var whenMarkerTop = $('#when-marker').position().top;
+          if (nowMarkerTop < whenMarkerTop) {
+            this.nowMarker.css('margin-top', parseInt(this.nowMarker.css('margin-top')) + whenMarkerTop - nowMarkerTop);
+            nowMarkerTop = this.nowMarker.position().top;
+          }
+          return nowMarkerTop - whenMarkerTop;
         },
         initFilters: function() {
           this.listFilterView = new ListFilterView();
@@ -45,9 +49,11 @@ define(
         onFilterChange: function(filter) {
           if (filter) {
             this.$('>li').show().filter(':not(.item-type-' + filter + ')').hide();
+            this.nowMarker.show();
           } else {
             this.$('>li').show();
           }
+          this.updateNowMarkerMargin();
         }
       }
     );
