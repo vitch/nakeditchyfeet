@@ -62,9 +62,9 @@ define(
         },
         initTooltips: function()
         {
-//          this.$('.awesome-marker').not('.awesome-marker-shadow').tooltip({
-//            container: 'body'
-//          });
+          this.$('.awesome-marker').not('.awesome-marker-shadow').tooltip({
+            container: 'body'
+          });
         },
         onMapItemsReady: function () {
           var map = this.leafletMap,
