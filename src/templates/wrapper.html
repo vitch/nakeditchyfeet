@@ -44,7 +44,7 @@
 		<p>Filter posts:</p>
 		<ul>
 			{% for filter in options.listFilterOptions %}
-			<li><a href="#" data-filter="{{ filter.filter }}" title="{{ filter.description }}"><i class="icon icon-{{ filter.icon }}"> </i> </a></li>
+			<li><a href="#" data-filter="{{ filter.filter }}" title="Show {{ filter.description|lower }}"><i class="icon icon-{{ filter.icon }}"> </i> </a></li>
 			{% endfor %}
 		</ul>
 	</div>

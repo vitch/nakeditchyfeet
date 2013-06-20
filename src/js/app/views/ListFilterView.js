@@ -12,6 +12,7 @@ define(
         },
         initialize: function (options) {
           this.$el.fadeIn();
+          this.$('a').tooltip();
         },
         onFilterClicked: function(e) {
           var clicked = $(e.currentTarget);
