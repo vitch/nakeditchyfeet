@@ -1,7 +1,8 @@
 define(
   [
+    'views/ListFilterView'
   ],
-  function () {
+  function (ListFilterView) {
     'use strict';
 
     return Backbone.View.extend(
@@ -10,6 +11,10 @@ define(
         events: {
         },
         initialize: function (options) {
+          this.initNowMarker();
+          this.initFilters();
+        },
+        initNowMarker: function() {
           var now = Date.now();
           this.$('.item').each(function() {
             var time = $(this).find('time'),
@@ -32,6 +37,17 @@ define(
           $(window).on('load', function() {
             window.scrollTo(0, destPosition);
           });
+        },
+        initFilters: function() {
+          this.listFilterView = new ListFilterView();
+          this.listFilterView.on('filterChange', _.bind(this.onFilterChange, this));
+        },
+        onFilterChange: function(filter) {
+          if (filter) {
+            this.$('>li').show().filter(':not(.item-type-' + filter + ')').hide();
+          } else {
+            this.$('>li').show();
+          }
         }
       }
     );

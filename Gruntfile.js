@@ -18,6 +18,7 @@ module.exports = function(grunt) {
   var jsLibs = [
     'js/lib/underscore-1.4.4.js',
     'js/lib/backbone-1.0.0.js',
+    'js/lib/swig.js',
     'js/lib/leaflet-src.js',
     'js/lib/leaflet.markercluster-src.js',
     'js/lib/leaflet.awesome-markers.js',
@@ -59,6 +60,16 @@ module.exports = function(grunt) {
             dest: 'out/js/lib'
           }
         ]
+      },
+      templates: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/js/app/views/templates',
+            src: ['**/*.html'],
+            dest: 'out/js/app/views/templates'
+          }
+        ]
       }
     },
     less: {
@@ -82,6 +93,7 @@ module.exports = function(grunt) {
               return page.prettyUrl.indexOf('/blog/') === 0;
             }).map(function(page) {
                 return {
+                  type: 'post',
                   icon: 'book',
                   target: page,
                   date: new Date(page.templateData.date),
@@ -93,6 +105,7 @@ module.exports = function(grunt) {
               return page.prettyUrl.match(/\/travel-tips\/.+/);
             }).map(function(page) {
                 return {
+                  type: 'tip',
                   icon: 'info-sign',
                   target: page,
                   date: new Date(page.templateData.date),
@@ -201,7 +214,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('build', ['clean', 'copy:main', (compress ? 'uglify:libs' : 'copy:libs'), (compress ? 'requirejs:compile' : 'copy:js'), 'less', 'haggerston']);
+  grunt.registerTask('build', ['clean', 'copy:main', 'copy:templates', (compress ? 'uglify:libs' : 'copy:libs'), (compress ? 'requirejs:compile' : 'copy:js'), 'less', 'haggerston']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
 
   grunt.registerTask('default', ['build']);

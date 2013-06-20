@@ -3,7 +3,7 @@
 
 <ul id="home-list">
 	{% for child in pages|published|listPageIconify|intersperseEvents|sort('date')|reverse %}
-		<li>
+		<li class="item-type-{{ child.type }}">
 			<i class="icon icon-{{ child.icon }}"> </i>
 			<div class="item">
 				<time datetime="{{ child.date|date('Y-m-d') }}">{{ child.date|date('jS M Y') }}</time>

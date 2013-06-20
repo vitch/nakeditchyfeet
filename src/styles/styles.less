@@ -54,6 +54,26 @@ h1,h2,h3,h4,h5 {
 			}
 		}
 	}
+
+	#list-filter {
+		list-style: none;
+		padding: 0;
+		margin: 40px 0 0;
+		li {
+			float: left;
+			margin: 0 10px 0 0;
+			a {
+				text-decoration: none;
+				color: @headingsColor;
+				font-size: 30px;
+
+				&.active,
+				&:hover {
+					color: #f60;
+				}
+			}
+		}
+	}
 }
 #site-content {
 	margin: 0 0 0 210px;
