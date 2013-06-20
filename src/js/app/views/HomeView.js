@@ -25,12 +25,7 @@ define(
             }
           });
           this.nowMarker = this.$('#now-marker');
-          var destPosition = this.updateNowMarkerMargin();
-          window.scrollTo(0, destPosition);
-          // TODO: Cancel this listener if the user chooses to scroll manually in the meantime
-          $(window).on('load', function() {
-            window.scrollTo(0, destPosition);
-          });
+          this.updateNowMarkerMargin();
         },
         updateNowMarkerMargin: function() {
           this.nowMarker.css('margin-top', this.initialNowMargin || (this.initialNowMargin = parseInt(this.nowMarker.css('margin-top'))));
@@ -40,7 +35,12 @@ define(
             this.nowMarker.css('margin-top', parseInt(this.nowMarker.css('margin-top')) + whenMarkerTop - nowMarkerTop);
             nowMarkerTop = this.nowMarker.position().top;
           }
-          return nowMarkerTop - whenMarkerTop;
+          var destPosition = nowMarkerTop - whenMarkerTop;
+          window.scrollTo(0, destPosition);
+          // TODO: Cancel this listener if the user chooses to scroll manually in the meantime
+          $(window).on('load', function() {
+            window.scrollTo(0, destPosition);
+          });
         },
         initFilters: function() {
           this.listFilterView = new ListFilterView();
