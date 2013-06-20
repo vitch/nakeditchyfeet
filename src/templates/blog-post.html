@@ -20,6 +20,6 @@
 	{%- endif %}
 
 	{% if headerImage %}<img src="{{ headerImage }}" class="header-image" />{% endif %}
-	{{ content|raw }}
+	<div id="content">{{ content|raw }}</div>
 </article>
 {% endblock %}
