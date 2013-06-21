@@ -157,6 +157,11 @@ module.exports = function(grunt) {
             }
             return pages;
           },
+          withGeoData: function(pages) {
+            return _(pages).filter(function(page) {
+              return !(_.isUndefined(page.templateData.latitude) || _.isUndefined(page.templateData.longitude));
+            });
+          },
           intro: function(page) {
             if (page.intro) {
               return page.intro;

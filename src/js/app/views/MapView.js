@@ -73,9 +73,6 @@ define(
               });
           this.hiddenMarkers = [];
           this.mapMarkers = this.mapItems.map(function(mapItemModel) {
-            if (mapItemModel.get('latitude') == false || mapItemModel.get('longitude') == false) {
-              return false;
-            }
             var marker = L.marker(
                   [mapItemModel.get('latitude'), mapItemModel.get('longitude')],
                   {
@@ -93,8 +90,6 @@ define(
             });
             mapItemClusters.addLayer(marker);
             return marker;
-          }).filter(function(model) {
-            return model !== false;
           });
 
           map.addLayer(mapItemClusters);
