@@ -7,6 +7,7 @@
 			"date": "{{ child.templateData.date|date('dS M Y' }}",
 			"latitude": {{ child.templateData.latitude|default(false) }},
 			"longitude": {{ child.templateData.longitude|default(false) }},
+			"type": "{{ item.type }}",
 			"icon": "{{ item.icon }}"
 		}{% if !loop.last %},{% endif %}
 	{%- endfor %}

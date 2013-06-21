@@ -67,11 +67,12 @@ define(
           });
         },
         onMapItemsReady: function () {
-          var map = this.leafletMap,
-              mapItemClusters = new L.MarkerClusterGroup({
+          var map = this.leafletMap;
+          var mapItemClusters = this.mapItemClusters = new L.MarkerClusterGroup({
                 showCoverageOnHover: false
               });
-          this.mapItems.each(function(mapItemModel) {
+          this.hiddenMarkers = [];
+          this.mapMarkers = this.mapItems.map(function(mapItemModel) {
             if (mapItemModel.get('latitude') == false || mapItemModel.get('longitude') == false) {
               return false;
             }
@@ -83,7 +84,8 @@ define(
                         icon: mapItemModel.get('icon'),
                         color: 'darkblue',
                         className: 'awesome-marker'
-                      })
+                      }),
+                    model: mapItemModel
                   }
                 );
             marker.on('click', function(e) {
@@ -91,6 +93,8 @@ define(
             });
             mapItemClusters.addLayer(marker);
             return marker;
+          }).filter(function(model) {
+            return model !== false;
           });
 
           map.addLayer(mapItemClusters);
@@ -105,11 +109,15 @@ define(
           this.listFilterView.on('filterChange', this.onFilterChange);
         },
         onFilterChange: function(filter) {
+          this.mapItemClusters.addLayers(this.hiddenMarkers);
           if (filter) {
-            console.log('Filters changed to', filter);
+            this.hiddenMarkers = this.mapMarkers.filter(function(marker) {
+              return marker.options.model.get('type') !== filter;
+            });
           } else {
-            console.log('Filters reset');
+            this.hiddenMarkers = [];
           }
+          this.mapItemClusters.removeLayers(this.hiddenMarkers);
         },
         sizeMap: function() {
           this.$el.height($(window).innerHeight() - 20);
