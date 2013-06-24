@@ -1,5 +1,5 @@
 [
-	{% for item in pages|matches('prettyUrl','/(blog|travel-tips)/')|withGeoData|listPageIconify|published -%}
+	{% for item in pages|matches('prettyUrl','/(blog|travel-tips)/')|published|withGeoData|listPageIconify|addPhotosets -%}
 		{%- set child = item.target -%}
 		{
 			"link": "{{ page|linkTo(child) }}",
