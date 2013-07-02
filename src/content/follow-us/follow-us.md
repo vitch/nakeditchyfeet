@@ -2,5 +2,6 @@ If you want to keep up to date with our adventures without having to remember to
 
  * [Follow @nakeditchyfeet](http://twitter.com/nakeditchyfeet) on Twitter.
  * [Subscribe via RSS](/feed.rss) to this blog's feed.
+ * [View our photostream](http://flickr.com/photos/vitch/collections/72157633392960182/) on Flickr
  * [Follow Kelvin](http://instagram.com/vitch77) on Instagram
  * [Follow Priscila](http://instagram.com/prixsantos) on Instagram

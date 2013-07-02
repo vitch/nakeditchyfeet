@@ -1,56 +1,292 @@
 
-// Core variables and mixins
-@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "variables.less";
 @import "mixins.less";
-
-	// CSS Reset
 @import "reset.less";
-
-	// Grid system and page structure
-@import "scaffolding.less";
-//@import "grid.less";
-//@import "layouts.less";
-
-	// Base CSS
-@import "type.less";
-//@import "code.less";
-@import "forms.less";
 @import "tables.less";
-
-	// Components: common
-@import "font-awesome.less"; //@import "sprites.less";
-//@import "dropdowns.less";
-@import "wells.less";
-@import "component-animations.less";
-//@import "close.less";
-
-	// Components: Buttons & Alerts
-@import "buttons.less";
-@import "button-groups.less";
-@import "alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
-
-	// Components: Nav
-@import "navs.less";
-@import "navbar.less";
-@import "breadcrumbs.less";
-@import "pagination.less";
-@import "pager.less";
-
-	// Components: Popovers
-@import "modals.less";
+@import "alerts.less";
 @import "tooltip.less";
-@import "popovers.less";
+@import "font-awesome";
+@import "leaflet.awesome-markers";
+@import "marker-cluster";
 
-	// Components: Misc
-@import "thumbnails.less";
-@import "media.less";
-@import "labels-badges.less";
-@import "progress-bars.less";
-@import "accordion.less";
-@import "carousel.less";
-@import "hero-unit.less";
+// Overrides
+@baseBorderRadius: 0;
 
-	// Utility classes
-@import "utilities.less"; // Has to be last to override when necessary
+// Custom
+@nowMarkerColor: #333;
+@linkFadeTransition: color .3s ease-out;
 
-@import "site-specific.less";
+body {
+	font-family: Georgia, Times;
+	margin: 0;
+}
+
+h1,h2,h3,h4,h5 {
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 27px;
+}
+
+a {
+	color: @linkColor;
+	&:hover {
+		color: @linkColorHover;
+	}
+}
+
+#mobile-nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: @white;
+	padding: 10px;
+	.box-sizing(border-box);
+	background: @white;
+	z-index: 2;
+	border-bottom: 1px solid @black;
+	.box-shadow(0 2px 4px rgba(0, 0, 0, .4));
+
+	h1 {
+		margin: 0;
+	}
+	a {
+		color: inherit;
+		text-decoration: none;
+
+		&:hover {
+			color: @linkColorHover;
+		}
+	}
+}
+
+#site-header {
+	position: fixed;
+	top: 0;
+	left: -500px;
+	bottom: 0;
+	width: 100%;
+	padding: 80px 20px 0 40px;
+	z-index: 2;
+	background: @white;
+	.box-sizing(border-box);
+
+	&.is-open {
+		.transition(left .5s ease-in-out);
+		left: 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: @headingsColor;
+		.transition(@linkFadeTransition);
+
+		&.active, &:hover {
+			color: @linkColorHover;
+		}
+	}
+
+	#when-marker {
+		margin-top: 40px;
+		border-top: 1px dashed @nowMarkerColor;
+	}
+
+	nav {
+		margin-top: 40px;
+
+		ul {
+			list-style: none;
+			padding: 0;
+			line-height: 1.3;
+
+			li.map-link {
+				margin-top: 20px;
+			}
+
+			a {
+				font-size: 21px;
+			}
+		}
+	}
+
+	#list-filter {
+		display: none;
+		margin: 60px 0 0;
+		p {
+			margin: 0 0 5px;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			li {
+				float: left;
+				margin: 0 10px 0 0;
+				a {
+					text-decoration: none;
+					color: @headingsColor;
+					font-size: 30px;
+					.transition(@linkFadeTransition);
+
+					&.active,
+					&:hover {
+						color: @linkColorHover;
+					}
+				}
+			}
+		}
+	}
+}
+#site-content {
+	margin: 30px 10px 0;
+	max-width: 800px;
+}
+#map-page #site-content {
+	max-width: inherit;
+}
+
+#home-list {
+	list-style: none;
+	padding: 0;
+	li {
+		margin: 0 0 25px;
+		position: relative;
+		padding: 0 0 0 50px;
+		.box-sizing(border-box);
+		width: 100%;
+
+		&#now-marker {
+			border-top: 1px dashed @nowMarkerColor;
+			margin: 40px 0;
+			padding: 0;
+		}
+
+		&>i {
+			position: absolute;
+			top: 3px;
+			left: 0;
+			font-size: 36px;
+		}
+
+		time {
+			font-style: italic;
+			font-size: 16px;
+		}
+		a {
+			text-decoration: none;
+			color: @headingsColor;
+			&:hover {
+				color: @linkColorHover;
+			}
+		}
+		h1 {
+			font-size: 21px;
+			margin: 0 0 10px;
+
+			strong {
+				font-family: Arial; // FIXME
+				font-weight: bold;
+			}
+		}
+
+		&.has-link {
+			cursor: pointer;
+
+			i, time, a {
+				.transition(@linkFadeTransition);
+			}
+
+			&:hover {
+				color: @linkColorHover;
+			}
+		}
+	}
+}
+
+
+article header {
+	border-bottom: 1px dashed @nowMarkerColor;
+	padding: 0 0 20px;
+	margin: 99px 0 0;
+	time {
+		color: @gray;
+		margin-top: -19px;
+		display: block;
+		font-style: italic;
+	}
+	h1 {
+		margin: 0 0 10px;
+	}
+	ul.tags {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+		li {
+			float: left;
+			margin: 0 10px 0 0;
+
+			a {
+				text-decoration: none;
+				color: @gray;
+
+				&:hover {
+					color: @linkColorHover;
+				}
+			}
+		}
+	}
+}
+
+.header-image {
+	margin: 20px 0 0;
+}
+#content>p:first-of-type {
+	margin-bottom: @baseLineHeight;
+	font-size: @baseFontSize * 1.5;
+	font-weight: 200;
+	line-height: @baseLineHeight * 1.5;
+}
+
+#content table {
+	.table();
+	.table-striped();
+}
+
+#content blockquote {
+	position: relative;
+	margin: 0 0 0 80px;
+
+	&:before {
+		color: @grayLighter;
+		position: absolute;
+		left: -70px;
+		font-size: 4em;
+		content: "\f10d";
+		font-family: FontAwesome;
+		font-weight: normal;
+		font-style: normal;
+		text-decoration: inherit;
+		-webkit-font-smoothing: antialiased;
+		*margin-right: .3em; // fixes ie7 issues
+	}
+
+	small {
+		display: block;
+		margin: 2px 0 0;
+	}
+}
+
+#content img {
+	margin: 0 0 10px 10px;
+	float: right;
+}
+
+#map {
+	width: 100%;
+	height: 200px;
+	margin: 10px 0;
+}
+
+@import "desktop";

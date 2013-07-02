@@ -21,7 +21,31 @@ module.exports = function(grunt) {
     'js/lib/leaflet-src.js',
     'js/lib/leaflet.markercluster-src.js',
     'js/lib/leaflet.awesome-markers.js',
-    'js/lib/bootstrap-tooltip.js'
+    'js/lib/bootstrap-tooltip.js',
+    'js/lib/enquire.js'
+  ];
+
+  var listFilterOptions = [
+    {
+      filter: 'post',
+      icon: 'book',
+      description: 'Blog posts'
+    },
+    {
+      filter: 'tip',
+      icon: 'info-sign',
+      description: 'Travel tips'
+    },
+    {
+      filter: 'photo',
+      icon: 'camera-retro',
+      description: 'Photos'
+    },
+    {
+      filter: '',
+      icon: 'ban-circle',
+      description: 'Everything'
+    }
   ];
 
 
@@ -59,6 +83,16 @@ module.exports = function(grunt) {
             dest: 'out/js/lib'
           }
         ]
+      },
+      templates: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/js/app/views/templates',
+            src: ['**/*.html'],
+            dest: 'out/js/app/views/templates'
+          }
+        ]
       }
     },
     less: {
@@ -76,7 +110,68 @@ module.exports = function(grunt) {
       options: {
         minify: compress,
         jsLibs: compress ? ['js/libs.min.js'] : jsLibs,
+        listFilterOptions: listFilterOptions,
         swigFilters: {
+          listPageIconify: function(pages) {
+            var blogs = _(pages).filter(function(page) {
+              return page.prettyUrl.indexOf('/blog/') === 0;
+            }).map(function(page) {
+                return {
+                  type: 'post',
+                  icon: 'book',
+                  target: page,
+                  date: new Date(page.templateData.date),
+                  label: page.templateData.title,
+                  image: page.templateData.headerImage,
+                  hasLink: true
+                }
+              });
+            var tips = _(pages).filter(function(page) {
+              return page.prettyUrl.match(/\/travel-tips\/.+/);
+            }).map(function(page) {
+                return {
+                  type: 'tip',
+                  icon: 'info-sign',
+                  target: page,
+                  date: new Date(page.templateData.date),
+                  label: page.templateData.title,
+                  hasLink: true
+                }
+              });
+            return blogs.concat(tips);
+
+          },
+          intersperseEvents: function(pages) {
+            var events = _(grunt.file.readJSON('src/data/events.json')).map(function(item) {
+              item.date = new Date(item.date);
+              item.hasLink = !!item.externalLink;
+              return item;
+            });
+
+            return pages.concat(events);
+          },
+          addPhotosets: function(pages) {
+            var events = _(grunt.file.readJSON('src/data/events.json'))
+              .filter(function(item) {
+                return !(_.isUndefined(item.latitude) || _.isUndefined(item.longitude))
+              })
+              .map(function(item) {
+                return {
+                  target: {
+                    templateData: {
+                      date: item.date,
+                      title: item.label,
+                      latitude: item.latitude,
+                      longitude: item.longitude
+                    }
+                  },
+                  type: item.type,
+                  icon: item.icon
+                };
+              });
+
+            return pages.concat(events);
+          },
           published: function(pages) {
             if (compress) {
               return _(pages).filter(function(page) {
@@ -84,6 +179,11 @@ module.exports = function(grunt) {
               });
             }
             return pages;
+          },
+          withGeoData: function(pages) {
+            return _(pages).filter(function(page) {
+              return !_.isUndefined(page.templateData) && !(_.isUndefined(page.templateData.latitude) || _.isUndefined(page.templateData.longitude));
+            });
           },
           intro: function(page) {
             if (page.intro) {
@@ -142,6 +242,12 @@ module.exports = function(grunt) {
         ],
         tasks: 'build'
       },
+      eventJson: {
+        files: [
+          'src/data/*.json'
+        ],
+        tasks: 'build'
+      },
       styles: {
         files: [
           'src/styles/**/*.less'
@@ -168,7 +274,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('build', ['clean', 'copy:main', (compress ? 'uglify:libs' : 'copy:libs'), (compress ? 'requirejs:compile' : 'copy:js'), 'less', 'haggerston']);
+  grunt.registerTask('build', ['clean', 'copy:main', 'copy:templates', (compress ? 'uglify:libs' : 'copy:libs'), (compress ? 'requirejs:compile' : 'copy:js'), 'less', 'haggerston']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
 
   grunt.registerTask('default', ['build']);

@@ -1,16 +1,24 @@
 {% extends 'wrapper.html' %}
 {% block bodyContent %}
 
-<ul class="article-list">
-	{% for child in pages|matches('prettyUrl','/blog/')|published|sort('date')|reverse %}
-		<li>
-			<a href="{{ page|linkTo(child) }}">
-				<img src="{{ page|relativePath(child) }}{{ child.templateData.headerImage }}" class="header-image" alt="{{ child.templateData.title }}" />
-				<span>
-					{% if child.isDraft -%}<span class="label label-info">Draft</span> {% endif %}
-					{{ child.templateData.date|date('jS M Y') }} &ndash; {{ child.templateData.title }}
-				</span>
-			</a>
+<ul id="home-list">
+	{% for child in pages|published|listPageIconify|intersperseEvents|sort('date')|reverse %}
+		<li class="item-type-{{ child.type }}{% if child.hasLink %} has-link{% endif %}">
+			<i class="icon icon-{{ child.icon }}"> </i>
+			<div class="item">
+				<time datetime="{{ child.date|date('Y-m-d') }}">{{ child.date|date('jS M Y') }}</time>
+				{% if child.target %}<a href="{{ page|linkTo(child.target) }}">{% endif %}
+				{% if child.externalLink %}<a href="{{ child.externalLink }}" target="_blank">{% endif %}
+					<h1>
+						{% if child.target.isDraft -%}<span>[Draft]</span> {% endif %}
+						{{ child.label|raw }}
+					</h1>
+				{% if child.hasLink %}</a>{% endif %}
+
+				{% if child.image -%}
+					<img src="{{ page|relativePath(child.target) }}{{ child.image }}" class="header-image" alt="{{ child.label }}">
+				{% endif %}
+			</div>
 		</li>
 	{% endfor %}
 </ul>

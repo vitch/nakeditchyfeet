@@ -1,43 +1,27 @@
 define(
   [
+    'views/ListFilterView'
   ],
-  function () {
+  function (ListFilterView) {
     'use strict';
 
     return Backbone.View.extend(
       {
-        el: '#map-panel',
+        el: '#map',
         events: {
-          'click #map-toggle a': 'onMapToggle',
-          'click #map-fullscreen a': 'onFullscreenToggle'
         },
         initialize: function (options) {
+          if (this.$el.length) {
+            _.bindAll(this, 'sizeMap', 'onMapItemsReady', 'initTooltips', 'sizeMap', 'onFilterChange');
 
-          _.bindAll(this, 'onPageInitialised', 'initMap', 'onMapItemsReady', 'initTooltips');
-
-          this.mapItems = options.mapItems;
-
-          this.isOpen = this.$el.is('.is-open');
-          this.isFullscreen = false;
-
-          this.fullscreenToggle = this.$('#map-fullscreen a');
-
-          if (this.isOpen) {
+            this.sizeMap();
+            this.mapItems = options.mapItems;
             this.initMap();
           }
-
-          this.mapItems.fetch({success: this.onMapItemsReady});
-
-          // Wait until the page has rendered before allowing CSS animations on the height of the #map div
-          _.delay(this.onPageInitialised, 1000);
         },
         initMap: function () {
-          if (this.isMapInitialised) {
-            return;
-          }
-          this.isMapInitialised = true;
 
-          var mapContainer = this.$('#map').empty()[0],
+          var mapContainer = this.$el.empty()[0],
               initTooltips = this.initTooltips;
 
           this.leafletMap = L.map(mapContainer).setView([10, 0], 2);
@@ -74,11 +58,7 @@ define(
 //            }
 //          ).addTo(map);
 
-          this.updateFullscreenTooltip();
-
-          if (this.mapItems.length) {
-            this.onMapItemsReady();
-          }
+          this.mapItems.fetch({success: this.onMapItemsReady});
         },
         initTooltips: function()
         {
@@ -86,85 +66,56 @@ define(
             container: 'body'
           });
         },
-        onPageInitialised: function () {
-          this.$el.addClass('is-animated');
-        },
         onMapItemsReady: function () {
-          if (!this.isMapInitialised) {
-            return;
-          }
-          var map = this.leafletMap,
-              mapItemClusters = new L.MarkerClusterGroup({
+          var map = this.leafletMap;
+          var mapItemClusters = this.mapItemClusters = new L.MarkerClusterGroup({
                 showCoverageOnHover: false
               });
-          this.mapItems.each(function(mapItemModel) {
-            if (mapItemModel.get('latitude') == false || mapItemModel.get('longitude') == false) {
-              return false;
-            }
-            var isCurrentPage = document.location.pathname.substr(1) == mapItemModel.get('link'),
-                marker = L.marker(
+          this.hiddenMarkers = [];
+          this.mapMarkers = this.mapItems.map(function(mapItemModel) {
+            var marker = L.marker(
                   [mapItemModel.get('latitude'), mapItemModel.get('longitude')],
                   {
                     title: mapItemModel.get('title').replace(/&#39;/g, '\''),
                       icon: L.AwesomeMarkers.icon({
-                        icon: 'bullseye',
-                        color: isCurrentPage ? 'orange' : 'darkblue',
+                        icon: mapItemModel.get('icon'),
+                        color: 'darkblue',
                         className: 'awesome-marker'
-                      })
+                      }),
+                    model: mapItemModel
                   }
                 );
-            if (isCurrentPage) {
-              map.setView([mapItemModel.get('latitude'), mapItemModel.get('longitude')], 6, true);
-            } else {
-              marker.on('click', function(e) {
-                document.location.href = '/' + mapItemModel.get('link');
-              });
-            }
+            marker.on('click', function(e) {
+              document.location.href = '/' + mapItemModel.get('link');
+            });
             mapItemClusters.addLayer(marker);
             return marker;
           });
 
           map.addLayer(mapItemClusters);
 
+          $(window).on('resize', _.throttle(this.sizeMap, 200));
+
           this.initTooltips();
+          this.initFilters();
         },
-        onMapToggle: function (e) {
-          this.isOpen = !this.isOpen;
-          this.$el[this.isOpen ? 'addClass' : 'removeClass']('is-open');
-
-          if (!this.mapToggleText) {
-            this.mapToggleText = this.$('#map-toggle a span');
+        initFilters: function() {
+          this.listFilterView = new ListFilterView();
+          this.listFilterView.on('filterChange', this.onFilterChange);
+        },
+        onFilterChange: function(filter) {
+          this.mapItemClusters.addLayers(this.hiddenMarkers);
+          if (filter) {
+            this.hiddenMarkers = this.mapMarkers.filter(function(marker) {
+              return marker.options.model.get('type') !== filter;
+            });
+          } else {
+            this.hiddenMarkers = [];
           }
-
-          _.delay(_.bind(function() {
-            this.mapToggleText.text(this.isOpen ? 'Hide map' : 'Show map');
-          }, this), 400);
-
-
-          if (this.isOpen) {
-            // Wait before initialising map so that it has the correct container height when it initialises
-            _.delay(this.initMap, 1000);
-          }
-          return false;
+          this.mapItemClusters.removeLayers(this.hiddenMarkers);
         },
-        onFullscreenToggle: function(e) {
-          this.fullscreenToggle.tooltip('destroy');
-          this.isFullscreen = !this.isFullscreen;
-          this.updateFullscreenTooltip();
-          this.$('#map-fullscreen i').removeClass('icon-fullscreen icon-resize-small').addClass(this.isFullscreen ? 'icon-resize-small' : 'icon-fullscreen')
-          this.$el.removeClass('is-animated');
-          var el = this.$el[this.isFullscreen ? 'addClass' : 'removeClass']('is-fullscreen');
-          _.defer(function() {
-            el.addClass('is-animated');
-          });
-          return false;
-        },
-        updateFullscreenTooltip: function() {
-          this.fullscreenToggle.tooltip({
-            title: this.isFullscreen ? 'Shrink map' : 'View map fullscreen',
-            container: 'body',
-            placement: 'bottom'
-          });
+        sizeMap: function() {
+          this.$el.height($(window).innerHeight() - 20);
         }
       }
     );

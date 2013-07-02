@@ -22,48 +22,39 @@
 	<![endif]-->
 
 </head>
-<body>
-<div id="wrap">
-	<div class="container">
-		<header id="site-header">
-			<h1>
-				{% if page.prettyUrl === '/' -%}
-					Naked Itchy Feet
-				{%- else -%}
-					<a href="{{ page|basePath }}">Naked Itchy Feet</a>
-				{%- endif %}
-			</h1>
-			<nav>
-				<ul class="nav nav-pills pull-right">
-					<li><a href="{{ page|basePath }}travel-tips/"><i class="icon icon-bullhorn"></i> Travel tips</a></li>
-					<li><a href="{{ page|basePath }}photos/"><i class="icon icon-camera-retro"></i> Photos</a></li>
-					<li><a href="{{ page|basePath }}follow-us/"><i class="icon icon-location-arrow"></i> Follow Us</a></li>
-					<li><a href="{{ page|basePath }}about-us/"><i class="icon icon-user"></i> About us</a></li>
-				</ul>
-			</nav>
-		</header>
-	</div>
-	<div id="map-panel" class="{% if mapIsOpen %}is-open{% endif %}">
-		<div id="map" class="{% if mapIsOpen %}home-map{% endif %}">
-			<p>Loading map</p>
-		</div>
-		<div id="map-fullscreen">
-			<a href="#" class="btn btn-inverse"><i class="icon icon-fullscreen"></i></a>
-		</div>
-		<div id="map-toggle">
-			<a href="#" class="btn"><i class="icon-map-marker"></i> <span>{% if mapIsOpen %}Hide{% else %}Show{% endif %} map</span></a>
-		</div>
-	</div>
-	<div class="container">
-	{% block bodyContent %}{% endblock %}
-	</div>
-	<div id="footer-space"></div>
+<body{% if bodyId %} id="{{ bodyId }}-page"{% endif %}>
+<div id="mobile-nav">
+	<a href="#"><h1><i class="icon icon-reorder"> </i> Naked Itchy Feet</h1></a>
 </div>
-<footer id="site-footer">
-	<div class="container">
-		<p class="muted">&copy; Kelvin Luck &amp; Priscila Santos 2013</p>
+<header id="site-header">
+	<h1>
+		{% if page.prettyUrl === '/' -%}
+			Naked Itchy Feet
+		{%- else -%}
+			<a href="{{ page|basePath }}">Naked Itchy Feet</a>
+		{%- endif %}
+	</h1>
+	<div id="when-marker"></div>
+	<nav>
+		<ul>
+			<li><a href="{{ page|basePath }}about-us/"{% if page.prettyUrl == '/about-us/' %} class="active"{% endif %}>About Us</a></li>
+			<li><a href="{{ page|basePath }}follow-us/"{% if page.prettyUrl == '/follow-us/' %} class="active"{% endif %}>Follow Us</a></li>
+			<li class="map-link"><a href="{{ page|basePath }}map/"{% if page.prettyUrl == '/map/' %} class="active"{% endif %}><i class="icon icon-globe"></i> Our Map</a></li>
+		</ul>
+	</nav>
+
+	<div id="list-filter">
+		<p>Filter posts:</p>
+		<ul>
+			{% for filter in options.listFilterOptions %}
+			<li><a href="#" data-filter="{{ filter.filter }}" title="Show {{ filter.description|lower }}"><i class="icon icon-{{ filter.icon }}"> </i> </a></li>
+			{% endfor %}
+		</ul>
 	</div>
-</footer>
+</header>
+<div id="site-content">
+{% block bodyContent %}{% endblock %}
+</div>
 <script type="text/javascript" src="{{ page|basePath }}js/lib/jquery-1.9.1.min.js"></script>
 {% for path in options.jsLibs -%}
 <script src="{{ page|basePath }}{{ path }}"></script>

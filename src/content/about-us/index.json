@@ -1,7 +1,7 @@
 {
-  "template": "about-us.html",
+  "template": "blog-post.html",
   "templateData": {
-    "title": "About us",
+    "title": "About Us",
     "content": "about-us.md"
   }
 }
