@@ -261,6 +261,15 @@ module.exports = function(grunt) {
           base: 'out/'
         }
       }
+    },
+    flickr: {
+      options: {
+        userId: '51035610516@N01',
+        collectionId:  '46131-72157633392960182',
+        // Please use your own API Key if you are using this as a template for your own site
+        apiKey: '6f3e186ef51005004ece29d2d2ec8583',
+        apiSecret: '5cfe6e7a9ce8b8b6'
+      }
     }
 
   });
@@ -273,6 +282,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+
+  grunt.registerTask('flickr', require('./src/grunt-flickr/task.js'));
 
   grunt.registerTask('build', ['clean', 'copy:main', 'copy:templates', (compress ? 'uglify:libs' : 'copy:libs'), (compress ? 'requirejs:compile' : 'copy:js'), 'less', 'haggerston']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);

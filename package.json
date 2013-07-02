@@ -29,7 +29,8 @@
     "grunt-contrib-less": "~0.5.0",
     "grunt-contrib-requirejs": "~0.4.0",
     "grunt-contrib-uglify": "~0.2.0",
-    "flickr": "~0.1.0"
+    "flickr": "~0.1.0",
+    "async": "~0.2.9"
   },
   "devDependencies": {},
   "peerDependencies": {},
