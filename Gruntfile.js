@@ -139,7 +139,19 @@ module.exports = function(grunt) {
                   hasLink: true
                 }
               });
-            return blogs.concat(tips);
+            var photos = _(pages).filter(function(page) {
+              return page.prettyUrl.indexOf('/photos/') === 0;
+            }).map(function(page) {
+                return {
+                  type: "photo",
+                  icon: "camera-retro",
+                  target: page,
+                  date: new Date(page.templateData.date),
+                  label: "New Photoset: " + page.templateData.title,
+                  hasLink: true
+                }
+              });
+            return blogs.concat(tips, photos);
 
           },
           intersperseEvents: function(pages) {

@@ -8,57 +8,12 @@
     "airline": "Oman Air"
   },
   {
-    "date": "2013-05-05",
-    "icon": "camera-retro",
-    "type": "photo",
-    "label": "New Photoset: Bangkok",
-    "latitude": 13.707,
-    "longitude": 100.505,
-    "externalLink": "http://www.flickr.com/photos/vitch/sets/72157633405886159/"
-  },
-  {
-    "date": "2013-05-05",
-    "icon": "camera-retro",
-    "type": "photo",
-    "label": "New Photoset: Koh Chang",
-    "latitude": 12.056,
-    "longitude": 102.289,
-    "externalLink": "http://www.flickr.com/photos/vitch/sets/72157633406038513/"
-  },
-  {
-    "date": "2013-05-05",
-    "icon": "camera-retro",
-    "type": "photo",
-    "label": "New Photoset: Koh Mak",
-    "latitude": 11.814,
-    "longitude": 102.468,
-    "externalLink": "http://www.flickr.com/photos/vitch/sets/72157633406184851/"
-  },
-  {
     "date": "2013-05-06",
     "icon": "plane",
     "label": "<strong>DMK - RGN</strong> Thailand to Myanmar",
     "from": "DMK",
     "to": "RGN",
     "airline": "Air Asia"
-  },
-  {
-    "date": "2013-05-18",
-    "icon": "camera-retro",
-    "type": "photo",
-    "label": "New Photoset: Yangon",
-    "latitude": 16.786,
-    "longitude": 96.152,
-    "externalLink": "http://www.flickr.com/photos/vitch/sets/72157633545449079/"
-  },
-  {
-    "date": "2013-05-18",
-    "icon": "camera-retro",
-    "type": "photo",
-    "label": "New Photoset: Mawlamyine",
-    "latitude": 16.488,
-    "longitude": 97.622,
-    "externalLink": "http://www.flickr.com/photos/vitch/sets/72157633847610282/"
   },
   {
     "date": "2013-05-20 10:00:00",
@@ -77,7 +32,7 @@
     "airline": "Tiger Airways"
   },
   {
-    "date": "2013-05-21",
+    "date": "2013-05-21 23:00:00",
     "icon": "plane",
     "label": "<strong>SIN - CGK - MDC</strong>",
     "from": "CGK",
@@ -88,71 +43,6 @@
     "date": "2013-06-19",
     "icon": "anchor",
     "label": "Pelni ship from Sulawesi to Flores"
-  },
-  {
-    "date": "2013-06-22",
-    "icon": "camera-retro",
-    "type": "photo",
-    "label": "New Photoset: Dawei",
-    "templateData": {
-      "latitude": 12.444,
-      "longitude": 98.598
-    },
-    "externalLink": "http://www.flickr.com/photos/vitch/sets/72157634261959021/"
-  },
-  {
-    "date": "2013-06-23",
-    "icon": "camera-retro",
-    "type": "photo",
-    "label": "New Photoset: Myeik",
-    "latitude": 12.4389,
-    "longitude": 98.6071,
-    "externalLink": "http://www.flickr.com/photos/vitch/sets/72157634269463721/"
-  },
-  {
-    "date": "2013-06-23",
-    "icon": "camera-retro",
-    "type": "photo",
-    "label": "New Photoset: Bagan",
-    "latitude": 21.166,
-    "longitude": 94.861,
-    "externalLink": "http://www.flickr.com/photos/vitch/sets/72157634276252386/"
-  },
-  {
-    "date": "2013-06-23",
-    "icon": "camera-retro",
-    "type": "photo",
-    "label": "New Photoset: Pyin U Lwin",
-    "latitude": 22.029,
-    "longitude": 96.471,
-    "externalLink": "http://www.flickr.com/photos/vitch/sets/72157634283843446/"
-  },
-  {
-    "date": "2013-06-24",
-    "icon": "camera-retro",
-    "type": "photo",
-    "label": "New Photoset: Singapore",
-    "latitude": 1.278,
-    "longitude": 103.823,
-    "externalLink": "http://www.flickr.com/photos/vitch/sets/72157634281254837/"
-  },
-  {
-    "date": "2013-06-24",
-    "icon": "camera-retro",
-    "type": "photo",
-    "label": "New Photoset: Bunaken",
-    "latitude": 1.615,
-    "longitude": 124.773,
-    "externalLink": "http://www.flickr.com/photos/vitch/sets/72157634289527793/"
-  },
-  {
-    "date": "2013-06-24",
-    "icon": "camera-retro",
-    "type": "photo",
-    "label": "New Photoset: Tongkoko",
-    "latitude": 1.551,
-    "longitude": 125.188,
-    "externalLink": "http://www.flickr.com/photos/vitch/sets/72157634290606753/"
   },
   {
     "date": "2013-08-07",

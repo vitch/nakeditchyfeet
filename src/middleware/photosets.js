@@ -10,7 +10,9 @@ module.exports = function() {
     var photosets = grunt.file.readJSON('src/data/photos/photosets.json');
     async.each(photosets, function(photoset, cb) {
         var photosetData = grunt.file.readJSON('src/data/photos/' + photoset.id + '.json');
-        var page = new Page('photos/' + photoset.id + '/index.html', {
+        var lastPhoto = photosetData.photos[photosetData.photos.length-1];
+        photosetData.date = lastPhoto.datetaken; // TODO: Don't presume the last in the set is the oldest?
+        var page = new Page('/photos/' + photoset.id + '/index.html', {
           template: 'photoset.html',
           templateData: photosetData
         });
