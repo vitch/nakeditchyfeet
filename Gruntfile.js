@@ -163,28 +163,6 @@ module.exports = function(grunt) {
 
             return pages.concat(events);
           },
-          addPhotosets: function(pages) {
-            var events = _(grunt.file.readJSON('src/data/events.json'))
-              .filter(function(item) {
-                return !(_.isUndefined(item.latitude) || _.isUndefined(item.longitude))
-              })
-              .map(function(item) {
-                return {
-                  target: {
-                    templateData: {
-                      date: item.date,
-                      title: item.label,
-                      latitude: item.latitude,
-                      longitude: item.longitude
-                    }
-                  },
-                  type: item.type,
-                  icon: item.icon
-                };
-              });
-
-            return pages.concat(events);
-          },
           published: function(pages) {
             if (compress) {
               return _(pages).filter(function(page) {

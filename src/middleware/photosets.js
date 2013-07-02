@@ -12,6 +12,8 @@ module.exports = function() {
         var photosetData = grunt.file.readJSON('src/data/photos/' + photoset.id + '.json');
         var lastPhoto = photosetData.photos[photosetData.photos.length-1];
         photosetData.date = lastPhoto.datetaken; // TODO: Don't presume the last in the set is the oldest?
+        photosetData.latitude = lastPhoto.latitude;
+        photosetData.longitude = lastPhoto.longitude;
         var page = new Page('/photos/' + photoset.id + '/index.html', {
           template: 'photoset.html',
           templateData: photosetData
