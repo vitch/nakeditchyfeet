@@ -1,73 +1,62 @@
-{ "collections": {
-  "collection": [
-    {
-      "id": "46131-72157633392960182",
-      "title": "Around the world 2013-14",
-      "description": "",
-      "iconlarge": "http:\/\/farm9.staticflickr.com\/8415\/cols\/72157633392960182_cd6f382d4c_l.jpg",
-      "iconsmall": "http:\/\/farm9.staticflickr.com\/8415\/cols\/72157633392960182_cd6f382d4c_s.jpg",
-      "set": [
-        {
-          "id": "72157633405886159",
-          "title": "Bangkok",
-          "description": ""
-        },
-        {
-          "id": "72157633406038513",
-          "title": "Koh Chang",
-          "description": ""
-        },
-        {
-          "id": "72157633406184851",
-          "title": "Koh Mak",
-          "description": ""
-        },
-        {
-          "id": "72157633545449079",
-          "title": "Yangon",
-          "description": ""
-        },
-        {
-          "id": "72157633847610282",
-          "title": "Mawlamyine",
-          "description": ""
-        },
-        {
-          "id": "72157634261959021",
-          "title": "Dawei",
-          "description": ""
-        },
-        {
-          "id": "72157634269463721",
-          "title": "Myeik",
-          "description": ""
-        },
-        {
-          "id": "72157634276252386",
-          "title": "Bagan",
-          "description": ""
-        },
-        {
-          "id": "72157634283843446",
-          "title": "Pyin U Lwin",
-          "description": ""
-        },
-        {
-          "id": "72157634281254837",
-          "title": "Singapore",
-          "description": ""
-        },
-        {
-          "id": "72157634289527793",
-          "title": "Bunaken",
-          "description": ""
-        },
-        {
-          "id": "72157634290606753",
-          "title": "Tongkoko",
-          "description": ""
-        }
-      ]
-    }
-  ]
-}, "stat": "ok" }
+[
+  {
+    "id": "72157633405886159",
+    "title": "Bangkok",
+    "description": ""
+  },
+  {
+    "id": "72157633406038513",
+    "title": "Koh Chang",
+    "description": ""
+  },
+  {
+    "id": "72157633406184851",
+    "title": "Koh Mak",
+    "description": ""
+  },
+  {
+    "id": "72157633545449079",
+    "title": "Yangon",
+    "description": ""
+  },
+  {
+    "id": "72157633847610282",
+    "title": "Mawlamyine",
+    "description": ""
+  },
+  {
+    "id": "72157634261959021",
+    "title": "Dawei",
+    "description": ""
+  },
+  {
+    "id": "72157634269463721",
+    "title": "Myeik",
+    "description": ""
+  },
+  {
+    "id": "72157634276252386",
+    "title": "Bagan",
+    "description": ""
+  },
+  {
+    "id": "72157634283843446",
+    "title": "Pyin U Lwin",
+    "description": ""
+  },
+  {
+    "id": "72157634281254837",
+    "title": "Singapore",
+    "description": ""
+  },
+  {
+    "id": "72157634289527793",
+    "title": "Bunaken",
+    "description": ""
+  },
+  {
+    "id": "72157634290606753",
+    "title": "Tongkoko",
+    "description": ""
+  }
+]
