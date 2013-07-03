@@ -4,7 +4,7 @@
 	<h1>{{ numSubpages }} post{% if numSubpages > 1 %}s{% endif %} tagged with "{{category}}"</h1>
 	<ul id="home-list">
 		{% for child in subpages|published|listPageIconify|sort('date')|reverse %}
-		<li class="item-type-{{ child.type }}">
+		<li class="item-type-{{ child.type }}{% if child.hasLink %} has-link{% endif %}">
 			<i class="icon icon-{{ child.icon }}"> </i>
 			<div class="item">
 				<time datetime="{{ child.date|date('Y-m-d') }}">{{ child.date|date('jS M Y') }}</time>
