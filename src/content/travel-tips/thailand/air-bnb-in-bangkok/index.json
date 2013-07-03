@@ -1,6 +1,5 @@
 {
   "template": "blog-post.html",
-  "isDraft": true,
   "templateData": {
     "title": "Air BnB in Bangkok",
     "content": "air-bnb-in-bangkok.md",
