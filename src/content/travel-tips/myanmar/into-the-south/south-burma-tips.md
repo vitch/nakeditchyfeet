@@ -1,4 +1,4 @@
-On our [trip to the south of Myanmar](/blog/2013-05-15/burma-into-the-south/) we had to do quite a bit of investigation into the available options for accomodation and travel. This is the difficulty of travelling in an area before it's covered in the guidebook! The below is what we found out - hopefully it is useful to others.
+On our [trip to the south of Myanmar](/blog/myanmar/into-the-south/) we had to do quite a bit of investigation into the available options for accomodation and travel. This is the difficulty of travelling in an area before it's covered in the guidebook! The below is what we found out - hopefully it is useful to others.
 
 ##Dawei
 

@@ -17,7 +17,7 @@ The main downside to the digital guidebooks is that you can't pick it up and fli
 
 ## Wikitravel / Wiki Sherpa
 
-Sometimes the guidebooks are out of date or just don't cover the area you are interested in. In this case [Wikitravel](http://www.wikitravel.org) can be a godsend. While the coverage isn't complete it has lots of information in some places and can be more recently updated than a guidebook. The problem is that you don't necessarily have internet access everywhere. Which is where [Wiki Sherpa](https://play.google.com/store/apps/details?id=com.rezendi.itravel&hl=en) (for Android devices) comes in. This app allows you to download the portions of Wikitravel that you might be interested in so that you can access it offline. This was really useful [when we were in South Myanmar](/blog/2013-05-15/burma-into-the-south/) where there was no internet and no information in the guidebook.
+Sometimes the guidebooks are out of date or just don't cover the area you are interested in. In this case [Wikitravel](http://www.wikitravel.org) can be a godsend. While the coverage isn't complete it has lots of information in some places and can be more recently updated than a guidebook. The problem is that you don't necessarily have internet access everywhere. Which is where [Wiki Sherpa](https://play.google.com/store/apps/details?id=com.rezendi.itravel&hl=en) (for Android devices) comes in. This app allows you to download the portions of Wikitravel that you might be interested in so that you can access it offline. This was really useful [when we were in South Myanmar](/blog/myanmar/into-the-south/) where there was no internet and no information in the guidebook.
 
 ## Trip Advisor City Guides
 
