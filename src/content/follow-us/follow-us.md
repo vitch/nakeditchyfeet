@@ -1,7 +1,7 @@
-If you want to keep up to date with our adventures without having to remember to keep coming back and check this site then there are a few different ways you can keep up to date.
+Keep up to date with our adventures via
 
- * [Follow @nakeditchyfeet](http://twitter.com/nakeditchyfeet) on Twitter.
- * [Subscribe via RSS](/feed.rss) to this blog's feed.
- * [View our photostream](http://flickr.com/photos/vitch/collections/72157633392960182/) on Flickr
- * [Follow Kelvin](http://instagram.com/vitch77) on Instagram
- * [Follow Priscila](http://instagram.com/prixsantos) on Instagram
+ * [@nakeditchyfeet](http://twitter.com/nakeditchyfeet) on Twitter.
+ * This blog's [RSS](/feed.rss) feed.
+ * Our [Flickr](http://flickr.com/photos/vitch/collections/72157633392960182/) photostream.
+ * [@vitch77](http://instagram.com/vitch77) on Instagram
+ * [@prixsantos](http://instagram.com/prixsantos) on Instagram
