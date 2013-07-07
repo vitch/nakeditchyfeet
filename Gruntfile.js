@@ -148,12 +148,23 @@ module.exports = function(grunt) {
             var photos = _(pages).filter(function(page) {
               return page.prettyUrl.indexOf('/photos/') === 0;
             }).map(function(page) {
+                var listPagePhotos = page.templateData.photos.concat().sort(function(a, b) {
+                  var ret = 0;
+                  if (a.machine_tags.indexOf('nif:list_page=1') > -1) {
+                    ret -= 1;
+                  }
+                  if (b.machine_tags.indexOf('nif:list_page=1') > -1) {
+                    ret += 1;
+                  }
+                  return ret;
+                }).slice(0, 5);
                 return {
                   type: "photo",
                   icon: "camera-retro",
                   target: page,
                   date: new Date(page.templateData.date),
                   label: "New Photoset: " + page.templateData.title,
+                  image: listPagePhotos,
                   hasLink: true
                 }
               });

@@ -16,7 +16,15 @@
 				{% if child.hasLink %}</a>{% endif %}
 
 				{% if child.image -%}
+					{%- if child.image.join -%}
+						<div class="photoset">
+							{% for thumb in child.image %}
+								<img src="{{ thumb.url_q }}">
+							{% endfor %}
+						</div>
+					{%- else -%}
 					<img src="{{ page|relativePath(child.target) }}{{ child.image }}" class="header-image" alt="{{ child.label }}">
+					{%- endif -%}
 				{% endif %}
 			</div>
 		</li>
