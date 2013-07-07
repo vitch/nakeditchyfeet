@@ -4,6 +4,6 @@ We are starting in Thailand and will hopefully end up in Brazil in about 10 mont
 
 This might sound like a windy route to reach South America, but its actually saving us about £1000 each as a flight from New Zealand to Chile would be that much more expensive. Plus we get to go to Hawaii (where we will probably spend those £1000 we saved!).
 
-We plan to work as and when permitted, either for free(volunteering), for food and shelter (wwoofing) and when the money well goes dry for remuneration.
+We plan to work as and when permitted, either for free (volunteering), for food and shelter (wwoofing) and when the money well goes dry for remuneration.
 
 After we reach Brazil who knows. The hosts of the 2014 World Cup might trap us.

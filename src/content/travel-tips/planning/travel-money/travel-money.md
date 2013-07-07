@@ -2,7 +2,7 @@ The days when taking money abroad with you meant travellers cheques or wads of c
 
 <div class="alert alert-info">This information is probably of most use to people from the UK (or people with bank accounts in the UK) - different countries have vastly different options when it comes to credit / debit cards.</div>
 
-In our experience the best and easiest way to get foreign currency is straight from an ATM in the country you are visiting (yes - [even Myanmar](/travel-tips/myanmar/money-in-myanmar/)). This way you avoid the various fees and commissions that money changers will try to charge you. Be aware though that not all credit/ debit cards are equal in this respect - in fact, most will try to charge you fees and commissions of their own (either explictly or via a "loaded" exchange rate).
+In our experience the best and easiest way to get foreign currency is straight from an ATM in the country you are visiting (yes - [even Myanmar](/travel-tips/myanmar/money-in-myanmar/)). This way you avoid the various fees and commissions that money changers will try to charge you. Be aware though that not all credit/ debit cards are equal in this respect - in fact, most will try to charge you fees and commissions of their own (either explicitly or via a "loaded" exchange rate).
 
 We followed [the advice](http://www.moneysavingexpert.com/travel/cheap-travel-money) of the ever-reliable [Money Saving Expert](http://www.moneysavingexpert.com) and got a [Halifax Clarity credit card](http://www.halifax.co.uk/creditcards/Landing/clarity-card-all/). Not only does this give you a proper exchange rate but they also don't charge any fees on their side. There is however a fee from the bank whose ATM you use which varies by country (and sometimes bank within a country):
 

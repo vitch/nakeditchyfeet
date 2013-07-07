@@ -4,7 +4,7 @@ The problem with guide books is having to carry them around… And that they are
 
 ## Digital Guidebooks
 
-We are taking a concophony of digital devices with us on our trip: An iPad, an iPhone, a Nexus 7, a Nexus 4 and two Kindles! It makes the most sense if we have guidebooks that we can access on all of these devices. Luckily, both Lonely Planet and Rough Guides now produce "e" versions of their guides. And you can download sample chapters to see how well they work for you.
+We are taking a cacophony of digital devices with us on our trip: An iPad, an iPhone, a Nexus 7, a Nexus 4 and two Kindles! It makes the most sense if we have guidebooks that we can access on all of these devices. Luckily, both Lonely Planet and Rough Guides now produce "e" versions of their guides. And you can download sample chapters to see how well they work for you.
 
 Lonely Planet even produces their e-books in a choice of formats. You can buy PDF files directly from their website (e.g. [Indonesia](http://shop.lonelyplanet.com/indonesia/indonesia-travel-guide-10/)) or Kindle e-books from Amazon (e.g. [Indonesia](http://www.amazon.co.uk/Lonely-Planet-Indonesia-Travel-ebook/dp/B00C2K5C2M/ref=sr_1_5?ie=UTF8&qid=1371035448&sr=8-5&keywords=lonely+planet+indonesia+kindle)). There are pros and cons to each:
 

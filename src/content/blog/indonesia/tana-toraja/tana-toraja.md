@@ -2,7 +2,7 @@ An equatorial Switzerland, Tana Toraja is the mountainous heart of Sulawesi. It 
 
 Everywhere we see the plumpest buffaloes of south east Asia, these animals are what torajans live for and are treated with care. Children bathe with them in the rivers, and they look healthy and well fed. People pet them, and treat them like the huge investment they are for it is because of them that most Torajan natives are born bankrupt.
 
-When a Torajan dies it is the family who organises and pays for the incredibly elaborate and expensive funeral ceremony. For the occasion the whole family must return to their villages and given than only 30% of Torajans actually live in Toraja it means that most of the time the dead aren't "buried" until years after their death. In the meantime their mummified bodies remain at the family home where they are offered food and tea daily and are considered sick until the first day of their funeral ceremony, when the first buffalo is sacrificed, and they are then pronounced dead. 
+When a Torajan dies it is the family who organises and pays for the incredibly elaborate and expensive funeral ceremony. For the occasion the whole family must return to their villages and given than only 30% of Torajans actually live in Toraja it means that most of the time the dead aren't "buried" until years after their death. In the meantime their mummified bodies remain at the family home where they are offered food and tea daily and are considered sick until the first day of their funeral ceremony, when the first buffalo is sacrificed, and they are then pronounced dead.
 
 Funerals vary in size but the norm is that many buffaloes will be sacrificed. At the funeral we attended 30 buffaloes were to be sacrificed. Each buffalo can be worth up to €50k. Hence bankruptcy.
 
@@ -10,7 +10,7 @@ The days here are filled with an incessant cockadoodledoo as the cockerels don't
 
 In Toraja, everyday is a good day for a funeral. Somewhere in a 60km radius there will be one, but we are extra lucky that a big ceremony is starting today. Foreigners don't need an invitation, their presence is welcomed and considered good luck for the family.
 
-Mr "The Deceased", as our guide refers to him, died in April 2012, more than a year ago, and has since then been patiently waiting for the family to organise his grand send off. The ceremonies will take place over the next 5 days and today is procession day, where the body will be moved from the house to a rice paddie turned into a festival arena 200m down the road and this is where the rest of the ceremonies will take place.
+Mr "The Deceased", as our guide refers to him, died in April 2012, more than a year ago, and has since then been patiently waiting for the family to organise his grand send off. The ceremonies will take place over the next 5 days and today is procession day, where the body will be moved from the house to a rice paddy turned into a festival arena 200m down the road and this is where the rest of the ceremonies will take place.
 
 We arrived at the dead man's house to find a crowd gathered around a few tongkonans (traditional houses) one of which had the coffin on top, with an effigy or wood carved life-size image of Mr Deceased called Tau Tau and next to which sat his frail widow in black. 
 
