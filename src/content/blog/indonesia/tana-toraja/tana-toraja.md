@@ -4,7 +4,7 @@ Everywhere we see the plumpest buffaloes of south east Asia, these animals are w
 
 When a Torajan dies it is the family who organises and pays for the incredibly elaborate and expensive funeral ceremony. For the occasion the whole family must return to their villages and given than only 30% of Torajans actually live in Toraja it means that most of the time the dead aren't "buried" until years after their death. In the meantime their mummified bodies remain at the family home where they are offered food and tea daily and are considered sick until the first day of their funeral ceremony, when the first buffalo is sacrificed, and they are then pronounced dead. 
 
-Funerals vary in size but the norm is that many buffaloes will be sacrificed. At the funeral we attended 30 buffalos were to be sacrificed. Each buffalo can be worth up to €50k. Hence bankruptcy.
+Funerals vary in size but the norm is that many buffaloes will be sacrificed. At the funeral we attended 30 buffaloes were to be sacrificed. Each buffalo can be worth up to €50k. Hence bankruptcy.
 
 The days here are filled with an incessant cockadoodledoo as the cockerels don't seem to know that dawn only happens once a day. This daily soundtrack is further enriched by the pigs squealing on their way to funeral ceremonies, the loud cicadas at sunset and mobile phones playing the latest Indonesian hits.
 
@@ -24,7 +24,7 @@ After another speech which we were told described the dead man's life, two buffa
 
 Then it was time for the bull fight and yet another comedy sketch. The bullring was a muddy rice paddy, completely surrounded by people and was open on two sides so the bulls could enter. But this meant they could also exit. So every time they were released into the ring one ended up chasing the other out, and we watched them running in the distance across the surrounding paddies, chasing the none the wiser farmers peacefully working on their rice crops. In all its strangeness I guess it was a fun way to say goodbye.
 
-The following days were dedicated to receiving all the family guests, killing buffalos and pigs, and with each member of the family donating meat to this or that person or organisation. On the last day The Deceased would then be taken to a family burial cave, carved inside a rock somewhere in the surrounding hills. 
+The following days were dedicated to receiving all the family guests, killing buffaloes and pigs, and with each member of the family donating meat to this or that person or organisation. On the last day The Deceased would then be taken to a family burial cave, carved inside a rock somewhere in the surrounding hills.
 
 We couldn't stay long enough to watch that part as we had a ferry to catch in Makassar. So we got on a bus the following day, and maybe because it was  one of the few buses we took in daylight it was also one of the most scenic journeys we have done in Asia. Towering green mountains with even higher sheer cliffs adorned by coconut trees turned into valleys cascading with fluorescent green rice fields and water buffaloes. Makassar was our last port in friendly Sulawesi, and to the port we headed to board the Pelni ship which would take us all the way to Cabo das Flores, the island today known as simply Flores.
 

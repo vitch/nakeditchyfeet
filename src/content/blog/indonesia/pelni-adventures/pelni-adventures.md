@@ -1,4 +1,4 @@
-Most people choose to travel between Sulawesi and Flores by air for the obvious reasons, speed and convenience with flights scheduled everyday. Indonesians however travel by ferry, at a fraction of the cost of a flight in economy class. The journey takes 2o hours and there is only one ferry scheduled every two weeks so no wonder not many travellers choose this alternative - it takes some organising and timing.
+Most tourists choose to travel between Sulawesi and Flores by air for the obvious reasons of speed and convenience with flights scheduled everyday. Most Indonesians however travel by ferry in economy class at a fraction of the cost of a flight. The journey takes 2o hours and there is only one ferry every two weeks so no wonder not many travellers choose this alternative - it takes some organising and timing.
 
 We arrived at the port in Makassar two hours in advance of the scheduled departure at 11pm without having previously booked tickets. We were taken to a travel agent opposite the port by one of the staff who kindly waited with us to make sure we were ok until we had our tickets in hand.
 
