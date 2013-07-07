@@ -187,7 +187,7 @@ module.exports = function(grunt) {
               return page.intro;
             }
             var $ = cheerio.load(page.renderedTemplate);
-            return $('article>p').first().html();
+            return $('#content>p').first().html();
           },
           geoLink: function(text, lat, lng) {
             return '<a href="https://maps.google.com/maps?q=' + lat + ',' + lng + '" data-lat="' + lat + '" data-lng="' + lng + '" class="geo-link" target="_blank"><i class="icon icon-map-marker"></i> ' + text + '</a>';
