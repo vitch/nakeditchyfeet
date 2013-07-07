@@ -2,6 +2,7 @@
   "template": "blog-post.html",
   "templateData": {
     "title": "About Us",
-    "content": "about-us.md"
+    "content": "about-us.md",
+    "hideComments": true
   }
 }
