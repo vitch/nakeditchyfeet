@@ -34,7 +34,7 @@ define(
             }
           ).addTo(this.leafletMap);
 
-          this.leafletMap.on('zoomend', function(){
+          this.leafletMap.on('zoomend moveend', function(){
             _.defer(initTooltips);
           });
 
@@ -117,6 +117,7 @@ define(
             this.hiddenMarkers = [];
           }
           this.mapItemClusters.removeLayers(this.hiddenMarkers);
+          this.initTooltips();
         },
         sizeMap: function() {
           this.$el.height($(window).innerHeight() - 20);
