@@ -4,10 +4,10 @@
     <channel>
         <title>Naked Itchy Feet</title>
         <atom:link href="http://www.nakeditchyfeet.com/feed.rss" rel="self" type="application/rss+xml" />
-        <link>http://www.nakeditchyfeet.com</link>
+        <link>http://nakeditchyfeet.com</link>
         <description>Around the world with Kelvin &amp; Priscila - mischief afoot</description>
         {% set latestPost = pages|matches('prettyUrl','/blog/')|published|sort('templateData.date')|reverse|first %}
-        <lastBuildDate>{{ latestPost.templateData.date|date('c') }}</lastBuildDate>
+        <lastBuildDate>{{ latestPost.templateData.date|date('r') }}</lastBuildDate>
         <language>en</language>
         <sy:updatePeriod>daily</sy:updatePeriod>
         <sy:updateFrequency>1</sy:updateFrequency>
@@ -15,11 +15,11 @@
         {% for child in pages|matches('prettyUrl','/blog/')|published|sort('templateData.date')|reverse %}
         <item>
             <title>{{ child.templateData.title }}</title>
-            <link>http://www.nakeditchyfeet.com{{ child.prettyUrl }}</link>
-            <pubDate>{{ child.templateData.date|date('c') }}</pubDate>
+            <link>http://nakeditchyfeet.com{{ child.prettyUrl }}</link>
+            <pubDate>{{ child.templateData.date|date('r') }}</pubDate>
             <dc:creator>Kelvin Luck &amp; Priscila Santos</dc:creator>
             <category>Uncategorised</category>
-            <guid isPermaLink="true">http://www.nakeditchyfeet.com{{ child.prettyUrl }}</guid>
+            <guid isPermaLink="true">http://nakeditchyfeet.com{{ child.prettyUrl }}</guid>
             <description>{{ child|intro }}</description>
         </item>
         {% endfor %}
