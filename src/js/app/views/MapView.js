@@ -24,7 +24,7 @@ define(
           var mapContainer = this.$el.empty()[0],
               initTooltips = this.initTooltips;
 
-          this.leafletMap = L.map(mapContainer).setView([10, 0], 2);
+          this.leafletMap = L.map(mapContainer).fitWorld();
 
           L.tileLayer(
             'http://{s}.tiles.mapbox.com/v3/{user}.{map}/{z}/{x}/{y}.png',
@@ -91,6 +91,10 @@ define(
             mapItemClusters.addLayer(marker);
             return marker;
           });
+
+          map.fitBounds(this.mapMarkers.map(function(marker) {
+            return marker.getLatLng();
+          }));
 
           map.addLayer(mapItemClusters);
 
