@@ -12,7 +12,7 @@
         <sy:updatePeriod>daily</sy:updatePeriod>
         <sy:updateFrequency>1</sy:updateFrequency>
         <generator>HaggerstonJS</generator>
-        {% for child in pages|matches('prettyUrl','/blog/')|published|sort('date')|reverse %}
+        {% for child in pages|matches('prettyUrl','/blog/')|published|sort('templateData.date')|reverse %}
         <item>
             <title>{{ child.templateData.title }}</title>
             <link>http://www.nakeditchyfeet.com{{ child.prettyUrl }}</link>
