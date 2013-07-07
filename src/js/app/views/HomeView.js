@@ -21,11 +21,13 @@ define(
           var now = Date.now();
           this.$('.item').each(function() {
             var time = $(this).find('time'),
-                d = new Date(time.attr('datetime')).getTime();
+                d = new Date(time.attr('datetime')).getTime(),
+                li = $(this).parent('li');
             if (d < now) {
-              $(this).parent('li').before('<li id="now-marker"></li>');
+              li.before('<li id="now-marker"></li>');
               return false;
             }
+            li.addClass('is-future');
           });
           this.nowMarker = this.$('#now-marker');
           this.updateNowMarkerMargin();
