@@ -8,7 +8,7 @@
     {% if child.extension == '' %}
     <url>
         <loc>http://nakeditchyfeet.com{{ child.prettyUrl }}</loc>
-        {% if child.templateData.date %}<lastmod>{{ child.templateData.date|date('r') }}</lastmod>{% else %}<changefreq>weekly</changefreq>{% endif %}
+        {% if child.templateData.date %}<lastmod>{{ child.templateData.date|date('c') }}</lastmod>{% else %}<changefreq>weekly</changefreq>{% endif %}
     </url>
     {% endif %}
     {% endfor %}
