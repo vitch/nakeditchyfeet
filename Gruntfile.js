@@ -111,7 +111,12 @@ module.exports = function(grunt) {
         minify: compress,
         jsLibs: compress ? ['js/libs.min.js'] : jsLibs,
         listFilterOptions: listFilterOptions,
-        middleware: [require('./src/middleware/photosets')()].concat(require('grunt-haggerston/tasks/lib/middleware/default')),
+        middleware: [
+          require('./src/middleware/photosets')(),
+          require('grunt-haggerston/tasks/lib/middleware/markdown')(),
+          require('grunt-haggerston/tasks/lib/middleware/generate')(),
+          require('grunt-haggerston/tasks/lib/middleware/render')()
+        ],
         swigFilters: {
           listPageIconify: function(pages) {
             var blogs = _(pages).filter(function(page) {

@@ -6,7 +6,7 @@
         <atom:link href="http://www.nakeditchyfeet.com/feed.rss" rel="self" type="application/rss+xml" />
         <link>http://www.nakeditchyfeet.com</link>
         <description>Around the world with Kelvin &amp; Priscila - mischief afoot</description>
-        {% set latestPost = pages|matches('prettyUrl','/blog/')|published|sort('date')|reverse|first %}
+        {% set latestPost = pages|matches('prettyUrl','/blog/')|published|sort('templateData.date')|reverse|first %}
         <lastBuildDate>{{ latestPost.templateData.date|date('c') }}</lastBuildDate>
         <language>en</language>
         <sy:updatePeriod>daily</sy:updatePeriod>
