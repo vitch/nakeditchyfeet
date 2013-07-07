@@ -1,0 +1,11 @@
+{
+  "template": "blog-post.html",
+  "templateData": {
+    "title": "Death as a way of living in Tana Toraja",
+    "date": "2013-06-18",
+    "content": "tana-toraja.md",
+    "latitude": -2.97824353,
+    "longitude": 119.89347814999999,
+    "tags": ["sulawesi", "indonesia", "tana toraja", "ceremony", "funeral", "tradition", "death"]
+  }
+}

@@ -1,6 +1,5 @@
 {
   "template": "blog-post.html",
-  "isDraft": true,
   "templateData": {
     "title": "Island hopping in Sulawesi - Bunaken and the Togeans",
     "date": "2013-06-12",
