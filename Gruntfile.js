@@ -136,6 +136,7 @@ module.exports = function(grunt) {
                   target: page,
                   date: new Date(page.templateData.date),
                   label: page.templateData.title,
+                  image: page.templateData.headerImage,
                   hasLink: true
                 }
               });
