@@ -42,7 +42,22 @@
   {
     "date": "2013-06-19",
     "icon": "anchor",
-    "label": "Pelni ship from Sulawesi to Flores"
+    "label": "Ferry from Sulawesi to Flores"
+  },
+  {
+    "date": "2013-06-28",
+    "icon": "anchor",
+    "label": "Boat from Flores to Lombok"
+  },
+  {
+    "date": "2013-07-13",
+    "icon": "picture",
+    "label": "Climb Gunung Rinjani"
+  },
+  {
+    "date": "2013-07-22",
+    "icon": "group",
+    "label": "Volunteer in Bali"
   },
   {
     "date": "2013-08-07",
@@ -54,7 +69,12 @@
     "flightChanged": "2013-07-16"
   },
   {
-    "date": "2013-09-17",
+    "date": "2013-09-15",
+    "icon": "anchor",
+    "label": "RYA Crew Course, Whitsunday Islands"
+  },
+  {
+    "date": "2013-09-25",
     "icon": "plane",
     "label": "<strong>BNE - NAN</strong>",
     "from": "BNE",
@@ -62,7 +82,7 @@
     "airline": "Air Pacific"
   },
   {
-    "date": "2013-10-18",
+    "date": "2013-10-09",
     "icon": "plane",
     "label": "<strong>NAN - AKL</strong>",
     "from": "NAN",
@@ -70,9 +90,19 @@
     "airline": "Air Pacific"
   },
   {
+    "date": "2013-11-06",
+    "icon": "plane",
+    "label": "<strong>AKL - SYD</strong>"
+  },
+  {
     "date": "2013-11-23",
     "icon": "heart",
     "label": "Wedding, South Australia"
+  },
+  {
+    "date": "2013-12-04",
+    "icon": "plane",
+    "label": "<strong>MEL - AKL</strong>"
   },
   {
     "date": "2013-12-28",
