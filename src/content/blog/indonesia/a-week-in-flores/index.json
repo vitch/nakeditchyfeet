@@ -1,8 +1,8 @@
 {
   "template": "blog-post.html",
-  "isDraft": true,
   "templateData": {
     "title": "Flores",
+    "headerImage": "inerie.jpg",
     "date": "2013-07-01",
     "content": "flores.md",
     "latitude": -8.760,
