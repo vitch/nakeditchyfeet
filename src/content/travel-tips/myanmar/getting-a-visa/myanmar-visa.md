@@ -7,7 +7,7 @@ To submit your visa application you need 5 things:
  * A filled in application form (empty ones can be collected from the front left of the room when you arrive without queuing)
  * Your passport
  * Two passport photos
- * A photocopy of your passport
+ * A photocopy of the photo page of your passport
  * The application fee - dependant on how quickly you want your visa:
   
 | Collection date | Price |
