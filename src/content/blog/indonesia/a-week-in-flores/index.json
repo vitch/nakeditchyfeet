@@ -1,0 +1,12 @@
+{
+  "template": "blog-post.html",
+  "isDraft": true,
+  "templateData": {
+    "title": "Flores",
+    "date": "2013-07-01",
+    "content": "flores.md",
+    "latitude": -8.760,
+    "longitude": 121.814,
+    "tags": ["flores", "indonesia", "volcano"]
+  }
+}
