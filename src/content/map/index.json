@@ -1,6 +1,7 @@
 {
   "template": "map.html",
   "templateData": {
-    "bodyId": "map"
+    "bodyId": "map",
+    "title": "Our Map"
   }
 }
