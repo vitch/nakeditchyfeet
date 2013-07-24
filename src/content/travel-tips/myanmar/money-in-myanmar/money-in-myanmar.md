@@ -1,7 +1,7 @@
 For a long time, taking money to Myanmar meant getting your hands on pristine USD notes and changing them into local Kyats on the black market. That is all starting to change.
 
 <div class="alert">
- **Note:** All of this information was correct in May 2013 but things are changing fast in Burma so there may be some changes - please [let us know](#) if you have more up to date information and we'll update the article.
+ **Note:** All of this information was correct in May 2013 but things are changing fast in Burma so there may be some changes - please [let us know](#comments) if you have more up to date information and we'll update the article.
 </div>
 
 Until very recently the only way that you could get Kyat (<abbr class="initialism" title="Myanmar Kyat">MMK</abbr>) to spend in Myanmar was to bring US dollar notes with you and to make sure they matched some strict criteria:
