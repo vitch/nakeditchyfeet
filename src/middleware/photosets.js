@@ -33,6 +33,7 @@ module.exports = function () {
         var photoPage = new Page('/photos/' + photoset.id + '/' + photo.id + '.html', {
           template: 'photo.html',
           templateData: {
+            title: photoset.title + ': ' + photo.title,
             photoset: photosetData,
             photoUrl: hasLarger ? photo.url_c : photo.url_z,
             photoId: photo.id,
