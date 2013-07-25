@@ -4,7 +4,7 @@
 	<nav>
 		<ul>
 			<li>
-				<a href="http://flickr.com/photos/vitch/{{ photo.id }}/in/set-{{ photoset.id }}" title="View on Flickr" target="_blank">
+				<a href="http://flickr.com/photos/vitch/{{ photoId }}/in/set-{{ photoset.id }}" title="View on Flickr" target="_blank">
 					<i class="icon-zoom-in"></i>
 				</a>
 			</li>
@@ -26,8 +26,7 @@
 		</ul>
 	</nav>
 	{% if nextPhotoLink %}<a href="{{ nextPhotoLink }}">{% endif %}
-		{{ photo|json_encode }}
-		<img src="{{ photo.url_c }}" style="width: {{ photo.width_c }}px; max-height:{{ photo.height_c }}px">
+		<img src="{{ photoUrl }}" style="{{ photoCss }}">
 	{% if nextPhotoLink %}</a>{% endif %}
 
 </div>

@@ -29,11 +29,14 @@ module.exports = function () {
       });
       pages.push(page);
       photosetData.photos.forEach(function(photo, i) {
+        var hasLarger = !!photo.url_c;
         var photoPage = new Page('/photos/' + photoset.id + '/' + photo.id + '.html', {
           template: 'photo.html',
           templateData: {
             photoset: photosetData,
-            photo: photo,
+            photoUrl: hasLarger ? photo.url_c : photo.url_z,
+            photoId: photo.id,
+            photoCss: 'width: ' + photo['width_' + (hasLarger ? 'c' : 'z')] + 'px; max-height:' + photo['height_' + (hasLarger ? 'c' : 'z')] + 'px',
             previousPhotoLink: i == 0 ? false : photosetData.photos[i-1].id + '.html',
             nextPhotoLink: i == photosetData.photos.length - 1 ? false : photosetData.photos[i+1].id + '.html'
           }
