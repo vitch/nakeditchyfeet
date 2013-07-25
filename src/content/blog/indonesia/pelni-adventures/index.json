@@ -2,7 +2,7 @@
   "template": "blog-post.html",
   "templateData": {
     "title": "Adventures on Pelni",
-    "date": "2013-06-20",
+    "date": "2013-06-20 23:00",
     "headerImage": "deck2.jpg",
     "content": "pelni-adventures.md",
     "latitude": -8.6175827,
