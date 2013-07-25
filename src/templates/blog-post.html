@@ -21,6 +21,20 @@
 
 	{% if headerImage %}<img src="{{ headerImage }}" class="header-image" />{% endif %}
 	<div id="content">{{ content|raw }}</div>
+	{% if photosets %}
+	<div id="related-photosets">
+		<h1><i class="icon-camera-retro"></i> Photos</h1>
+		{% for photoset in pages|getPhotosetData(photosets) %}
+			<a href="{{ page|linkTo(photoset.target) }}">
+				<div class="photoset tt-trigger" title="{{ photoset.target.templateData.title }}">
+					{% for thumb in photoset.image %}
+					<img src="{{ thumb.url_q }}" alt="{{ thumb.title }}">
+					{% endfor %}
+				</div>
+			</a>
+		{% endfor %}
+	</div>
+	{% endif %}
 	{% if !hideComments -%}
 	<div id="comments">
 		<h1>Comments</h1>

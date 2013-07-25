@@ -48,6 +48,28 @@ module.exports = function(grunt) {
     }
   ];
 
+  var generatePhotosetPreview = function(page) {
+    var listPagePhotos = page.templateData.photos.concat().sort(function(a, b) {
+      var ret = 0;
+      if (a.machine_tags.indexOf('nif:list_page=1') > -1) {
+        ret -= 1;
+      }
+      if (b.machine_tags.indexOf('nif:list_page=1') > -1) {
+        ret += 1;
+      }
+      return ret;
+    }).slice(0, 5);
+    return {
+      type: "photo",
+      icon: "camera-retro",
+      target: page,
+      date: new Date(page.templateData.date),
+      label: "New Photoset: " + page.templateData.title,
+      image: listPagePhotos,
+      hasLink: true
+    }
+  };
+
 
   // Project configuration.
   grunt.initConfig({
@@ -147,27 +169,7 @@ module.exports = function(grunt) {
               });
             var photos = _(pages).filter(function(page) {
               return page.prettyUrl.match(/^\/photos\/.*\/$/) !== null;
-            }).map(function(page) {
-                var listPagePhotos = page.templateData.photos.concat().sort(function(a, b) {
-                  var ret = 0;
-                  if (a.machine_tags.indexOf('nif:list_page=1') > -1) {
-                    ret -= 1;
-                  }
-                  if (b.machine_tags.indexOf('nif:list_page=1') > -1) {
-                    ret += 1;
-                  }
-                  return ret;
-                }).slice(0, 5);
-                return {
-                  type: "photo",
-                  icon: "camera-retro",
-                  target: page,
-                  date: new Date(page.templateData.date),
-                  label: "New Photoset: " + page.templateData.title,
-                  image: listPagePhotos,
-                  hasLink: true
-                }
-              });
+            }).map(generatePhotosetPreview);
             return blogs.concat(tips, photos);
 
           },
@@ -199,6 +201,11 @@ module.exports = function(grunt) {
             }
             var $ = cheerio.load(page.renderedTemplate);
             return $('#content>p').first().html();
+          },
+          getPhotosetData: function(pages, photosetIds) {
+            return _(pages).filter(function(page) {
+              return page.prettyUrl.match(new RegExp('^/photos/(' + photosetIds.join('|') + '){1}/$')) !== null;
+            }).map(generatePhotosetPreview);
           },
           geoLink: function(text, lat, lng) {
             return '<a href="https://maps.google.com/maps?q=' + lat + ',' + lng + '" data-lat="' + lat + '" data-lng="' + lng + '" class="geo-link" target="_blank"><i class="icon icon-map-marker"></i> ' + text + '</a>';

@@ -209,24 +209,6 @@ a {
 			.image-box-shadow();
 		}
 
-		.photoset {
-			@photosetPadding: 2px;
-			overflow: hidden;
-			margin: 0 0 10px;
-			padding: 0 0 0 @photosetPadding;
-			.image-box-shadow();
-
-			img {
-				float: left;
-				margin: 0;
-				width: 150px;
-				max-width: 20%;
-				min-height: 45px;
-				.box-sizing(border-box);
-				padding: @photosetPadding @photosetPadding @photosetPadding 0;
-			}
-		}
-
 		&.has-link {
 			cursor: pointer;
 
@@ -241,6 +223,23 @@ a {
 	}
 }
 
+.photoset {
+	@photosetPadding: 2px;
+	overflow: hidden;
+	margin: 0 0 10px;
+	padding: 0 0 0 @photosetPadding;
+	.image-box-shadow();
+
+	img {
+		float: left;
+		margin: 0;
+		width: 150px;
+		max-width: 20%;
+		min-height: 45px;
+		.box-sizing(border-box);
+		padding: @photosetPadding @photosetPadding @photosetPadding 0;
+	}
+}
 
 header.content-header {
 	border-bottom: 1px dashed @nowMarkerColor;
@@ -319,6 +318,19 @@ header.content-header {
 #content img {
 	margin: 0 0 10px 10px;
 	float: right;
+}
+
+#related-photosets {
+	overflow: hidden;
+
+	h1 {
+		margin-bottom: 10px;
+	}
+	.photoset {
+		float: left;
+		margin: 10px;
+		position: relative;
+	}
 }
 
 #comments {

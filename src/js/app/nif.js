@@ -16,6 +16,7 @@ define(
   function (MapItemsCollection, HomeView, MapView, MobileNavView, PhotoView) {
     'use strict';
     $(function() {
+      $('.tt-trigger').tooltip();
       var homeView = new HomeView();
       var mapView = new MapView({
         mapItems: new MapItemsCollection()
