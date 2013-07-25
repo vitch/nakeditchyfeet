@@ -1,0 +1,34 @@
+{% extends 'wrapper.html' %}
+{% block bodyContent %}
+<div id="fullsize-photo">
+	<nav>
+		<ul>
+			<li>
+				<a href="http://flickr.com/photos/vitch/{{ photo.id }}/in/set-{{ photoset.id }}" title="View on Flickr" target="_blank">
+					<i class="icon-zoom-in"></i>
+				</a>
+			</li>
+			<li>
+				{% if nextPhotoLink %}
+					<a href="{{ nextPhotoLink }}" title="Next photo"><i class="icon-chevron-right"></i></a>
+				{% else %}
+					<i class="icon-chevron-right icon-muted"></i>
+				{% endif %}
+			</li>
+			<li>
+				{% if previousPhotoLink %}
+				<a href="{{ previousPhotoLink }}" title="Previous photo"><i class="icon-chevron-left"></i></a>
+				{% else %}
+				<i class="icon-chevron-left icon-muted"></i>
+				{% endif %}
+			</li>
+			<li><a href="./" title="Back to photoset"><i class="icon-camera-retro"></i></a></li>
+		</ul>
+	</nav>
+	{% if nextPhotoLink %}<a href="{{ nextPhotoLink }}">{% endif %}
+		{{ photo|json_encode }}
+		<img src="{{ photo.url_c }}" style="width: {{ photo.width_c }}px; max-height:{{ photo.height_c }}px">
+	{% if nextPhotoLink %}</a>{% endif %}
+
+</div>
+{% endblock %}

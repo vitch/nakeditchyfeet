@@ -10,9 +10,10 @@ define(
     'collections/MapItemsCollection',
     'views/HomeView',
     'views/MapView',
-    'views/MobileNavView'
+    'views/MobileNavView',
+    'views/PhotoView'
   ],
-  function (MapItemsCollection, HomeView, MapView, MobileNavView) {
+  function (MapItemsCollection, HomeView, MapView, MobileNavView, PhotoView) {
     'use strict';
     $(function() {
       var homeView = new HomeView();
@@ -20,6 +21,7 @@ define(
         mapItems: new MapItemsCollection()
       });
       var mobileNavView = new MobileNavView();
+      var photoView = new PhotoView();
     });
   }
 );

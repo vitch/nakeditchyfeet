@@ -19,7 +19,7 @@
 					{%- if child.image.join -%}
 						<div class="photoset">
 							{% for thumb in child.image %}
-								<img src="{{ thumb.url_q }}">
+								<img src="{{ thumb.url_q }}" alt="{{ thumb.title }}">
 							{% endfor %}
 						</div>
 					{%- else -%}

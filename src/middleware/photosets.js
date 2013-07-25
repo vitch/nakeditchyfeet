@@ -28,6 +28,18 @@ module.exports = function () {
         templateData: photosetData
       });
       pages.push(page);
+      photosetData.photos.forEach(function(photo, i) {
+        var photoPage = new Page('/photos/' + photoset.id + '/' + photo.id + '.html', {
+          template: 'photo.html',
+          templateData: {
+            photoset: photosetData,
+            photo: photo,
+            previousPhotoLink: i == 0 ? false : photosetData.photos[i-1].id + '.html',
+            nextPhotoLink: i == photosetData.photos.length - 1 ? false : photosetData.photos[i+1].id + '.html'
+          }
+        });
+        pages.push(photoPage);
+      });
       cb();
     }, function (err) {
       next(pages);

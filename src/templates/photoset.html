@@ -8,7 +8,7 @@
 <ul id="photoset">
 	{% for photo in photos %}
 		<li>
-			<a href="http://flickr.com/photos/vitch/{{ photo.id }}/in/set-{{ id }}" target="_blank"><img src="{{ photo.url_q }}" width="{{ photo.width_q }}px" height="{{ photo.height_q }}px"></a>
+			<a href="{{ photo.id }}.html"><img src="{{ photo.url_q }}" alt="{{photo.title}}" title="{{photo.title}}"></a>
 		</li>
 	{% endfor %}
 </ul>

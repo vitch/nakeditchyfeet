@@ -146,7 +146,7 @@ module.exports = function(grunt) {
                 }
               });
             var photos = _(pages).filter(function(page) {
-              return page.prettyUrl.indexOf('/photos/') === 0;
+              return page.prettyUrl.match(/^\/photos\/.*\/$/) !== null;
             }).map(function(page) {
                 var listPagePhotos = page.templateData.photos.concat().sort(function(a, b) {
                   var ret = 0;
