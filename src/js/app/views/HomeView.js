@@ -18,21 +18,10 @@ define(
           }
         },
         initNowMarker: function() {
-          var now = Date.now();
-          this.$('.item').each(function() {
-            var time = $(this).find('time'),
-                d = new Date(time.attr('datetime')).getTime(),
-                li = $(this).parent('li');
-            if (d < now) {
-              li.before('<li id="now-marker"></li>');
-              return false;
-            }
-            li.addClass('is-future');
-          });
           this.nowMarker = this.$('#now-marker');
           this.updateNowMarkerMargin();
         },
-        updateNowMarkerMargin: function() {
+        updateNowMarkerMargin: function(scroll) {
           this.nowMarker.css('margin-top', this.initialNowMargin || (this.initialNowMargin = parseInt(this.nowMarker.css('margin-top'))));
           var nowMarkerTop = this.nowMarker.position().top;
           var whenMarkerTop = $('#when-marker').position().top;
@@ -40,12 +29,9 @@ define(
             this.nowMarker.css('margin-top', parseInt(this.nowMarker.css('margin-top')) + whenMarkerTop - nowMarkerTop);
             nowMarkerTop = this.nowMarker.position().top;
           }
-          var destPosition = nowMarkerTop - whenMarkerTop;
-          window.scrollTo(0, destPosition);
-          // TODO: Cancel this listener if the user chooses to scroll manually in the meantime
-          $(window).on('load', function() {
-            window.scrollTo(0, destPosition);
-          });
+          if (scroll) {
+            window.scrollTo(0, Math.max(0, nowMarkerTop - whenMarkerTop));
+          }
         },
         initFilters: function() {
           this.listFilterView = new ListFilterView();
@@ -58,7 +44,7 @@ define(
           } else {
             this.$('>li').show();
           }
-          this.updateNowMarkerMargin();
+          this.updateNowMarkerMargin(true);
         },
         onClickLi: function(e) {
           var link = $(e.currentTarget).find('a');
