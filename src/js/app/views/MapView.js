@@ -120,7 +120,7 @@ define(
           this.initTooltips();
         },
         sizeMap: function() {
-          this.$el.height($(window).innerHeight() - 20);
+          this.$el.height($(window).innerHeight() - 20 - parseInt($('#site-content').css('marginTop')));
         }
       }
     );
