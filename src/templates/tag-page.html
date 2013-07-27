@@ -22,4 +22,38 @@
 		</li>
 		{% endfor %}
 	</ul>
+
+<script type="text/javascript">
+	(function() {
+		var now = Date.now();
+		var items = document.getElementById('home-list').getElementsByTagName('li');
+		var destPosition = -document.getElementById('when-marker').offsetTop;
+		var nowMarker;
+		for (var i=0; i<items.length; i++) {
+			var li = items[i];
+			var time = li.getElementsByTagName('time')[0];
+			var d = new Date(time.getAttribute('dateTime')).getTime();
+
+			if (d < now) {
+				nowMarker = document.createElement('li');
+				nowMarker.setAttribute('id', 'now-marker');
+				li.parentElement.insertBefore(nowMarker, li);
+				destPosition += nowMarker.offsetTop;
+				break;
+			}
+			li.className += ' is-future';
+		}
+		window.scrollTo(0, destPosition);
+		var userScrolled = false;
+		window.addEventListener('scroll', function() {
+			userScrolled = true;
+			window.removeEventListener('scroll', arguments.callee);
+		});
+		window.addEventListener('load', function() {
+			if (!userScrolled) {
+				window.scrollTo(0, destPosition);
+			}
+		});
+	})();
+</script>
 {% endblock %}
