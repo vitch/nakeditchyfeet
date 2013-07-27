@@ -126,8 +126,8 @@ module.exports = function(grunt) {
         jsLibs: compress ? ['js/libs.min.js'] : jsLibs,
         listFilterOptions: listFilterOptions,
         middleware: [
-          require('./src/middleware/photosets')(),
           require('grunt-haggerston/tasks/lib/middleware/markdown')(),
+          require('./src/middleware/photosets')(),
           require('grunt-haggerston/tasks/lib/middleware/generate')(),
           require('./src/middleware/order')(),
           require('grunt-haggerston/tasks/lib/middleware/render')()
