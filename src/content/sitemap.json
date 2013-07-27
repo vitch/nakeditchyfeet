@@ -1,5 +1,6 @@
 {
   "template": "sitemap.xml",
+  "renderOrder": 2,
   "extension": ".xml",
   "templateData": {
   }

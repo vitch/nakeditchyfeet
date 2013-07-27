@@ -1,5 +1,6 @@
 {
   "template": "feed.xml",
+  "renderOrder": 1,
   "extension": ".rss",
   "templateData": {
   }

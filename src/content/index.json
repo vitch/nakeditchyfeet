@@ -1,5 +1,6 @@
 {
   "template": "home.html",
+  "renderOrder": 1,
   "templateData": {
     "title": "Naked Itchy Feet",
     "mapIsOpen": true

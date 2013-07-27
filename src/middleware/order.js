@@ -5,18 +5,9 @@ module.exports = function () {
   // filter will fail. Hacky workaround?
   return function (pages, next, options) {
     var sortedPages = pages.sort(function(p1, p2) {
-      var t1 = p1.template;
-      var t2 = p2.template;
-      if (t1 === t2) {
-        return 0;
-      }
-      if (t1 === 'home.html' || t1 === 'feed.xml' || t1 === 'tag-page.xml') {
-        return 1;
-      }
-      if (t2 === 'home.html' || t1 === 'feed.xml' || t1 === 'tag-page.xml') {
-        return 1;
-      }
-      return 0;
+      var o1 = p1.renderOrder || 0;
+      var o2 = p2.renderOrder || 0;
+      return o1 - o2;
     });
     next(sortedPages);
   }

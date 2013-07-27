@@ -1,5 +1,6 @@
 {
   "template": "tag-page.html",
+  "renderOrder": 1,
   "generate": {
     "category": "tags"
   }
