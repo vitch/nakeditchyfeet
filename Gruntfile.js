@@ -24,6 +24,8 @@ module.exports = function(grunt) {
     'js/lib/bootstrap-tooltip.js',
     'js/lib/enquire.js'
   ];
+  var compileJsTarget = compress ? 'requirejs:compile' : 'copy:js';
+  var copyJsLibsTarget = compress ? 'uglify:libs' : 'copy:libs';
 
   var listFilterOptions = [
     {
@@ -267,9 +269,15 @@ module.exports = function(grunt) {
       },
       js: {
         files: [
-          'src/js/**/*.js'
+          'src/js/app/**/*.js'
         ],
-        tasks: 'build'
+        tasks: compileJsTarget
+      },
+      jsLibs: {
+        files: [
+          'src/js/lib/**/*.js'
+        ],
+        tasks: copyJsLibsTarget
       },
       eventJson: {
         files: [
@@ -314,7 +322,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('flickr', require('./src/grunt-flickr/task.js'));
 
-  grunt.registerTask('build', ['clean', 'copy:main', 'copy:templates', (compress ? 'uglify:libs' : 'copy:libs'), (compress ? 'requirejs:compile' : 'copy:js'), 'less', 'haggerston']);
+  grunt.registerTask('build', ['clean', 'copy:main', 'copy:templates', copyJsLibsTarget, compileJsTarget, 'less', 'haggerston']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
 
   grunt.registerTask('default', ['build']);
