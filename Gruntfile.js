@@ -107,16 +107,6 @@ module.exports = function(grunt) {
             dest: 'out/js/lib'
           }
         ]
-      },
-      templates: {
-        files: [
-          {
-            expand: true,
-            cwd: 'src/js/app/views/templates',
-            src: ['**/*.html'],
-            dest: 'out/js/app/views/templates'
-          }
-        ]
       }
     },
     less: {
@@ -259,7 +249,7 @@ module.exports = function(grunt) {
           'src/templates/**/*.html',
           'src/templates/**/*.xml'
         ],
-        tasks: 'build'
+        tasks: 'haggerston'
       },
       assets: {
         files: [
@@ -283,7 +273,7 @@ module.exports = function(grunt) {
         files: [
           'src/data/*.json'
         ],
-        tasks: 'build'
+        tasks: 'haggerston'
       },
       styles: {
         files: [
@@ -322,7 +312,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('flickr', require('./src/grunt-flickr/task.js'));
 
-  grunt.registerTask('build', ['clean', 'copy:main', 'copy:templates', copyJsLibsTarget, compileJsTarget, 'less', 'haggerston']);
+  grunt.registerTask('build', ['clean', 'copy:main', copyJsLibsTarget, compileJsTarget, 'less', 'haggerston']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
 
   grunt.registerTask('default', ['build']);
