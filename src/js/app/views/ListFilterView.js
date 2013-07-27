@@ -22,6 +22,7 @@ define(
           if (chosenFilter) {
             clicked.addClass('active');
           }
+          $('#site-header').removeClass('is-open');
           return false;
         }
       }
