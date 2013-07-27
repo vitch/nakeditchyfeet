@@ -6,21 +6,21 @@
         <atom:link href="http://nakeditchyfeet.com/feed.rss" rel="self" type="application/rss+xml" />
         <link>http://nakeditchyfeet.com</link>
         <description>Around the world with Kelvin &amp; Priscila - mischief afoot</description>
-        {% set latestPost = pages|matches('prettyUrl','/blog/')|published|sort('templateData.date')|reverse|first %}
-        <lastBuildDate>{{ latestPost.templateData.date|date('r') }}</lastBuildDate>
+        {% set latestPost = pages|published|listPageIconify|sort('date')|reverse|first %}
+        <lastBuildDate>{{ latestPost.date|date('r') }}</lastBuildDate>
         <language>en</language>
         <sy:updatePeriod>daily</sy:updatePeriod>
         <sy:updateFrequency>1</sy:updateFrequency>
         <generator>HaggerstonJS</generator>
-        {% for child in pages|matches('prettyUrl','/blog/')|published|sort('templateData.date')|reverse %}
+        {% for child in pages|published|listPageIconify|sort('date')|reverse %}
         <item>
-            <title>{{ child.templateData.title }}</title>
-            <link>http://nakeditchyfeet.com{{ child.prettyUrl }}</link>
-            <pubDate>{{ child.templateData.date|date('r') }}</pubDate>
+            <title>{{ child.label }}</title>
+            <link>http://nakeditchyfeet.com{{ child.target.prettyUrl }}</link>
+            <pubDate>{{ child.date|date('r') }}</pubDate>
             <dc:creator>Kelvin Luck &amp; Priscila Santos</dc:creator>
-            <category>Uncategorised</category>
-            <guid isPermaLink="true">http://nakeditchyfeet.com{{ child.prettyUrl }}</guid>
-            <description>{{ child|intro }}</description>
+            <category>{{ child.type }}</category>
+            <guid isPermaLink="true">http://nakeditchyfeet.com{{ child.target.prettyUrl }}</guid>
+            <description>{{ child|listPageIntro }}</description>
         </item>
         {% endfor %}
     </channel>

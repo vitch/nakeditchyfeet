@@ -137,6 +137,7 @@ module.exports = function(grunt) {
           require('./src/middleware/photosets')(),
           require('grunt-haggerston/tasks/lib/middleware/markdown')(),
           require('grunt-haggerston/tasks/lib/middleware/generate')(),
+          require('./src/middleware/order')(),
           require('grunt-haggerston/tasks/lib/middleware/render')()
         ],
         swigFilters: {
@@ -163,7 +164,7 @@ module.exports = function(grunt) {
                   target: page,
                   date: new Date(page.templateData.date),
                   label: page.templateData.title,
-                  image: page.templateData.headerImage,
+//                  image: page.templateData.headerImage,
                   hasLink: true
                 }
               });
@@ -195,12 +196,25 @@ module.exports = function(grunt) {
               return !_.isUndefined(page.templateData) && !(_.isUndefined(page.templateData.latitude) || _.isUndefined(page.templateData.longitude));
             });
           },
-          intro: function(page) {
-            if (page.intro) {
-              return page.intro;
+          listPageIntro: function(item) {
+            switch(item.type) {
+              case 'photo':
+                return item.label;
+                break;
+              case 'post':
+              case 'tip':
+                var page = item.target;
+                if (page.intro) {
+                  return page.intro;
+                }
+                var $ = cheerio.load(page.renderedTemplate);
+                var firstParagraph = $('#content>p').first();
+                return firstParagraph.html();
+
+                break;
+              default:
+                // nothing
             }
-            var $ = cheerio.load(page.renderedTemplate);
-            return $('#content>p').first().html();
           },
           getPhotosetData: function(pages, photosetIds) {
             return _(pages).filter(function(page) {
