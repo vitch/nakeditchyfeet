@@ -280,6 +280,12 @@ module.exports = function(grunt) {
           'src/styles/**/*.less'
         ],
         tasks: 'less'
+      },
+      stays: {
+        files: [
+          'src/data/stays.json'
+        ],
+        tasks: 'stays'
       }
     },
     connect: {
@@ -297,6 +303,12 @@ module.exports = function(grunt) {
         apiKey: '6f3e186ef51005004ece29d2d2ec8583',
         apiSecret: '5cfe6e7a9ce8b8b6'
       }
+    },
+    stays: {
+      options: {
+        src: 'src/data/stays.json',
+        out: 'out/stay-data.json'
+      }
     }
 
   });
@@ -310,9 +322,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('flickr', require('./src/grunt-flickr/task.js'));
+  grunt.registerTask('flickr', require('./src/grunt-tasks/flickr.js'));
+  grunt.registerTask('stays', require('./src/grunt-tasks/stays.js'));
 
-  grunt.registerTask('build', ['clean', 'copy:main', copyJsLibsTarget, compileJsTarget, 'less', 'haggerston']);
+  grunt.registerTask('build', ['clean', 'copy:main', copyJsLibsTarget, compileJsTarget, 'less', 'haggerston', 'stays']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
 
   grunt.registerTask('default', ['build']);
