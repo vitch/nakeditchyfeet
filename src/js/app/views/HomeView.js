@@ -19,9 +19,13 @@ define(
         },
         initNowMarker: function() {
           this.nowMarker = this.$('#now-marker');
+
           this.updateNowMarkerMargin();
         },
         updateNowMarkerMargin: function(scroll) {
+          if (this.nowMarker.length === 0) {
+            return;
+          }
           this.nowMarker.css('margin-top', this.initialNowMargin || (this.initialNowMargin = parseInt(this.nowMarker.css('margin-top'))));
           var nowMarkerTop = this.nowMarker.position().top;
           var whenMarkerTop = $('#when-marker').position().top;
