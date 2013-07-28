@@ -1,8 +1,133 @@
 {"stays": [
   {
+    "id": "d3db04b4-1924-2abb-bba7-0f36988ec5e5",
+    "date": "2013-07-25T00:00:00.000Z",
+    "location": "8094a518-f1f8-20b7-81d4-1b6347465d06"
+  },
+  {
+    "id": "7c2adbac-b231-4a11-d126-a122128408a7",
+    "date": "2013-07-24T00:00:00.000Z",
+    "location": "8094a518-f1f8-20b7-81d4-1b6347465d06"
+  },
+  {
+    "id": "7ac05ccc-b161-bccd-0449-ddc6d9ff773c",
+    "date": "2013-07-23T00:00:00.000Z",
+    "location": "8094a518-f1f8-20b7-81d4-1b6347465d06"
+  },
+  {
+    "id": "75c69fae-69f1-8e9d-fc7e-e1d3c6388197",
+    "date": "2013-07-22T00:00:00.000Z",
+    "location": "8094a518-f1f8-20b7-81d4-1b6347465d06"
+  },
+  {
+    "id": "6b4117dd-d30c-0372-9848-1a651be457d7",
+    "date": "2013-07-21T00:00:00.000Z",
+    "location": "780d9099-da73-95fa-d4cb-ecac4dbf1723"
+  },
+  {
+    "id": "e909d6ee-763f-b40b-8ced-b57cab960910",
+    "date": "2013-07-20T00:00:00.000Z",
+    "location": "e3db21b6-0296-0f7c-b3f4-d10631ee03c7"
+  },
+  {
+    "id": "0df2dffa-a17c-7c4d-c099-961a191df48d",
+    "date": "2013-07-19T00:00:00.000Z",
+    "location": "e3db21b6-0296-0f7c-b3f4-d10631ee03c7"
+  },
+  {
+    "id": "709f9bab-d2a9-f8c3-b41e-6ec17688aa49",
+    "date": "2013-07-18T00:00:00.000Z",
+    "location": "18ada179-0f32-500f-e9b3-2eef35378ff1"
+  },
+  {
+    "id": "79744c77-70e5-371b-7db4-6e6ae9b10806",
+    "date": "2013-07-17T00:00:00.000Z",
+    "location": "18ada179-0f32-500f-e9b3-2eef35378ff1"
+  },
+  {
+    "id": "de4e33da-954c-ece2-0321-e61ab891b091",
+    "date": "2013-07-16T00:00:00.000Z",
+    "location": "18ada179-0f32-500f-e9b3-2eef35378ff1"
+  },
+  {
+    "id": "e57f58b5-1d23-cc55-94e2-658b2be4a07d",
+    "date": "2013-07-15T00:00:00.000Z",
+    "location": "ca0594f3-342d-45e6-85f1-e36d971cb32e"
+  },
+  {
+    "id": "e49fdde1-ff2f-2c00-abc8-33112e7f6874",
+    "date": "2013-07-14T00:00:00.000Z",
+    "location": "ca0594f3-342d-45e6-85f1-e36d971cb32e"
+  },
+  {
+    "id": "0defb9d6-244a-c769-b086-7d02ada10830",
+    "date": "2013-07-13T00:00:00.000Z",
+    "location": "fafb3eba-6aee-818b-6a59-61eda19cd40a"
+  },
+  {
+    "id": "6bc9c8bf-200b-339e-93aa-a7d118d9a455",
+    "date": "2013-07-12T00:00:00.000Z",
+    "location": "6a0af308-9fed-ac7e-c4d0-838e2d6384d1"
+  },
+  {
+    "id": "de6a31cf-e5db-706e-21f3-9d2016482a08",
+    "date": "2013-07-11T00:00:00.000Z",
+    "location": "d17a0ca2-3f5a-3658-0558-b936e4aa79c5"
+  },
+  {
+    "id": "a7cc4ab5-768a-0520-2de3-35bf86da4149",
+    "date": "2013-07-10T00:00:00.000Z",
+    "location": "0bbbfc73-be01-6b2c-1233-2835bea2f04d"
+  },
+  {
+    "id": "2c8f58c0-77a5-745d-c9c8-65403f626662",
+    "date": "2013-07-09T00:00:00.000Z",
+    "location": "914a6b51-9e23-af6f-29de-b810ae11e1dc"
+  },
+  {
+    "id": "ee025d8f-ef30-e034-892b-811eaf1474bf",
+    "date": "2013-07-08T00:00:00.000Z",
+    "location": "914a6b51-9e23-af6f-29de-b810ae11e1dc"
+  },
+  {
+    "id": "044b3d7b-a583-673f-091c-fb2fa239ef1d",
+    "date": "2013-07-07T00:00:00.000Z",
+    "location": "914a6b51-9e23-af6f-29de-b810ae11e1dc"
+  },
+  {
+    "id": "82b3e4a9-c9f9-d4e5-708c-2d090e33bcbe",
+    "date": "2013-07-06T00:00:00.000Z",
+    "location": "914a6b51-9e23-af6f-29de-b810ae11e1dc"
+  },
+  {
+    "id": "d98b6df9-2840-7e50-9029-1300de4b64be",
+    "date": "2013-07-05T00:00:00.000Z",
+    "location": "914a6b51-9e23-af6f-29de-b810ae11e1dc"
+  },
+  {
+    "id": "90a12b07-1f9a-5047-086a-b2bb779b5895",
+    "date": "2013-07-04T00:00:00.000Z",
+    "location": "0a26d6c5-ff18-849b-1ae1-502a3ea9dd40"
+  },
+  {
+    "id": "b130b3f9-1b9d-0ffa-6b6f-b3c14118388e",
+    "date": "2013-07-03T00:00:00.000Z",
+    "location": "0a26d6c5-ff18-849b-1ae1-502a3ea9dd40"
+  },
+  {
     "id": "b2e424c5-1116-c774-bc57-a6d4cedc9e58",
     "date": "2013-07-02T00:00:00.000Z",
     "location": "4f32ef11-7ed7-cb27-3452-291d4282e909"
+  },
+  {
+    "id": "35c5acfa-87bf-309f-2e31-3d2521ae7563",
+    "date": "2013-07-01T00:00:00.000Z",
+    "location": "76d2f194-fc64-f945-6a11-b76bf3fd4cb7"
+  },
+  {
+    "id": "4d27511a-4973-6c82-17c3-a561293b6630",
+    "date": "2013-06-30T00:00:00.000Z",
+    "location": "d0eba4ef-abad-5c51-e4a6-ad6c938a846d"
   },
   {
     "id": "6a58b43f-9e3b-988e-be68-844049f70165",
@@ -13,6 +138,11 @@
     "id": "ee8ad8c4-602f-7d6d-1f35-3dfd5758f86a",
     "date": "2013-06-28T00:00:00.000Z",
     "location": "d94350f5-8a8f-e375-20fd-6d614bd24852"
+  },
+  {
+    "id": "630374be-1726-5e1d-a450-7dcbaf35d12d",
+    "date": "2013-06-27T00:00:00.000Z",
+    "location": "ebb53e77-edcf-c402-fbd9-606d94fff25e"
   },
   {
     "id": "dd13c2f0-cd10-4031-77ac-efec0b599e05",
@@ -38,6 +168,11 @@
     "id": "fe8fce9a-f693-0bb3-34e6-ccc15f344241",
     "date": "2013-06-22T00:00:00.000Z",
     "location": "ab07760f-8d00-1418-132f-1de18914409e"
+  },
+  {
+    "id": "e541f434-3e18-e46c-07c8-7b1d4f78dbba",
+    "date": "2013-06-21T00:00:00.000Z",
+    "location": "e6869208-d064-1a9e-2829-924902529253"
   },
   {
     "id": "e9bc2eba-4445-74f6-7646-44ff8910ce9d",
@@ -346,6 +481,18 @@
     "id": "13dd5b73-4574-4aca-3614-c53673c80663"
   },
   {
+    "latitude": "-2.9787185",
+    "longitude": "119.8936633",
+    "name": "Pia's pop",
+    "id": "5df0e618-1f73-3998-f186-5d3c5a7b8d28"
+  },
+  {
+    "latitude": "",
+    "longitude": "",
+    "name": "Pia,",
+    "id": "cc6b53d4-2f1b-0289-f035-573202f0a191"
+  },
+  {
     "latitude": "-2.97824353",
     "longitude": "119.89347814999999",
     "name": "Pia's Poppies",
@@ -392,5 +539,107 @@
     "longitude": "117.74574507",
     "name": "Mascot Beach Hotel",
     "id": "4f32ef11-7ed7-cb27-3452-291d4282e909"
+  },
+  {
+    "latitude": "-8.11824829",
+    "longitude": "117.74574507",
+    "name": "Heavenly Homestay",
+    "id": "0a26d6c5-ff18-849b-1ae1-502a3ea9dd40"
+  },
+  {
+    "latitude": "-8.11824829",
+    "longitude": "117.74574507",
+    "name": "Seger Reef",
+    "id": "914a6b51-9e23-af6f-29de-b810ae11e1dc"
+  },
+  {
+    "latitude": "-8.4999486",
+    "longitude": "116.0495796",
+    "name": "Indah Homestay",
+    "id": "0bbbfc73-be01-6b2c-1233-2835bea2f04d"
+  },
+  {
+    "latitude": "-8.3215618",
+    "longitude": "116.4731976",
+    "name": "Restu by views",
+    "id": "d17a0ca2-3f5a-3658-0558-b936e4aa79c5"
+  },
+  {
+    "latitude": "-8.39411689",
+    "longitude": "116.44014652",
+    "name": "Crater rim sembalun side",
+    "id": "6a0af308-9fed-ac7e-c4d0-838e2d6384d1"
+  },
+  {
+    "latitude": "-8.2789734",
+    "longitude": "116.2669127",
+    "name": "Crater rim senaru side",
+    "id": "95b81ad0-85a4-dc27-47d2-f50cf2d2ff9a"
+  },
+  {
+    "latitude": "-8.3387362",
+    "longitude": "116.2775606",
+    "name": "Crater rim Senaru side",
+    "id": "fafb3eba-6aee-818b-6a59-61eda19cd40a"
+  },
+  {
+    "latitude": "-8.3522562",
+    "longitude": "116.0429338",
+    "name": "Karisma Losmen",
+    "id": "ca0594f3-342d-45e6-85f1-e36d971cb32e"
+  },
+  {
+    "latitude": "-8.3536249",
+    "longitude": "116.0601522",
+    "name": "Rawa Indah",
+    "id": "18ada179-0f32-500f-e9b3-2eef35378ff1"
+  },
+  {
+    "latitude": "-8.5310216",
+    "longitude": "115.5082875",
+    "name": "Tirta Yoga Guesthouse",
+    "id": "e3db21b6-0296-0f7c-b3f4-d10631ee03c7"
+  },
+  {
+    "latitude": "-8.3372767",
+    "longitude": "115.6597086",
+    "name": "Galang Kangin",
+    "id": "780d9099-da73-95fa-d4cb-ecac4dbf1723"
+  },
+  {
+    "latitude": "-8.27861",
+    "longitude": "115.593191",
+    "name": "Ocean Sun",
+    "id": "8094a518-f1f8-20b7-81d4-1b6347465d06"
+  },
+  {
+    "latitude": "-8.50476",
+    "longitude": "116.05496",
+    "name": "",
+    "id": "6c68b33b-3224-45a2-e8d6-2238c64f6854"
+  },
+  {
+    "latitude": "-8.50478",
+    "longitude": "116.05496",
+    "name": "Made Homestay",
+    "id": "76d2f194-fc64-f945-6a11-b76bf3fd4cb7"
+  },
+  {
+    "latitude": "-8.439",
+    "longitude": "116.745",
+    "name": "Boat to Lombok pt 3",
+    "id": "d0eba4ef-abad-5c51-e4a6-ad6c938a846d"
+  },
+  {
+    "latitude": "-8.48455",
+    "longitude": "119.87912",
+    "name": "Bagus bagus",
+    "id": "ebb53e77-edcf-c402-fbd9-606d94fff25e"
+  },
+  {
+    "latitude": "-8.75429",
+    "longitude": "121.86255",
+    "name": "Bintang Lodge",
+    "id": "e6869208-d064-1a9e-2829-924902529253"
   }
 ]}
