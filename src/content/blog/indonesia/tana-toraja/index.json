@@ -2,6 +2,7 @@
   "template": "blog-post.html",
   "templateData": {
     "title": "Death as a way of living in Tana Toraja",
+    "author": "Priscila Santos",
     "date": "2013-06-18",
     "headerImage": "procession.jpg",
     "content": "tana-toraja.md",

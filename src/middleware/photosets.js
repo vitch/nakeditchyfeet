@@ -23,6 +23,7 @@ module.exports = function () {
         photosetData.latitude = averageLocationData.latitude / averageLocationData.num;
         photosetData.longitude = averageLocationData.longitude / averageLocationData.num;
       }
+      photosetData.author = 'Kelvin Luck';
       var page = new Page('/photos/' + photoset.id + '/index.html', {
         template: 'photoset.html',
         templateData: photosetData

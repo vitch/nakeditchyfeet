@@ -2,6 +2,7 @@
   "template": "blog-post.html",
   "templateData": {
     "title": "What's the plan?",
+    "author": "Priscila Santos",
     "date": "2013-04-05",
     "headerImage": "map.jpg",
     "content": "whats-the-plan.md",

@@ -2,6 +2,7 @@
   "template": "blog-post.html",
   "templateData": {
     "title": "Guidebooks - a modern take",
+    "author": "Kelvin Luck",
     "content": "guidebooks.md",
     "date": "2013-04-09",
     "category": "Planning",

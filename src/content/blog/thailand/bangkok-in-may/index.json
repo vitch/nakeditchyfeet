@@ -2,6 +2,7 @@
   "template": "blog-post.html",
   "templateData": {
     "title": "Bangkok in May",
+    "author": "Priscila Santos",
     "date": "2013-05-05",
     "headerImage": "sapan-pout.jpg",
     "content": "bangkok-in-may.md",

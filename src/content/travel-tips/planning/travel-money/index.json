@@ -2,6 +2,7 @@
   "template": "blog-post.html",
   "templateData": {
     "title": "Travel Money",
+    "author": "Kelvin Luck",
     "content": "travel-money.md",
     "date": "2013-04-10",
     "category": "Planning",

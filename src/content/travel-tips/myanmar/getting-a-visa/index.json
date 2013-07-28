@@ -3,8 +3,9 @@
   "markdownPreprocessWithSwig": true,
   "templateData": {
     "title": "Getting a Myanmar visa in Bangkok",
-    "content": "myanmar-visa.md",
+    "author": "Kelvin Luck",
     "date": "2013-05-06",
+    "content": "myanmar-visa.md",
     "category": "Myanmar",
     "latitude": 13.72077,
     "longitude": 100.52449,

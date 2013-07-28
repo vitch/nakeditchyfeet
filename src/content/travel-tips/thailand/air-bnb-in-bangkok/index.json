@@ -2,6 +2,7 @@
   "template": "blog-post.html",
   "templateData": {
     "title": "Air BnB in Bangkok",
+    "author": "Kelvin Luck",
     "content": "air-bnb-in-bangkok.md",
     "date": "2013-05-06",
     "category": "Thailand",

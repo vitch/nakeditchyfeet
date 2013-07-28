@@ -2,8 +2,9 @@
   "template": "blog-post.html",
   "templateData": {
     "title": "Flores",
-    "headerImage": "inerie.jpg",
+    "author": "Priscila Santos",
     "date": "2013-07-01",
+    "headerImage": "inerie.jpg",
     "content": "flores.md",
     "latitude": -8.760,
     "longitude": 121.814,

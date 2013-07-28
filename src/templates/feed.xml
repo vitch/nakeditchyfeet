@@ -17,7 +17,7 @@
             <title>{{ child.label }}</title>
             <link>http://nakeditchyfeet.com{{ child.target.prettyUrl }}</link>
             <pubDate>{{ child.date|date('r') }}</pubDate>
-            <dc:creator>Kelvin Luck &amp; Priscila Santos</dc:creator>
+            <dc:creator>{{ child.target.templateData..author }}</dc:creator>
             <category>{{ child.type }}</category>
             <guid isPermaLink="true">http://nakeditchyfeet.com{{ child.target.prettyUrl }}</guid>
             <description>{{ child|listPageIntro }}</description>

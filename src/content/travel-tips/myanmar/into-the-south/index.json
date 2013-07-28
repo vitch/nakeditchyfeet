@@ -2,6 +2,7 @@
   "template": "blog-post.html",
   "templateData": {
     "title": "Tips for the south of Burma",
+    "author": "Priscila Santos",
     "date": "2013-05-15",
     "category": "Myanmar",
     "latitude": 13.45,

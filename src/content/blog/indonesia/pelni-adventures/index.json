@@ -2,6 +2,7 @@
   "template": "blog-post.html",
   "templateData": {
     "title": "Adventures on Pelni",
+    "author": "Priscila Santos",
     "date": "2013-06-20 23:00",
     "headerImage": "deck2.jpg",
     "content": "pelni-adventures.md",
