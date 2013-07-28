@@ -1,0 +1,65 @@
+{% extends 'wrapper.html' %}
+{% block bodyContent %}
+<ul id="home-list">
+	{% for child in pagesToLoop %}
+		<li class="item-type-{{ child.type }}{% if child.hasLink %} has-link{% endif %}">
+			<i class="icon icon-{{ child.icon }}"> </i>
+			<div class="item">
+				<time datetime="{{ child.date|date('Y-m-d') }}">{{ child.date|date('jS M Y') }}</time>
+				{% if child.target %}<a href="{{ page|linkTo(child.target) }}">{% endif %}
+				{% if child.externalLink %}<a href="{{ child.externalLink }}" target="_blank">{% endif %}
+					<h1>
+						{% if child.target.isDraft -%}<span>[Draft]</span> {% endif %}
+						{{ child.label|raw }}
+					</h1>
+				{% if child.hasLink %}</a>{% endif %}
+
+				{% if child.image -%}
+					{%- if child.image.join -%}
+						<div class="photoset">
+							{% for thumb in child.image %}
+								<img src="{{ thumb.url_q }}" alt="{{ thumb.title }}">
+							{% endfor %}
+						</div>
+					{%- else -%}
+					<img src="{{ page|relativePath(child.target) }}{{ child.image }}" class="header-image" alt="{{ child.label }}">
+					{%- endif -%}
+				{% endif %}
+			</div>
+		</li>
+	{% endfor %}
+</ul>
+<script type="text/javascript">
+	(function() {
+		var now = Date.now();
+		var items = document.getElementById('home-list').getElementsByTagName('li');
+		var destPosition = -document.getElementById('when-marker').offsetTop;
+		var nowMarker;
+		for (var i=0; i<items.length; i++) {
+			var li = items[i];
+			var time = li.getElementsByTagName('time')[0];
+			var d = new Date(time.getAttribute('dateTime')).getTime();
+
+			if (d < now) {
+				nowMarker = document.createElement('li');
+				nowMarker.setAttribute('id', 'now-marker');
+				li.parentElement.insertBefore(nowMarker, li);
+				destPosition += nowMarker.offsetTop;
+				break;
+			}
+			li.className += ' is-future';
+		}
+		window.scrollTo(0, destPosition);
+		var userScrolled = false;
+		window.addEventListener('scroll', function() {
+			userScrolled = true;
+			window.removeEventListener('scroll', arguments.callee);
+		});
+		window.addEventListener('load', function() {
+			if (!userScrolled) {
+				window.scrollTo(0, destPosition);
+			}
+		});
+	})();
+</script>
+{% endblock %}
