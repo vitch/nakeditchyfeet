@@ -22,7 +22,7 @@ module.exports = function () {
           cleanedTags.push(tag);
         }
       });
-      page.templateData.tags = cleanedTags;
+      page.templateData.tags = cleanedTags.sort();
     });
     next(pages);
   }
