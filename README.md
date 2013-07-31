@@ -1,8 +1,8 @@
 # Naked Itchy Feet
 
-This repository contains the source code for [our travel blog](nakeditchyfeet.com).
+This repository contains the source code for [our travel blog](http://nakeditchyfeet.com).
 
-The blog is built using [HaggerstonJS](https://github.com/haggerstonjs/grunt-haggerston/) and can be generated and viewed by downloading this repository and running `grunt serve` in the directory then navigating to [localhost:8000]().
+The blog is built using [HaggerstonJS](https://github.com/haggerstonjs/grunt-haggerston/) and can be generated and viewed by downloading this repository and running `grunt serve` in the directory then navigating to [http://localhost:8000]().
 
 The source code is open as an example of how to use HaggerstonJS to generate a moderately complex static site. 
 
