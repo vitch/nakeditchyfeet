@@ -4,11 +4,6 @@
 	<nav>
 		<ul>
 			<li>
-				<a href="http://flickr.com/photos/vitch/{{ photoId }}/in/set-{{ photoset.id }}" title="View on Flickr" target="_blank">
-					<i class="icon-zoom-in"></i>
-				</a>
-			</li>
-			<li>
 				{% if nextPhotoLink %}
 					<a href="{{ nextPhotoLink }}" title="Next photo"><i class="icon-chevron-right"></i></a>
 				{% else %}
@@ -21,6 +16,11 @@
 				{% else %}
 				<i class="icon-chevron-left icon-muted"></i>
 				{% endif %}
+			</li>
+			<li>
+				<a href="http://flickr.com/photos/vitch/{{ photoId }}/in/set-{{ photoset.id }}" title="View on Flickr" target="_blank">
+					<i class="icon-flickr"></i>
+				</a>
 			</li>
 			<li><a href="./" title="Back to photoset"><i class="icon-camera-retro"></i></a></li>
 		</ul>

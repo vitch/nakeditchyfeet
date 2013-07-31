@@ -401,12 +401,16 @@ header.content-header {
 
 	li {
 		float: left;
-		font-size: 60px;
 		margin: 0 10px 10px 0;
 		a {
-			color: @textColor;
+			font-size: 60px;
+			color: @gray;
 			text-decoration: none;
 			.transition(@linkFadeTransition);
+
+			.icon-envelope-alt {
+				font-size: 1.09em;
+			}
 
 			&:hover {
 				color: @linkColorHover;
