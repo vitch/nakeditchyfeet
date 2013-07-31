@@ -6,7 +6,7 @@
 		<h1>
 			{{ title }}
 		</h1>
-		{% if tags -%}
+		{% if tags.length -%}
 		<ul class="tags">
 			{% for tag in tags -%}
 			<li><a href="{{ page|basePath}}tags/{{tag|replace(' ', '-')}}.html" class="label"><i class="icon icon-tag"></i> {{tag}}</a></li>
