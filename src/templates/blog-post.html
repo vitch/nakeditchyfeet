@@ -19,7 +19,7 @@
 	<div class="alert alert-block alert-error" style="margin-top: 20px;"><strong>Warning</strong>: Draft post - will not be visible on live website</div>
 	{%- endif %}
 
-	{% if headerImage %}<img src="{{ headerImage }}" class="header-image" />{% endif %}
+	{% if headerImageLarge %}<img src="{{ headerImageLarge }}" class="header-image" />{% else if headerImage %}<img src="{{ headerImage }}" class="header-image" />{% endif %}
 	<div id="content">{{ content|raw }}</div>
 	{% if photosets %}
 	<div id="related-photosets">
