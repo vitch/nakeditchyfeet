@@ -1,5 +1,5 @@
 {
-  "template": "blog-post.html",
+  "template": "follow-us.html",
   "templateData": {
     "title": "Follow Us",
     "content": "follow-us.md",
