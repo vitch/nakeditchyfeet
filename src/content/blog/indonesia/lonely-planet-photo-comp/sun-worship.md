@@ -4,4 +4,4 @@ The way the competition works is pretty simple. Each week a theme is set (the we
 
 Luckily we were on Gili Meno when we saw the theme of "Sun Worship" and we had an amazing sunset to photograph. We went for a cheesy silhouette with Gili Trawangan and Bali's Gunung Agung in the background.
 
-You can view the top five entries in the sun worship challenge [on Flickr](http://flickr.com/groups/lonelyplanetpublications/discuss/72157634659956716/) and keep an eye on the upcoming themes - maybe there is one you can enter yourself :)
+You can view the top five entries in the sun worship challenge [on Flickr](http://flickr.com/groups/lonelyplanetpublications/discuss/72157634750630289/) and keep an eye on the upcoming themes - maybe there is one you can enter yourself :)
