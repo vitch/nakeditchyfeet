@@ -128,6 +128,7 @@ module.exports = function(grunt) {
         middleware: [
           require('grunt-haggerston/tasks/lib/middleware/markdown')(),
           require('./src/middleware/photosets')(),
+          require('./src/middleware/trim-tags')(),
           require('grunt-haggerston/tasks/lib/middleware/generate')(),
           require('./src/middleware/order')(),
           require('grunt-haggerston/tasks/lib/middleware/render')()
