@@ -1,0 +1,14 @@
+{
+  "template": "blog-post.html",
+  "templateData": {
+    "title": "Sun Worship photo challenge",
+    "author": "Kelvin Luck",
+    "date": "2013-07-30",
+    "headerImage": "sun-worship.jpg",
+    "headerImageLarge": "sun-worship-large.jpg",
+    "content": "sun-worship.md",
+    "latitude": -8.3415,
+    "longitude": 116.0556,
+    "tags": ["indonesia", "lombok", "gili islands", "beaches", "sunset", "photo", "competition"]
+  }
+}
