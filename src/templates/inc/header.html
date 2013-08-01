@@ -1,0 +1,19 @@
+<header class="content-header">
+	{% if date %}<time datetime="{{ date|date('Y-m-d') }}" pubdate>{{ date|date('jS M Y') }}</time>{% endif %}
+	<h1>
+		{{ title }}
+	</h1>
+	{% if tags.length -%}
+	<ul class="tags">
+		{% for tag in tags -%}
+		<li><a href="{{ page|basePath}}tags/{{tag|replace(' ', '-')}}.html" class="label"><i class="icon icon-tag"></i> {{tag}}</a></li>
+		{%- endfor %}
+	</ul>
+	{%- endif %}
+</header>
+
+{% if page.isDraft -%}
+<div class="alert alert-block alert-error" style="margin-top: 20px;"><strong>Warning</strong>: Draft post - will not be visible on live website</div>
+{%- endif %}
+
+{% if headerImageLarge %}<img src="{{ headerImageLarge }}" class="header-image" />{% else if headerImage %}<img src="{{ headerImage }}" class="header-image" />{% endif %}
