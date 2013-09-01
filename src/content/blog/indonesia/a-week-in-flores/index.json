@@ -3,12 +3,12 @@
   "templateData": {
     "title": "Flores",
     "author": "Priscila Santos",
-    "date": "2013-07-01",
+    "date": "2013-06-28",
     "headerImage": "inerie.jpg",
     "content": "flores.md",
     "latitude": -8.760,
     "longitude": 121.814,
-    "photosets": ["72157634904125314", "72157634900828849", "72157634900828839"],
+    "photosets": ["72157634904125314", "72157634900828849", "72157634900828839", "72157634929892075"],
     "tags": ["flores", "indonesia", "volcano"]
   }
 }
