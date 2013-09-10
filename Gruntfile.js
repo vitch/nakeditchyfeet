@@ -192,7 +192,7 @@ module.exports = function(grunt) {
           listPageIntro: function(item) {
             switch(item.type) {
               case 'photo':
-                return item.label;
+                return item.target.templateData.description ? item.target.templateData.description : item.label;
                 break;
               case 'post':
               case 'tip':

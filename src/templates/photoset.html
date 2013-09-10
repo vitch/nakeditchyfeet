@@ -5,11 +5,18 @@
 	{% if date %}<time datetime="{{ date|date('Y-m-d') }}" pubdate>{{ date|date('jS M Y') }}</time>{% endif %}
 	<h1>Photoset: {{ title }}</h1>
 </header>
-<ul id="photoset">
-	{% for photo in photos %}
-		<li>
-			<a href="{{ photo.id }}.html"><img src="{{ photo.url_q }}" alt="{{photo.title}}" title="{{photo.title}}"></a>
-		</li>
-	{% endfor %}
-</ul>
+	{% if description %}
+	<div id="content">
+		<p>
+			{{ description|replace('\n','</p><p>')|raw }}
+		</p>
+	</div>
+	{% endif %}
+	<ul id="photoset">
+		{% for photo in photos %}
+			<li>
+				<a href="{{ photo.id }}.html"><img src="{{ photo.url_q }}" alt="{{photo.title}}" title="{{photo.title}}"></a>
+			</li>
+		{% endfor %}
+	</ul>
 {% endblock %}
