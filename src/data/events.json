@@ -70,29 +70,15 @@
   },
   {
     "date": "2013-09-15",
-    "icon": "anchor",
-    "label": "RYA Competent Crew Course, Whitsunday Islands"
+    "icon": "plane",
+    "label": "<strong>PER - DPS</strong>",
+    "airline": "JetStar"
   },
   {
-    "date": "2013-09-25",
+    "date": "2013-09-26",
     "icon": "plane",
-    "label": "<strong>BNE - NAN</strong>",
-    "from": "BNE",
-    "to": "NAN",
-    "airline": "Air Pacific"
-  },
-  {
-    "date": "2013-10-09",
-    "icon": "plane",
-    "label": "<strong>NAN - AKL</strong>",
-    "from": "NAN",
-    "to": "AKL",
-    "airline": "Air Pacific"
-  },
-  {
-    "date": "2013-11-06",
-    "icon": "plane",
-    "label": "<strong>AKL - SYD</strong>"
+    "label": "<strong>LOP - PER</strong>",
+    "airline": "JetStar"
   },
   {
     "date": "2013-11-23",
@@ -100,9 +86,32 @@
     "label": "Wedding, South Australia"
   },
   {
-    "date": "2013-12-04",
+    "date": "2013-11-27",
     "icon": "plane",
-    "label": "<strong>MEL - AKL</strong>"
+    "label": "<strong>ADL - BNE</strong>",
+    "airline": "JetStar"
+  },
+  {
+    "date": "2013-12-02",
+    "icon": "plane",
+    "label": "<strong>BNE - NAN</strong>",
+    "from": "BNE",
+    "to": "NAN",
+    "airline": "Air Pacific"
+  },
+  {
+    "date": "2013-12-22",
+    "icon": "plane",
+    "label": "<strong>NAN - AKL</strong>",
+    "from": "NAN",
+    "to": "AKL",
+    "airline": "Air Pacific"
+  },
+  {
+    "date": "2013-12-23",
+    "icon": "plane",
+    "label": "<strong>AKL - CHC</strong>",
+    "airline": "Air New Zealand"
   },
   {
     "date": "2013-12-28",
