@@ -314,17 +314,12 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-haggerston');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-requirejs');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  require('load-grunt-tasks')(grunt);
 
-  grunt.registerTask('flickr', require('./src/grunt-tasks/flickr.js'));
-  grunt.registerTask('stays', require('./src/grunt-tasks/stays.js'));
+  grunt.loadTasks('src/grunt-tasks');
+
+//  grunt.registerTask('flickr', require('./src/grunt-tasks/flickr.js'));
+//  grunt.registerTask('stays', require('./src/grunt-tasks/stays.js'));
 
   grunt.registerTask('build', ['clean', 'copy:main', copyJsLibsTarget, compileJsTarget, 'less', 'haggerston', 'stays']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
