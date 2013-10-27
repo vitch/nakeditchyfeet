@@ -86,7 +86,7 @@
     "label": "Wedding, South Australia"
   },
   {
-    "date": "2013-11-27",
+    "date": "2013-11-26",
     "icon": "plane",
     "label": "<strong>ADL - BNE</strong>",
     "airline": "JetStar"
@@ -100,18 +100,12 @@
     "airline": "Air Pacific"
   },
   {
-    "date": "2013-12-22",
+    "date": "2013-12-16",
     "icon": "plane",
     "label": "<strong>NAN - AKL</strong>",
     "from": "NAN",
     "to": "AKL",
     "airline": "Air Pacific"
-  },
-  {
-    "date": "2013-12-23",
-    "icon": "plane",
-    "label": "<strong>AKL - CHC</strong>",
-    "airline": "Air New Zealand"
   },
   {
     "date": "2013-12-28",
@@ -124,7 +118,7 @@
     "label": "Wedding, Marlborough Sounds"
   },
   {
-    "date": "2014-01-21",
+    "date": "2014-03-09",
     "icon": "plane",
     "label": "<strong>AKL - HNL</strong>",
     "from": "AKL",
@@ -132,7 +126,7 @@
     "airline": "Air New Zealand"
   },
   {
-    "date": "2014-02-13",
+    "date": "2014-03-19",
     "icon": "plane",
     "label": "<strong>HNL - LAX</strong>",
     "from": "HNL",
@@ -140,9 +134,9 @@
     "airline": "American Airlines"
   },
   {
-    "date": "2014-03-01",
-    "icon": "glass",
-    "label": "CARNAVAL!"
+    "date": "2014-06-12",
+    "icon": "dribbble",
+    "label": "Brazil vs. ? - World cup opener"
   }
 
 ]
