@@ -86,10 +86,10 @@
     "label": "Wedding, South Australia"
   },
   {
-    "date": "2013-11-26",
+    "date": "2013-11-25",
     "icon": "plane",
     "label": "<strong>ADL - BNE</strong>",
-    "airline": "JetStar"
+    "airline": "Virgin Australia"
   },
   {
     "date": "2013-12-02",
@@ -100,7 +100,7 @@
     "airline": "Air Pacific"
   },
   {
-    "date": "2013-12-16",
+    "date": "2013-12-09",
     "icon": "plane",
     "label": "<strong>NAN - AKL</strong>",
     "from": "NAN",
