@@ -1,0 +1,14 @@
+{
+  "isDraft": true,
+  "template": "blog-post.html",
+  "templateData": {
+    "title": "The best free campsites in Australia",
+    "author": "Kelvin Luck",
+    "date": "2013-12-03",
+    "content": "index.md",
+    "latitude": 0,
+    "longitude": 0,
+    "photosets": [],
+    "tags": ["australia", "camping", "free", "budget", "accommdation"]
+  }
+}
