@@ -39,10 +39,14 @@ It was Monday and there were only two other guests in the whole island. It raine
 In the evening we were invited to join the seasons festivities at the resort staff's Christmas Party. 
 This involved a lot of Kava drinking, a huge BBQ followed by Secret Santa and dancing to Fiji's own version of Gangnam Style. 
 
+![Christmas barbeque in Fiji](DSCF1244.jpg)
+
 The next coupe of days were spent pinching ourselves for we couldn't believe we'd found this place. This isn't a five star type resort, the pool was 
 the ocean, the bedrooms where in simple thatched roof bamboo walled cottages, and the bathroom and showers were shared. 
 But the place was built with careful detailing and using traditional materials and techniques, the water was crystal clear, and the treatment was 
 personal so it felt like five stars. 
+
+![Accomodation on Caqalai Island](DSCF1430.jpg)
 
 But, it wouldn't have been fair on the other 331 islands to spend all week in one place, so we moved on. 
 Only next door though, to Caqalai Island, another white sand donut we'd heard good things about. 
@@ -51,15 +55,22 @@ painted bright yellow which made them charming, there were solar panels for ligh
 minutes. We went snorkeling from a small rock outcrop you can walk to at low tide, known as Snake Island, and we did see a sea snake, lots of Christmas Trees (the animal) plus 
 a shark. Not sure it was a just reef shark.
 
+![Beautiful tropical beaches](DSCF1440.jpg)
+![Cava session](DSCF1476.jpg)
+
 From here the wind blew us back onto the main island up a winding river with mangrove margins to Waidalice landing. Here we hopped on the back of a van 
 whose open back showed us very scenic views of those tropical mountains we'd seen on our first day and mud coloured rivers all the way to Elington Wharf
 on the north east of the main island. Here, another boat took us to Nananou-i-ra Island, as we prepared to slowly drift towards our port of departure in Nadi. 
+
+![Hills](DSCF1529.jpg)
 
 Unfortunately here we were slightly less lucky and the place we chose to stay at was in a bit of a state. On arrival at the Safari Lodge, the beach that welcomed us was covered in plastic packaging and, within five minutes of arriving the mosquitoes had also presented us their welcome gifts. Just as well it rained for the rest of the day. This, added to the value for money on offer, prompted us to go find somewhere else the next day. Turned out it was a lot more welcoming on the other side of the island. 
 
 The nice Fijian lady, who ran [Macdonald's Cottages](http://www.macsnananu.com/) where we stayed on our last night, cooked us a tasty curry for dinner and we lounged in the sun 
 between downpours, went swimming off the pier right out front and walked to the island's Sunset Point, yes at sunset, where a magician has built a 
 labyrinth, with ropes stuck to the ground for practicing walking meditation.
+
+![Pier on the nicer side of Nananou-i-ra Island](DSCF1552.jpg)
 
 Before we left Fiji we promised we will be back one day. With plenty of time to dedicate to the Fijian islands and islanders, explore Viti Levu's highlands, hike into remote villages
 in the middle of volcano craters, take a boat that won't return until a week later and hlearn the real meaning of "Fiji time".

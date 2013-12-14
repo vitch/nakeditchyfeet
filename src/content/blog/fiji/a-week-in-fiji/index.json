@@ -1,14 +1,15 @@
 {
   "template": "blog-post.html",
+  "isDraft": true,
   "templateData": {
-    "isDraft": true,
     "title": "A stolen glance at Fiji",
     "author": "Priscila Santos",
+    "headerImage": "heading_2.jpg",
     "date": "2013-12-12",
     "content": "index.md",
     "latitude":0,
     "longitude": 0,
-    "photosets": [],
-    "tags": []
+    "photosets": ["72157638603575254"],
+    "tags": ["fiji", "south pacific", "islands", "tropical"]
   }
 }

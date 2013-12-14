@@ -1,7 +1,7 @@
 {
   "template": "blog-post.html",
+  "isDraft": true,
   "templateData": {
-    "isDraft": true,
     "title": "Aussie Beginnings",
     "author": "Priscila Santos",
     "date": "2013-09-20",
