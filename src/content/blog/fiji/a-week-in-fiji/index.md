@@ -1,13 +1,16 @@
-Fiji surprised me in many ways. The warmth of the people, the beauty of the landscapes and how these people are so proud of their coutry are all reasons why it was so easy to fall in love with the place. 
+Fiji surprised me in many ways. The warmth of the people, the beauty of the landscapes and how these people are so proud of their country are all reasons why it was so easy to fall in love with the place. 
 But Fiji has many egos and can be many different things to those who visit. Even to those who live in it.
 
 As we saw it, there are three ways of exploring Fiji, which depend on budget and how long you can stay there for:
+
+![Beautiful tropical beaches](DSCF1440.jpg)
 
 *Splurge* - The Mamanucas and Yasawas are a group of islands on the northwest of the main island. These are the post card images of Fiji, but expensive to get to and stay at. There doesn't seem to be a way of getting there that is cheap and run by locals, the most inexpensive dorm room in a resort is around FJD100, so it is mostly aimed at honeymooners or those on a planned or package holiday. Backpacking around these islands sounds like a nearly impossible thing to do.
 
 *With time* - Fiji is your oyster. The northeastern groups of islands are more remote but take a while to get to as travel is slower (with ferries only twice a week to some islands). With time in your hands you can delve deeper and farther into the less visited islands, which means that you will sleep, eat and travel cheaper, get to meet the real Fijians and experience the genuine culture.
 
 *Little time and money* - This was our case, you've guessed it. As this was a stop on a round the world trip booked nearly a year ago, it got unfairly shrunk to only a week, after we ended up spending longer than planned in Indonesia and Australia. But I'm glad we came at all and made the most of our time in this very special place. We only saw 3 of the 332 islands but were spoiled for beauty, cultural experiences and exclusivity, and without spending as much as we dreaded.
+
 
 I had assumed that Fiji was going to be a hell hole of honeymooners, full of resorts, empty souls and people trying to hassle you. 
 I was worried it would have become infused with popularity and the greed that comes with it and turned the natural beauty into 
@@ -55,14 +58,14 @@ painted bright yellow which made them charming, there were solar panels for ligh
 minutes. We went snorkeling from a small rock outcrop you can walk to at low tide, known as Snake Island, and we did see a sea snake, lots of Christmas Trees (the animal) plus 
 a shark. Not sure it was a just reef shark.
 
-![Beautiful tropical beaches](DSCF1440.jpg)
-![Cava session](DSCF1476.jpg)
+
+
 
 From here the wind blew us back onto the main island up a winding river with mangrove margins to Waidalice landing. Here we hopped on the back of a van 
 whose open back showed us very scenic views of those tropical mountains we'd seen on our first day and mud coloured rivers all the way to Elington Wharf
 on the north east of the main island. Here, another boat took us to Nananou-i-ra Island, as we prepared to slowly drift towards our port of departure in Nadi. 
 
-![Hills](DSCF1529.jpg)
+
 
 Unfortunately here we were slightly less lucky and the place we chose to stay at was in a bit of a state. On arrival at the Safari Lodge, the beach that welcomed us was covered in plastic packaging and, within five minutes of arriving the mosquitoes had also presented us their welcome gifts. Just as well it rained for the rest of the day. This, added to the value for money on offer, prompted us to go find somewhere else the next day. Turned out it was a lot more welcoming on the other side of the island. 
 
@@ -75,4 +78,5 @@ labyrinth, with ropes stuck to the ground for practicing walking meditation.
 Before we left Fiji we promised we will be back one day. With plenty of time to dedicate to the Fijian islands and islanders, explore Viti Levu's highlands, hike into remote villages
 in the middle of volcano craters, take a boat that won't return until a week later and hlearn the real meaning of "Fiji time".
 
-
+![Hills](DSCF1529.jpg)
+![Cava session](DSCF1476.jpg)
