@@ -5,7 +5,7 @@ As we saw it, there are three ways of exploring Fiji, which depend on budget and
 
 ![Beautiful tropical beaches](DSCF1440.jpg)
 
-*Splurge* - The Mamanucas and Yasawas are a group of islands on the northwest of the main island. These are the post card images of Fiji, but expensive to get to and stay at. There doesn't seem to be a way of getting there that is cheap and run by locals, the most inexpensive dorm room in a resort is around FJD100, so it is mostly aimed at honeymooners or those on a planned or package holiday. Backpacking around these islands sounds like a nearly impossible thing to do.
+*Splurge* - The Mamanucas and Yasawas are a group of islands on the northwest of the main island. These are the post card images of Fiji, but expensive to get to and stay in. There doesn't seem to be a way of getting there that is cheap and run by locals, the most inexpensive dorm room in a resort is around [FJD100](https://www.google.co.uk/search?q=100+FJD+in+GBP), so it is mostly aimed at honeymooners or those on a planned or package holiday. Backpacking around these islands sounds like a nearly impossible thing to do.
 
 *With time* - Fiji is your oyster. The northeastern groups of islands are more remote but take a while to get to as travel is slower (with ferries only twice a week to some islands). With time in your hands you can delve deeper and farther into the less visited islands, which means that you will sleep, eat and travel cheaper, get to meet the real Fijians and experience the genuine culture.
 
@@ -22,8 +22,8 @@ As they put their guitars down, we were the only foreigners still filling in our
 load of tourists lands". It felt like the more people came through that gate, the better, and I felt that they where happy we came to see their home.
 
 
-In December is cyclone season in Fiji, so we expected rain. And we got rain, everyday. Which didn't matter, it's hot, so when the rain isn't an excuse to 
-hide inside reading or sleeping, it was an excuse to go and get wetter. Swimming in tropical rain in a hot sea has to be any water lover's dream come true. 
+December is cyclone season in Fiji, so we expected rain. And we got rain, everyday. Which didn't matter - it's hot, so when the rain isn't an excuse to 
+hide inside reading or sleeping, it's an excuse to go and get wetter. Swimming in tropical rain in a hot sea has to be any water lover's dream come true. 
 
 But for most of our visit to Fiji the sun shone, no cyclones threatened and the rain heavy clouds hovering in the distance added to the mood. 
 Given that until the day before we arrived we had no idea of what we could do with such a short visit, it was lucky how it turned out. 
@@ -38,13 +38,14 @@ For three hours, we traveled sandwiched in between steep dark green mountains an
 Only five hours after landing we where already wishing we could stay longer.  
 
 [Leleuvia Island Resort's](http://www.leleuvia.com/) boat picked us up at Bau Landing and whizzed us onto a tiny sandy dot on a hot sea. 
-It was Monday and there were only two other guests in the whole island. It rained all afternoon, a great excuse to catch up on sleep.  
+It was Monday and there were only two other guests in the whole island. It rained all afternoon, a great excuse to catch up on sleep.
+
 In the evening we were invited to join the seasons festivities at the resort staff's Christmas Party. 
-This involved a lot of Kava drinking, a huge BBQ followed by Secret Santa and dancing to Fiji's own version of Gangnam Style. 
+This involved a lot of Kava drinking, a huge BBQ followed by Secret Santa and dancing to [Fiji's own version of Gangnam Style](http://www.youtube.com/watch?v=0TP0F0o5pLU).
 
 ![Christmas barbeque in Fiji](DSCF1244.jpg)
 
-The next coupe of days were spent pinching ourselves for we couldn't believe we'd found this place. This isn't a five star type resort, the pool was 
+The next couple of days were spent pinching ourselves for we couldn't believe we'd found this place. This isn't a five star type resort, the pool was 
 the ocean, the bedrooms where in simple thatched roof bamboo walled cottages, and the bathroom and showers were shared. 
 But the place was built with careful detailing and using traditional materials and techniques, the water was crystal clear, and the treatment was 
 personal so it felt like five stars. 
@@ -52,16 +53,16 @@ personal so it felt like five stars.
 ![Accomodation on Caqalai Island](DSCF1430.jpg)
 
 But, it wouldn't have been fair on the other 331 islands to spend all week in one place, so we moved on. 
-Only next door though, to Caqalai Island, another white sand donut we'd heard good things about. 
+Only next door though, to [Caqalai Island](http://www.owlfiji.com/caqalai.htm), another white sand donut we'd heard good things about. 
 It was so close to Leleuvia that people had managed to swim to it in the past. Here the bure (cottages) were more rustic and rough, 
 painted bright yellow which made them charming, there were solar panels for lighting and charging things and you could walk around the island in twenty 
-minutes. We went snorkeling from a small rock outcrop you can walk to at low tide, known as Snake Island, and we did see a sea snake, lots of Christmas Trees (the animal) plus 
+minutes. We went snorkeling from Snake Island - a small rock outcrop you can walk to at low tide - and we saw a sea snake, lots of Christmas Trees ([the animal](http://en.wikipedia.org/wiki/Spirobranchus_giganteus)) plus 
 a shark. Not sure it was a just reef shark.
 
 
 
 
-From here the wind blew us back onto the main island up a winding river with mangrove margins to Waidalice landing. Here we hopped on the back of a van 
+From here the wind blew us back onto the main island up a winding river with mangrove margins to Waidalice landing. Here we hopped on a ute 
 whose open back showed us very scenic views of those tropical mountains we'd seen on our first day and mud coloured rivers all the way to Elington Wharf
 on the north east of the main island. Here, another boat took us to Nananou-i-ra Island, as we prepared to slowly drift towards our port of departure in Nadi. 
 
@@ -70,13 +71,10 @@ on the north east of the main island. Here, another boat took us to Nananou-i-ra
 Unfortunately here we were slightly less lucky and the place we chose to stay at was in a bit of a state. On arrival at the Safari Lodge, the beach that welcomed us was covered in plastic packaging and, within five minutes of arriving the mosquitoes had also presented us their welcome gifts. Just as well it rained for the rest of the day. This, added to the value for money on offer, prompted us to go find somewhere else the next day. Turned out it was a lot more welcoming on the other side of the island. 
 
 The nice Fijian lady, who ran [Macdonald's Cottages](http://www.macsnananu.com/) where we stayed on our last night, cooked us a tasty curry for dinner and we lounged in the sun 
-between downpours, went swimming off the pier right out front and walked to the island's Sunset Point, yes at sunset, where a magician has built a 
-labyrinth, with ropes stuck to the ground for practicing walking meditation.
+between downpours, went swimming off the pier right out front and walked to the island's Sunset Point, yes at sunset, where Ed Morris (ex-president of the International Brotherhood of Magicians) has built a 
+[labyrinth](http://labyrinthlocator.com/locate-a-labyrinth?action=locate&country=Fiji&state=), with ropes stuck to the ground for practicing walking meditation.
 
 ![Pier on the nicer side of Nananou-i-ra Island](DSCF1552.jpg)
 
 Before we left Fiji we promised we will be back one day. With plenty of time to dedicate to the Fijian islands and islanders, explore Viti Levu's highlands, hike into remote villages
-in the middle of volcano craters, take a boat that won't return until a week later and hlearn the real meaning of "Fiji time".
-
-![Hills](DSCF1529.jpg)
-![Cava session](DSCF1476.jpg)
+in the middle of volcano craters, take a boat that won't return until a week later and learn the real meaning of "Fiji time".
