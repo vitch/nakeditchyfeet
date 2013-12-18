@@ -4,10 +4,11 @@
   "templateData": {
     "title": "Aussie Beginnings",
     "author": "Priscila Santos",
+    "headerImage": "mindil-beach.jpg",
     "date": "2013-09-20",
     "content": "darwin.md",
-    "latitude": 12.27,
-    "longitude": 130.5,
+    "latitude": -12.45,
+    "longitude": 130.833333,
     "photosets": [],
     "tags": ["australia", "darwin"]
   }
