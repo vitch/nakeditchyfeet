@@ -134,6 +134,19 @@
     "airline": "American Airlines"
   },
   {
+    "date": "2014-03-24",
+    "icon": "plane",
+    "label": "<strong>LAX - BOG</strong>",
+    "from": "LAX",
+    "to": "BOG",
+    "airline": "Jet Blue"
+  },
+  {
+    "date": "2014-04-08",
+    "icon": "anchor",
+    "label": "Galapagos Islands"
+  },
+  {
     "date": "2014-06-12",
     "icon": "dribbble",
     "label": "Brazil vs. ? - World cup opener"
