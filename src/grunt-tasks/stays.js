@@ -19,11 +19,31 @@ module.exports = function(grunt) {
       locations[stay.location].dates.push(stay.date);
     });
 
-    _.reject(locations, function(location) {
-      location.dates.length === 0;
-    });
 
-    grunt.file.write(options.out, JSON.stringify(_.toArray(locations)));
+    grunt.file.write(options.out, JSON.stringify(_.toArray(_.reject(locations, function(location) {
+      return location.dates.length === 0;
+    }))));
+
+    // stays = grunt.file.readJSON(options.src);
+
+    // var geoJSON = stays.locations.map(function(location) {
+    //   return {
+    //     "type": "Feature",
+    //     "geometry": {
+    //       "type": "Point",
+    //       "coordinates": [+location.longitude, +location.latitude]
+    //     },
+    //     "properties": {
+    //       "name": location.name
+    //     }
+    //   }
+    // });
+    // grunt.file.write(options.out, JSON.stringify({
+    //   type: 'featureCollection',
+    //   features: geoJSON
+    // }));
+
+
     grunt.log.writeln('OK'.green);
   });
 }

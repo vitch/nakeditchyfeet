@@ -12,10 +12,11 @@ define(
         },
         initialize: function (options) {
           if (this.$el.length) {
-            _.bindAll(this, 'sizeMap', 'onMapItemsReady', 'initTooltips', 'sizeMap', 'onFilterChange');
+            _.bindAll(this, 'sizeMap', 'onMapItemsReady', 'onStayDataReady', 'initTooltips', 'sizeMap', 'onFilterChange');
 
             this.sizeMap();
             this.mapItems = options.mapItems;
+            this.stayData = options.stayData;
             this.initMap();
           }
         },
@@ -59,10 +60,11 @@ define(
 //          ).addTo(map);
 
           this.mapItems.fetch({success: this.onMapItemsReady});
+          this.stayData.fetch({success: this.onStayDataReady});
         },
         initTooltips: function()
         {
-          this.$('.awesome-marker').not('.awesome-marker-shadow').tooltip({
+          this.$('.awesome-marker, .stay-marker').not('.awesome-marker-shadow').tooltip({
             container: 'body'
           });
         },
@@ -102,6 +104,24 @@ define(
 
           this.initTooltips();
           this.initFilters();
+        },
+        onStayDataReady: function() {
+          var map = this.leafletMap;
+          var markers = this.stayData.map(function(stayDataModel) {
+            var numNights = stayDataModel.get('dates').length;
+            var markerSize = 3 + numNights;
+            var marker = L.marker(
+                  [stayDataModel.get('latitude'), stayDataModel.get('longitude')],
+                  {
+                    title: stayDataModel.get('name'),
+                    icon: new L.DivIcon({ html: '<div><span></span></div>', className: 'stay-marker', iconSize: new L.Point(markerSize, markerSize) }),
+                    model: stayDataModel
+                  }
+                );
+            map.addLayer(marker);
+            return marker;
+          });
+          this.initTooltips();
         },
         initFilters: function() {
           this.listFilterView = new ListFilterView();
