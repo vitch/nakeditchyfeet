@@ -1,0 +1,13 @@
+{
+  "template": "blog-post.html",
+  "isDraft": true,
+  "templateData": {
+    "title": "Support Brazilians at the World Cup",
+    "author": "Priscila Santos",
+    "date": "2014-03-03",
+    "content": "index.md",
+    "latitude": -15.031998, 
+    "longitude": -47.773037,
+    "tags": ["brazil", "football", "volunteering", "ethical", "tourism"]
+  }
+}
