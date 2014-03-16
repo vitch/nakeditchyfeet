@@ -7,9 +7,7 @@
 </header>
 	{% if description %}
 	<div id="content">
-		<p>
-			{{ description|replace('\n','</p><p>')|raw }}
-		</p>
+		{{ description|md|raw }}
 	</div>
 	{% endif %}
 	<ul id="photoset">

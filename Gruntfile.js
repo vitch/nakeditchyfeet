@@ -12,6 +12,7 @@ module.exports = function(grunt) {
 
   var _ = require('underscore');
   var cheerio = require('cheerio');
+  var marked = require('marked');
 
   var target = grunt.option('target') || 'dev';
   var compress = target !== 'dev';
@@ -208,6 +209,9 @@ module.exports = function(grunt) {
               default:
                 // nothing
             }
+          },
+          md: function(str) {
+            return marked(str);
           },
           getPhotosetData: function(pages, photosetIds) {
             return _(pages).filter(function(page) {
