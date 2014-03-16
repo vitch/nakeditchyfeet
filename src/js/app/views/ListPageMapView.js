@@ -15,6 +15,7 @@ define(
           var mapContainer = this.$el.empty()[0];
 
           var leafletMap = L.map(mapContainer, {
+            animate: false,
             dragging: false,
             touchZoom: false,
             scrollWheelZoom: false,
@@ -38,9 +39,11 @@ define(
 
 
           var line = L.polyline([from, to]).addTo(leafletMap);
-          leafletMap.fitBounds(line.getBounds());
-
-        },
+          $(window).on('resize', _.throttle(function() {
+            leafletMap.invalidateSize();
+            leafletMap.fitBounds(line.getBounds());
+          }, 200)).trigger('resize');
+        }
       }
     );
   }
