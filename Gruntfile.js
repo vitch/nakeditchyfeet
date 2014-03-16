@@ -53,10 +53,10 @@ module.exports = function(grunt) {
   var generatePhotosetPreview = function(page) {
     var listPagePhotos = page.templateData.photos.concat().sort(function(a, b) {
       var ret = 0;
-      if (a.machine_tags.indexOf('nif:list_page=1') > -1) {
+      if (a.machine_tags.indexOf('nif:list_page=1') > -1 || a.machine_tags.indexOf('nif:listpage=1') > -1) {
         ret -= 1;
       }
-      if (b.machine_tags.indexOf('nif:list_page=1') > -1) {
+      if (b.machine_tags.indexOf('nif:list_page=1') > -1 || b.machine_tags.indexOf('nif:listpage=1') > -1) {
         ret += 1;
       }
       return ret;
