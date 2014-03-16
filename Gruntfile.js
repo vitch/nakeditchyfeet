@@ -170,7 +170,6 @@ module.exports = function(grunt) {
           },
           intersperseEvents: function(pages) {
             var airports = {};
-            console.log('intersperseEvents');
             grunt.file.read('src/data/airports.csv').split('\n').forEach(function(line) {
               var parts = line.split(',');
               if (parts.length < 7) {

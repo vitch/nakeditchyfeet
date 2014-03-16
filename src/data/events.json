@@ -35,7 +35,7 @@
     "date": "2013-05-21 23:00:00",
     "icon": "plane",
     "label": "<strong>SIN - CGK - MDC</strong>",
-    "from": "CGK",
+    "from": "SIN",
     "to": "MDC",
     "airline": "Lion Air"
   },
@@ -72,12 +72,16 @@
     "date": "2013-09-15 23:00:00",
     "icon": "plane",
     "label": "<strong>PER - DPS</strong>",
+    "from": "PER",
+    "to": "DPS",
     "airline": "JetStar"
   },
   {
     "date": "2013-09-26 23:00:00",
     "icon": "plane",
     "label": "<strong>LOP - PER</strong>",
+    "from": "LOP",
+    "to": "PER",
     "airline": "JetStar"
   },
   {
@@ -89,6 +93,8 @@
     "date": "2013-11-25",
     "icon": "plane",
     "label": "<strong>ADL - BNE</strong>",
+    "from": "ADL",
+    "to": "BNE",
     "airline": "Virgin Australia"
   },
   {
