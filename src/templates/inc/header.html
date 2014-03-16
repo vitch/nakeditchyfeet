@@ -17,3 +17,4 @@
 {%- endif %}
 
 {% if headerImageLarge %}<img src="{{ headerImageLarge }}" class="header-image" />{% else if headerImage %}<img src="{{ headerImage }}" class="header-image" />{% endif %}
+{% if headerImageCaption %}<p class="header-image-caption">{{ headerImageCaption|raw }}</p>{% endif %}

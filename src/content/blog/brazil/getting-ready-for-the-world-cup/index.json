@@ -1,13 +1,14 @@
 {
   "template": "blog-post.html",
-  "isDraft": true,
   "templateData": {
     "title": "Support Brazilians at the World Cup",
+    "headerImage": "283837328_d85497c7e1_b.jpg",
+    "headerImageCaption": "Photo by <a href=\"http://www.flickr.com/people/theposs\" target=\"_blank\">The Poss</a> on <a href=\"http://www.flickr.com/photos/theposs/283837328\" target=\"_blank\">flickr</a>",
     "author": "Priscila Santos",
-    "date": "2014-03-03",
+    "date": "2014-03-16",
     "content": "index.md",
     "latitude": -15.031998, 
     "longitude": -47.773037,
-    "tags": ["brazil", "football", "volunteering", "ethical", "tourism"]
+    "tags": ["brazil", "football", "volunteering", "ethical", "tourism", "south america"]
   }
 }
