@@ -169,9 +169,29 @@ module.exports = function(grunt) {
 
           },
           intersperseEvents: function(pages) {
+            var airports = {};
+            console.log('intersperseEvents');
+            grunt.file.read('src/data/airports.csv').split('\n').forEach(function(line) {
+              var parts = line.split(',');
+              if (parts.length < 7) {
+                return;
+              }
+              var airportCode = parts[4].replace(/"/g, '');
+              if (airportCode) {
+                airports[airportCode] = {
+                  lat: parts[6],
+                  lng: parts[7]
+                };
+              }
+            });
             var events = _(grunt.file.readJSON('src/data/events.json')).map(function(item) {
               item.date = new Date(item.date);
               item.hasLink = !!item.externalLink;
+              if (item.icon === 'plane') {
+                item.showMap = true;
+                item.from = airports[item.from];
+                item.to = airports[item.to];
+              }
               return item;
             });
 
