@@ -3,40 +3,35 @@
     "date": "2013-04-16",
     "icon": "plane",
     "label": "<strong>LHR - MCT - BKK</strong> And we're off!",
-    "from": "LHR",
-    "to": "MCT",
+    "airports": "LHR,MCT,BKK",
     "airline": "Oman Air"
   },
   {
     "date": "2013-05-06",
     "icon": "plane",
     "label": "<strong>DMK - RGN</strong> Thailand to Myanmar",
-    "from": "DMK",
-    "to": "RGN",
+    "airports": "DMK,RGN",
     "airline": "Air Asia"
   },
   {
     "date": "2013-05-20 10:00:00",
     "icon": "plane",
     "label": "<strong>MDL - DMK</strong>",
-    "from": "MDL",
-    "to": "DMK",
+    "airports": "MDL,DMK",
     "airline": "Air Asia"
   },
   {
     "date": "2013-05-20 16:00:00",
     "icon": "plane",
     "label": "<strong>BKK - SIN</strong>",
-    "from": "BKK",
-    "to": "SIN",
+    "airports": "BKK,SIN",
     "airline": "Tiger Airways"
   },
   {
     "date": "2013-05-21 23:00:00",
     "icon": "plane",
     "label": "<strong>SIN - CGK - MDC</strong>",
-    "from": "SIN",
-    "to": "MDC",
+    "airports": "SIN,CGK,MDC",
     "airline": "Lion Air"
   },
   {
@@ -63,8 +58,7 @@
     "date": "2013-08-07 23:00:00",
     "icon": "plane",
     "label": "<strong>DPS - DRW</strong>",
-    "from": "DPS",
-    "to": "DRW",
+    "airports": "DPS,DRW",
     "airline": "JetStar",
     "flightChanged": "2013-07-16"
   },
@@ -72,16 +66,14 @@
     "date": "2013-09-15 23:00:00",
     "icon": "plane",
     "label": "<strong>PER - DPS</strong>",
-    "from": "PER",
-    "to": "DPS",
+    "airports": "PER,DPS",
     "airline": "JetStar"
   },
   {
     "date": "2013-09-26 23:00:00",
     "icon": "plane",
     "label": "<strong>LOP - PER</strong>",
-    "from": "LOP",
-    "to": "PER",
+    "airports": "LOP,PER",
     "airline": "JetStar"
   },
   {
@@ -93,24 +85,21 @@
     "date": "2013-11-25",
     "icon": "plane",
     "label": "<strong>ADL - BNE</strong>",
-    "from": "ADL",
-    "to": "BNE",
+    "airports": "ADL,BNE",
     "airline": "Virgin Australia"
   },
   {
     "date": "2013-12-02",
     "icon": "plane",
     "label": "<strong>BNE - NAN</strong>",
-    "from": "BNE",
-    "to": "NAN",
+    "airports": "BNE,NAN",
     "airline": "Air Pacific"
   },
   {
     "date": "2013-12-09",
     "icon": "plane",
     "label": "<strong>NAN - AKL</strong>",
-    "from": "NAN",
-    "to": "AKL",
+    "airports": "NAN,AKL",
     "airline": "Air Pacific"
   },
   {
@@ -127,24 +116,21 @@
     "date": "2014-03-09",
     "icon": "plane",
     "label": "<strong>AKL - HNL</strong>",
-    "from": "AKL",
-    "to": "HNL",
+    "airports": "AKL,HNL",
     "airline": "Air New Zealand"
   },
   {
     "date": "2014-03-19",
     "icon": "plane",
     "label": "<strong>HNL - LAX</strong>",
-    "from": "HNL",
-    "to": "LAX",
+    "airports": "HNL,LAX",
     "airline": "American Airlines"
   },
   {
     "date": "2014-03-24",
     "icon": "plane",
     "label": "<strong>LAX - BOG</strong>",
-    "from": "LAX",
-    "to": "BOG",
+    "airports": "LAX,BOG",
     "airline": "Jet Blue"
   },
   {

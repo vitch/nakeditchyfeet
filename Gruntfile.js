@@ -188,8 +188,9 @@ module.exports = function(grunt) {
               item.hasLink = !!item.externalLink;
               if (item.icon === 'plane') {
                 item.showMap = true;
-                item.from = airports[item.from];
-                item.to = airports[item.to];
+                item.airports = item.airports.split(',').map(function(code) {
+                  return code + '|' + airports[code].lat + ',' + airports[code].lng;
+                }).join('||');
               }
               return item;
             });
