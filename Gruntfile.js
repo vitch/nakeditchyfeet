@@ -51,15 +51,15 @@ module.exports = function(grunt) {
   ];
 
   var generatePhotosetPreview = function(page) {
+    var findListPagePhotosRegExp = new RegExp('nif:list_?page=1'); // Allow nif:list_page=1 and nif:listpage=1
     var listPagePhotos = page.templateData.photos.concat().sort(function(a, b) {
-      var ret = 0;
-      if (a.machine_tags.indexOf('nif:list_page=1') > -1 || a.machine_tags.indexOf('nif:listpage=1') > -1) {
-        ret -= 1;
+      if (a.machine_tags.match(findListPagePhotosRegExp)) {
+        return -1;
+      } 
+      if (b.machine_tags.match(findListPagePhotosRegExp)) {
+        return 1;
       }
-      if (b.machine_tags.indexOf('nif:list_page=1') > -1 || b.machine_tags.indexOf('nif:listpage=1') > -1) {
-        ret += 1;
-      }
-      return ret;
+      return 0;
     }).slice(0, 5);
     return {
       type: "photo",
