@@ -48,6 +48,7 @@ define(
           $(window).on('resize', _.throttle(function() {
             leafletMap.invalidateSize();
             leafletMap.fitBounds(line.getBounds());
+            leafletMap.setZoom(leafletMap.getZoom() - 1);
           }, 200)).trigger('resize');
         }
       }
