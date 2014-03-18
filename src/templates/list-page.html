@@ -25,6 +25,10 @@
 					<img src="{{ page|relativePath(child.target) }}{{ child.image }}" class="header-image" alt="{{ child.label }}">
 					{%- endif -%}
 				{% endif %}
+				{% if child.showMap %}
+					<div class="list-page-map" data-airports="{{ child.airports }}">
+					</div>
+				{% endif %}
 			</div>
 		</li>
 	{% endfor %}

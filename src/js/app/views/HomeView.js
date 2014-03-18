@@ -1,8 +1,9 @@
 define(
   [
-    'views/ListFilterView'
+    'views/ListFilterView',
+    'views/ListPageMapView'
   ],
-  function (ListFilterView) {
+  function (ListFilterView, ListPageMapView) {
     'use strict';
 
     return Backbone.View.extend(
@@ -15,6 +16,9 @@ define(
           if (this.$el.length) {
             this.initNowMarker();
             this.initFilters();
+            this.$('.list-page-map').each(function() {
+              new ListPageMapView({el: this});
+            });
           }
         },
         initNowMarker: function() {
