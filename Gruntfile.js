@@ -17,12 +17,12 @@ module.exports = function(grunt) {
   var target = grunt.option('target') || 'dev';
   var compress = target !== 'dev';
   var jsLibs = [
-    'js/lib/underscore-1.4.4.js',
-    'js/lib/backbone-1.0.0.js',
+    'js/lib/underscore/underscore.js',
+    'js/lib/backbone/backbone.js',
     'js/lib/leaflet-src.js',
     'js/lib/leaflet.markercluster-src.js',
     'js/lib/leaflet.awesome-markers.js',
-    'js/lib/bootstrap-tooltip.js',
+    'js/lib/bootstrap/js/tooltip.js',
     'js/lib/enquire.js'
   ];
   var compileJsTarget = compress ? 'requirejs:compile' : 'copy:js';
