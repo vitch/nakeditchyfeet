@@ -1,0 +1,21 @@
+{
+  "name": "naked-itchy-feet",
+  "dependencies": {
+    "bootstrap": "3.1.1",
+    "jquery": "~1.11.0",
+    "underscore": "~1.6",
+    "backbone": "~1.1.2"
+  },
+  "version": "0.0.1",
+  "authors": [
+    "Kelvin Luck <git@kelvinluck.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor"
+  ]
+}
