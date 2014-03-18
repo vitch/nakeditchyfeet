@@ -19,11 +19,11 @@ module.exports = function(grunt) {
   var jsLibs = [
     'js/lib/underscore/underscore.js',
     'js/lib/backbone/backbone.js',
-    'js/lib/leaflet-src.js',
-    'js/lib/leaflet.markercluster-src.js',
-    'js/lib/leaflet.awesome-markers.js',
+    'js/lib/leaflet-dist/leaflet-src.js',
+    'js/lib/leaflet.markercluster/dist/leaflet.markercluster-src.js',
+    'js/lib/Leaflet.awesome-markers/dist/leaflet.awesome-markers.js',
     'js/lib/bootstrap/js/tooltip.js',
-    'js/lib/enquire.js'
+    'js/lib/enquire/dist/enquire.js'
   ];
   var compileJsTarget = compress ? 'requirejs:compile' : 'copy:js';
   var copyJsLibsTarget = compress ? 'uglify:libs' : 'copy:libs';
