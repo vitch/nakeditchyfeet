@@ -48,11 +48,18 @@ define(
           var line = L.polyline(linePoints, {color: '#000', weight: 2, dashArray: '3,3'}).addTo(leafletMap);
           var currentWidth = 0;
           var $el = this.$el;
+          var planeMarker;
           $(window).on('resize', _.throttle(function() {
             var newW = $el.width();
             if (newW !== currentWidth) {
               leafletMap.invalidateSize();
               leafletMap.fitBounds(line.getBounds(), { padding: [15, 20]});
+              if (_.isUndefined(planeMarker)) {
+                var planeIcon = L.divIcon({className:'map-marker-airplane', iconSize: [30, 30], html: '<span class="fa fa-plane"></span>'});
+                planeMarker = L.marker(line.getBounds().getCenter(), {icon: planeIcon}).addTo(leafletMap);
+              } else {
+                planeMarker.setLatLng(line.getBounds().getCenter());
+              }
               currentWidth = newW;
             }
           }, 200)).trigger('resize');
