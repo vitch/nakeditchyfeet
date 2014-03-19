@@ -1,20 +1,20 @@
 
 @import "variables.less";
 @import "mixins.less";
-@import "reset.less";
+@import "normalize.less";
 @import "tables.less";
 @import "alerts.less";
 @import "tooltip.less";
 @import "font-awesome";
-@import "leaflet.awesome-markers";
-@import "marker-cluster";
+@import (less) "leaflet.awesome-markers.css";
+@import (less) "MarkerCluster.css";
 
 // Overrides
-@baseBorderRadius: 0;
+@border-radius-base: 0;
 
 // Custom
-@nowMarkerColor: #333;
-@linkFadeTransition: color .3s ease-out;
+@now-marker-color: #333;
+@link-fade-transition: color .3s ease-out;
 
 // Mixins
 
@@ -39,9 +39,9 @@ h1 {
 }
 
 a {
-	color: @linkColor;
+	color: @link-color;
 	&:hover {
-		color: @linkColorHover;
+		color: @link-hover-color;
 	}
 }
 
@@ -49,12 +49,12 @@ a {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background: @white;
+	background: #fff;
 	padding: 10px;
 	.box-sizing(border-box);
-	background: @white;
+	background: #fff;
 	z-index: 2;
-	border-bottom: 1px solid @black;
+	border-bottom: 1px solid #000;
 	.box-shadow(0 2px 4px rgba(0, 0, 0, .4));
 
 	h1 {
@@ -65,7 +65,7 @@ a {
 		text-decoration: none;
 
 		&:hover {
-			color: @linkColorHover;
+			color: @link-hover-color;
 		}
 	}
 }
@@ -78,7 +78,7 @@ a {
 	width: 100%;
 	padding: 80px 20px 0 40px;
 	z-index: 1001;
-	background: @white;
+	background: #fff;
 	.box-sizing(border-box);
 
 	&.is-open {
@@ -88,17 +88,17 @@ a {
 
 	a {
 		text-decoration: none;
-		color: @headingsColor;
-		.transition(@linkFadeTransition);
+		color: @headings-color;
+		.transition(@link-fade-transition);
 
 		&.active, &:hover {
-			color: @linkColorHover;
+			color: @link-hover-color;
 		}
 	}
 
 	#when-marker {
 		margin-top: 40px;
-		border-top: 1px dashed @nowMarkerColor;
+		border-top: 1px dashed @now-marker-color;
 	}
 
 	nav {
@@ -134,13 +134,13 @@ a {
 				margin: 0 10px 0 0;
 				a {
 					text-decoration: none;
-					color: @headingsColor;
+					color: @headings-color;
 					font-size: 30px;
-					.transition(@linkFadeTransition);
+					.transition(@link-fade-transition);
 
 					&.active,
 					&:hover {
-						color: @linkColorHover;
+						color: @link-hover-color;
 					}
 				}
 			}
@@ -167,13 +167,13 @@ a {
 		clear: left;
 
 		&#now-marker {
-			border-top: 1px dashed @nowMarkerColor;
+			border-top: 1px dashed @now-marker-color;
 			margin: 40px 0;
 			padding: 0;
 		}
 
 		&.is-future {
-			color: @grayLight;
+			color: @gray-light;
 		}
 
 		&>i {
@@ -189,9 +189,9 @@ a {
 		}
 		a {
 			text-decoration: none;
-			color: @headingsColor;
+			color: @headings-color;
 			&:hover {
-				color: @linkColorHover;
+				color: @link-hover-color;
 			}
 		}
 		h1 {
@@ -219,11 +219,11 @@ a {
 			cursor: pointer;
 
 			i, time, a {
-				.transition(@linkFadeTransition);
+				.transition(@link-fade-transition);
 			}
 
 			&:hover {
-				color: @linkColorHover;
+				color: @link-hover-color;
 			}
 		}
 	}
@@ -248,7 +248,7 @@ a {
 }
 
 header.content-header {
-	border-bottom: 1px dashed @nowMarkerColor;
+	border-bottom: 1px dashed @now-marker-color;
 	padding: 0 0 20px;
 	margin: 99px 0 0;
 	time {
@@ -274,7 +274,7 @@ header.content-header {
 				color: @gray;
 
 				&:hover {
-					color: @linkColorHover;
+					color: @link-hover-color;
 				}
 			}
 		}
@@ -291,10 +291,10 @@ header.content-header {
 	font-size: 90%;
 }
 #content>p:first-of-type {
-	margin-bottom: @baseLineHeight;
-	font-size: @baseFontSize * 1.5;
+	margin-bottom: @line-height-base;
+	font-size: @font-size-base * 1.5;
 	font-weight: 200;
-	line-height: @baseLineHeight * 1.5;
+	line-height: @line-height-base * 1.5;
 }
 
 #content table {
@@ -307,7 +307,7 @@ header.content-header {
 	margin: 0 0 0 80px;
 
 	&:before {
-		color: @grayLighter;
+		color: @gray-lighter;
 		position: absolute;
 		left: -70px;
 		font-size: 4em;
@@ -350,7 +350,7 @@ header.content-header {
 	h1 {
 		padding: 0 0 5px;
 		margin: 0 0 20px;
-		border-bottom: 1px dashed @nowMarkerColor;
+		border-bottom: 1px dashed @now-marker-color;
 	}
 }
 
@@ -395,9 +395,9 @@ header.content-header {
 		}
 		a {
 			text-decoration: none;
-			color: @textColor;
+			color: @text-color;
 			&:hover {
-				color: @linkColorHover;
+				color: @link-hover-color;
 			}
 		}
 		i {
@@ -417,14 +417,14 @@ header.content-header {
 			font-size: 60px;
 			color: @gray;
 			text-decoration: none;
-			.transition(@linkFadeTransition);
+			.transition(@link-fade-transition);
 
 			.icon-envelope-alt {
 				font-size: 1.09em;
 			}
 
 			&:hover {
-				color: @linkColorHover;
+				color: @link-hover-color;
 			}
 		}
 	}
