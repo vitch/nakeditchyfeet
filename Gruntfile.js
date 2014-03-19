@@ -118,6 +118,16 @@ module.exports = function(grunt) {
             dest: 'out/font-awesome/fonts'
           }
         ]
+      },
+      awesomeMarkers: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/js/lib/Leaflet.awesome-markers/dist/images',
+            src: ['**'],
+            dest: 'out/awesome-markers/images'
+          }
+        ]
       }
     },
     less: {
@@ -357,7 +367,7 @@ module.exports = function(grunt) {
 //  grunt.registerTask('flickr', require('./src/grunt-tasks/flickr.js'));
 //  grunt.registerTask('stays', require('./src/grunt-tasks/stays.js'));
 
-  grunt.registerTask('build', ['clean', 'copy:main', 'copy:fonts', copyJsLibsTarget, compileJsTarget, 'less', 'haggerston', 'stays']);
+  grunt.registerTask('build', ['clean', 'copy:main', 'copy:fonts', 'copy:awesomeMarkers', copyJsLibsTarget, compileJsTarget, 'less', 'haggerston', 'stays']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
 
   grunt.registerTask('default', ['build']);

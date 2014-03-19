@@ -8,6 +8,7 @@
 @import "font-awesome";
 @import (less) "leaflet.awesome-markers.css";
 @import (less) "MarkerCluster.css";
+@import (less) "MarkerCluster.Default.css";
 
 // Overrides
 @border-radius-base: 0;
@@ -430,5 +431,27 @@ header.content-header {
 		}
 	}
 }
+
+// Map stuff
+
+
+// Override awesome marker paths
+.awesome-marker {
+  background-image: url('../awesome-markers/images/markers-soft.png');
+}
+.awesome-marker-shadow {
+  background-image: url('../awesome-markers/images/markers-shadow.png');
+}
+/* Retina displays */
+@media (min--moz-device-pixel-ratio: 1.5),(-o-min-device-pixel-ratio: 3/2),
+(-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5),(min-resolution: 1.5dppx) {
+ .awesome-marker {
+  background-image: url('../awesome-markers/images/markers-soft@2x.png');
+ }
+ .awesome-marker-shadow {
+  background-image: url('../awesome-markers/images/markers-shadow@2x.png');
+ }
+}
+// /overrides
 
 @import "desktop";
