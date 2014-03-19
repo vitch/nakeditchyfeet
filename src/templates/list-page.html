@@ -3,7 +3,7 @@
 <ul id="home-list">
 	{% for child in pagesToLoop %}
 		<li class="item-type-{{ child.type }}{% if child.hasLink %} has-link{% endif %}">
-			<i class="icon icon-{{ child.icon }}"> </i>
+			<i class="fa fa-{{ child.icon }}"> </i>
 			<div class="item">
 				<time datetime="{{ child.date|date('Y-m-d') }}">{{ child.date|date('jS M Y') }}</time>
 				{% if child.target %}<a href="{{ page|linkTo(child.target) }}">{% endif %}

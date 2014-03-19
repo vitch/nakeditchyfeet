@@ -17,13 +17,13 @@ module.exports = function(grunt) {
   var target = grunt.option('target') || 'dev';
   var compress = target !== 'dev';
   var jsLibs = [
-    'js/lib/underscore-1.4.4.js',
-    'js/lib/backbone-1.0.0.js',
-    'js/lib/leaflet-src.js',
-    'js/lib/leaflet.markercluster-src.js',
-    'js/lib/leaflet.awesome-markers.js',
-    'js/lib/bootstrap-tooltip.js',
-    'js/lib/enquire.js'
+    'js/lib/underscore/underscore.js',
+    'js/lib/backbone/backbone.js',
+    'js/lib/leaflet-dist/leaflet-src.js',
+    'js/lib/leaflet.markercluster/dist/leaflet.markercluster-src.js',
+    'js/lib/Leaflet.awesome-markers/dist/leaflet.awesome-markers.js',
+    'js/lib/bootstrap/js/tooltip.js',
+    'js/lib/enquire/dist/enquire.js'
   ];
   var compileJsTarget = compress ? 'requirejs:compile' : 'copy:js';
   var copyJsLibsTarget = compress ? 'uglify:libs' : 'copy:libs';
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
     },
     {
       filter: 'tip',
-      icon: 'info-sign',
+      icon: 'info-circle',
       description: 'Travel tips'
     },
     {
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
     },
     {
       filter: '',
-      icon: 'ban-circle',
+      icon: 'ban',
       description: 'Everything'
     }
   ];
@@ -108,13 +108,33 @@ module.exports = function(grunt) {
             dest: 'out/js/lib'
           }
         ]
+      },
+      fonts: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/js/lib/font-awesome/fonts',
+            src: ['**'],
+            dest: 'out/font-awesome/fonts'
+          }
+        ]
+      },
+      awesomeMarkers: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/js/lib/Leaflet.awesome-markers/dist/images',
+            src: ['**'],
+            dest: 'out/awesome-markers/images'
+          }
+        ]
       }
     },
     less: {
       site: {
         options: {
           compress: compress,
-          paths: ['src/styles', 'src/styles/bootstrap', 'src/styles/font-awesome']
+          paths: ['src/styles', 'src/js/lib/bootstrap/less', 'src/js/lib/font-awesome/less', 'src/js/lib/Leaflet.awesome-markers/dist', 'src/js/lib/leaflet.markercluster/dist']
         },
         files: {
           'out/styles/styles.css': 'src/styles/styles.less'
@@ -154,7 +174,7 @@ module.exports = function(grunt) {
             }).map(function(page) {
                 return {
                   type: 'tip',
-                  icon: 'info-sign',
+                  icon: 'info-circle',
                   target: page,
                   date: new Date(page.templateData.date),
                   label: page.templateData.title,
@@ -239,7 +259,7 @@ module.exports = function(grunt) {
             }).map(generatePhotosetPreview);
           },
           geoLink: function(text, lat, lng) {
-            return '<a href="https://maps.google.com/maps?q=' + lat + ',' + lng + '" data-lat="' + lat + '" data-lng="' + lng + '" class="geo-link" target="_blank"><i class="icon icon-map-marker"></i> ' + text + '</a>';
+            return '<a href="https://maps.google.com/maps?q=' + lat + ',' + lng + '" data-lat="' + lat + '" data-lng="' + lng + '" class="geo-link" target="_blank"><i class="fa fa-map-marker"></i> ' + text + '</a>';
           }
         }
       }
@@ -347,7 +367,7 @@ module.exports = function(grunt) {
 //  grunt.registerTask('flickr', require('./src/grunt-tasks/flickr.js'));
 //  grunt.registerTask('stays', require('./src/grunt-tasks/stays.js'));
 
-  grunt.registerTask('build', ['clean', 'copy:main', copyJsLibsTarget, compileJsTarget, 'less', 'haggerston', 'stays']);
+  grunt.registerTask('build', ['clean', 'copy:main', 'copy:fonts', 'copy:awesomeMarkers', copyJsLibsTarget, compileJsTarget, 'less', 'haggerston', 'stays']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
 
   grunt.registerTask('default', ['build']);
