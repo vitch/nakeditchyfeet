@@ -17,13 +17,13 @@ module.exports = function(grunt) {
   var target = grunt.option('target') || 'dev';
   var compress = target !== 'dev';
   var jsLibs = [
-    'js/lib/underscore/underscore.js',
-    'js/lib/backbone/backbone.js',
-    'js/lib/leaflet-dist/leaflet-src.js',
-    'js/lib/leaflet.markercluster/dist/leaflet.markercluster-src.js',
-    'js/lib/Leaflet.awesome-markers/dist/leaflet.awesome-markers.js',
-    'js/lib/bootstrap/js/tooltip.js',
-    'js/lib/enquire/dist/enquire.js'
+    'vendor/underscore/underscore.js',
+    'vendor/backbone/backbone.js',
+    'vendor/leaflet-dist/leaflet-src.js',
+    'vendor/leaflet.markercluster/dist/leaflet.markercluster-src.js',
+    'vendor/Leaflet.awesome-markers/dist/leaflet.awesome-markers.js',
+    'vendor/bootstrap/js/tooltip.js',
+    'vendor/enquire/dist/enquire.js'
   ];
   var compileJsTarget = compress ? 'requirejs:compile' : 'copy:js';
   var copyJsLibsTarget = compress ? 'uglify:libs' : 'copy:libs';
@@ -103,7 +103,7 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            cwd: 'src/js/lib',
+            cwd: 'vendor',
             src: ['**/*.js'],
             dest: 'out/js/lib'
           }
@@ -113,7 +113,7 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            cwd: 'src/js/lib/font-awesome/fonts',
+            cwd: 'vendor/font-awesome/fonts',
             src: ['**'],
             dest: 'out/font-awesome/fonts'
           }
@@ -123,7 +123,7 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            cwd: 'src/js/lib/Leaflet.awesome-markers/dist/images',
+            cwd: 'vendor/Leaflet.awesome-markers/dist/images',
             src: ['**'],
             dest: 'out/awesome-markers/images'
           }
@@ -134,7 +134,7 @@ module.exports = function(grunt) {
       site: {
         options: {
           compress: compress,
-          paths: ['src/styles', 'src/js/lib/bootstrap/less', 'src/js/lib/font-awesome/less', 'src/js/lib/Leaflet.awesome-markers/dist', 'src/js/lib/leaflet.markercluster/dist']
+          paths: ['src/styles', 'vendor/bootstrap/less', 'vendor/font-awesome/less', 'vendor/Leaflet.awesome-markers/dist', 'vendor/leaflet.markercluster/dist']
         },
         files: {
           'out/styles/styles.css': 'src/styles/styles.less'
@@ -144,7 +144,7 @@ module.exports = function(grunt) {
     haggerston: {
       options: {
         minify: compress,
-        jsLibs: compress ? ['js/libs.min.js'] : jsLibs,
+        jsLibs: compress ? ['js/libs.min.js'] : jsLibs.map(function(l) {return l.replace('vendor', 'js/lib'); }),
         listFilterOptions: listFilterOptions,
         middleware: [
           require('grunt-haggerston/tasks/lib/middleware/markdown')(),
@@ -280,9 +280,7 @@ module.exports = function(grunt) {
     uglify: {
       libs: {
         files: {
-          'out/js/libs.min.js': jsLibs.map(function(path) {
-            return 'src/' + path
-          })
+          'out/js/libs.min.js': jsLibs
         }
       }
     },
@@ -310,7 +308,7 @@ module.exports = function(grunt) {
       },
       jsLibs: {
         files: [
-          'src/js/lib/**/*.js'
+          'vendor/**/*.js'
         ],
         tasks: copyJsLibsTarget
       },
