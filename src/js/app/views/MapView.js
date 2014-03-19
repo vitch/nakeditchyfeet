@@ -30,7 +30,8 @@ define(
             'http://{s}.tiles.mapbox.com/v3/{user}.{map}/{z}/{x}/{y}.png',
             {
               user: 'nakeditchyfeet',
-              map: 'map-9xnn0a7i'
+              map: 'map-9xnn0a7i',
+              attribution: '<a href="http://mapbox.com/about/maps" target="_blank">&copy; Mapbox &copy; OpenStreetMap</a>'
             }
           ).addTo(this.leafletMap);
 
