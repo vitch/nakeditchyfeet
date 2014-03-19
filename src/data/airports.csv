@@ -3628,6 +3628,7 @@
 3726,"Boeing Fld King Co Intl","Seattle","United States","BFI","KBFI",47.53,-122.301947,21,-8,"A"
 3727,"Lackland Afb Kelly Fld Annex","San Antonio","United States","SKF","KSKF",29.384228,-98.581108,691,-6,"A"
 3728,"Honolulu Intl","Honolulu","United States","HNL","PHNL",21.318681,-157.922428,13,-10,"N"
+3728a,"Honolulu Intl","Honolulu","United States","HNL2","PHNL",21.318681,203.922428,13,-10,"N"
 3729,"Des Moines Intl","Des Moines","United States","DSM","KDSM",41.533972,-93.663083,958,-6,"A"
 3730,"Craven Co Rgnl","New Bern","United States","EWN","KEWN",35.072972,-77.042944,18,-5,"A"
 3731,"San Diego Intl","San Diego","United States","SAN","KSAN",32.733556,-117.189667,17,-8,"A"

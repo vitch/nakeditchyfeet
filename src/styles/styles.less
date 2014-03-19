@@ -180,6 +180,9 @@ img {
 
 		&.is-future {
 			color: @gray-light;
+			.list-page-map {
+				.opacity(.5);
+			}
 		}
 
 		&>i {
@@ -219,6 +222,7 @@ img {
 			width: 100%;
 			height: 200px;
 			.image-box-shadow();
+			cursor: default;
 		}
 
 		&.has-link {
@@ -438,6 +442,13 @@ header.content-header {
 
 // Map stuff
 
+.map-marker-airplane {
+	background: #000;
+	color: #fff;
+	border-radius: 30px;
+	font-size: 21px;
+	text-align: center;
+}
 
 // Override awesome marker paths
 .awesome-marker {
