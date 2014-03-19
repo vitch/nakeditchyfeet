@@ -292,43 +292,43 @@ module.exports = function(grunt) {
           'src/templates/**/*.html',
           'src/templates/**/*.xml'
         ],
-        tasks: 'haggerston'
+        tasks: ['haggerston', 'notify:watchComplete']
       },
       assets: {
         files: [
           'assets/**/*'
         ],
-        tasks: 'copy:main'
+        tasks: ['copy:main', 'notify:watchComplete']
       },
       js: {
         files: [
           'src/js/app/**/*.js'
         ],
-        tasks: compileJsTarget
+        tasks: [compileJsTarget, 'notify:watchComplete']
       },
       jsLibs: {
         files: [
           'vendor/**/*.js'
         ],
-        tasks: copyJsLibsTarget
+        tasks: [copyJsLibsTarget, 'notify:watchComplete']
       },
       eventJson: {
         files: [
           'src/data/*.json'
         ],
-        tasks: 'haggerston'
+        tasks: ['haggerston', 'notify:watchComplete']
       },
       styles: {
         files: [
           'src/styles/**/*.less'
         ],
-        tasks: 'less'
+        tasks: ['less', 'notify:watchComplete']
       },
       stays: {
         files: [
           'src/data/stays.json'
         ],
-        tasks: 'stays'
+        tasks: ['stays', 'notify:watchComplete']
       }
     },
     connect: {
@@ -353,6 +353,13 @@ module.exports = function(grunt) {
       options: {
         src: 'src/data/stays.json',
         out: 'out/stay-data.json'
+      }
+    },
+    notify: {
+      watchComplete: {
+        options: {
+            message: 'Rebuild done'
+        }
       }
     }
 
