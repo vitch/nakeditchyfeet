@@ -80,6 +80,7 @@ define(
                     title: mapItemModel.get('title').replace(/&#39;/g, '\''),
                       icon: L.AwesomeMarkers.icon({
                         icon: mapItemModel.get('icon'),
+                        prefix: 'fa',
                         color: 'darkblue',
                         className: 'awesome-marker'
                       }),
