@@ -24,7 +24,7 @@ define(
             trackResize: false,
             keyboard: false,
             zoomControl: false,
-            attributionControl: false,
+            attributionControl: true,
             layers:[]
           });
 
@@ -32,7 +32,8 @@ define(
             'http://{s}.tiles.mapbox.com/v3/{user}.{map}/{z}/{x}/{y}.png',
             {
               user: 'nakeditchyfeet',
-              map: 'map-9xnn0a7i'
+              map: 'map-9xnn0a7i',
+              attribution: '<a href="http://mapbox.com/about/maps" target="_blank">&copy; Mapbox &copy; OpenStreetMap</a>'
             }
           ).addTo(leafletMap);
 
@@ -44,11 +45,16 @@ define(
             linePoints.push(latLng);
           });
 
-          var line = L.polyline(linePoints).addTo(leafletMap);
+          var line = L.polyline(linePoints, {color: '#000', weight: 2, dashArray: '3,3'}).addTo(leafletMap);
+          var currentWidth = 0;
+          var $el = this.$el;
           $(window).on('resize', _.throttle(function() {
-            leafletMap.invalidateSize();
-            leafletMap.fitBounds(line.getBounds());
-            leafletMap.setZoom(leafletMap.getZoom() - 1);
+            var newW = $el.width();
+            if (newW !== currentWidth) {
+              leafletMap.invalidateSize();
+              leafletMap.fitBounds(line.getBounds(), { padding: [15, 20]});
+              currentWidth = newW;
+            }
           }, 200)).trigger('resize');
         }
       }
