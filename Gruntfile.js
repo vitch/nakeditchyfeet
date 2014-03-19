@@ -36,7 +36,7 @@ module.exports = function(grunt) {
     },
     {
       filter: 'tip',
-      icon: 'info-sign',
+      icon: 'info-circle',
       description: 'Travel tips'
     },
     {
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
     },
     {
       filter: '',
-      icon: 'ban-circle',
+      icon: 'ban',
       description: 'Everything'
     }
   ];
@@ -164,7 +164,7 @@ module.exports = function(grunt) {
             }).map(function(page) {
                 return {
                   type: 'tip',
-                  icon: 'info-sign',
+                  icon: 'info-circle',
                   target: page,
                   date: new Date(page.templateData.date),
                   label: page.templateData.title,
@@ -249,7 +249,7 @@ module.exports = function(grunt) {
             }).map(generatePhotosetPreview);
           },
           geoLink: function(text, lat, lng) {
-            return '<a href="https://maps.google.com/maps?q=' + lat + ',' + lng + '" data-lat="' + lat + '" data-lng="' + lng + '" class="geo-link" target="_blank"><i class="icon icon-map-marker"></i> ' + text + '</a>';
+            return '<a href="https://maps.google.com/maps?q=' + lat + ',' + lng + '" data-lat="' + lat + '" data-lng="' + lng + '" class="geo-link" target="_blank"><i class="fa fa-map-marker"></i> ' + text + '</a>';
           }
         }
       }

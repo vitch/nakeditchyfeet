@@ -11,6 +11,7 @@
 
 // Overrides
 @border-radius-base: 0;
+@fa-font-path: '../font-awesome/fonts';
 
 // Custom
 @now-marker-color: #333;
@@ -294,7 +295,7 @@ header.content-header {
 	margin-bottom: @line-height-base;
 	font-size: @font-size-base * 1.5;
 	font-weight: 200;
-	line-height: @line-height-base * 1.5;
+	line-height: @line-height-computed * 1.5;
 }
 
 #content table {
@@ -419,7 +420,7 @@ header.content-header {
 			text-decoration: none;
 			.transition(@link-fade-transition);
 
-			.icon-envelope-alt {
+			.fa-envelope-alt {
 				font-size: 1.09em;
 			}
 
