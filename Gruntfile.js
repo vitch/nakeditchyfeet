@@ -108,13 +108,23 @@ module.exports = function(grunt) {
             dest: 'out/js/lib'
           }
         ]
+      },
+      fonts: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/js/lib/font-awesome/fonts',
+            src: ['**'],
+            dest: 'out/font-awesome/fonts'
+          }
+        ]
       }
     },
     less: {
       site: {
         options: {
           compress: compress,
-          paths: ['src/styles', 'src/styles/bootstrap', 'src/styles/font-awesome']
+          paths: ['src/styles', 'src/js/lib/bootstrap/less', 'src/js/lib/font-awesome/less', 'src/js/lib/Leaflet.awesome-markers/dist', 'src/js/lib/leaflet.markercluster/dist']
         },
         files: {
           'out/styles/styles.css': 'src/styles/styles.less'
@@ -347,7 +357,7 @@ module.exports = function(grunt) {
 //  grunt.registerTask('flickr', require('./src/grunt-tasks/flickr.js'));
 //  grunt.registerTask('stays', require('./src/grunt-tasks/stays.js'));
 
-  grunt.registerTask('build', ['clean', 'copy:main', copyJsLibsTarget, compileJsTarget, 'less', 'haggerston', 'stays']);
+  grunt.registerTask('build', ['clean', 'copy:main', 'copy:fonts', copyJsLibsTarget, compileJsTarget, 'less', 'haggerston', 'stays']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
 
   grunt.registerTask('default', ['build']);
