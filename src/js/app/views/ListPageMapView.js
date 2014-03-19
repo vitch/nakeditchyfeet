@@ -53,20 +53,25 @@ define(
           var line = L.polyline(linePoints, {color: '#000', weight: 2, dashArray: '3,3'}).addTo(leafletMap);
           var currentWidth = 0;
           var $el = this.$el;
-          var planeMarker;
+          var planeIcon = L.divIcon({className:'map-marker-airplane', iconSize: [30, 30], html: '<span class="fa fa-plane"></span>'});
+          var planeMarkers = [];
           $(window).on('resize', _.throttle(function() {
             var newW = $el.width();
             if (newW !== currentWidth) {
               leafletMap.invalidateSize();
               leafletMap.fitBounds(line.getBounds(), { padding: [15, 20]});
-              if (_.isUndefined(planeMarker)) {
-                var planeIcon = L.divIcon({className:'map-marker-airplane', iconSize: [30, 30], html: '<span class="fa fa-plane"></span>'});
-                planeMarker = L.marker(line.getBounds().getCenter(), {icon: planeIcon}).addTo(leafletMap);
-              } else {
-                planeMarker.setLatLng(line.getBounds().getCenter());
-              }
-              var lineAngle = computeAngle(leafletMap.latLngToLayerPoint(linePoints[0]), leafletMap.latLngToLayerPoint(linePoints[1]));
-              planeMarker._icon.style[L.DomUtil.TRANSFORM] += ' rotate(' + (lineAngle+45) + 'deg)';
+
+              _.range(linePoints.length - 1).forEach(function(i) {
+                var segment = L.polyline([linePoints[i], linePoints[i+1]]);
+                if (_.isUndefined(planeMarkers[i])) {
+                  planeMarkers[i] = L.marker(segment.getBounds().getCenter(), {icon: planeIcon, clickable: false}).addTo(leafletMap);
+                } else {
+                  planeMarkers[i].setLatLng(segment.getBounds().getCenter());
+                }
+                var lineAngle = computeAngle(leafletMap.latLngToLayerPoint(linePoints[i]), leafletMap.latLngToLayerPoint(linePoints[i+1]));
+                planeMarkers[i]._icon.style[L.DomUtil.TRANSFORM] += ' rotate(' + (lineAngle+45) + 'deg)';
+              })
+              
               currentWidth = newW;
             }
           }, 200)).trigger('resize');
