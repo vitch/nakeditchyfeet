@@ -20,9 +20,9 @@
   "dependencies": {
   },
   "devDependencies": {
-    "underscore": "~1.4.4",
-    "cheerio": "~0.10.8",
-    "grunt": "~0.4.1",
+    "underscore": "~1.6.0",
+    "cheerio": "~0.13.1",
+    "grunt": "~0.4.4",
     "grunt-haggerston": "git://github.com/haggerstonjs/grunt-haggerston.git",
     "grunt-contrib-clean": "~0.4.0",
     "grunt-contrib-copy": "~0.5.0",
