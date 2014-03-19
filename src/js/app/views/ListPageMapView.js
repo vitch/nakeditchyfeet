@@ -4,6 +4,11 @@ define(
   function () {
     'use strict';
 
+    // From http://makinacorpus.github.io/Leaflet.GeometryUtil/leaflet.geometryutil.js.html
+    var computeAngle = function(a, b) {
+        return (Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI);
+    };
+
     return Backbone.View.extend(
       {
         initialize: function (options) {
@@ -60,6 +65,8 @@ define(
               } else {
                 planeMarker.setLatLng(line.getBounds().getCenter());
               }
+              var lineAngle = computeAngle(leafletMap.latLngToLayerPoint(linePoints[0]), leafletMap.latLngToLayerPoint(linePoints[1]));
+              planeMarker._icon.style[L.DomUtil.TRANSFORM] += ' rotate(' + (lineAngle+45) + 'deg)';
               currentWidth = newW;
             }
           }, 200)).trigger('resize');
