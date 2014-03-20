@@ -132,13 +132,23 @@ module.exports = function(grunt) {
             dest: 'out/awesome-markers/images'
           }
         ]
+      },
+      leaflet: {
+        files: [
+          {
+            expand: true,
+            cwd: 'vendor/leaflet-dist/images',
+            src: ['**'],
+            dest: 'out/leaflet/images'
+          }
+        ]
       }
     },
     less: {
       site: {
         options: {
           compress: compress,
-          paths: ['src/styles', 'vendor/bootstrap/less', 'vendor/font-awesome/less', 'vendor/Leaflet.awesome-markers/dist', 'vendor/leaflet.markercluster/dist']
+          paths: ['src/styles', 'vendor/bootstrap/less', 'vendor/leaflet-dist', 'vendor/font-awesome/less', 'vendor/Leaflet.awesome-markers/dist', 'vendor/leaflet.markercluster/dist']
         },
         files: {
           'out/styles/styles.css': 'src/styles/styles.less'
@@ -376,7 +386,9 @@ module.exports = function(grunt) {
 //  grunt.registerTask('flickr', require('./src/grunt-tasks/flickr.js'));
 //  grunt.registerTask('stays', require('./src/grunt-tasks/stays.js'));
 
-  grunt.registerTask('build', ['clean', 'copy:main', 'copy:jQuery', 'copy:fonts', 'copy:awesomeMarkers', copyJsLibsTarget, compileJsTarget, 'less', 'haggerston', 'stays']);
+  grunt.registerTask('copyVendor', ['copy:jQuery', 'copy:fonts', 'copy:leaflet', 'copy:awesomeMarkers'])
+
+  grunt.registerTask('build', ['clean', 'copy:main', 'copyVendor', copyJsLibsTarget, compileJsTarget, 'less', 'haggerston', 'stays']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
 
   grunt.registerTask('default', ['build']);

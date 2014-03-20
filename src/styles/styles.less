@@ -6,9 +6,11 @@
 @import "alerts.less";
 @import "tooltip.less";
 @import "font-awesome";
+@import (less) "leaflet.css";
 @import (less) "leaflet.awesome-markers.css";
 @import (less) "MarkerCluster.css";
 @import (less) "MarkerCluster.Default.css";
+
 
 // Overrides
 @border-radius-base: 0;
@@ -448,6 +450,15 @@ header.content-header {
 	border-radius: 30px;
 	font-size: 21px;
 	text-align: center;
+}
+
+// Override leaflet paths
+
+.leaflet-control-layers-toggle {
+	background-image: url(../leaflet/images/layers.png);
+}
+.leaflet-retina .leaflet-control-layers-toggle {
+	background-image: url(../leaflet/images/layers-2x.png);
 }
 
 // Override awesome marker paths
