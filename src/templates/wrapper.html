@@ -55,7 +55,7 @@
 <div id="site-content">
 {% block bodyContent %}{% endblock %}
 </div>
-<script type="text/javascript" src="{{ page|basePath }}js/lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{{ page|basePath }}js/lib/jquery.js"></script>
 {% for path in options.jsLibs -%}
 <script src="{{ page|basePath }}{{ path }}"></script>
 {% endfor %}

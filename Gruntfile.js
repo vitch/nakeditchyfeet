@@ -89,6 +89,10 @@ module.exports = function(grunt) {
           }
         ]
       },
+      jQuery: {
+        src: 'vendor/jquery/dist/jquery.js',
+        dest: 'out/js/lib/jquery.js'
+      },
       js: {
         files: [
           {
@@ -372,7 +376,7 @@ module.exports = function(grunt) {
 //  grunt.registerTask('flickr', require('./src/grunt-tasks/flickr.js'));
 //  grunt.registerTask('stays', require('./src/grunt-tasks/stays.js'));
 
-  grunt.registerTask('build', ['clean', 'copy:main', 'copy:fonts', 'copy:awesomeMarkers', copyJsLibsTarget, compileJsTarget, 'less', 'haggerston', 'stays']);
+  grunt.registerTask('build', ['clean', 'copy:main', 'copy:jQuery', 'copy:fonts', 'copy:awesomeMarkers', copyJsLibsTarget, compileJsTarget, 'less', 'haggerston', 'stays']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
 
   grunt.registerTask('default', ['build']);
