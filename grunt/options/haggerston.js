@@ -20,6 +20,11 @@ var listFilterOptions = [
     description: 'Photos'
   },
   {
+    filter: 'flight',
+    icon: 'plane',
+    description: 'Flights'
+  },
+  {
     filter: '',
     icon: 'ban',
     description: 'Everything'
@@ -116,6 +121,7 @@ module.exports = function(grunt) {
             item.hasLink = !!item.externalLink;
             if (item.icon === 'plane') {
               item.showMap = true;
+              item.type = 'flight';
               item.airports = item.airports.split(',').map(function(code) {
                 return code + '|' + airports[code].lat + ',' + airports[code].lng;
               }).join('||');
