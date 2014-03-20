@@ -39,26 +39,6 @@ define(
             _.defer(initTooltips);
           });
 
-//          L.tileLayer(
-//            'http://a.tiles.mapbox.com/v3/vitch.map-knaif0fn/{z}/{x}/{y}.png',
-//            {
-//              "attribution": "<a href='http://mapbox.com/about/maps' target='_blank'>Terms & Feedback</a>",
-//              "bounds": [-180, - 85, 180, 85],
-//              "center": [0, 0, 3],
-//              "data": ["http://a.tiles.mapbox.com/v3/vitch.map-knaif0fn/markers.geojsonp"],
-//              "geocoder": "http://a.tiles.mapbox.com/v3/vitch.map-knaif0fn/geocode/{query}.jsonp",
-//              "id": "vitch.map-knaif0fn",
-//              "maxzoom": 17,
-//              "minzoom": 0,
-//              "name": "Simple terrain",
-//              "private": true,
-//              "scheme": "xyz",
-//              "tilejson": "2.0.0",
-//              "tiles": ["http://a.tiles.mapbox.com/v3/vitch.map-knaif0fn/{z}/{x}/{y}.png", "http://b.tiles.mapbox.com/v3/vitch.map-knaif0fn/{z}/{x}/{y}.png", "http://c.tiles.mapbox.com/v3/vitch.map-knaif0fn/{z}/{x}/{y}.png", "http://d.tiles.mapbox.com/v3/vitch.map-knaif0fn/{z}/{x}/{y}.png"],
-//              "webpage": "http://tiles.mapbox.com/vitch/map/map-knaif0fn"
-//            }
-//          ).addTo(map);
-
           this.mapItems.fetch({success: this.onMapItemsReady});
         },
         initTooltips: function()
