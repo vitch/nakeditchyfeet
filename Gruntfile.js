@@ -25,8 +25,6 @@ module.exports = function(grunt) {
     'vendor/bootstrap/js/tooltip.js',
     'vendor/enquire/dist/enquire.js'
   ];
-  var compileJsTarget = compress ? 'requirejs:compile' : 'copy:js';
-  var copyJsLibsTarget = compress ? 'uglify:libs' : 'copy:libs';
 
   var listFilterOptions = [
     {
@@ -304,7 +302,8 @@ module.exports = function(grunt) {
           'src/content/**/*.json',
           'src/content/**/*.md',
           'src/templates/**/*.html',
-          'src/templates/**/*.xml'
+          'src/templates/**/*.xml',
+          'src/data/*.json'
         ],
         tasks: ['haggerston', 'notify:watchComplete']
       },
@@ -318,19 +317,13 @@ module.exports = function(grunt) {
         files: [
           'src/js/app/**/*.js'
         ],
-        tasks: [compileJsTarget, 'notify:watchComplete']
+        tasks: ['compileJs', 'notify:watchComplete']
       },
       jsLibs: {
         files: [
           'vendor/**/*.js'
         ],
-        tasks: [copyJsLibsTarget, 'notify:watchComplete']
-      },
-      eventJson: {
-        files: [
-          'src/data/*.json'
-        ],
-        tasks: ['haggerston', 'notify:watchComplete']
+        tasks: ['copyJsLibs', 'notify:watchComplete']
       },
       styles: {
         files: [
@@ -380,15 +373,14 @@ module.exports = function(grunt) {
   });
 
   require('load-grunt-tasks')(grunt);
+  grunt.loadTasks('grunt/tasks');
 
-  grunt.loadTasks('src/grunt-tasks');
-
-//  grunt.registerTask('flickr', require('./src/grunt-tasks/flickr.js'));
-//  grunt.registerTask('stays', require('./src/grunt-tasks/stays.js'));
+  grunt.registerTask('copyJsLibs', [compress ? 'uglify:libs' : 'copy:libs']);
+  grunt.registerTask('compileJs', [compress ? 'requirejs:compile' : 'copy:js']);
 
   grunt.registerTask('copyVendor', ['copy:jQuery', 'copy:fonts', 'copy:leaflet', 'copy:awesomeMarkers'])
 
-  grunt.registerTask('build', ['clean', 'copy:main', 'copyVendor', copyJsLibsTarget, compileJsTarget, 'less', 'haggerston', 'stays']);
+  grunt.registerTask('build', ['clean', 'copy:main', 'copyVendor', 'copyJsLibs', 'compileJs', 'less', 'haggerston', 'stays']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
 
   grunt.registerTask('default', ['build']);
