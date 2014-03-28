@@ -11,6 +11,8 @@ define(
 
     var planeIcon = L.divIcon({className:'map-marker-airplane', iconSize: [30, 30], html: '<span class="fa fa-plane"></span>'});
 
+    var replaceRotation = /(.*)rotate\((.*)deg\)/;
+
     var FlightPolyLine = L.FeatureGroup.extend({
       initialize: function(options) {
         this._layers = {};
@@ -21,24 +23,27 @@ define(
         });
         this.addLayer(L.polyline(airportCoordinates, {color: '#000', weight: 2, dashArray: '3,3'}));
 
-        this.airportCoordinates = airportCoordinates;
-        this.planeMarkers = [];
+        this.planeMarkers = _.range(airportCoordinates.length - 1).map(function(i) {
+          var points = [airportCoordinates[i], airportCoordinates[i+1]];
+          var segment = L.polyline(points);
+          var planeMarker = L.marker(segment.getBounds().getCenter(), {icon: planeIcon, clickable: false, points: points});
+          this.addLayer(planeMarker);
+          return planeMarker;
+        }, this);
       },
       positionPlanes: function() {
-        _.range(this.airportCoordinates.length - 1).forEach(function(i) {
-          var point1 = this.airportCoordinates[i];
-          var point2 = this.airportCoordinates[i+1];
-          var segment = L.polyline([point1, point2]);
-          var currentMarker = this.planeMarkers[i];
-          if (_.isUndefined(currentMarker)) {
-            currentMarker = this.planeMarkers[i] = L.marker(segment.getBounds().getCenter(), {icon: planeIcon, clickable: false});
-            this.addLayer(currentMarker);
+        var map = this._map;
+        this.planeMarkers.forEach(function(planeMarker) {
+          var points = planeMarker.options.points;
+          var lineAngle = computeAngle(map.latLngToLayerPoint(points[0]), map.latLngToLayerPoint(points[1]));
+          var iconStyle = planeMarker._icon.style[L.DomUtil.TRANSFORM];
+          var rotateStr = ' rotate(' + (lineAngle + 45) + 'deg)';
+          if (iconStyle.indexOf('rotate') > -1) {
+            planeMarker._icon.style[L.DomUtil.TRANSFORM] = iconStyle.replace(replaceRotation, '$1' + rotateStr);
           } else {
-            currentMarker.setLatLng(segment.getBounds().getCenter());
+            planeMarker._icon.style[L.DomUtil.TRANSFORM] += rotateStr;
           }
-          var lineAngle = computeAngle(this._map.latLngToLayerPoint(point1), this._map.latLngToLayerPoint(point2));
-          currentMarker._icon.style[L.DomUtil.TRANSFORM] += ' rotate(' + (lineAngle+45) + 'deg)';
-        }, this);
+        });
       }
     });
 

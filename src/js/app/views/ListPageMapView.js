@@ -48,7 +48,7 @@ define(
             if (newW !== currentWidth) {
               leafletMap.invalidateSize();
               leafletMap.fitBounds(flightPolyline.getBounds(), { padding: [15, 20]});
-              flightPolyline.positionPlanes();
+              flightPolyline.positionPlanes(); // Does this need to happen every resize or just once when the map is ready?
               currentWidth = newW;
             }
           }, 200)).trigger('resize');
