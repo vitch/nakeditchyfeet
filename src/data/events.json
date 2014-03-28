@@ -129,8 +129,8 @@
   {
     "date": "2014-03-24",
     "icon": "plane",
-    "label": "<strong>LAX - BOG</strong>",
-    "airports": "LAX,BOG",
+    "label": "<strong>LAX - FLL - BOG</strong>",
+    "airports": "LAX,FLL,BOG",
     "airline": "Jet Blue"
   },
   {
