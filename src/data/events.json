@@ -120,6 +120,20 @@
     "airline": "Air New Zealand"
   },
   {
+    "date": "2014-03-11",
+    "icon": "plane",
+    "label": "<strong>HNL - LIH</strong>",
+    "airports": "HNL,LIH",
+    "airline": "Island Air"
+  },
+  {
+    "date": "2014-03-16",
+    "icon": "plane",
+    "label": "<strong>LIH - HNL</strong>",
+    "airports": "LIH,HNL",
+    "airline": "Island Air"
+  },
+  {
     "date": "2014-03-19",
     "icon": "plane",
     "label": "<strong>HNL - LAX</strong>",
