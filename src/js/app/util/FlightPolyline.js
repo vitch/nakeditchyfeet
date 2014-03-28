@@ -31,6 +31,11 @@ define(
           return planeMarker;
         }, this);
       },
+      onAdd: function(map) {
+        L.FeatureGroup.prototype.onAdd.call(this, map);
+        this.positionPlanes();
+        this._map.on('zoomend', this.positionPlanes, this);
+      },
       positionPlanes: function() {
         var map = this._map;
         this.planeMarkers.forEach(function(planeMarker) {
