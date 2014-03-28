@@ -144,6 +144,15 @@ module.exports = function(grunt) {
             return !_.isUndefined(page.templateData) && !(_.isUndefined(page.templateData.latitude) || _.isUndefined(page.templateData.longitude));
           });
         },
+        findFlights: function(pages) {
+          return _(pages).filter(function(page) {
+            return page.type === 'flight';
+          }).map(function(page) {
+            return {
+              airports: page.airports
+            };
+          });
+        },
         listPageIntro: function(item) {
           switch(item.type) {
             case 'photo':

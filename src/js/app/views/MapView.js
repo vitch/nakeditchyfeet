@@ -51,10 +51,19 @@ define(
         onMapItemsReady: function () {
           var map = this.leafletMap;
           var mapItemClusters = this.mapItemClusters = new L.MarkerClusterGroup({
-                showCoverageOnHover: false
-              });
+            showCoverageOnHover: false
+          });
           this.hiddenMarkers = [];
-          this.mapMarkers = this.mapItems.map(function(mapItemModel) {
+          var flights = [];
+          var pages = this.mapItems.filter(function(mapItemModel) {
+            if (mapItemModel.get('type') === 'flight') {
+              flights.push(mapItemModel);
+              return false;
+            }
+            return true;
+          });
+
+          this.mapMarkers = pages.map(function(mapItemModel) {
             var marker = L.marker(
                   [mapItemModel.get('latitude'), mapItemModel.get('longitude')],
                   {
@@ -73,6 +82,14 @@ define(
             });
             mapItemClusters.addLayer(marker);
             return marker;
+          });
+
+          this.flightLines = flights.map(function(mapItemModel) {
+            var airportCoordinates = mapItemModel.get('airports').split('||').map(function(a) {
+              var latLng = a.split('|')[1].split(',')
+              return new L.LatLng(latLng[0], latLng[1]);
+            });
+            return L.polyline(airportCoordinates, {color: '#000', weight: 2, dashArray: '3,3'}).addTo(map);
           });
 
           map.fitBounds(this.mapMarkers.map(function(marker) {

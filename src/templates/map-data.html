@@ -9,6 +9,12 @@
 			"longitude": {{ child.templateData.longitude }},
 			"type": "{{ item.type }}",
 			"icon": "{{ item.icon }}"
+		},
+	{%- endfor %}
+	{% for item in pages|published|intersperseEvents|findFlights -%}
+		{
+			"airports": "{{ item.airports }}",
+			"type": "flight"
 		}{% if !loop.last %},{% endif %}
 	{%- endfor %}
 ]
