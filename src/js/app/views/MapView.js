@@ -1,8 +1,9 @@
 define(
   [
-    'views/ListFilterView'
+    'views/ListFilterView',
+    'util/FlightPolyline'
   ],
-  function (ListFilterView) {
+  function (ListFilterView, FlightPolyline) {
     'use strict';
 
     return Backbone.View.extend(
@@ -84,17 +85,14 @@ define(
             return marker;
           });
 
-          this.flightLines = flights.map(function(mapItemModel) {
-            var airportCoordinates = mapItemModel.get('airports').split('||').map(function(a) {
-              var latLng = a.split('|')[1].split(',')
-              return new L.LatLng(latLng[0], latLng[1]);
-            });
-            return L.polyline(airportCoordinates, {color: '#000', weight: 2, dashArray: '3,3'}).addTo(map);
-          });
-
           map.fitBounds(this.mapMarkers.map(function(marker) {
             return marker.getLatLng();
           }));
+
+          flights.forEach(function(mapItemModel) {
+            var flightPolyline = new FlightPolyline({airports: mapItemModel.get('airports')});
+            flightPolyline.addTo(map);
+          });
 
           map.addLayer(mapItemClusters);
 
