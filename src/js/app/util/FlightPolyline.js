@@ -11,8 +11,6 @@ define(
 
     var planeIcon = L.divIcon({className:'map-marker-airplane', iconSize: [30, 30], html: '<span class="fa fa-plane"></span>'});
 
-    var replaceRotation = /(.*)rotate\((.*)deg\)/;
-
     var FlightPolyLine = L.FeatureGroup.extend({
       initialize: function(options) {
         this._layers = {};
@@ -34,20 +32,13 @@ define(
       onAdd: function(map) {
         L.FeatureGroup.prototype.onAdd.call(this, map);
         this.positionPlanes();
-        this._map.on('zoomend', this.positionPlanes, this);
       },
       positionPlanes: function() {
         var map = this._map;
         this.planeMarkers.forEach(function(planeMarker) {
           var points = planeMarker.options.points;
           var lineAngle = computeAngle(map.latLngToLayerPoint(points[0]), map.latLngToLayerPoint(points[1]));
-          var iconStyle = planeMarker._icon.style[L.DomUtil.TRANSFORM];
-          var rotateStr = ' rotate(' + (lineAngle + 45) + 'deg)';
-          if (iconStyle.indexOf('rotate') > -1) {
-            planeMarker._icon.style[L.DomUtil.TRANSFORM] = iconStyle.replace(replaceRotation, '$1' + rotateStr);
-          } else {
-            planeMarker._icon.style[L.DomUtil.TRANSFORM] += rotateStr;
-          }
+          planeMarker._icon.firstChild.style[L.DomUtil.TRANSFORM] = 'rotate(' + (lineAngle + 45) + 'deg)';
         });
       }
     });
