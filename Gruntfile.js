@@ -38,7 +38,7 @@ module.exports = function(grunt) {
   });
 
   // Aliases
-  grunt.registerTask('copyJsLibs', [grunt.isProduction ? 'uglify:libs' : 'copy:libs']);
+  grunt.registerTask('copyJsLibs', [grunt.isProduction ? 'uglify:libs' : 'copy:libs', 'copy:require']);
   grunt.registerTask('compileJs', [grunt.isProduction ? 'requirejs:compile' : 'copy:js']);
 
   grunt.registerTask('copyVendor', ['copy:jQuery', 'copy:fonts', 'copy:leaflet', 'copy:awesomeMarkers'])
