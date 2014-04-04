@@ -28,10 +28,12 @@ module.exports = function(grunt) {
   ];
 
 
-  // Load config and initialise
+  // Load custom tasks...
+  grunt.loadTasks('grunt/tasks');
+
+  // Load config and initialise...
   require('load-grunt-config')(grunt, {
-    defaultPath: path.join(__dirname, 'grunt/options'),
-    configPath: path.join(__dirname, 'grunt/tasks'),
+    configPath: path.join(__dirname, 'grunt/options'),
     init: true
   });
 
