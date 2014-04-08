@@ -148,9 +148,23 @@
     "airline": "Jet Blue"
   },
   {
-    "date": "2014-04-08",
+    "date": "2014-04-08 09:25",
+    "icon": "plane",
+    "label": "<strong>UIO - GYE - GPS</strong>",
+    "airports": "UIO,GYE,GPS",
+    "airline": ""
+  },
+  {
+    "date": "2014-04-08 16:00",
     "icon": "anchor",
     "label": "Galapagos Islands"
+  },
+  {
+    "date": "2014-04-23",
+    "icon": "plane",
+    "label": "<strong>SCY - GYE - UIO</strong>",
+    "airports": "SCY,GYE,UIO",
+    "airline": ""
   },
   {
     "date": "2014-06-12",
