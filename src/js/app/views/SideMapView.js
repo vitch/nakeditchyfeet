@@ -64,16 +64,23 @@ define(
               }
               $li.addClass('is-in-view');
             });
+            var stripSpace = /[\t|\n]/g;
             var datas = $('#home-list>li.is-in-view').map(function() {
               var $li = $(this);
               var data = {
-                icon: $li.find('>.fa').attr('class').split(' ')[1]
+                icon: $li.find('>.fa').attr('class').split(' ')[1],
+                title: $li.find('h1').text().replace(stripSpace, '')
               };
               switch (data.icon) {
                 case 'fa-plane':
                   data.isPlane = true;
                   data.airports = $li.find('.list-page-map').data().airports;
                   break;
+                case 'fa-book':
+                case 'fa-info-circle':
+                case 'fa-camera-retro':
+                  data.link = $li.find('a').attr('href');
+                  // fall through...
                 default:
                   data.geo = $li.data().geo;
               }
