@@ -79,6 +79,7 @@ module.exports = function(grunt) {
                 date: new Date(page.templateData.date),
                 label: page.templateData.title,
                 image: page.templateData.headerImage,
+                geo: page.templateData.latitude + ',' + page.templateData.longitude,
                 hasLink: true
               }
             });
@@ -92,6 +93,7 @@ module.exports = function(grunt) {
                 date: new Date(page.templateData.date),
                 label: page.templateData.title,
   //                  image: page.templateData.headerImage,
+                geo: page.templateData.latitude + ',' + page.templateData.longitude,
                 hasLink: true
               }
             });
@@ -125,7 +127,7 @@ module.exports = function(grunt) {
               item.airports = item.airports.split(',').map(function(code) {
                 return code + '|' + airports[code].lat + ',' + airports[code].lng;
               }).join('||');
-            }
+            } 
             return item;
           });
 

@@ -11,9 +11,10 @@ define(
     'views/HomeView',
     'views/MapView',
     'views/MobileNavView',
+    'views/SideMapView',
     'views/PhotoView'
   ],
-  function (MapItemsCollection, HomeView, MapView, MobileNavView, PhotoView) {
+  function (MapItemsCollection, HomeView, MapView, MobileNavView, SideMapView, PhotoView) {
     'use strict';
     $(function() {
       $('.tt-trigger').tooltip();
@@ -23,6 +24,7 @@ define(
       });
       var mobileNavView = new MobileNavView();
       var photoView = new PhotoView();
+      var sideMapView = new SideMapView();
     });
   }
 );

@@ -2,7 +2,7 @@
 {% block bodyContent %}
 <ul id="home-list">
 	{% for child in pagesToLoop %}
-		<li class="item-type-{{ child.type }}{% if child.hasLink %} has-link{% endif %}">
+		<li class="item-type-{{ child.type }}{% if child.hasLink %} has-link{% endif %}" data-geo="{{ child.geo }}">
 			<i class="fa fa-{{ child.icon }}"> </i>
 			<div class="item">
 				<time datetime="{{ child.date|date('Y-m-d') }}">{{ child.date|date('jS M Y') }}</time>
@@ -33,4 +33,6 @@
 		</li>
 	{% endfor %}
 </ul>
+<div id="side-map">
+</div>
 {% endblock %}

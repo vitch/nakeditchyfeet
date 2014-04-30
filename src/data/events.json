@@ -37,22 +37,26 @@
   {
     "date": "2013-06-19",
     "icon": "anchor",
-    "label": "Ferry from Sulawesi to Flores"
+    "label": "Ferry from Sulawesi to Flores",
+    "geo": [0,0]
   },
   {
     "date": "2013-06-28",
     "icon": "anchor",
-    "label": "Boat from Flores to Lombok"
+    "label": "Boat from Flores to Lombok",
+    "geo": [0,0]
   },
   {
     "date": "2013-07-13",
     "icon": "picture",
-    "label": "Climb Gunung Rinjani"
+    "label": "Climb Gunung Rinjani",
+    "geo": [0,0]
   },
   {
     "date": "2013-07-22",
     "icon": "group",
-    "label": "Volunteer in Bali"
+    "label": "Volunteer in Bali",
+    "geo": [0,0]
   },
   {
     "date": "2013-08-07 23:00:00",
@@ -79,7 +83,8 @@
   {
     "date": "2013-11-23",
     "icon": "heart",
-    "label": "Wedding, South Australia"
+    "label": "Wedding, South Australia",
+    "geo": [0,0]
   },
   {
     "date": "2013-11-25",
@@ -105,12 +110,14 @@
   {
     "date": "2013-12-28",
     "icon": "heart",
-    "label": "Wedding, Blenheim"
+    "label": "Wedding, Blenheim",
+    "geo": [0,0]
   },
   {
     "date": "2014-01-18",
     "icon": "heart",
-    "label": "Wedding, Marlborough Sounds"
+    "label": "Wedding, Marlborough Sounds",
+    "geo": [0,0]
   },
   {
     "date": "2014-03-09",
@@ -157,7 +164,8 @@
   {
     "date": "2014-04-08 16:00",
     "icon": "anchor",
-    "label": "Galapagos Islands"
+    "label": "Galapagos Islands",
+    "geo": [0,0]
   },
   {
     "date": "2014-04-23",
@@ -176,7 +184,8 @@
   {
     "date": "2014-05-17 16:00",
     "icon": "anchor",
-    "label": "Leticia - Manaus down the Amazon"
+    "label": "Leticia - Manaus down the Amazon",
+    "geo": [0,0]
   },
   {
     "date": "2014-05-23",
@@ -188,7 +197,8 @@
   {
     "date": "2014-06-12",
     "icon": "dribbble",
-    "label": "Brazil vs. Croatia - World cup opener"
+    "label": "Brazil vs. Croatia - World cup opener",
+    "geo": [0,0]
   }
 
 ]
