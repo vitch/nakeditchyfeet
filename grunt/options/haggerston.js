@@ -49,6 +49,7 @@ var generatePhotosetPreview = function(page) {
     date: new Date(page.templateData.date),
     label: "New Photoset: " + page.templateData.title,
     image: listPagePhotos,
+    geo: page.templateData.latitude + ',' + page.templateData.longitude,
     hasLink: true
   }
 };
