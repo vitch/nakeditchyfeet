@@ -1,7 +1,8 @@
 define(
   [
+    'util/FlightPolyline'
   ],
-  function () {
+  function (FlightPolyline) {
     'use strict';
 
     var displayedMarkerJSON = '';
@@ -48,6 +49,8 @@ define(
             }
           ).addTo(this.leafletMap);
 
+          this.stuffLayer = L.layerGroup().addTo(this.leafletMap);
+
           $(window).on('resize', _.throttle(this.sizeMap, 200, {leading: false}));
         },
         updateMap: function(event) {
@@ -93,19 +96,19 @@ define(
           var markerJSON = JSON.stringify(datas);
           if (markerJSON !== displayedMarkerJSON) {
             displayedMarkerJSON = markerJSON;
-            // TODO: Clear the map and then add the relevant markers to the map
-            if (this.mapItemClusters) {
-              this.leafletMap.removeLayer(this.mapItemClusters);
-            }
+            
+            this.stuffLayer.clearLayers();
             var mapItemClusters = this.mapItemClusters = new L.MarkerClusterGroup({
               showCoverageOnHover: false,
               zoomToBoundsOnClick: false,
               spiderfyOnMaxZoom: true,
               maxClusterRadius: 40
             });
-            _.each(datas, function(data) {
+            var bounds = _.map(datas, function(data) {
               if (data.icon === 'fa-plane') {
-                // Nothing yet!
+                var planeLine = new FlightPolyline({airports: data.airports});
+                planeLine.addTo(this.stuffLayer);
+                return planeLine.getBounds();
               } else {
                 var marker = L.marker(
                   data.geo.split(','),
@@ -120,10 +123,11 @@ define(
                   }
                 );
                 mapItemClusters.addLayer(marker);
+                return marker.getLatLng();
               }
-            });
-            this.leafletMap.addLayer(mapItemClusters);
-            this.leafletMap.fitBounds(mapItemClusters.getBounds());
+            }, this);
+            this.stuffLayer.addLayer(mapItemClusters);
+            this.leafletMap.fitBounds(bounds);
           }
         },
         sizeMap: function() {
