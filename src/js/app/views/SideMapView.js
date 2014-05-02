@@ -98,12 +98,6 @@ define(
             displayedMarkerJSON = markerJSON;
             
             this.stuffLayer.clearLayers();
-            var mapItemClusters = this.mapItemClusters = new L.MarkerClusterGroup({
-              showCoverageOnHover: false,
-              zoomToBoundsOnClick: false,
-              spiderfyOnMaxZoom: true,
-              maxClusterRadius: 40
-            });
             var bounds = _.map(datas, function(data) {
               if (data.icon === 'fa-plane') {
                 var planeLine = new FlightPolyline({airports: data.airports, noPlaneMarkers: true});
@@ -122,11 +116,10 @@ define(
                     })
                   }
                 );
-                mapItemClusters.addLayer(marker);
+                this.stuffLayer.addLayer(marker);
                 return marker.getLatLng();
               }
             }, this);
-            this.stuffLayer.addLayer(mapItemClusters);
             this.leafletMap.fitBounds(bounds);
           }
         },
