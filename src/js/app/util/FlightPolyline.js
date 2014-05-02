@@ -21,13 +21,17 @@ define(
         });
         this.addLayer(L.polyline(airportCoordinates, {color: '#000', weight: 2, dashArray: '3,3'}));
 
-        this.planeMarkers = _.range(airportCoordinates.length - 1).map(function(i) {
-          var points = [airportCoordinates[i], airportCoordinates[i+1]];
-          var segment = L.polyline(points);
-          var planeMarker = L.marker(segment.getBounds().getCenter(), {icon: planeIcon, clickable: false, points: points});
-          this.addLayer(planeMarker);
-          return planeMarker;
-        }, this);
+        if (options.noPlaneMarkers) {
+          this.planeMarkers = [];
+        } else {
+          this.planeMarkers = _.range(airportCoordinates.length - 1).map(function(i) {
+            var points = [airportCoordinates[i], airportCoordinates[i+1]];
+            var segment = L.polyline(points);
+            var planeMarker = L.marker(segment.getBounds().getCenter(), {icon: planeIcon, clickable: false, points: points});
+            this.addLayer(planeMarker);
+            return planeMarker;
+          }, this);
+        }
       },
       onAdd: function(map) {
         L.FeatureGroup.prototype.onAdd.call(this, map);

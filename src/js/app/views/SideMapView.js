@@ -106,7 +106,7 @@ define(
             });
             var bounds = _.map(datas, function(data) {
               if (data.icon === 'fa-plane') {
-                var planeLine = new FlightPolyline({airports: data.airports});
+                var planeLine = new FlightPolyline({airports: data.airports, noPlaneMarkers: true});
                 planeLine.addTo(this.stuffLayer);
                 return planeLine.getBounds();
               } else {
