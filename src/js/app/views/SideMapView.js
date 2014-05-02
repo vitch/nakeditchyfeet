@@ -93,7 +93,32 @@ define(
           if (markerJSON !== displayedMarkerJSON) {
             displayedMarkerJSON = markerJSON;
             // TODO: Clear the map and then add the relevant markers to the map
-            console.log(displayedMarkerJSON);
+            if (this.mapItemClusters) {
+              this.leafletMap.removeLayer(this.mapItemClusters);
+            }
+            var mapItemClusters = this.mapItemClusters = new L.MarkerClusterGroup({
+              showCoverageOnHover: false
+            });
+            _.each(datas, function(data) {
+              if (data.icon === 'fa-plane') {
+                // Nothing yet!
+              } else {
+                var marker = L.marker(
+                  data.geo.split(','),
+                  {
+                    title: data.title,
+                    icon: L.AwesomeMarkers.icon({
+                      icon: data.icon,
+                      prefix: 'fa',
+                      color: 'darkblue',
+                      className: 'awesome-marker'
+                    })
+                  }
+                );
+                mapItemClusters.addLayer(marker);
+              }
+            });
+            this.leafletMap.addLayer(mapItemClusters);
           }
         },
         sizeMap: function() {
