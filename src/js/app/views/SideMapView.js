@@ -4,6 +4,8 @@ define(
   function () {
     'use strict';
 
+    var displayedMarkerJSON = '';
+
     return Backbone.View.extend(
       {
         el: '#side-map',
@@ -87,8 +89,12 @@ define(
               return data;
             }).get();
           }
-          // TODO: Clear the map and then add the relevant markers to the map
-          console.log(JSON.stringify(datas));
+          var markerJSON = JSON.stringify(datas);
+          if (markerJSON !== displayedMarkerJSON) {
+            displayedMarkerJSON = markerJSON;
+            // TODO: Clear the map and then add the relevant markers to the map
+            console.log(displayedMarkerJSON);
+          }
         },
         sizeMap: function() {
           var siteContent = $('#site-content');
