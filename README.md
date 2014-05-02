@@ -2,7 +2,25 @@
 
 This repository contains the source code for [our travel blog](http://nakeditchyfeet.com).
 
-The blog is built using [HaggerstonJS](https://github.com/haggerstonjs/grunt-haggerston/) and can be generated and viewed by downloading this repository and running `grunt serve` in the directory then navigating to [http://localhost:8000]().
+The blog is built using [HaggerstonJS](https://github.com/haggerstonjs/grunt-haggerston/) and can be generated and viewed 
+from the contents of this repository.
+
+First, make sure you have the dependencies installed:
+
+ * [Git](http://git-scm.com/)
+ * [Node / NPM](http://nodejs.org/)
+ * [GruntJS](http://gruntjs.com/) (installed via `npm install -g grunt-cli`)
+
+Then:
+
+```
+git clone https://github.com/vitch/nakeditchyfeet.git
+cd nakeditchyfeet
+npm install
+grunt serve
+```
+
+And point your browser at [http://localhost:3000]().
 
 The source code is open as an example of how to use HaggerstonJS to generate a moderately complex static site. 
 

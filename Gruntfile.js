@@ -28,15 +28,17 @@ module.exports = function(grunt) {
   ];
 
 
-  // Load config and initialise
+  // Load custom tasks...
+  grunt.loadTasks('grunt/tasks');
+
+  // Load config and initialise...
   require('load-grunt-config')(grunt, {
-    defaultPath: path.join(__dirname, 'grunt/options'),
-    configPath: path.join(__dirname, 'grunt/tasks'),
+    configPath: path.join(__dirname, 'grunt/options'),
     init: true
   });
 
   // Aliases
-  grunt.registerTask('copyJsLibs', [grunt.isProduction ? 'uglify:libs' : 'copy:libs']);
+  grunt.registerTask('copyJsLibs', grunt.isProduction ? ['uglify:libs', 'uglify:require'] : ['copy:libs', 'copy:require']);
   grunt.registerTask('compileJs', [grunt.isProduction ? 'requirejs:compile' : 'copy:js']);
 
   grunt.registerTask('copyVendor', ['copy:jQuery', 'copy:fonts', 'copy:leaflet', 'copy:awesomeMarkers'])

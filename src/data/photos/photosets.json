@@ -170,6 +170,11 @@
     "description": "Cafe culture and skyscrapers in Perth, surf and vineyards in Margaret River, a terrifying climb up a 70 meter tree and then more surf in Denmark!"
   },
   {
+    "id": "72157642723637575",
+    "title": "Albany to Esperance",
+    "description": "Stunning white sand beaches with turquoise waters made this one of the most beautiful parts of Australia for us."
+  },
+  {
     "id": "72157638603575254",
     "title": "Fiji",
     "description": "A week in paradise. In cyclone season!"
@@ -188,5 +193,25 @@
     "id": "72157641922565133",
     "title": "The Tongariro Crossing",
     "description": "The Tongariro Crossing is said by many to be the best day walk in NZ and maybe even the world... 20 kilometers across a crazy moonscape between volcanoes and lakes. And a side trip up Mount Doom aka Mount Ngauruhoe!"
+  },
+  {
+    "id": "72157642751240453",
+    "title": "Kaua'i",
+    "description": "Kaua'i is known as &quot;the garden isle&quot; and is one of the oldest of the Hawaiian islands. \n\nWe visited the Na Pali Coast, Waimea Canyon and surfed the waves of Hanalei Bay."
+  },
+  {
+    "id": "72157642834539003",
+    "title": "O'ahu",
+    "description": "From Waikiki to the big surf of the North Shore and the empty beaches of the west coast, O'ahu has something for everyone."
+  },
+  {
+    "id": "72157643044307975",
+    "title": "La la land",
+    "description": "A flying visit to the City of Angels was a great chance to catch up with old friends."
+  },
+  {
+    "id": "72157643247112613",
+    "title": "Bogota",
+    "description": "Our South American journey started in Bogota, the capital of Colombia."
   }
 ]

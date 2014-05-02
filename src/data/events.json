@@ -120,6 +120,20 @@
     "airline": "Air New Zealand"
   },
   {
+    "date": "2014-03-11",
+    "icon": "plane",
+    "label": "<strong>HNL - LIH</strong>",
+    "airports": "HNL,LIH",
+    "airline": "Island Air"
+  },
+  {
+    "date": "2014-03-16",
+    "icon": "plane",
+    "label": "<strong>LIH - HNL</strong>",
+    "airports": "LIH,HNL",
+    "airline": "Island Air"
+  },
+  {
     "date": "2014-03-19",
     "icon": "plane",
     "label": "<strong>HNL - LAX</strong>",
@@ -134,9 +148,42 @@
     "airline": "Jet Blue"
   },
   {
-    "date": "2014-04-08",
+    "date": "2014-04-08 09:25",
+    "icon": "plane",
+    "label": "<strong>UIO - GYE - GPS</strong>",
+    "airports": "UIO,GYE,GPS",
+    "airline": ""
+  },
+  {
+    "date": "2014-04-08 16:00",
     "icon": "anchor",
     "label": "Galapagos Islands"
+  },
+  {
+    "date": "2014-04-23",
+    "icon": "plane",
+    "label": "<strong>SCY - GYE - UIO</strong>",
+    "airports": "SCY,GYE,UIO",
+    "airline": ""
+  },
+  {
+    "date": "2014-05-12",
+    "icon": "plane",
+    "label": "<strong>CLO - LET</strong>",
+    "airports": "CLO,LET",
+    "airline": ""
+  },
+  {
+    "date": "2014-05-17 16:00",
+    "icon": "anchor",
+    "label": "Leticia - Manaus down the Amazon"
+  },
+  {
+    "date": "2014-05-23",
+    "icon": "plane",
+    "label": "<strong>PLL - BEL</strong>",
+    "airports": "PLL,BEL",
+    "airline": ""
   },
   {
     "date": "2014-06-12",

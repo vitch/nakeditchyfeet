@@ -9,6 +9,10 @@ module.exports = {
       }
     ]
   },
+  require: {
+    src: 'vendor/requirejs/require.js',
+    dest: 'out/js/lib/require.js'
+  },
   jQuery: {
     src: 'vendor/jquery/dist/jquery.js',
     dest: 'out/js/lib/jquery.js'

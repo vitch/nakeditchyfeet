@@ -33,7 +33,7 @@
     "flickr": "~0.1.0",
     "async": "~0.2.9",
     "marked": "~0.2.8",
-    "load-grunt-config": "git://github.com/Pradeek/load-grunt-config.git",
+    "load-grunt-config": "~0.7.2",
     "grunt-notify": "~0.2.20"
   },
   "peerDependencies": {},
