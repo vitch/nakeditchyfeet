@@ -26,7 +26,7 @@ define(
           var mapContainer = this.$el.empty()[0];
 
           this.leafletMap = L.map(mapContainer, {
-            animate: false,
+            animate: true,
             dragging: false,
             touchZoom: false,
             scrollWheelZoom: false,
@@ -36,6 +36,7 @@ define(
             trackResize: false,
             keyboard: false,
             zoomControl: false,
+            maxZoom: 6
           }).fitWorld();
 
           L.tileLayer(
@@ -97,7 +98,10 @@ define(
               this.leafletMap.removeLayer(this.mapItemClusters);
             }
             var mapItemClusters = this.mapItemClusters = new L.MarkerClusterGroup({
-              showCoverageOnHover: false
+              showCoverageOnHover: false,
+              zoomToBoundsOnClick: false,
+              spiderfyOnMaxZoom: true,
+              maxClusterRadius: 40
             });
             _.each(datas, function(data) {
               if (data.icon === 'fa-plane') {
@@ -119,6 +123,7 @@ define(
               }
             });
             this.leafletMap.addLayer(mapItemClusters);
+            this.leafletMap.fitBounds(mapItemClusters.getBounds());
           }
         },
         sizeMap: function() {
