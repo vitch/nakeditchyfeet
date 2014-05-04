@@ -113,6 +113,12 @@ define(
                       $li.removeClass('marker-active');
                       this._icon.className = this._icon.className.replace('darkred', 'darkblue');
                     });
+                    $li.on('mouseover', function() {
+                      marker._icon.className = marker._icon.className.replace('darkblue', 'darkred');
+                    });
+                    $li.on('mouseout', function() {
+                      marker._icon.className = marker._icon.className.replace('darkred', 'darkblue');
+                    });
                     bounds = marker.getLatLng();
                 }
                 if (link) {
