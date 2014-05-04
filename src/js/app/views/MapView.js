@@ -82,7 +82,7 @@ define(
                       icon: L.AwesomeMarkers.icon({
                         icon: mapItemModel.get('icon'),
                         prefix: 'fa',
-                        color: 'darkblue',
+                        markerColor: 'darkblue',
                         className: 'awesome-marker'
                       }),
                     model: mapItemModel
