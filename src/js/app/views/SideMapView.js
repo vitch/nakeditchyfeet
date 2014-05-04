@@ -107,6 +107,11 @@ define(
                     );
                     bounds = marker.getLatLng();
                 }
+                if (link) {
+                  marker.on('click', function() {
+                    document.location = link;
+                  });
+                }
                 $li.data('marker', marker);
                 $li.data('bounds', bounds);
               }
