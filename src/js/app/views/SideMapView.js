@@ -100,16 +100,18 @@ define(
                         icon: L.AwesomeMarkers.icon({
                           icon: icon,
                           prefix: 'fa',
-                          color: 'darkblue',
+                          markerColor: 'darkblue',
                           className: 'awesome-marker'
                         })
                       }
                     );
                     marker.on('mouseover', function() {
                       $li.addClass('marker-active');
+                      this._icon.className = this._icon.className.replace('darkblue', 'darkred');
                     });
                     marker.on('mouseout', function() {
                       $li.removeClass('marker-active');
+                      this._icon.className = this._icon.className.replace('darkred', 'darkblue');
                     });
                     bounds = marker.getLatLng();
                 }
