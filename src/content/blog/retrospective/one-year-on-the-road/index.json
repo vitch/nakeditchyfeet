@@ -1,0 +1,16 @@
+{
+  "template": "blog-post.html",
+  "isDraft": true,
+  "templateData": {
+    "title": "One year on the road",
+    "author": "Kelvin Luck",
+    "metaDescription": "",
+    "date": "2014-04-16",
+    "headerImage": "",
+    "content": "index.md",
+    "latitude": 51.53609,
+    "longitude": -0.1021,
+    "photosets": [],
+    "tags": ["retrospective"]
+  }
+}
