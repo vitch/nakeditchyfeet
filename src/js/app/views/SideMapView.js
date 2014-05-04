@@ -71,55 +71,48 @@ define(
               $li.addClass('is-in-view');
             });
             var stripSpace = /[\t|\n]/g;
-            var datas = $('#home-list>li.is-in-view').map(function() {
+            var stuffLayer = this.stuffLayer;
+            stuffLayer.clearLayers();
+            var bounds = $('#home-list>li.is-in-view').map(function() {
               var $li = $(this);
-              var data = {
-                icon: $li.find('>.fa').attr('class').split(' ')[1],
-                title: $li.find('h1').text().replace(stripSpace, '')
-              };
-              switch (data.icon) {
-                case 'fa-plane':
-                  data.isPlane = true;
-                  data.airports = $li.find('.list-page-map').data().airports;
-                  break;
-                case 'fa-book':
-                case 'fa-info-circle':
-                case 'fa-camera-retro':
-                  data.link = $li.find('a').attr('href');
-                  // fall through...
-                default:
-                  data.geo = $li.data().geo;
+              var domData = $li.data();
+              if (!domData.marker) {
+                var icon = $li.find('>.fa').attr('class').split(' ')[1];
+                var title = $li.find('h1').text().replace(stripSpace, '');
+                var marker;
+                var bounds;
+                var link;
+                switch (icon) {
+                  case 'fa-plane':
+                    marker = new FlightPolyline({airports: $li.find('.list-page-map').data().airports, noPlaneMarkers: true});
+                    bounds = marker.getBounds();
+                    break;
+                  case 'fa-book':
+                  case 'fa-info-circle':
+                  case 'fa-camera-retro':
+                    link = $li.find('a').attr('href');
+                    // fall through...
+                  default:
+                    marker = L.marker(
+                      domData.geo.split(','),
+                      {
+                        title: title,
+                        icon: L.AwesomeMarkers.icon({
+                          icon: icon,
+                          prefix: 'fa',
+                          color: 'darkblue',
+                          className: 'awesome-marker'
+                        })
+                      }
+                    );
+                    bounds = marker.getLatLng();
+                }
+                $li.data('marker', marker);
+                $li.data('bounds', bounds);
               }
-              return data;
+              stuffLayer.addLayer(domData.marker);
+              return domData.bounds;
             }).get();
-          }
-          var markerJSON = JSON.stringify(datas);
-          if (markerJSON !== displayedMarkerJSON) {
-            displayedMarkerJSON = markerJSON;
-            
-            this.stuffLayer.clearLayers();
-            var bounds = _.map(datas, function(data) {
-              if (data.icon === 'fa-plane') {
-                var planeLine = new FlightPolyline({airports: data.airports, noPlaneMarkers: true});
-                planeLine.addTo(this.stuffLayer);
-                return planeLine.getBounds();
-              } else {
-                var marker = L.marker(
-                  data.geo.split(','),
-                  {
-                    title: data.title,
-                    icon: L.AwesomeMarkers.icon({
-                      icon: data.icon,
-                      prefix: 'fa',
-                      color: 'darkblue',
-                      className: 'awesome-marker'
-                    })
-                  }
-                );
-                this.stuffLayer.addLayer(marker);
-                return marker.getLatLng();
-              }
-            }, this);
             this.leafletMap.fitBounds(bounds);
           }
         },
