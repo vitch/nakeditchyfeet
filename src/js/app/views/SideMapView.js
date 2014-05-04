@@ -105,6 +105,12 @@ define(
                         })
                       }
                     );
+                    marker.on('mouseover', function() {
+                      $li.addClass('marker-active');
+                    });
+                    marker.on('mouseout', function() {
+                      $li.removeClass('marker-active');
+                    });
                     bounds = marker.getLatLng();
                 }
                 if (link) {
