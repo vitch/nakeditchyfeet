@@ -19,7 +19,7 @@ define(
             this.sizeMap();
             this.initMap();
             this.$doc.bind('scroll', _.throttle(this.updateMap, 400, {leading: false}));
-            this.$doc.trigger('scroll');
+            $(document).trigger('scroll');
           }
         },
         initMap: function () {
@@ -38,7 +38,7 @@ define(
             keyboard: false,
             zoomControl: false,
             maxZoom: 6
-          }).fitWorld();
+          });
 
           L.tileLayer(
             'http://{s}.tiles.mapbox.com/v3/{user}.{map}/{z}/{x}/{y}.png',
