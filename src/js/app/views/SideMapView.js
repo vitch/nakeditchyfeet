@@ -53,6 +53,13 @@ define(
 
           $(window).on('resize', _.throttle(this.sizeMap, 200, {leading: false}));
         },
+        initTooltips: function()
+        {
+          this.$('.awesome-marker').not('.awesome-marker-shadow').tooltip({
+            container: 'body',
+            html: true
+          });
+        },
         updateMap: function(event) {
           var lis = $('#home-list>li').removeClass('is-in-view');
           if (lis.length) {
@@ -133,6 +140,7 @@ define(
               return domData.bounds;
             }).get();
             this.leafletMap.fitBounds(bounds);
+            this.initTooltips();
           }
         },
         sizeMap: function() {
