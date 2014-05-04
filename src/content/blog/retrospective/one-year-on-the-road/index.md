@@ -1,111 +1,95 @@
 On the 16th April 2013 we set off from Heathrow with a [vague plan](/blog/planning/whats-the-plan/) and
-some date-changeable intercontinental flights. Today it is exactly one year later and we are in the
-Galapagos Islands looking back over an incredible year. In some ways it feels like we just left London
-yesterday and in other ways it feels like a lifetime ago.
+some date-changeable intercontinental flights. Today, exactly one year later, we are in the
+Galapagos Islands looking back over a full year. In some ways it feels like we just left London
+yesterday and in other ways it feels like a lifetime ago. So much has happened.
 
-In the last year we have visited ten different countries: Thailand (three weeks), Myanmar (two weeks), 
-Singapore (one day), Indonesia (three months), Australia (three and a half months), Fiji (one week), 
-New Zealand (three months), the United States of America (two weeks in Hawaii and Los Angeles), Colombia
-(nearly three weeks) and Ecuador (nearly two weeks so far). 
+So what's come out of so much wandering around? Where have we been? What have we done and not done? 
 
-We changed the dates of every one of our flights at least once. And we gave up on the original plan of being
-in Brazil in time for Carnival (at the end of February) because we kept getting caught up where ever we were. 
-We decided instead that the start of the World Cup (in June) would be just as good a target.
+In the last year we have visited ten different countries. We started our trip in Thailand (20 days), we 
+thought we would follow the banana pancake trail into Laos, Cambodia and Vietnam, but ended up doing a b 
+line for Myanmar (15 days). Then a quick stop in Singapore (1 day), on our way to Indonesia (89 days). 
+Australia (105 days) and New Zealand (90 days) with Fiji (7 days) in between, the US (10 days in Hawaii 
+and 5 in LA), and into South America through Colombia (19 days). As we write this we find ourselves in 
+Ecuador (11 days so far).
 
-We've been on twenty one flights, uncountable long distance buses, three overnight boat adventures and 
-have driven more than 25,000km in the two vehicles we bought (and then managed to sell again!). 
-We've also been to three weddings (of good friends from the UK who have moved to the southern hemisphere) 
-and [one funeral](blog/indonesia/tana-toraja/) (of a man we had never met who had died more than a year 
-earlier).
+We booked six flights prior to leaving the UK and changed the dates of every single one of them at least once. 
+In our original plan we would have reached Brazil in time for Carnival (two months ago) but we kept getting 
+caught up by time running out where ever we were so instead we decided that the start of the World Cup (in 
+June) would be just as good a target.
 
-It's been amazing!
+We've boarded twenty one flights, uncountable long distance buses, sailed through three overnight boat adventures and 
+have driven more than 25,000km in the two vehicles we bought in Australia and New Zealand (and then managed to sell again!). 
+Timing worked perfectly and we were able to attend three very special wedding celebrations of good friends Down Under
+and [one funeral](blog/indonesia/tana-toraja/) of a man we had actually never met and had died more than a year earlier.
 
-It's also been pretty busy - we have barely had time to figure out what we are doing tomorrow or next week,
-let alone to sit back and reflect on all of the amazing experiences we have had or keep this site up 
-to date. That is something that we're hoping to rectify over the next month or so - we're going to slow down
-a bit and should have more time for reflection and to make our way through the massive backlog of photos 
-waiting to be uploaded (we got really far behind while driving across Australia and
-New Zealand and camping without power or internet). When we do upload photos they automatically slip in
-to the blog on the date they were taken - if you want to keep track of this then [follow us](/follow-us/) 
-and get email updates when there is new content.
+It has REALLY been amazing, as is to be expected. 
 
-In the meantime, here is a quick time line with some of the highlights from the trip so far:
+It's also been pretty busy - day to day we barely have time to figure out what we are doing tomorrow or next week, decide 
+on routes, research etc, let alone to sit back and reflect on all of the amazing experiences we have had or even keep this blog up 
+to date. As I sit here on a bouncy bus trying to write this it article it seems hard as ever to get the time when we can 
+justify not being out exploring, seeing places in exchange for a few hours in front of the computer. But we'll get there!
 
- * **Month 1** - Thailand and ~~Myanmar~~Burma
-   * Arriving on [Koh Mak](/photos/72157633406184851/) - a beautiful tropical island where the boat is met by 
-     mashed up VW camper vans which take you down the single lane road to the beach with the accomodation on.
-   * Visiting [a golden rock](/photos/72157633847610282/) in Myanmar where we met a pilgrim and a monk who
-     shared fruit and juice with us and explained about life in Burma.
-   * Watching the sun set over the thousands of temples on the plain in [Bagan](/photos/72157634276252386/).
- * **Month 2** - ~~Myanmar~~Burma, Singapore and Sulawesi
-   * Snorkelling and diving in [Bunaken](/photos/72157634289527793/) - the most amazing coral and tropical fish
-     that we've seen anywhere on this trip.
-   * Relaxing on [the Togean Islands](/blog/indonesia/island-hopping-in-sulawesi/) - especially at 
-     [Lestari Malenge](/photos/72157634713459842/) where there was a great beach, a lagoon to swim in and a 
-     really long ramshackle wooden bridge to the fishing village on the other side.
- * ** Month 3** - Sulawesi, Flores and Lombok
-   * Being guests at a [traditional funeral](/blog/indonesia/tana-toraja/) in Tana Toraja, complete with a
-     mummified corpse and buffalo sacrifices.
-   * Visiting the stunning [17 islands marine park](/photos/72157634900828839/) in Flores - completely unspoiled
-     white sand beaches and turquoise waters.
-   * Taking a [boat from Flores to Lombok](/photos/72157634929892071/) via Komodo Island where the dragons live. 
-     One of our friends on the boat also made an [amazing video](http://youtu.be/_e5U6_CJ_s8) of the trip.
-   * Discovering the beautiful beaches and amazing surf around [Kuta, Lombok](/photos/72157635443329429/).
-   * Climbing [Gunung Rinjani](/photos/72157638024700505/) in Lombok. The three day, 3,726 meter climb was really
-     hard but it was more than worth it for the incredible views and the sense of achievement. One of the top
-     highlights of the entire year!
- * **Month 4** Lombok, Bali and the Northern Territory of Australia
-   * Relaxing on the [Gili Islands](/photos/72157638027135023/) while recovering from the excursions of Bali.
-   * Volunteering [teaching English](/photos/72157638790186545/) at an after school club in North Bali.
-   * Watching the incredible surf on Bali's [Bukit Peninsula](/photos/72157638977793484/).
-   * [Arriving in Australia](/blog/australia/ozzie-beginnings/) to a nightmare of no accomodation or transport but
-     managing to hire a campervan for the weekend and explore Lichfield National Park with its crocodile free 
-     waterfalls and swimming holes.
- * **Month 5** Northern Territory and Western Australia
-   * [Watching sunset](/photos/72157639008018693/11545674595.html) from the top of a big limestone outcrop in 
-     Kakadu National Park
-   * Camping at [Edith Falls](#) near Katherine Gorge. 
-   * The [infinity pool]() at the campground in Lake Argyle.
-   * The [camels on Cable Beach]() in Broome.
-   * Jumping into pools at the bottom of the gorges of [Karijini National Park]().
-   * Catching up with old friends in Exmouth and visiting the [Cape Range National Park]() - white sand beaches and 
-     incredible turquoise waters.
-   * Volunteering with a lovely family in Geraldton looking after sheep and chickens and even [feeding kangaroos]()!
- * **Month 6** Back to Lombok, South Western Australia and South Australia
-   * Relaxing back in [Kuta, Lombok](/photos/72157640671515293/) while recharging our Australian visitor visa.
-   * Climbing a [70 meter high tree]() on metal spikes with no safety gear.
-   * Making friends with [a surf instructor]() in Denmark and camping in his garden.
-   * Sleeping in the [most beautiful free campsite](), right on the beach near Albany.
-   * Swimming in the perfectly clear, deliciously freezing sea from the [stunning beaches of Esperance]().
-   * Making it across the [Nullarbor desert]() without our van breaking down!
-   * Catching up with old friends and their new baby near Adelaide.
- * **Month 7** New South Wales, Victoria and back to South Australia
- * **Month 8** South Australia, Queensland, Fiji and New Zealand
- * **Month 9** South Island and second wedding.
- * **Month 10** Third wedding, start of North island (to Ohakune)
- * **Month 11** Rest of North Island, O'ahu and Kaua'i
- * **Month 12** O'ahu, LA, Colombia and Ecuador
+The Best Of the Year
 
----
+So after a year of travel what are our highlights? Which places and experiences left a lasting memory?
 
-It's also been pretty busy - a far cry from the "long holiday" vibe I was expecting when we left the UK.
+Its hard to choose the best places overall because nearly everywhere we've been is special for different reasons and 
+depending on the circumstances it is visited in. So we've categorised our low down into the following:
 
-It turns out that travelling to so many places and seeing so much is actually pretty time consuming and we
-haven't had much time to reflect on everything we have seen and experienced
+Best places to go on a 3 week holiday from Europe
+Lombok, Indonesia
+This Indonesian island has it all and is only a quick boat trip from touristy Bali. It features Gunung Rinjani, a 3742m 
+high active volcano which can be climbed on a challenging 3-4 day trip. The Gili Islands, three tiny white sand ringed 
+pieces of heaven, where you can snorkel with turtles, and depending on which island you choose to stay at, party the nights 
+away, or enjoy some relax time on empty beaches. If you like your surf, then head to Kuta Lombok which has some of the best 
+surf we've found plus dozens of amazing beaches line the coast, just rent a motorbike and go explore! Lombok isn't a huge 
+island so it is feasible to have time to enjoy all it has to offer in 3 weeks (although you will wish you could stay longer) 
+but the transport network isnt very organised so it takes some figuring out. But that is part of the fun.
 
----
+Galapagos
+Now there's a special place. It is by far the largest concentration of wild animals that we've seen and all of them only a arms 
+reach from you. The snorkelling rewards  with turtles everywhere you look, and there is nowhere else in the world you will swim 
+with penguins this close to you. Seals dance and twirl in the waters oblivious that you are there and baby reef sharks circle 
+your legs in the shallow mangrove waters. On land, strange birds pose for as many photos as you wish, and 100 year old Giant 
+tortoises slowly parade their heavy carapaces while your jaw drops.  An eight day cruise around the islands which includes all 
+the above attractions will cost about £2000, flights from Madrid to Quito with Iberia about £500. After the cruise you should 
+stay a few days on Santa Cruz and San Cristobal Islands, accommodation is quite expensive and this trip will probably demand 
+some saving before hand so its unlikely you will want to stay longer than 3 weeks. 
+
+Best place for a 3 month road trip
+New Zealand
+My favourite country in the world for natural beauty hands down. New Zealand is compact, so unlike driving in Australia, within 
+a few hours drive you can see a lot. the best way to travel is by car, buses are great but wont wait for you to do sporadic hikes 
+off the side of the road and there are so many of those amazing places in NZ. If you can buy a vehicle bare in mind that self 
+contained will make your like easier as most cities and towns have freedom camping areas where you can park you van for FREE. It 
+is illegal to park on the side of the road so a self contained vehicle will save a lot of money on holiday park fees. And at the 
+end of your trip just sell it on to another traveller looking to do what you did!
+
+Best Surf (even for beginners)
+
+Hawaii
+Mellow waves, warm sea, surf culture everywhere! Hawaii gets high marks for big wave and pro surfing as everyone knows but even 
+if you are a white water surfer or still finding your confidence to take it to the green stuff there are incredible spots. Just 
+ensure you take the surf seasons into account a the swell shifts from the north to the south in the spring and summer. Our favourite 
+spot is Hanelei Bay in the Garden Island of Kauai, right next to the pier. Hawaiian locals can be a little (a lot!) territorial when 
+it comes to their waves, but in Hanelei there was none of that as there are plenty of more challenging breaks around for grumpy surfers.
 
 
+Most surprising places
+Fiji
+We imagined Fiji to be very different, and expected a touristy place, with a soul tainted by tourism money and opportunities. Instead, 
+we found a humble people and surprisingly unspoilt country. We chose to visit a couple of small off the beaten track islands which were 
+the most picture perfect tropical islands we've seen, hardly any tourists around. Only the loveliest locals, used to tourism but who 
+you never needed to second guess as to their interest in you or worry whether someone was trying to scam or trick you or giving you 
+the wrong information just because thats what they think you want to hear, as is so many times the case in other countries especially 
+in south east asia.
 
-When we set of from Heathrow nine months ago we had a [vague plan](/blog/planning/whats-the-plan/) and
-some international date-changeable flights. In some ways that feels like a lifetime ago and in other ways
-it feels like it was only yesterday.
-
-In the nine months so far we've visited seven countries - Thailand (two weeks), Myanmar (two weeks), 
-Singapore (one day), Indonesia (nearly four months), Australia (three months), Fiji (one week) and New Zealand
-(just over a month so far). We've taken eleven flights, uncountable of long distance buses, two overnight boats
-and driven over 25,000km. And we have had some amazing experiences.
-
-It turns out that full time travel is actually quite time consuming and we've felt that we've needed a holiday
-from the travelling more than once. It might sound like a terribly first world problem but constantly planning
-your next step and trying to make the most of the
+Hawaii
+Hawaii caught us off guard. It wasn't until we arrived that we realised that the islands are more of an unhappy US colony than an Aloha 
+filled Polynesian island. History hasn't been kind to Hawaii, and today Hawaiian people struggle to make a living on the islands as most 
+of the land and property in the islands is owned by people from mainland US and the tourism industry has driven rents and living costs 
+to a ridiculous high level. As a result, homelessness is a big issue as people cant afford a home, so it is common to see entire families 
+camping in state parks, with sofas under their gazebos. It is such an incredible place, and we are so happy we got to see it, but we 
+couldn't help feeling guilty for falling for tourism advertising and encouraging this unfair situation. On the other hand, it is a double 
+sworded ethical issue, as nowadays Hawaiians depend on tourism to bring money into the islands since they don't produce anything anymore 
+and import about 95% of food, energy etc. so visitors are both seen as Hawaii's saviours as their condemners.
