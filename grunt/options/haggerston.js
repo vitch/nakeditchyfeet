@@ -132,7 +132,19 @@ module.exports = function(grunt) {
             return item;
           });
 
-          return pages.concat(events);
+          var tweets = _(grunt.file.readJSON('src/data/tweets.json')).map(function(item) {
+            return {
+              type: 'tweet',
+              icon: 'twitter',
+              date: new Date(item.created_at),
+              label: item.text,
+              externalLink: 'https://twitter.com/nakeditchyfeet/status/' + item.id_str,
+              hasLink: true
+            };
+          });
+
+
+          return pages.concat(events, tweets);
         },
         published: function(pages) {
           if (grunt.isProduction) {
