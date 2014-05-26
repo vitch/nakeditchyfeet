@@ -146,7 +146,7 @@ define(
         sizeMap: function() {
           var siteContent = $('#site-content');
           this.$el.height($(window).innerHeight() - parseInt(siteContent.css('marginTop')));
-          var w = siteContent.width() + parseInt(siteContent.css('marginLeft')) + 10;
+          var w = siteContent.outerWidth() + parseInt(siteContent.css('marginLeft')) + 10;
           this.$el.width($(window).innerWidth() - w);
           this.$el.css('left', w);
           this.$doc.trigger('scroll');

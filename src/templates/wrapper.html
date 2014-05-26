@@ -20,52 +20,65 @@
 
 </head>
 <body{% if bodyId %} id="{{ bodyId }}-page"{% endif %}>
-<div id="mobile-nav">
-	<a href="#"><h1><i class="fa fa-reorder"> </i> Naked Itchy Feet</h1></a>
-</div>
-<header id="site-header">
-	<h1>
-		{% if page.prettyUrl === '/' -%}
-			Naked Itchy Feet
-		{%- else -%}
-			<a href="{{ page|basePath }}">Naked Itchy Feet</a>
-		{%- endif %}
-	</h1>
-	<div id="when-marker"></div>
-	<nav>
-		<ul>
-			<li><a href="{{ page|basePath }}about-us/"{% if page.prettyUrl == '/about-us/' %} class="active"{% endif %}>About Us</a></li>
-			<li><a href="{{ page|basePath }}follow-us/"{% if page.prettyUrl == '/follow-us/' %} class="active"{% endif %}>Follow Us</a></li>
-			<li class="map-link"><a href="{{ page|basePath }}map/"{% if page.prettyUrl == '/map/' %} class="active"{% endif %}><i class="fa fa-globe"></i> Our Map</a></li>
-		</ul>
-	</nav>
-
-	<div id="list-filter">
-		<p>Filter posts:</p>
-		<ul>
-			{% for filter in options.listFilterOptions %}
-			<li><a href="#" data-filter="{{ filter.filter }}" title="Show {{ filter.description|lower }}"><i class="fa fa-{{ filter.icon }}"> </i> </a></li>
-			{% endfor %}
-		</ul>
+	<header id="site-header">
+		<img src="/images/feet.svg" alt="Feet">
+		<div><div>
+			<h1>
+				{% if page.prettyUrl === '/' -%}
+					<span id="logotype">Naked Itchy Feet</span>
+				{%- else -%}
+					<a href="{{ page|basePath }}"><span id="logotype">Naked Itchy Feet</span></a>
+				{%- endif %}
+			</h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="{{ page|basePath }}"{% if page.prettyUrl == '/' %} class="active"{% endif %}>
+							<span class="icon icon-blog"></span>
+							Blog
+						</a>
+					</li>
+					<li>
+						<a href="{{ page|basePath }}map/"{% if page.prettyUrl == '/map/' %} class="active"{% endif %}>
+							<span class="icon icon-map"></span>
+							Our Map
+						</a>
+					</li>
+					<li>
+						<a href="{{ page|basePath }}about-us/"{% if page.prettyUrl == '/about-us/' %} class="active"{% endif %}>
+							<span class="icon icon-feet"></span>
+							About Us
+						</a>
+					</li>
+					<li>
+						<a href="{{ page|basePath }}follow-us/"{% if page.prettyUrl == '/follow-us/' %} class="active"{% endif %}>
+							<span class="icon icon-follow"></span>
+							Follow Us
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div></div>
+	</header>
+	<div id="site-content">
+		{% block bodyContent %}{% endblock %}
 	</div>
-</header>
-<div id="site-content">
-{% block bodyContent %}{% endblock %}
-</div>
-<script type="text/javascript" src="{{ page|basePath }}js/lib/jquery.js"></script>
-{% for path in options.jsLibs -%}
-<script src="{{ page|basePath }}{{ path }}"></script>
-{% endfor %}
-<script type="text/javascript" src="{{ page|basePath }}js/lib/require.js" data-main="{{ page|basePath }}js/app/nif{% if options.minify %}.min{% endif %}.js"></script>
-<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	<div id="side-map">
+	</div>
+	<script type="text/javascript" src="{{ page|basePath }}js/lib/jquery.js"></script>
+	{% for path in options.jsLibs -%}
+	<script src="{{ page|basePath }}{{ path }}"></script>
+	{% endfor %}
+	<script type="text/javascript" src="{{ page|basePath }}js/lib/require.js" data-main="{{ page|basePath }}js/app/nif{% if options.minify %}.min{% endif %}.js"></script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	ga('create', 'UA-41677517-1', 'nakeditchyfeet.com');
-	ga('send', 'pageview');
+		ga('create', 'UA-41677517-1', 'nakeditchyfeet.com');
+		ga('send', 'pageview');
 
-</script>
+	</script>
 </body>
 </html>
