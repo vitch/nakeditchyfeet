@@ -63,15 +63,18 @@ organised and takes some figuring out - but that' i's part of the fun!
 ####Galapagos Islands, Ecuador
 
 Now there's a special place. It is by far the largest concentration of wild animals that we've seen and all of them only an arms 
-reach from you. The snorkelling rewards  with turtles everywhere you look, and there is nowhere else in the world you will swim 
-with penguins this close to you. Seals dance and twirl in the waters oblivious that you are there and baby reef sharks circle 
-your legs in the shallow mangrove waters. On land, strange birds pose for as many photos as you wish, and 100 year old Giant 
+reach from you. The snorkelling rewards with turtles everywhere you look and there is nowhere else in the world you will swim 
+with penguins this close to you. Seals dance and twirl in the waters oblivious to your presence and baby reef sharks circle 
+your legs in the shallow mangrove waters. On land, strange birds pose for as many photos as you wish, and 100 year old giant 
 tortoises slowly parade their heavy carapaces while your jaw drops.  
 
-An eight day cruise around the islands which includes all 
-the above attractions will cost about £2000, flights from Madrid to Quito with Iberia about £500. After the cruise you should 
-stay a few days on Santa Cruz and San Cristobal Islands, accommodation is quite expensive and this trip will probably demand 
-some saving before hand so its unlikely you will want to stay longer than 3 weeks. 
+It is definitely not cheap though! An eight day cruise around the islands will cost something like £2000 (booking last minute can make 
+it cheaper but will reduce your choice in boat), flights from Madrid to Quito with Iberia about £500. After the cruise you should also 
+spend a few days on Santa Cruz and San Cristobal Islands - but even this is more expensive than the rest of Ecuador and South America.
+
+If you have time once you are back in Quito you should also check out the nearby Cotopaxi (the highest active volcano in the world),
+the Quilotoa loop (beautiful Andean scenery and traditional villages to walk between) and Mindo (cloud forest complete with zip-wires,
+tubing and tree frogs).
 
 ###Best place for a 3 month road trip
 
