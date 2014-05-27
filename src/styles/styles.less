@@ -31,6 +31,18 @@
 	.box-shadow(0 0 3px rgba(0, 0, 0, .5));
 }
 
+.map-bg-gradient() {
+		// Gradient so that when you are zoomed out it looks like the artic ocean and antartica span to the edges of the container
+	background: rgb(115,181,229); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgb(115,181,229) 0%, rgb(115,181,229) 49%, rgb(236,236,236) 49%, rgb(236,236,236) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(115,181,229)), color-stop(49%,rgb(115,181,229)), color-stop(49%,rgb(236,236,236)), color-stop(100%,rgb(236,236,236))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgb(115,181,229) 0%,rgb(115,181,229) 49%,rgb(236,236,236) 49%,rgb(236,236,236) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgb(115,181,229) 0%,rgb(115,181,229) 49%,rgb(236,236,236) 49%,rgb(236,236,236) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgb(115,181,229) 0%,rgb(115,181,229) 49%,rgb(236,236,236) 49%,rgb(236,236,236) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgb(115,181,229) 0%,rgb(115,181,229) 49%,rgb(236,236,236) 49%,rgb(236,236,236) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73b5e5', endColorstr='#ececec',GradientType=0 ); /* IE6-9 */
+}
+
 // Fonts
 
 @font-face {
@@ -376,6 +388,7 @@ header.content-header {
 #map {
 	width: 100%;
 	height: 200px;
+	.map-bg-gradient;
 }
 
 #photoset {
@@ -457,15 +470,7 @@ header.content-header {
 	left: 0;
 	
 	.js & {
-		// Gradient so that when you are zoomed out it looks like the artic ocean and antartica span to the edges of the container
-		background: rgb(115,181,229); /* Old browsers */
-		background: -moz-linear-gradient(top,  rgb(115,181,229) 0%, rgb(115,181,229) 49%, rgb(236,236,236) 49%, rgb(236,236,236) 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(115,181,229)), color-stop(49%,rgb(115,181,229)), color-stop(49%,rgb(236,236,236)), color-stop(100%,rgb(236,236,236))); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  rgb(115,181,229) 0%,rgb(115,181,229) 49%,rgb(236,236,236) 49%,rgb(236,236,236) 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  rgb(115,181,229) 0%,rgb(115,181,229) 49%,rgb(236,236,236) 49%,rgb(236,236,236) 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  rgb(115,181,229) 0%,rgb(115,181,229) 49%,rgb(236,236,236) 49%,rgb(236,236,236) 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  rgb(115,181,229) 0%,rgb(115,181,229) 49%,rgb(236,236,236) 49%,rgb(236,236,236) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73b5e5', endColorstr='#ececec',GradientType=0 ); /* IE6-9 */
+		.map-bg-gradient;
 	}
 
 }

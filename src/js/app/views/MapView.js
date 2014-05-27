@@ -25,7 +25,9 @@ define(
           var mapContainer = this.$el.empty()[0],
               initTooltips = this.initTooltips;
 
-          this.leafletMap = L.map(mapContainer).fitWorld();
+          this.leafletMap = L.map(mapContainer, {
+            minZoom: 2
+          }).fitWorld();
 
           L.tileLayer(
             'http://{s}.tiles.mapbox.com/v3/{user}.{map}/{z}/{x}/{y}.png',
