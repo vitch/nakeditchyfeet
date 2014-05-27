@@ -159,6 +159,8 @@ img {
 #site-content {
 	margin: 0 0 0 45px;
 	padding: 30px;
+	position: relative;
+	z-index: 10;
 
 	#map-page & {
 		padding: 0;
@@ -166,7 +168,9 @@ img {
 
 	.box-sizing(border-box);
 	max-width: 700px;
-	.box-shadow(10px 0 10px rgba(0,0,0,.3));
+	.js & {
+		.box-shadow(4px 0 5px rgba(0, 0, 0, 0.4));
+	}
 }
 #map-page #site-content {
 	max-width: inherit;
@@ -448,6 +452,7 @@ header.content-header {
 
 #side-map {
 	position: fixed;
+	z-index: 9;
 	top: 0;
 	left: 0;
 
