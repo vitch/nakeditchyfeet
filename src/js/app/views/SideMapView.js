@@ -20,6 +20,14 @@ define(
             this.initMap();
             this.$doc.bind('scroll', _.throttle(this.updateMap, 400, {leading: false}));
             $(document).trigger('scroll');
+
+            // Sidenav hover
+            var siteContent = $('#site-content');
+            $('#site-header').hover(function() {
+              siteContent.addClass('sidenav-hover');
+            }, function() {
+              siteContent.removeClass('sidenav-hover');
+            });
           }
         },
         initMap: function () {

@@ -179,9 +179,12 @@ img {
 }
 #site-content {
 	margin: 0 0 0 @sidenav-width-closed;
+	background: #fff;
 	padding: 30px;
 	position: relative;
 	z-index: 10;
+
+	.transition(margin-left @sidenav-transition-duration @sidenav-transition-easing);
 
 	.clearfix;
 
@@ -193,6 +196,10 @@ img {
 	max-width: 800px;
 	.js & {
 		.box-shadow(4px 0 5px rgba(0, 0, 0, 0.4));
+	}
+
+	&.sidenav-hover {
+		margin-left: @sidenav-width-open;
 	}
 }
 #map-page #site-content {
