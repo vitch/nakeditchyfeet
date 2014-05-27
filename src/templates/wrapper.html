@@ -63,8 +63,10 @@
 	<div id="site-content">
 		{% block bodyContent %}{% endblock %}
 	</div>
+	{% if bodyId !== 'map' -%}
 	<div id="side-map">
 	</div>
+	{%- endif %}
 	<script type="text/javascript" src="{{ page|basePath }}js/lib/jquery.js"></script>
 	{% for path in options.jsLibs -%}
 	<script src="{{ page|basePath }}{{ path }}"></script>
