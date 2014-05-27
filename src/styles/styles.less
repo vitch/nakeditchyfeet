@@ -19,8 +19,8 @@
 // Custom
 @link-fade-transition: color .3s ease-out;
 
-@sidenav-transition-duration: .2s;
-@sidenav-transition-easing: ease-out;
+@sidenav-transition-duration: .26s;
+@sidenav-transition-easing: ease-in-out;
 @sidenav-width-closed: 45px;
 @sidenav-width-open: 135px;
 @sidenav-side-padding: 9px;
@@ -128,15 +128,19 @@ img {
 	}
 
 	#logotype {
-		margin: 120px 0 10px;
+		position: absolute;
+		top: 120px;
 		background: url(/images/logotype.svg) no-repeat 0 0;
 		text-indent: -2000px;
 		display: block;
-		width: 120px;
-		height: 60px;
+		width: 30px;
+		height: 30px;
+		webkit-transition: width @sidenav-transition-duration @sidenav-transition-easing, height @sidenav-transition-duration @sidenav-transition-easing;
+		transition: width @sidenav-transition-duration @sidenav-transition-easing, height @sidenav-transition-duration @sidenav-transition-easing;
 	}
 
 	nav {
+		margin-top: 190px;
 
 		ul {
 			list-style: none;
@@ -166,6 +170,10 @@ img {
 		&>img {
 			left: 0;
 			height: 109px;
+		}
+		#logotype {
+			width: 120px;
+			height: 60px;
 		}
 	}
 }
