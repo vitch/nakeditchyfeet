@@ -144,11 +144,20 @@ define(
           }
         },
         sizeMap: function() {
-          var siteContent = $('#site-content');
-          this.$el.height($(window).innerHeight() - parseInt(siteContent.css('marginTop')));
+          var siteContent = $('#site-content').height('auto');
+          var siteContentHeight = siteContent.height();
+          var win = $(window);
+          var windowHeight = win.innerHeight();
+          var windowWidth = win.innerWidth();
           var w = siteContent.outerWidth() + parseInt(siteContent.css('marginLeft'));
-          this.$el.width($(window).innerWidth() - w);
-          this.$el.css('left', w);
+          if (siteContentHeight < windowHeight) {
+            siteContent.css('height', windowHeight + 'px');
+          }
+          this.$el.css({
+            height: windowHeight,
+            width: windowWidth - w,
+            left: w
+          });
           this.$doc.trigger('scroll');
         }
       }
