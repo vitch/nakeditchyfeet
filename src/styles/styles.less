@@ -21,7 +21,7 @@
 
 @sidenav-transition-duration: .2s;
 @sidenav-transition-easing: ease-out;
-@sidenav-width-closed: 44px;
+@sidenav-width-closed: 45px;
 @sidenav-width-open: 135px;
 @sidenav-side-padding: 9px;
 
@@ -100,6 +100,7 @@ img {
 	bottom: 0;
 	padding: 0 @sidenav-side-padding;
 	width: @sidenav-width-closed;
+	// border-right: 1px solid #fff;
 	z-index: 1001;
 	background: #A4CBB1;
 	.box-sizing(border-box);
@@ -169,7 +170,7 @@ img {
 	}
 }
 #site-content {
-	margin: 0 0 0 45px;
+	margin: 0 0 0 @sidenav-width-closed;
 	padding: 30px;
 	position: relative;
 	z-index: 10;
