@@ -20,6 +20,7 @@
 // Custom
 @link-fade-transition: color .3s ease-out;
 
+@sidenav-bg-color: #9FCBB4;
 @sidenav-transition-duration: .26s;
 @sidenav-transition-easing: ease-in-out;
 @sidenav-width-closed: 45px;
@@ -98,7 +99,7 @@ img {
 	width: @sidenav-width-closed;
 	// border-right: 1px solid #fff;
 	z-index: 1001;
-	background: #A4CBB1;
+	background: @sidenav-bg-color;
 	.box-sizing(border-box);
 	overflow: hidden;
 	.transition(width @sidenav-transition-duration @sidenav-transition-easing);
