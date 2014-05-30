@@ -38,5 +38,9 @@ module.exports = {
       'src/data/stays.json'
     ],
     tasks: ['stays', 'notify:watchComplete']
+  },
+  icons: {
+    files: [ 'src/icons/*.svg'],
+    tasks: ['webfont', 'less', 'copy:fontsNew', 'notify:watchComplete']
   }
 };

@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('copyVendor', ['copy:jQuery', 'copy:fonts', 'copy:leaflet', 'copy:awesomeMarkers'])
 
-  grunt.registerTask('build', ['clean', 'copy:main', 'copyVendor', 'copyJsLibs', 'compileJs', 'less', 'haggerston', 'stays']);
+  grunt.registerTask('build', ['clean', 'webfont', 'copy:fontsNew', 'copy:main', 'copyVendor', 'copyJsLibs', 'compileJs', 'less', 'haggerston', 'stays']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
 
   grunt.registerTask('default', ['build']);

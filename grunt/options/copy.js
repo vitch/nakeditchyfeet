@@ -47,6 +47,16 @@ module.exports = {
       }
     ]
   },
+  fontsNew: {
+    files: [
+      {
+        expand: true,
+        cwd: 'src/icons/generated/',
+        src: ['*.eot', '*.svg', '*.ttf', '*.woff'],
+        dest: 'out/fonts'
+      }
+    ]
+  },
   awesomeMarkers: {
     files: [
       {

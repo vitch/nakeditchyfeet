@@ -1,1 +1,1 @@
-module.exports = ['out/*'];
+module.exports = ['out/*', 'src/icons/generated/*'];

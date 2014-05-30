@@ -6,6 +6,7 @@
 @import "alerts.less";
 @import "tooltip.less";
 @import "font-awesome";
+@import "nif-icons.less"; // Generated SVG icons
 @import (less) "leaflet.css";
 @import (less) "leaflet.awesome-markers.css";
 @import (less) "MarkerCluster.css";
@@ -57,6 +58,11 @@
   font-style: normal;
 }
 
+// Override the weird vertical align in the generated font which makes things look weird...
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	vertical-align: top;
+}
+
 
 // Styles
 
@@ -82,16 +88,6 @@ a {
 
 img {
 	max-width: 100%;
-}
-
-// TEMP
-.icon {
-	display: block;
-	float: left;
-	width: 25px;
-	height: 22px;
-	margin: 0 10px 0 0;
-	background: rgba(0,0,0,.4);
 }
 
 #site-header {
@@ -150,13 +146,17 @@ img {
 
 			li {
 				border-bottom: 1px solid #fff;
-				padding: 9px 0 5px;
+				padding: 9px 0 5px 2px;
 			}
 
 			a {
 				font-size: 19px;
 				color: #fff;
 				text-decoration: none;
+
+				span:before {
+					font-size: 1.1em;
+				}
 			}
 		}
 	}
