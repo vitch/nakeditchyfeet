@@ -5,7 +5,12 @@ module.exports = {
     options: {
       engine: 'node',
       stylesheet: 'less',
-      syntax: 'bootstrap',
+      template: 'src/icons/template/fa.css',
+      templateOptions: {
+        baseClass: 'icon',
+        classPrefix: 'icon-',
+        mixinPrefix: 'icon-'
+      },
       htmlDemo: false,
       font: 'nif-icons',
       relativeFontPath: '/fonts/'
