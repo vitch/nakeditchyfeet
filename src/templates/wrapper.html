@@ -26,11 +26,11 @@
 	<header id="site-header">
 		<img src="/images/feet.svg" alt="Feet">
 		<div><div>
-			<h1>
+			<h1 class="icon icon-n">
 				{% if page.prettyUrl === '/' -%}
-					<span id="logotype">Naked Itchy Feet</span>
+					<span id="logotype" class="icon icon-logotype">Naked Itchy Feet</span>
 				{%- else -%}
-					<a href="{{ page|basePath }}"><span id="logotype">Naked Itchy Feet</span></a>
+					<a href="{{ page|basePath }}"><span id="logotype" class="icon">Naked Itchy Feet</span></a>
 				{%- endif %}
 			</h1>
 			<nav>
