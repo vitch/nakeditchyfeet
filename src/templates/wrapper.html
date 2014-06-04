@@ -35,22 +35,26 @@
 			</h1>
 			<nav>
 				<ul>
-					<li class="icon icon-blog">
+					<li>
+						<span class="icon icon-blog"></span>
 						<a href="{{ page|basePath }}"{% if page.prettyUrl == '/' %} class="active"{% endif %}>
 							Blog
 						</a>
 					</li>
-					<li class="icon icon-globe">
+					<li>
+						<span class="icon icon-globe"></span>
 						<a href="{{ page|basePath }}map/"{% if page.prettyUrl == '/map/' %} class="active"{% endif %}>
 							Our Map
 						</a>
 					</li>
-					<li class="icon icon-foot">
+					<li>
+						<span class="icon icon-foot"></span>
 						<a href="{{ page|basePath }}about-us/"{% if page.prettyUrl == '/about-us/' %} class="active"{% endif %}>
 							About Us
 						</a>
 					</li>
-					<li class="icon icon-twitter">
+					<li>
+						<span class="icon icon-twitter"></span>
 						<a href="{{ page|basePath }}follow-us/"{% if page.prettyUrl == '/follow-us/' %} class="active"{% endif %}>
 							Follow Us
 						</a>

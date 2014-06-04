@@ -161,9 +161,9 @@ img {
 
 			li {
 				border-bottom: 1px solid @sidenav-color;
-				padding: 9px 0 5px 2px;
+				padding: 8px 0 5px 2px;
 
-				&:before {
+				&>span:before {
 					font-size: 21px;
 				}
 			}
@@ -172,7 +172,7 @@ img {
 				font-size: 19px;
 				color: @sidenav-color;
 				text-decoration: none;
-				padding-left: 2px;
+				padding: 1px 0 0 2px;
 				.opacity(0);
 				.transition(opacity @sidenav-transition-duration @sidenav-transition-easing);
 			}
