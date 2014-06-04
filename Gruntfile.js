@@ -41,9 +41,9 @@ module.exports = function(grunt) {
   grunt.registerTask('copyJsLibs', grunt.isProduction ? ['uglify:libs', 'uglify:require'] : ['copy:libs', 'copy:require']);
   grunt.registerTask('compileJs', [grunt.isProduction ? 'requirejs:compile' : 'copy:js']);
 
-  grunt.registerTask('copyVendor', ['copy:jQuery', 'copy:fonts', 'copy:leaflet', 'copy:awesomeMarkers'])
+  grunt.registerTask('copyVendor', ['copy:jQuery', 'copy:leaflet', 'copy:awesomeMarkers'])
 
-  grunt.registerTask('build', ['clean', 'webfont', 'copy:fontsNew', 'copy:main', 'copyVendor', 'copyJsLibs', 'compileJs', 'less', 'haggerston', 'stays']);
+  grunt.registerTask('build', ['clean', 'webfont', 'copy:fonts', 'copy:main', 'copyVendor', 'copyJsLibs', 'compileJs', 'less', 'haggerston', 'stays']);
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
 
   grunt.registerTask('default', ['build']);

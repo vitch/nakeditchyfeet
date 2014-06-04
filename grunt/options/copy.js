@@ -41,16 +41,6 @@ module.exports = {
     files: [
       {
         expand: true,
-        cwd: 'vendor/font-awesome/fonts',
-        src: ['**'],
-        dest: 'out/font-awesome/fonts'
-      }
-    ]
-  },
-  fontsNew: {
-    files: [
-      {
-        expand: true,
         cwd: 'src/icons/generated/',
         src: ['*.eot', '*.svg', '*.ttf', '*.woff'],
         dest: 'out/fonts'
