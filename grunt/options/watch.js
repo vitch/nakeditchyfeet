@@ -41,6 +41,6 @@ module.exports = {
   },
   icons: {
     files: [ 'src/icons/*.svg'],
-    tasks: ['webfont', 'less', 'copy:fontsNew', 'notify:watchComplete']
+    tasks: ['webfont', 'less', 'copy:fonts', 'notify:watchComplete']
   }
 };
