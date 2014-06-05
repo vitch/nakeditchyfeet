@@ -11,6 +11,9 @@ module.exports = {
         classPrefix: 'nif-icon-',
         mixinPrefix: 'nif-icon-'
       },
+      fontHeight: 14,
+      descent: 2,
+      ascent: 2,
       htmlDemo: false,
       font: 'nif-icons',
       relativeFontPath: '/fonts/'
