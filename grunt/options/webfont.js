@@ -7,9 +7,9 @@ module.exports = {
       stylesheet: 'less',
       template: 'src/icons/template/fa.css',
       templateOptions: {
-        baseClass: 'icon',
-        classPrefix: 'icon-',
-        mixinPrefix: 'icon-'
+        baseClass: 'nif-icon',
+        classPrefix: 'nif-icon-',
+        mixinPrefix: 'nif-icon-'
       },
       htmlDemo: false,
       font: 'nif-icons',

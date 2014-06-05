@@ -92,19 +92,19 @@ define(
               var $li = $(this);
               var domData = $li.data();
               if (!domData.marker) {
-                var icon = $li.find('>.fa').attr('class').split(' ')[1];
+                var icon = $li.find('>.nif-icon').attr('class').split(' ')[1];
                 var title = $li.find('h1').text().replace(stripSpace, '');
                 var marker;
                 var bounds;
                 var link;
                 switch (icon) {
-                  case 'fa-plane':
+                  case 'nif-icon-plane':
                     marker = new FlightPolyline({airports: $li.find('.list-page-map').data().airports, noPlaneMarkers: true});
                     bounds = marker.getBounds();
                     break;
-                  case 'fa-book':
-                  case 'fa-info-circle':
-                  case 'fa-camera-retro':
+                  case 'nif-icon-book':
+                  case 'nif-icon-info-circle':
+                  case 'nif-icon-camera-retro':
                     link = $li.find('a').attr('href');
                     // fall through...
                   default:
@@ -114,7 +114,7 @@ define(
                         title: title,
                         icon: L.AwesomeMarkers.icon({
                           icon: icon,
-                          prefix: 'fa',
+                          prefix: 'nif-icon',
                           markerColor: 'darkblue',
                           className: 'awesome-marker'
                         })

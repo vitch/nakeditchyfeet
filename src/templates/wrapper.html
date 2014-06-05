@@ -26,9 +26,9 @@
 	<header id="site-header">
 		<img src="/images/feet.svg" alt="Feet">
 		<div><div>
-			<h1 class="icon icon-n">
+			<h1 class="nif-icon nif-icon-n">
 				{% if page.prettyUrl === '/' -%}
-					<span id="logotype" class="icon icon-logotype">Naked Itchy Feet</span>
+					<span id="logotype" class="nif-icon nif-icon-logotype">Naked Itchy Feet</span>
 				{%- else -%}
 					<a href="{{ page|basePath }}"><span id="logotype" class="icon">Naked Itchy Feet</span></a>
 				{%- endif %}
@@ -36,25 +36,25 @@
 			<nav>
 				<ul>
 					<li>
-						<span class="icon icon-blog"></span>
+						<span class="nif-icon nif-icon-blog"></span>
 						<a href="{{ page|basePath }}"{% if page.prettyUrl == '/' %} class="active"{% endif %}>
 							Blog
 						</a>
 					</li>
 					<li>
-						<span class="icon icon-globe"></span>
+						<span class="nif-icon nif-icon-globe"></span>
 						<a href="{{ page|basePath }}map/"{% if page.prettyUrl == '/map/' %} class="active"{% endif %}>
 							Our Map
 						</a>
 					</li>
 					<li>
-						<span class="icon icon-foot"></span>
+						<span class="nif-icon nif-icon-foot"></span>
 						<a href="{{ page|basePath }}about-us/"{% if page.prettyUrl == '/about-us/' %} class="active"{% endif %}>
 							About Us
 						</a>
 					</li>
 					<li>
-						<span class="icon icon-twitter"></span>
+						<span class="nif-icon nif-icon-twitter"></span>
 						<a href="{{ page|basePath }}follow-us/"{% if page.prettyUrl == '/follow-us/' %} class="active"{% endif %}>
 							Follow Us
 						</a>

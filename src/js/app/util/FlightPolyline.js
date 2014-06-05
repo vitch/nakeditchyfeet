@@ -9,7 +9,7 @@ define(
         return (Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI);
     };
 
-    var planeIcon = L.divIcon({className:'map-marker-airplane', iconSize: [30, 30], html: '<span class="fa fa-plane"></span>'});
+    var planeIcon = L.divIcon({className:'map-marker-airplane', iconSize: [30, 30], html: '<span class="nif-icon nif-icon-plane"></span>'});
 
     var FlightPolyLine = L.FeatureGroup.extend({
       initialize: function(options) {
