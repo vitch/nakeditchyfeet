@@ -25,6 +25,7 @@
 @sidenav-width-closed: 45px;
 @sidenav-width-open: 135px;
 @sidenav-side-padding: 9px;
+@sidenav-arrow-size: 6px;
 
 // Mixins
 
@@ -101,8 +102,28 @@ img {
 	z-index: 1001;
 	background: @sidenav-bg-color;
 	.box-sizing(border-box);
-	overflow: hidden;
 	.transition(width @sidenav-transition-duration @sidenav-transition-easing);
+
+	.active-marker{
+		.js & {
+			position: absolute;
+			right: 0;
+
+			&:after {
+				left: 100%;
+				top: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				border-left-color: @sidenav-bg-color;
+				border-width: @sidenav-arrow-size;
+				margin-top: -@sidenav-arrow-size;
+			}
+		}
+	}
 
 	&>div {
 		overflow: hidden;

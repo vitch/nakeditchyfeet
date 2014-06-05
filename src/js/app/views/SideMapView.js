@@ -27,7 +27,7 @@ define(
               siteContent.addClass('sidenav-hover');
             }, function() {
               siteContent.removeClass('sidenav-hover');
-            });
+            }).append($('<span class="active-marker"></span>').css('top', $('#site-header a.active').position().top + 11));
           }
         },
         initMap: function () {
