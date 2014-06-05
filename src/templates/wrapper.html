@@ -36,27 +36,27 @@
 			<nav>
 				<ul>
 					<li>
-						<span class="nif-icon nif-icon-blog"></span>
 						<a href="{{ page|basePath }}" class="{{ page|isBlogActiveClass }}">
-							Blog
+							<span class="nif-icon nif-icon-blog"></span>
+							<span>Blog</span>
 						</a>
 					</li>
 					<li>
-						<span class="nif-icon nif-icon-globe"></span>
 						<a href="{{ page|basePath }}map/"{% if page.prettyUrl == '/map/' %} class="active"{% endif %}>
-							Our Map
+							<span class="nif-icon nif-icon-globe"></span>
+							<span>Our Map</span>
 						</a>
 					</li>
 					<li>
-						<span class="nif-icon nif-icon-foot"></span>
 						<a href="{{ page|basePath }}about-us/"{% if page.prettyUrl == '/about-us/' %} class="active"{% endif %}>
-							About Us
+							<span class="nif-icon nif-icon-foot"></span>
+							<span>About Us</span>
 						</a>
 					</li>
 					<li>
-						<span class="nif-icon nif-icon-twitter"></span>
 						<a href="{{ page|basePath }}follow-us/"{% if page.prettyUrl == '/follow-us/' %} class="active"{% endif %}>
-							Follow Us
+							<span class="nif-icon nif-icon-twitter"></span>
+							<span>Follow Us</span>
 						</a>
 					</li>
 				</ul>

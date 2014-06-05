@@ -166,20 +166,31 @@ img {
 			li {
 				border-bottom: 1px solid @sidenav-color;
 				padding: 8px 0 5px 2px;
-
-				&>span:before {
-					font-size: 21px;
-					vertical-align: top;
-				}
 			}
 
 			a {
 				font-size: 19px;
 				color: @sidenav-color;
 				text-decoration: none;
-				padding: 1px 0 0 2px;
-				.opacity(0);
-				.transition(opacity @sidenav-transition-duration @sidenav-transition-easing);
+				padding: 0 0 0 2px;
+
+				span {
+
+					display: block;
+					float: left;
+					&.nif-icon {
+						padding: 0 5px 0 1px;
+						&:before {
+							font-size: 21px;
+							vertical-align: top;
+						}
+					}
+
+					&:last-child {
+						.opacity(0);
+						.transition(opacity @sidenav-transition-duration @sidenav-transition-easing);
+					}
+				}
 			}
 		}
 	}
@@ -198,7 +209,7 @@ img {
 			.opacity(1);
 		}
 
-		ul a {
+		ul a span:last-child {
 			.opacity(1);
 		}
 	}
