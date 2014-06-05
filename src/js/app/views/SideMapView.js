@@ -14,22 +14,13 @@ define(
         },
         initialize: function (options) {
           if (this.$el.length) {
+
             _.bindAll(this, 'sizeMap', 'updateMap');
             this.$doc = $(document);
             this.sizeMap();
             this.initMap();
             this.$doc.bind('scroll', _.throttle(this.updateMap, 400, {leading: false}));
             $(document).trigger('scroll');
-
-            // Sidenav hover
-            var siteContent = $('#site-content');
-            $('#site-header').hover(function() {
-              siteContent.addClass('sidenav-hover');
-            }, function() {
-              siteContent.removeClass('sidenav-hover');
-            });
-
-            siteContent.prepend($('<span class="active-marker"></span>').css('top', $('#site-header a.active').position().top + 11));
           }
         },
         initMap: function () {

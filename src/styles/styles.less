@@ -228,24 +228,23 @@ img {
 
 
 	.active-marker{
-		.js & {
-			position: fixed;
-			left: @sidenav-width-closed;
-			.transition(left @sidenav-transition-duration @sidenav-transition-easing);
+		position: fixed;
+		left: @sidenav-width-closed;
+		z-index: 1;
+		.transition(left @sidenav-transition-duration @sidenav-transition-easing);
 
-			&:after {
-				left: 100%;
-				top: 50%;
-				border: solid transparent;
-				content: " ";
-				height: 0;
-				width: 0;
-				position: absolute;
-				pointer-events: none;
-				border-left-color: @sidenav-bg-color;
-				border-width: @sidenav-arrow-size;
-				margin-top: -@sidenav-arrow-size;
-			}
+		&:after {
+			left: 100%;
+			top: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-left-color: @sidenav-bg-color;
+			border-width: @sidenav-arrow-size;
+			margin-top: -@sidenav-arrow-size;
 		}
 	}
 

@@ -8,15 +8,17 @@ require.config(
 define(
   [
     'collections/MapItemsCollection',
+    'views/SideNavView',
     'views/HomeView',
     'views/MapView',
     'views/SideMapView',
     'views/PhotoView'
   ],
-  function (MapItemsCollection, HomeView, MapView, SideMapView, PhotoView) {
+  function (MapItemsCollection, SideNavView, HomeView, MapView, SideMapView, PhotoView) {
     'use strict';
     $(function() {
       $('.tt-trigger').tooltip();
+      var sideNavView = new SideNavView();
       var homeView = new HomeView();
       var mapView = new MapView({
         mapItems: new MapItemsCollection()
