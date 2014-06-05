@@ -186,6 +186,9 @@ module.exports = function(grunt) {
         },
         geoLink: function(text, lat, lng) {
           return '<a href="https://maps.google.com/maps?q=' + lat + ',' + lng + '" data-lat="' + lat + '" data-lng="' + lng + '" class="geo-link" target="_blank"><i class="fa fa-map-marker"></i> ' + text + '</a>';
+        },
+        isBlogActiveClass: function(page) {
+          return page.prettyUrl.match(/^\/(blog|photos|tags)?/) ? 'active' : '';
         }
       }
     }

@@ -37,7 +37,7 @@
 				<ul>
 					<li>
 						<span class="nif-icon nif-icon-blog"></span>
-						<a href="{{ page|basePath }}"{% if page.prettyUrl == '/' %} class="active"{% endif %}>
+						<a href="{{ page|basePath }}" class="{{ page|isBlogActiveClass }}">
 							Blog
 						</a>
 					</li>
