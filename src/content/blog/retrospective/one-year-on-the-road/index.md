@@ -81,8 +81,7 @@ off the side of the road and there are so many of those amazing places in NZ.
 
 If you are there for long enough it's probably worth buying a vehicle and selling it on to another traveller looking to do what you
 did at the end. It's more of a risk than renting but can end up significantly cheaper. We got a station wagon with space to sleep in
-the back and a cheap tent. It's not nearly as easy to free camp as it is in Australia but there are lots of cheap [department of
-conservation](http://www.doc.govt.nz/) campsites in jaw-droppingly beautiful places.
+the back and a cheap tent. It's not nearly as easy to free camp as it is in Australia but there are lots of cheap [DOC campsites](http://www.doc.govt.nz/parks-and-recreation/places-to-stay/conservation-campsites-by-region/)  in jaw-droppingly beautiful places.
 
 From Cape Reinga at top of the north island to Milford Sound near the bottom of the south island the country is filled with some of
 the most outstanding scenery in the world. If you have less time then you can concentrate on the more magnificent south island but
