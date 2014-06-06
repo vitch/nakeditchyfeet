@@ -480,15 +480,14 @@ header.content-header {
 
 #photoset {
 	list-style: none;
-	@photosetPadding: 8px;
-	padding: 0 0 0 @photosetPadding;
+	@photosetPadding: 5px;
+	padding: 0;
+	overflow: hidden;
 	li {
 		margin: 0 @photosetPadding @photosetPadding 0;
 		float: left;
-		.image-box-shadow();
 		img {
-			width: 150px;
-			height: 150px;
+			display: block;
 		}
 	}
 }

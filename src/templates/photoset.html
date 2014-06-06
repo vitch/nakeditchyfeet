@@ -13,7 +13,7 @@
 	<ul id="photoset">
 		{% for photo in photos %}
 			<li>
-				<a href="{{ photo.id }}.html"><img src="{{ photo.url_q }}" alt="{{photo.title}}" title="{{photo.title}}"></a>
+				<a href="{{ photo.id }}.html"><img src="{{ photo.url_s }}" data-h="{{ photo.height_s }}" data-w="{{ photo.width_s }}" alt="{{photo.title}}" title="{{photo.title}}"></a>
 			</li>
 		{% endfor %}
 	</ul>
