@@ -110,3 +110,9 @@ Only the loveliest
 locals, who are used to tourism but relaxed and friendly - you never needed to second guess as to their intent or worry whether they were 
 trying to scam or trick you. And they would never give you incorrect information just because that's what they think you want to hear.
 
+---
+
+It is amazing to look back at these experiences and putting this post together has shone a new light on these places we were so lucky 
+to visit and allowed us to look back on them with a different perspective.
+
+One thing we would do differently is an obvious no brainer and something we need to become better at - travelling slower. We will keep trying....
