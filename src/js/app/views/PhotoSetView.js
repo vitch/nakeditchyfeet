@@ -25,34 +25,43 @@ define(
           }
         },
         updateSizes: function() {
-          var margin = 5;
-          var availableWidth = this.$el.width() - margin;
+          this.margin = 5;
+          this.maxHeight = 200;
+          var availableWidth = this.$el.width() - this.margin;
           if (availableWidth != this.availableWidth) {
-            var maxHeight = 200;
             var currentRow = [];
             var currentRowWidth = 0;
             _.each(this.imageData, function(data) {
-              data.scaledWidth = maxHeight / data.h * data.w;
+              data.scaledWidth = this.maxHeight / data.h * data.w;
               currentRow.push(data);
-              currentRowWidth += data.scaledWidth + margin;
+              currentRowWidth += data.scaledWidth + this.margin;
               if (currentRowWidth > availableWidth) {
-                currentRowWidth += margin;
-                var ratio = availableWidth / currentRowWidth;
-                // console.log('ROW', currentRow, availableWidth, currentRowWidth, ratio);
-                var destHeight = Math.round(ratio * maxHeight);
-                _.each(currentRow, function(item, i) {
-                  // console.log('Item', i, item.scaledWidth, '=>', Math.floor(item.scaledWidth * ratio));
-                  item.img.css({
-                    width: item.scaledWidth * ratio, 
-                    height: destHeight
-                  });
-                });
+                currentRowWidth += this.margin;
+                this.calculateRow(currentRow, currentRowWidth, availableWidth);
                 currentRow = [];
                 currentRowWidth = 0;
               }
-            });
+            }, this);
+
+            // this.calculateRow(currentRow, currentRowWidth, availableWidth);
+            _.each(currentRow, function(item) {
+              item.img.css({height: this.maxHeight})
+            }, this)
+
             this.availableWidth = availableWidth;
           }
+        },
+        calculateRow: function(currentRow, currentRowWidth, availableWidth) {
+          var ratio = availableWidth / currentRowWidth;
+          // console.log('ROW', currentRow, availableWidth, currentRowWidth, ratio);
+          var destHeight = Math.round(ratio * this.maxHeight);
+          _.each(currentRow, function(item, i) {
+            // console.log('Item', i, item.scaledWidth, '=>', Math.floor(item.scaledWidth * ratio));
+            item.img.css({
+              width: item.scaledWidth * ratio, 
+              height: destHeight
+            });
+          });
         }
       }
     );
