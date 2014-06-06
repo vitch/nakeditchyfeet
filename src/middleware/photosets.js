@@ -45,6 +45,18 @@ module.exports = function () {
           }
         });
         pages.push(photoPage);
+
+        // Set up photo variables so we can display the one which is tall enough on the photoset pages...
+        var photoSize = 'l';
+        ['s', 'n', 'm', 'z', 'c'].some(function(size, i) {
+          if (photo['height_' + size] > 130) {
+            photoSize = size;
+            return true;
+          }
+        });
+        photo.listPageUrl = photo['url_' + photoSize];
+        photo.listPageHeight = photo['height_' + photoSize];
+        photo.listPageWidth = photo['width_' + photoSize];
       });
       cb();
     }, function (err) {
