@@ -36,7 +36,6 @@ define(
               currentRow.push(data);
               currentRowWidth += data.scaledWidth + this.margin;
               if (currentRowWidth > availableWidth) {
-                currentRowWidth += this.margin;
                 this.calculateRow(currentRow, currentRowWidth, availableWidth);
                 currentRow = [];
                 currentRowWidth = 0;
@@ -53,13 +52,34 @@ define(
         },
         calculateRow: function(currentRow, currentRowWidth, availableWidth) {
           var ratio = availableWidth / currentRowWidth;
-          // console.log('ROW', currentRow, availableWidth, currentRowWidth, ratio);
           var destHeight = Math.round(ratio * this.maxHeight);
-          _.each(currentRow, function(item, i) {
-            // console.log('Item', i, item.scaledWidth, '=>', Math.floor(item.scaledWidth * ratio));
-            item.img.css({
-              width: item.scaledWidth * ratio, 
+          var totalW = 0;
+          var sized = _.map(currentRow, function(item) {
+            var w = Math.round(item.scaledWidth * ratio);
+            totalW += w;
+            return {
+              img: item.img,
+              width: w,
               height: destHeight
+            }
+          });
+          // Clean up rounding errors so everything lines up perfectly...
+          var widthDiff = availableWidth - totalW - sized.length * this.margin;
+          var dir = -1;
+          if (widthDiff < 0) {
+            dir = 1;
+            widthDiff *= -1;
+          }
+          var which = 0;
+          while (widthDiff-- > 0) {
+            sized[which].width -= dir;
+            which = (which + 1) % sized.length;
+          }
+          // Apply sizes at end to avoid layout thrashing...
+          _.each(sized, function(item) {
+            item.img.css({
+              width: item.width,
+              height: item.height
             });
           });
         }
