@@ -121,6 +121,9 @@ define(
         },
         sizeMap: function() {
           this.$el.height($(window).innerHeight());
+          if (this.leafletMap) {
+            this.leafletMap.invalidateSize();
+          }
         }
       }
     );
