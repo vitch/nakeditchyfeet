@@ -1,8 +1,9 @@
 define(
   [
-    'util/FlightPolyline'
+    'util/FlightPolyline',
+    'util/Tileset'
   ],
-  function (FlightPolyline) {
+  function (FlightPolyline, Tileset) {
     'use strict';
 
     return Backbone.View.extend(
@@ -30,14 +31,7 @@ define(
             layers:[]
           });
 
-          L.tileLayer(
-            'http://{s}.tiles.mapbox.com/v3/{user}.{map}/{z}/{x}/{y}.png',
-            {
-              user: 'nakeditchyfeet',
-              map: 'ibm368a5',
-              attribution: '<a href="http://mapbox.com/about/maps" target="_blank">&copy; Mapbox &copy; OpenStreetMap</a>'
-            }
-          ).addTo(leafletMap);
+          Tileset.addTo(leafletMap);
 
           var flightPolyline = new FlightPolyline({airports: airports});
           flightPolyline.addTo(leafletMap);

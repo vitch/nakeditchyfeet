@@ -1,9 +1,10 @@
 define(
   [
     'views/ListFilterView',
-    'util/FlightPolyline'
+    'util/FlightPolyline',
+    'util/Tileset'
   ],
-  function (ListFilterView, FlightPolyline) {
+  function (ListFilterView, FlightPolyline, Tileset) {
     'use strict';
 
     return Backbone.View.extend(
@@ -29,14 +30,7 @@ define(
             minZoom: 2
           }).fitWorld();
 
-          L.tileLayer(
-            'http://{s}.tiles.mapbox.com/v3/{user}.{map}/{z}/{x}/{y}.png',
-            {
-              user: 'nakeditchyfeet',
-              map: 'ibm368a5',
-              attribution: '<a href="http://mapbox.com/about/maps" target="_blank">&copy; Mapbox &copy; OpenStreetMap</a>'
-            }
-          ).addTo(this.leafletMap);
+          Tileset.addTo(this.leafletMap);
 
           this.leafletMap.on('zoomend moveend', function(){
             _.defer(initTooltips);

@@ -1,7 +1,8 @@
 define(
   [
+    'util/Tileset'
   ],
-  function (FlightPolyline) {
+  function (Tileset) {
     'use strict';
 
     var displayedMarkerJSON = '';
@@ -37,15 +38,7 @@ define(
             maxZoom: 11
           });
 
-          L.tileLayer(
-            'http://{s}.tiles.mapbox.com/v3/{user}.{map}/{z}/{x}/{y}.png',
-            // 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
-            {
-              user: 'nakeditchyfeet',
-              map: 'ibm368a5',
-              attribution: '<a href="http://mapbox.com/about/maps" target="_blank">&copy; Mapbox &copy; OpenStreetMap</a>'
-            }
-          ).addTo(this.leafletMap);
+          Tileset.addTo(this.leafletMap);
 
           this.stuffLayer = L.layerGroup().addTo(this.leafletMap);
 
