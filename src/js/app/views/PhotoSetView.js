@@ -50,6 +50,9 @@ define(
               data.img.removeClass('marker-active');
               this._icon.className = this._icon.className.replace('darkred', 'darkblue');
             });
+            marker.on('click', function() {
+              document.location = data.img.parent().attr('href');
+            });
             data.img.on('mouseover', function() {
               marker._icon.className = marker._icon.className.replace('darkblue', 'darkred');
             });
