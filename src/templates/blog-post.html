@@ -1,6 +1,6 @@
 {% extends 'wrapper.html' %}
 {% block bodyContent %}
-<article>
+<article id="post" data-geo="{{ latitude }}, {{ longitude }}">
 	{% include "inc/header.html" %}
 	<div id="content">{{ content|raw }}</div>
 	{% if photosets %}
