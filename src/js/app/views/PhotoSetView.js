@@ -32,7 +32,7 @@ define(
             var marker = L.marker(
               data.latLng,
               {
-                title: '?', // FIXME
+                title: data.img.attr('title'),
                 icon: L.AwesomeMarkers.icon({
                   icon: 'camera-retro',
                   prefix: 'nif-icon',
