@@ -60,7 +60,9 @@ define(
             });
             return marker;
           });
-          this.sideMapView.setMarkers(markers);
+          this.sideMapView.initMap({
+            markers: markers
+          });
         },
         updateSizes: function() {
           this.margin = 5;

@@ -19,6 +19,7 @@ define(
 
             _.bindAll(this, 'updateMap');
             this.sideMapView = options.sideMapView;
+            this.sideMapView.initMap();
 
             this.sideMapView.on('mapSized', this.updateMap);
             $(document).bind('scroll', _.throttle(this.updateMap, 400, {leading: false}));
@@ -98,7 +99,7 @@ define(
               }
               return domData.marker;
             }).get();
-            this.sideMapView.setMarkers(markers);
+            this.sideMapView.updateMarkers(markers);
           }
         },
         initFilters: function() {

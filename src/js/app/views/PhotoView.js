@@ -15,21 +15,20 @@ define(
 
             var img = this.$('a img');
 
-            this.sideMapView = options.sideMapView;
-            var marker = L.marker(
-                      this.$el.data('geo').split(','),
-                      {
-                        title: img.attr('title'),
-                        icon: L.AwesomeMarkers.icon({
-                          icon: 'camera-retro',
-                          prefix: 'nif-icon',
-                          markerColor: 'darkblue',
-                          className: 'awesome-marker'
-                        })
-                      }
-                    );
-
-            this.sideMapView.setMarker(marker);
+            options.sideMapView.initMap({
+              marker: L.marker(
+                this.$el.data('geo').split(','),
+                {
+                  title: img.attr('title'),
+                  icon: L.AwesomeMarkers.icon({
+                    icon: 'camera-retro',
+                    prefix: 'nif-icon',
+                    markerColor: 'darkblue',
+                    className: 'awesome-marker'
+                  })
+                }
+              )
+            });
 
             // Hacky way to make the height correct once the image has loaded and we know how tall it is.
             // There must be a better way?

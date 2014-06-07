@@ -13,36 +13,57 @@ define(
         events: {
         },
         initialize: function (options) {
+        },
+        initMap: function (options) {
+
           if (this.$el.length) {
+
+            options = _.extend({}, options, { zoom: 6})
 
             _.bindAll(this, 'sizeMap');
             this.sizeMap();
-            this.initMap();
+
+            var mapContainer = this.$el.empty()[0];
+
+            var mapOptions = {
+              animate: true,
+              dragging: false,
+              touchZoom: false,
+              scrollWheelZoom: false,
+              doubleClickZoom: false,
+              boxZoom: false,
+              tap: false,
+              trackResize: false,
+              keyboard: false,
+              zoomControl: false,
+              maxZoom: 11
+            };
+
+            if (options.marker) {
+              mapOptions.layers = [options.marker];
+              mapOptions.center = options.marker.getLatLng();
+              mapOptions.zoom = options.zoom;
+            } else if (options.markers) {
+              mapOptions.layers = options.markers;
+            } else {
+              this.containerLayer = L.layerGroup();
+              mapOptions.layers = [this.containerLayer]
+            }
+
+            this.leafletMap = L.map(mapContainer, mapOptions);
+
+            Tileset.addTo(this.leafletMap);
+
+            $(window).on('resize', _.throttle(this.sizeMap, 200, {leading: false}));
+
+            if (options.markers) {
+              this.leafletMap.fitBounds(_.map(options.markers, function(marker) {
+                return _.isFunction(marker.getBounds) ? marker.getBounds() : marker.getLatLng();
+              }))
+            }
+
+            this.initTooltips();
           }
-        },
-        initMap: function () {
-
-          var mapContainer = this.$el.empty()[0];
-
-          this.leafletMap = L.map(mapContainer, {
-            animate: true,
-            dragging: false,
-            touchZoom: false,
-            scrollWheelZoom: false,
-            doubleClickZoom: false,
-            boxZoom: false,
-            tap: false,
-            trackResize: false,
-            keyboard: false,
-            zoomControl: false,
-            maxZoom: 11
-          });
-
-          Tileset.addTo(this.leafletMap);
-
-          this.stuffLayer = L.layerGroup().addTo(this.leafletMap);
-
-          $(window).on('resize', _.throttle(this.sizeMap, 200, {leading: false}));
         },
         initTooltips: function()
         {
@@ -51,20 +72,14 @@ define(
             html: true
           });
         },
-        setMarkers: function(markers) {
-          this.stuffLayer.clearLayers();
+        updateMarkers: function(markers) {
+          this.containerLayer.clearLayers();
           var bounds = [];
           _.each(markers, function(m) {
-            this.stuffLayer.addLayer(m);
+            this.containerLayer.addLayer(m);
             bounds.push(_.isFunction(m.getBounds) ? m.getBounds() : m.getLatLng());
           }, this);
-          this.leafletMap.fitBounds(L.latLngBounds(bounds));
-          this.initTooltips();
-        },
-        setMarker: function(marker, zoom) {
-          this.stuffLayer.clearLayers();
-          this.stuffLayer.addLayer(marker);
-          this.leafletMap.setView(marker.getLatLng(), zoom || 5);
+          this.leafletMap.fitBounds(bounds);
           this.initTooltips();
         },
         sizeMap: function() {
