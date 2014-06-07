@@ -73,7 +73,7 @@ define(
                     title: mapItemModel.get('title').replace(/&#39;/g, '\''),
                       icon: L.AwesomeMarkers.icon({
                         icon: mapItemModel.get('icon'),
-                        prefix: 'fa',
+                        prefix: 'nif-icon',
                         markerColor: 'darkblue',
                         className: 'awesome-marker'
                       }),
