@@ -1,10 +1,9 @@
 define(
   [
     'views/ListFilterView',
-    'views/ListPageMapView',
     'util/FlightPolyline'
   ],
-  function (ListFilterView, ListPageMapView, FlightPolyline) {
+  function (ListFilterView,FlightPolyline) {
     'use strict';
 
     return Backbone.View.extend(
@@ -20,10 +19,6 @@ define(
 
             _.bindAll(this, 'updateMap');
             this.sideMapView = options.sideMapView;
-
-            this.$('.list-page-map').each(function() {
-              new ListPageMapView({el: this});
-            });
 
             this.sideMapView.on('mapSized', this.updateMap);
             $(document).bind('scroll', _.throttle(this.updateMap, 400, {leading: false}));
