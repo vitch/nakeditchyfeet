@@ -2,6 +2,8 @@
   "template": "blog-post.html",
   "templateData": {
     "title": "About Us",
+    "latitude": 51.53609,
+    "longitude": -0.1021,
     "content": "about-us.md",
     "hideComments": true
   }

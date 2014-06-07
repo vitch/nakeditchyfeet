@@ -3,6 +3,8 @@
   "templateData": {
     "title": "Follow Us",
     "content": "follow-us.md",
+    "latitude": 51.53609,
+    "longitude": -0.1021,
     "hideComments": true
   }
 }
