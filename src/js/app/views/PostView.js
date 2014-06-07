@@ -12,8 +12,6 @@ define(
         initialize: function (options) {
           if (this.$el.length) {
 
-            // _.bindAll(this);
-
             this.sideMapView = options.sideMapView;
             var marker = L.marker(
                       this.$el.data('geo').split(','),

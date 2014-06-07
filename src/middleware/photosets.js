@@ -36,6 +36,7 @@ module.exports = function () {
           template: 'photo.html',
           templateData: {
             title: photoset.title + ': ' + photo.title,
+            geo: photo.geo_is_public ? photo.latitude + ',' + photo.longitude : photosetData.latitude + ',' + photosetData.longitude, // Default to the photoset's position if there is no position for the photo. Good idea?
             photoset: photosetData,
             photoUrl: hasLarger ? photo.url_c : photo.url_z,
             photoId: photo.id,
