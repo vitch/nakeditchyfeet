@@ -17,7 +17,7 @@ define(
             var marker = L.marker(
                       this.$el.data('geo').split(','),
                       {
-                        title: '?',
+                        title: this.$('a img').attr('title'),
                         icon: L.AwesomeMarkers.icon({
                           icon: 'camera-retro',
                           prefix: 'nif-icon',
