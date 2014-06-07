@@ -39,6 +39,7 @@ define(
 
           L.tileLayer(
             'http://{s}.tiles.mapbox.com/v3/{user}.{map}/{z}/{x}/{y}.png',
+            // 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
             {
               user: 'nakeditchyfeet',
               map: 'ibm368a5',
