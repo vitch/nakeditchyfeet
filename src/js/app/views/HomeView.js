@@ -25,6 +25,7 @@ define(
               new ListPageMapView({el: this});
             });
 
+            this.sideMapView.on('mapSized', this.updateMap);
             $(document).bind('scroll', _.throttle(this.updateMap, 400, {leading: false}));
             $(document).trigger('scroll');
           }
