@@ -14,7 +14,7 @@ define(
         initialize: function (options) {
           if (this.$el.length) {
 
-            _.bindAll(this, 'sizeMap', 'fixCenter');
+            _.bindAll(this, 'sizeMap');
             this.sizeMap();
             this.initMap();
           }
@@ -66,24 +66,10 @@ define(
         setMarker: function(marker, zoom) {
           this.stuffLayer.clearLayers();
           this.stuffLayer.addLayer(marker);
-          this.fixCenter({latLng: marker.getLatLng(), zoom: zoom || 5});
+          this.leafletMap.setView(marker.getLatLng(), zoom || 5);
         },
         fitBounds: function(bounds) {
           this.leafletMap.fitBounds(bounds);
-          this.initTooltips();
-        },
-        fixCenter: function(data) {
-          this.off('mapSized').on('mapSized', function() {
-            this._center(data);
-          }, this);
-          this._center(data);
-        },
-        _center: function(data) {
-          if (data.latLng && data.zoom) {
-            this.leafletMap.setView(data.latLng, data.zoom);
-          } else if (data.bounds) {
-            this.leafletMap.fitBounds(bounds);
-          }
           this.initTooltips();
         },
         sizeMap: function() {
@@ -102,6 +88,7 @@ define(
             left: w
           });
           if (this.leafletMap) {
+            this.leafletMap.invalidateSize(false);
             this.trigger('mapSized');
           }
         }
