@@ -12,17 +12,55 @@ define(
         initialize: function (options) {
           if (this.$el.length) {
             _.bindAll(this, 'updateSizes');
+            this.sideMapView = options.sideMapView;
             this.imageData = this.$('img').map(function() {
               var img = $(this);
               var data = img.data();
               return {
                 img: img,
                 w: parseInt(data.w, 10),
-                h: parseInt(data.h, 10)
+                h: parseInt(data.h, 10),
+                latLng: data.geo.split(',')
               };
             });
             $(window).on('resize', _.throttle(this.updateSizes, 200)).trigger('resize');
+            this.initMap();
           }
+        },
+        initMap: function() {
+          var bounds = [];
+          var markers = _.map(this.imageData, function(data) {
+            var marker = L.marker(
+              data.latLng,
+              {
+                title: '?', // FIXME
+                icon: L.AwesomeMarkers.icon({
+                  icon: 'camera-retro',
+                  prefix: 'nif-icon',
+                  markerColor: 'darkblue',
+                  className: 'awesome-marker'
+                })
+              }
+            );
+            marker.on('mouseover', function() {
+              data.img.addClass('marker-active');
+              this._icon.className = this._icon.className.replace('darkblue', 'darkred');
+            });
+            marker.on('mouseout', function() {
+              data.img.removeClass('marker-active');
+              this._icon.className = this._icon.className.replace('darkred', 'darkblue');
+            });
+            data.img.on('mouseover', function() {
+              marker._icon.className = marker._icon.className.replace('darkblue', 'darkred');
+            });
+            data.img.on('mouseout', function() {
+              marker._icon.className = marker._icon.className.replace('darkred', 'darkblue');
+            });
+            bounds.push(marker.getLatLng());
+            return marker;
+          });
+          this.sideMapView.setMarkers(markers);
+          this.sideMapView.fitBounds(bounds);
         },
         updateSizes: function() {
           this.margin = 5;

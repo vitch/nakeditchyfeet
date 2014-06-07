@@ -14,7 +14,7 @@
 		{% for photo in photos %}
 			<li>
 				<a href="{{ photo.id }}.html">
-					<img src="{{ photo.listPageUrl }}" data-h="{{ photo.listPageHeight }}" data-w="{{ photo.listPageWidth }}" alt="{{photo.title}}" title="{{photo.title}}">
+					<img src="{{ photo.listPageUrl }}" data-h="{{ photo.listPageHeight }}" data-w="{{ photo.listPageWidth }}" data-geo="{{ photo.geo }}" alt="{{photo.title}}" title="{{photo.title}}">
 				</a>
 			</li>
 		{% endfor %}

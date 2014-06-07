@@ -25,10 +25,10 @@ define(
       var homeView = new HomeView({sideMapView:sideMapView});
       var postView = new PostView({sideMapView:sideMapView});
       var photoView = new PhotoView({sideMapView:sideMapView});
+      var photoSetView = new PhotoSetView({sideMapView:sideMapView});
       var mapView = new MapView({
         mapItems: new MapItemsCollection()
       });
-      var photoSetView = new PhotoSetView();
     });
   }
 );

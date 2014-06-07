@@ -32,11 +32,15 @@ module.exports = function () {
       pages.push(page);
       photosetData.photos.forEach(function(photo, i) {
         var hasLarger = !!photo.url_c;
+
+        // Default to the photoset's position if there is no position for the photo. Good idea?
+        photo.geo = photo.geo_is_public ? photo.latitude + ',' + photo.longitude : photosetData.latitude + ',' + photosetData.longitude; 
+
         var photoPage = new Page('/photos/' + photoset.id + '/' + photo.id + '.html', {
           template: 'photo.html',
           templateData: {
             title: photoset.title + ': ' + photo.title,
-            geo: photo.geo_is_public ? photo.latitude + ',' + photo.longitude : photosetData.latitude + ',' + photosetData.longitude, // Default to the photoset's position if there is no position for the photo. Good idea?
+            geo: photo.geo,
             photoset: photosetData,
             photoUrl: hasLarger ? photo.url_c : photo.url_z,
             photoId: photo.id,
