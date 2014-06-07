@@ -1,0 +1,14 @@
+{
+  "template": "blog-post.html",
+  "templateData": {
+    "title": "One year on the road",
+    "author": "Kelvin Luck",
+    "metaDescription": "",
+    "date": "2014-04-16",
+    "headerImage": "us.jpg",
+    "content": "index.md",
+    "latitude": 0.3839569,
+    "longitude": -90.4513206,
+    "tags": ["retrospective", "fiji", "hawaii", "lombok", "indonesia", "new zealand", "galapagos"]
+  }
+}

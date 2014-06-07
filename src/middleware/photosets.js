@@ -10,7 +10,7 @@ module.exports = function () {
     async.each(photosets, function (photoset, cb) {
       var photosetData = grunt.file.readJSON('src/data/photos/' + photoset.id + '.json');
       var lastPhoto = photosetData.photos[photosetData.photos.length - 1];
-      photosetData.date = lastPhoto.datetaken; // TODO: Don't presume the last in the set is the oldest?
+      photosetData.date = lastPhoto.datetaken.substr(0, 10); // TODO: Don't presume the last in the set is the oldest?
       var averageLocationData = photosetData.photos.reduce(function(memo, photo) {
         if (photo.geo_is_public) {
           memo.num ++;
