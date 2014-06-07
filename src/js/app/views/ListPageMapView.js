@@ -8,6 +8,7 @@ define(
     return Backbone.View.extend(
       {
         initialize: function (options) {
+            return;
             this.initMap(this.$el.data('airports'));
         },
         initMap: function (airports) {
