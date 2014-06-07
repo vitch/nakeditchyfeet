@@ -13,11 +13,13 @@ define(
           if (this.$el.length) {
             this.$('nav a').tooltip({ placement:'bottom' });
 
+            var img = this.$('a img');
+
             this.sideMapView = options.sideMapView;
             var marker = L.marker(
                       this.$el.data('geo').split(','),
                       {
-                        title: this.$('a img').attr('title'),
+                        title: img.attr('title'),
                         icon: L.AwesomeMarkers.icon({
                           icon: 'camera-retro',
                           prefix: 'nif-icon',
@@ -28,6 +30,12 @@ define(
                     );
 
             this.sideMapView.setMarker(marker);
+
+            // Hacky way to make the height correct once the image has loaded and we know how tall it is.
+            // There must be a better way?
+            img.on('load', function() {
+              $(window).trigger('resize');
+            });
           }
         }
       }
