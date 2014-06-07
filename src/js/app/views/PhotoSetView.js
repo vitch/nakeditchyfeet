@@ -28,7 +28,6 @@ define(
           }
         },
         initMap: function() {
-          var bounds = [];
           var markers = _.map(this.imageData, function(data) {
             var marker = L.marker(
               data.latLng,
@@ -59,11 +58,9 @@ define(
             data.img.on('mouseout', function() {
               marker._icon.className = marker._icon.className.replace('darkred', 'darkblue');
             });
-            bounds.push(marker.getLatLng());
             return marker;
           });
           this.sideMapView.setMarkers(markers);
-          this.sideMapView.fitBounds(bounds);
         },
         updateSizes: function() {
           this.margin = 5;

@@ -48,20 +48,17 @@ define(
               $li.addClass('is-in-view');
             });
             var stripSpace = /[\t|\n]/g;
-            var markers = [];
-            var bounds = this.$('>li.is-in-view').map(function() {
+            var markers = this.$('>li.is-in-view').map(function() {
               var $li = $(this);
               var domData = $li.data();
               if (!domData.marker) {
                 var icon = $li.find('>.nif-icon').attr('class').split(' ')[1];
                 var title = $li.find('h1').text().replace(stripSpace, '');
                 var marker;
-                var bounds;
                 var link;
                 switch (icon) {
                   case 'nif-icon-plane':
                     marker = new FlightPolyline({airports: $li.find('.list-page-map').data().airports, noPlaneMarkers: true});
-                    bounds = marker.getBounds();
                     break;
                   case 'nif-icon-book':
                   case 'nif-icon-info-circle':
@@ -95,7 +92,6 @@ define(
                     $li.on('mouseout', function() {
                       marker._icon.className = marker._icon.className.replace('darkred', 'darkblue');
                     });
-                    bounds = marker.getLatLng();
                 }
                 if (link) {
                   marker.on('click', function() {
@@ -103,13 +99,11 @@ define(
                   });
                 }
                 $li.data('marker', marker);
-                $li.data('bounds', bounds);
+                domData.marker = marker;
               }
-              markers.push(domData.marker);
-              return domData.bounds;
+              return domData.marker;
             }).get();
             this.sideMapView.setMarkers(markers);
-            this.sideMapView.fitBounds(bounds);
           }
         },
         initFilters: function() {

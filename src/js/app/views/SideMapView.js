@@ -34,7 +34,7 @@ define(
             trackResize: false,
             keyboard: false,
             zoomControl: false,
-            maxZoom: 6
+            maxZoom: 11
           });
 
           L.tileLayer(
@@ -60,17 +60,18 @@ define(
         },
         setMarkers: function(markers) {
           this.stuffLayer.clearLayers();
+          var bounds = [];
           _.each(markers, function(m) {
             this.stuffLayer.addLayer(m);
+            bounds.push(_.isFunction(m.getBounds) ? m.getBounds() : m.getLatLng());
           }, this);
+          this.leafletMap.fitBounds(L.latLngBounds(bounds));
+          this.initTooltips();
         },
         setMarker: function(marker, zoom) {
           this.stuffLayer.clearLayers();
           this.stuffLayer.addLayer(marker);
           this.leafletMap.setView(marker.getLatLng(), zoom || 5);
-        },
-        fitBounds: function(bounds) {
-          this.leafletMap.fitBounds(bounds);
           this.initTooltips();
         },
         sizeMap: function() {
