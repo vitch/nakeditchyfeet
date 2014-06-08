@@ -352,10 +352,9 @@ img {
 
 .photoset {
 	@photosetPadding: 2px;
-	@photoHeight: 150px;
 	overflow: hidden;
 	margin: 0 0 10px;
-	height: @photoHeight * 2;
+	height: 160px;
 
 	div {
 		background-size: cover;
@@ -364,17 +363,36 @@ img {
 		.box-sizing(border-box);
 		margin: 0 @photosetPadding @photosetPadding 0;
 		float: left;
-		height: 50%;
-
-		&.big {
+		height: 100%;
+		width: 100%;
+		
+	}
+	@media (min-width: 500px) {
+		.big {
 			width: 48%;
 			width: calc(~"50% - " (2 * @photosetPadding));
-			height: 100%;
 		}
-		&.small {
+		.small {
 			width: 25%;
 			width: calc(~"25% - " @photosetPadding);
+			height: 50%;
 		}
+	}
+
+	@media (min-width: 530px) {
+		height: 180px;
+	}
+
+	@media (min-width: 600px) {
+		height: 210px;
+	}
+
+	@media (min-width: 750px) {
+		height: 250px;
+	}
+
+	@media (min-width: 830px) {
+		height: 300px;
 	}
 
 	// &.side-1 {
