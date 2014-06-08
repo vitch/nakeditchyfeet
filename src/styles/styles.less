@@ -355,6 +355,7 @@ img {
 	@photoHeight: 150px;
 	overflow: hidden;
 	margin: 0 0 10px;
+	height: @photoHeight * 2;
 
 	div {
 		background-size: cover;
@@ -363,12 +364,12 @@ img {
 		.box-sizing(border-box);
 		margin: 0 @photosetPadding @photosetPadding 0;
 		float: left;
-		height: @photoHeight;
+		height: 50%;
 
 		&.big {
 			width: 48%;
 			width: calc(~"50% - " (3 * @photosetPadding)); // Not sure why it has to be 3* rather than 2*!
-			height: @photoHeight * 2 + @photosetPadding;
+			height: 100%;
 		}
 		&.small {
 			width: 25%;
