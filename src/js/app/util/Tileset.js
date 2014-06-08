@@ -57,10 +57,10 @@ define([], function() {
     })
   };
 
-  return tiles.mapboxNIF;
+  // return tiles.mapboxNIF;
   // return tiles.thunderforestLandscape;
   // return tiles.thunderforestOutdoors;
-  // return tiles.stamenWatercolor;
+  return tiles.stamenWatercolor;
   // return tiles.esriWorldPhysical;
   // return tiles.esriWorldTopoMap;
   // return tiles.esriWorldImagery;
