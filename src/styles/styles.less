@@ -352,19 +352,27 @@ img {
 
 .photoset {
 	@photosetPadding: 2px;
+	@photoHeight: 150px;
 	overflow: hidden;
 	margin: 0 0 10px;
-	padding: 0 0 0 @photosetPadding;
-	.image-box-shadow();
 
-	img {
-		float: left;
-		margin: 0;
-		width: 150px;
-		max-width: 20%;
-		min-height: 45px;
+	div {
+		background-size: cover;
+		background-position: 50%;
+		background-repeat: no-repeat;
 		.box-sizing(border-box);
-		padding: @photosetPadding @photosetPadding @photosetPadding 0;
+		margin: 0 @photosetPadding @photosetPadding 0;
+		float: left;
+		height: @photoHeight;
+
+		&.big {
+			width: 48%;
+			width: calc(~"50% - " (3 * @photosetPadding)); // Not sure why it has to be 3* rather than 2*!
+			height: @photoHeight * 2 + @photosetPadding;
+		}
+		&.small {
+			width: 25%;
+		}
 	}
 }
 

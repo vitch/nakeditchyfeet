@@ -15,15 +15,17 @@
 				{% if child.hasLink %}</a>{% endif %}
 
 				{% if child.image -%}
-					{%- if child.image.join -%}
-						<div class="photoset">
-							{% for thumb in child.image %}
-								<img src="{{ thumb.url_q }}" alt="{{ thumb.title }}">
-							{% endfor %}
-						</div>
-					{%- else -%}
 					<img src="{{ page|relativePath(child.target) }}{{ child.image }}" class="header-image" alt="{{ child.label }}">
-					{%- endif -%}
+				{% endif %}
+				{% if child.photosetData %}
+					<div class="photoset">
+						<div class="big" style="background-image: url({{ child.photosetData.big.url_m }});" title="{{ child.photosetData.big.title }}">
+						</div>
+						{% for thumb in child.photosetData.small %}
+							<div class="small" style="background-image: url({{ thumb.url_n }});" title="{{ thumb.title }}">
+							</div>
+						{% endfor %}
+					</div>
 				{% endif %}
 				{% if child.showMap %}
 					<div class="list-page-map" data-airports="{{ child.airports }}">

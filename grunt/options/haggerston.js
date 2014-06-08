@@ -42,13 +42,17 @@ var generatePhotosetPreview = function(page) {
     }
     return 0;
   }).slice(0, 5);
+  
   return {
     type: "photo",
     icon: "camera-retro",
     target: page,
     date: new Date(page.templateData.date),
     label: "New Photoset: " + page.templateData.title,
-    image: listPagePhotos,
+    photosetData: {
+      big: listPagePhotos[0],
+      small: listPagePhotos.slice(1,5)
+    },
     geo: page.templateData.latitude + ',' + page.templateData.longitude,
     hasLink: true
   }
