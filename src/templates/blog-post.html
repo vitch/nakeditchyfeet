@@ -8,9 +8,12 @@
 		<h1><i class="icon-camera-retro"></i> Photos</h1>
 		{% for photoset in pages|getPhotosetData(photosets) %}
 			<a href="{{ page|linkTo(photoset.target) }}">
-				<div class="photoset tt-trigger" title="{{ photoset.target.templateData.title }}">
-					{% for thumb in photoset.image %}
-					<img src="{{ thumb.url_q }}" alt="{{ thumb.title }}">
+				<div class="photoset side-{{ photoset.photosetData.side }} tt-trigger" title="{{ photoset.target.templateData.title }}">
+					<div class="big" style="background-image: url({{ photoset.photosetData.big.url_m }});" title="{{ photoset.photosetData.big.title }}">
+					</div>
+					{% for thumb in photoset.photosetData.small %}
+						<div class="small" style="background-image: url({{ thumb.url_n }});" title="{{ thumb.title }}">
+						</div>
 					{% endfor %}
 				</div>
 			</a>
