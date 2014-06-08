@@ -27,7 +27,8 @@ define(
               initTooltips = this.initTooltips;
 
           this.leafletMap = L.map(mapContainer, {
-            minZoom: 2
+            minZoom: Tileset.options.minZoom || 2,
+            maxZoom: Tileset.options.maxZoom || null
           }).fitWorld();
 
           Tileset.addTo(this.leafletMap);

@@ -36,7 +36,8 @@ define(
               trackResize: false,
               keyboard: false,
               zoomControl: false,
-              maxZoom: 11
+              minZoom: Tileset.options.minZoom || null,
+              maxZoom: Tileset.options.maxZoom ? Math.min(Tileset.options.maxZoom, 11) : 11
             };
 
             if (options.marker) {
