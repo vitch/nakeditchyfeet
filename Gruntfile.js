@@ -23,8 +23,7 @@ module.exports = function(grunt) {
     'vendor/leaflet-dist/leaflet-src.js',
     'vendor/leaflet.markercluster/dist/leaflet.markercluster-src.js',
     'vendor/Leaflet.awesome-markers/dist/leaflet.awesome-markers.js',
-    'vendor/bootstrap/js/tooltip.js',
-    'vendor/enquire/dist/enquire.js'
+    'vendor/bootstrap/js/tooltip.js'
   ];
 
 
