@@ -368,13 +368,20 @@ img {
 
 		&.big {
 			width: 48%;
-			width: calc(~"50% - " (3 * @photosetPadding)); // Not sure why it has to be 3* rather than 2*!
+			width: calc(~"50% - " (2 * @photosetPadding));
 			height: 100%;
 		}
 		&.small {
 			width: 25%;
+			width: calc(~"25% - " @photosetPadding);
 		}
 	}
+
+	// &.side-1 {
+	// 	div {
+	// 		float: right;
+	// 	}
+	// }
 }
 
 header.content-header {

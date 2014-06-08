@@ -31,7 +31,7 @@ var listFilterOptions = [
   }
 ];
 
-var generatePhotosetPreview = function(page) {
+var generatePhotosetPreview = function(page, i) {
   var findListPagePhotosRegExp = new RegExp('nif:list_?page=1'); // Allow nif:list_page=1 and nif:listpage=1
   var listPagePhotos = page.templateData.photos.concat().sort(function(a, b) {
     if (a.machine_tags.match(findListPagePhotosRegExp)) {
@@ -42,7 +42,7 @@ var generatePhotosetPreview = function(page) {
     }
     return 0;
   }).slice(0, 5);
-  
+
   return {
     type: "photo",
     icon: "camera-retro",
@@ -51,7 +51,8 @@ var generatePhotosetPreview = function(page) {
     label: "New Photoset: " + page.templateData.title,
     photosetData: {
       big: listPagePhotos[0],
-      small: listPagePhotos.slice(1,5)
+      small: listPagePhotos.slice(1,5),
+      side: i%2
     },
     geo: page.templateData.latitude + ',' + page.templateData.longitude,
     hasLink: true
