@@ -13,6 +13,9 @@ define(
         events: {
         },
         initialize: function (options) {
+          this.fitBoundsParams = {
+            padding: [20, 20]
+          };
         },
         initMap: function (options) {
 
@@ -60,7 +63,7 @@ define(
             if (options.markers) {
               this.leafletMap.fitBounds(_.map(options.markers, function(marker) {
                 return _.isFunction(marker.getBounds) ? marker.getBounds() : marker.getLatLng();
-              }))
+              }), this.fitBoundsParams)
             }
 
             this.initTooltips();
@@ -80,7 +83,7 @@ define(
             this.containerLayer.addLayer(m);
             bounds.push(_.isFunction(m.getBounds) ? m.getBounds() : m.getLatLng());
           }, this);
-          this.leafletMap.fitBounds(bounds);
+          this.leafletMap.fitBounds(bounds, this.fitBoundsParams);
           this.initTooltips();
         },
         sizeMap: function() {
