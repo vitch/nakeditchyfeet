@@ -54,9 +54,11 @@ define(
             });
             data.img.on('mouseover', function() {
               marker._icon.className = marker._icon.className.replace('darkblue', 'darkred');
+              marker.setZIndexOffset(1000);
             });
             data.img.on('mouseout', function() {
               marker._icon.className = marker._icon.className.replace('darkred', 'darkblue');
+              marker.setZIndexOffset(0);
             });
             return marker;
           });
