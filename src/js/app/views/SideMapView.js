@@ -13,18 +13,23 @@ define(
         events: {
         },
         initialize: function (options) {
-          this.fitBoundsParams = {
-            padding: [20, 20]
-          };
+          if (this.$el.length) {
+
+            _.bindAll(this, 'handleResize');
+
+            this.fitBoundsParams = {
+              padding: [20, 20]
+            };
+
+            $(window).on('resize', _.throttle(this.handleResize, 200, {leading: false}));
+          }
         },
         initMap: function (options) {
 
           if (this.$el.length) {
 
             options = _.extend({}, options, { zoom: 6})
-
-            _.bindAll(this, 'sizeMap');
-            this.sizeMap();
+            this.handleResize();
 
             var mapContainer = this.$el.empty()[0];
 
@@ -58,8 +63,6 @@ define(
 
             Tileset.addTo(this.leafletMap);
 
-            $(window).on('resize', _.throttle(this.sizeMap, 200, {leading: false}));
-
             if (options.markers) {
               this.leafletMap.fitBounds(_.map(options.markers, function(marker) {
                 return _.isFunction(marker.getBounds) ? marker.getBounds() : marker.getLatLng();
@@ -86,16 +89,32 @@ define(
           this.leafletMap.fitBounds(bounds, this.fitBoundsParams);
           this.initTooltips();
         },
-        sizeMap: function() {
+        handleResize: function() {
           var siteContent = $('#site-content').height('auto');
           var siteContentHeight = siteContent.height();
+          var siteContentWidth;
+          var siteContentLeftMargin = parseInt(siteContent.css('marginLeft'));
           var win = $(window);
           var windowHeight = win.innerHeight();
           var windowWidth = win.innerWidth();
-          var w = siteContent.outerWidth() + parseInt(siteContent.css('marginLeft'));
-          if (siteContentHeight < windowHeight) {
-            siteContent.css('height', windowHeight + 'px');
+
+          var availableWidth = windowWidth - siteContentLeftMargin;
+          if (availableWidth < 850) {
+            siteContentWidth = availableWidth;
+          } else {
+            siteContentWidth = Math.min(Math.max(availableWidth * .7, 650), 900);
           }
+
+          var siteContentParams = {
+            width: siteContentWidth
+          };
+
+          var w = siteContentWidth + siteContentLeftMargin;
+          if (siteContentHeight < windowHeight) {
+            siteContentParams.height = windowHeight;
+          }
+          siteContent.css(siteContentParams);
+
           this.$el.css({
             height: windowHeight,
             width: windowWidth - w,
