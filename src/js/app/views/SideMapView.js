@@ -17,16 +17,25 @@ define(
 
             _.bindAll(this, 'handleResize');
 
+            this.isMapShown = false;
+
             this.fitBoundsParams = {
               padding: [20, 20]
             };
 
             $(window).on('resize', _.throttle(this.handleResize, 200, {leading: false}));
+
+            this.handleResize();
           }
         },
         initMap: function (options) {
 
           if (this.$el.length) {
+            
+            if (!this.isMapShown) {
+              this.initMapOptions = options || {};
+              return;
+            }
 
             options = _.extend({}, options, { zoom: 6})
             this.handleResize();
@@ -59,6 +68,10 @@ define(
               mapOptions.layers = [this.containerLayer]
             }
 
+            if (options.updatedMarkers) {
+              this.updateMarkers(options.updatedMarkers);
+            }
+
             this.leafletMap = L.map(mapContainer, mapOptions);
 
             Tileset.addTo(this.leafletMap);
@@ -80,6 +93,10 @@ define(
           });
         },
         updateMarkers: function(markers) {
+          if (this.initMapOptions) {
+            this.initMapOptions.updatedMarkers = markers;
+            return;
+          }
           this.containerLayer.clearLayers();
           var bounds = [];
           _.each(markers, function(m) {
@@ -97,10 +114,12 @@ define(
           var win = $(window);
           var windowHeight = win.innerHeight();
           var windowWidth = win.innerWidth();
+          var isMapShown = true;
 
           var availableWidth = windowWidth - siteContentLeftMargin;
           if (availableWidth < 850) {
             siteContentWidth = availableWidth;
+            isMapShown = false;
           } else {
             siteContentWidth = Math.min(Math.max(availableWidth * .7, 650), 900);
           }
@@ -120,7 +139,16 @@ define(
             width: windowWidth - w,
             left: w
           });
-          if (this.leafletMap) {
+
+          if (isMapShown && !this.isMapShown) {
+            this.isMapShown = isMapShown;
+            if (this.initMapOptions) {
+              this.initMap(this.initMapOptions);
+              this.initMapOptions = false;
+            }
+          }
+
+          if (isMapShown && this.leafletMap) {
             this.leafletMap.invalidateSize(false);
             this.trigger('mapSized');
           }
