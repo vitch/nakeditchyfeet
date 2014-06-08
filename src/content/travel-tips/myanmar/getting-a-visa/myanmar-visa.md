@@ -1,6 +1,6 @@
 Our decision to [visit Myanmar](/blog/myanmar/into-the-south/) was a bit last minute and we were already in Thailand so we needed to get our hands on a Myanmar visa whilst in Bangkok. This turned out to be pretty easy but we did have to do a bit of searching around to find out how to get to the embassy and what we needed to bring. Hopefully the information below will help others out...
 
-The {{ "Myanmar Embassy"|geoLink(13.72077,100.52449)|raw }} is in the Silom district of Bangkok (just down the road from the [robot building](http://www.flickr.com/photos/vitch/8709491872/in/set-72157633405886159)). It is between two stations on the MRT (skytrain): Chong Nonsi (S3) and Surasak (S5) - Surasak is marginally closer. The embassy is open on weekdays from 11:00 - 13:00 for applying and dropping off your passport and from 15:00 - 17:00 for collecting your passport with it's shiny new visa.
+The {{ "Myanmar Embassy"|geoLink(13.72077,100.52449)|raw }} is in the Silom district of Bangkok (just down the road from the [robot building](/photos/72157633405886159/8703456827.html)). It is between two stations on the MRT (skytrain): Chong Nonsi (S3) and Surasak (S5) - Surasak is marginally closer. The embassy is open on weekdays from 11:00 - 13:00 for applying and dropping off your passport and from 15:00 - 17:00 for collecting your passport with it's shiny new visa.
 
 To submit your visa application you need 5 things:
 
