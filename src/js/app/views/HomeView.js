@@ -85,11 +85,13 @@ define(
                     $li.on('mouseover', function() {
                       if (marker._icon) { // FIXME: This is for if the map isn't shown. A bit messy tho
                         marker._icon.className = marker._icon.className.replace('darkblue', 'darkred');
+                        marker.setZIndexOffset(1000);
                       }
                     });
                     $li.on('mouseout', function() {
                       if (marker._icon) {
                         marker._icon.className = marker._icon.className.replace('darkred', 'darkblue');
+                        marker.setZIndexOffset(0);
                       }
                     });
                 }
