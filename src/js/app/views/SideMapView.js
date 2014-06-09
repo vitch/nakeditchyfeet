@@ -109,20 +109,12 @@ define(
         handleResize: function() {
           var siteContent = $('#site-content').height('auto');
           var siteContentHeight = siteContent.height();
-          var siteContentWidth;
+          var siteContentWidth = siteContent.width();
           var siteContentLeftMargin = parseInt(siteContent.css('marginLeft'));
           var win = $(window);
           var windowHeight = win.innerHeight();
           var windowWidth = win.innerWidth();
-          var isMapShown = true;
-
-          var availableWidth = windowWidth - siteContentLeftMargin;
-          if (availableWidth < 850) {
-            siteContentWidth = availableWidth;
-            isMapShown = false;
-          } else {
-            siteContentWidth = Math.min(Math.max(availableWidth * .7, 650), 860);
-          }
+          var isMapShown = this.$el.css('display') === 'block';
 
           var w = siteContentWidth + siteContentLeftMargin;
           if (siteContentHeight < windowHeight) {

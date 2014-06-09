@@ -596,6 +596,7 @@ header.content-header {
 // Side map stuff
 
 #side-map {
+	display: none;
 	position: fixed;
 	z-index: 9;
 	top: 0;
@@ -604,7 +605,9 @@ header.content-header {
 	.js & {
 		.map-bg-gradient;
 	}
-
+	@media (min-width: 850px) {
+		display: block;
+	}
 }
 
 // Map stuff
