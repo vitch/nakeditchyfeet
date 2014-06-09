@@ -109,7 +109,7 @@ define(
         handleResize: function() {
           var siteContent = $('#site-content').height('auto');
           var siteContentHeight = siteContent.height();
-          var siteContentWidth = siteContent.width();
+          var siteContentWidth = siteContent.outerWidth();
           var siteContentLeftMargin = parseInt(siteContent.css('marginLeft'));
           var win = $(window);
           var windowHeight = win.innerHeight();
