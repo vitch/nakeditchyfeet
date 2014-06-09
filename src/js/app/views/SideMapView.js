@@ -121,7 +121,7 @@ define(
             siteContentWidth = availableWidth;
             isMapShown = false;
           } else {
-            siteContentWidth = Math.min(Math.max(availableWidth * .7, 650), 900);
+            siteContentWidth = Math.min(Math.max(availableWidth * .7, 650), 860);
           }
 
           var siteContentParams = {
