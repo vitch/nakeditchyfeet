@@ -361,7 +361,7 @@ img {
 		background-position: 50%;
 		background-repeat: no-repeat;
 		.box-sizing(border-box);
-		margin: 0 @photosetPadding @photosetPadding 0;
+		border-bottom: @photosetPadding solid #fff;
 		float: left;
 		height: 100%;
 		width: 100%;
@@ -369,13 +369,12 @@ img {
 	}
 	@media (min-width: 500px) {
 		.big {
-			width: 48%;
-			width: calc(~"50% - " (2 * @photosetPadding));
+			width: 50%;
 		}
 		.small {
 			width: 25%;
-			width: calc(~"25% - " @photosetPadding);
 			height: 50%;
+			border-left: @photosetPadding solid #fff;
 		}
 	}
 
