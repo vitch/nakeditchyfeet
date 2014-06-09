@@ -124,15 +124,10 @@ define(
             siteContentWidth = Math.min(Math.max(availableWidth * .7, 650), 860);
           }
 
-          var siteContentParams = {
-            width: siteContentWidth
-          };
-
           var w = siteContentWidth + siteContentLeftMargin;
           if (siteContentHeight < windowHeight) {
-            siteContentParams.height = windowHeight;
+            siteContent.css({height:windowHeight});
           }
-          siteContent.css(siteContentParams);
 
           this.$el.css({
             height: windowHeight,

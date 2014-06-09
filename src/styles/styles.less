@@ -221,9 +221,14 @@ img {
 
 #site-content {
 	margin: 0 0 0 @sidenav-width-closed;
+
+	.box-sizing(border-box);
+	max-width: 860px;
+	width: auto;
+
 	background: #fff;
 	padding: 30px;
-	position: relative;
+	position: relative; // For the drop shadow... Will it hurt performance?
 	z-index: 10;
 
 	.transition(margin-left @sidenav-transition-duration @sidenav-transition-easing);
@@ -233,9 +238,6 @@ img {
 	#map-page & {
 		padding: 0;
 	}
-
-	.box-sizing(border-box);
-	max-width: 860px;
 	.js & {
 		.box-shadow(4px 0 5px rgba(0, 0, 0, 0.4));
 	}
@@ -269,6 +271,14 @@ img {
 		.active-marker {
 			left: @sidenav-width-open;
 		}
+	}
+
+	@media (min-width: 850px) {
+		width: 70%;
+	}
+
+	@media (min-width: 1228px) {
+		width: 860px;
 	}
 }
 #map-page #site-content {
