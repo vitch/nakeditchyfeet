@@ -54,13 +54,16 @@ define([], function() {
       subdomains: '0123',
       minZoom: 2,
       maxZoom: 18
+    }),
+    openStreetMapHot: L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
     })
   };
 
   // return tiles.mapboxNIF;
   // return tiles.thunderforestLandscape;
   // return tiles.thunderforestOutdoors;
-  return tiles.stamenWatercolor;
+  // return tiles.stamenWatercolor;
   // return tiles.esriWorldPhysical;
   // return tiles.esriWorldTopoMap;
   // return tiles.esriWorldImagery;
@@ -68,6 +71,7 @@ define([], function() {
   // return tiles.esriNatGeo;
   // return tiles.acetateTerrain;
   // return tiles.acetateAll;
+  return tiles.openStreetMapHot;
 
 
 });
