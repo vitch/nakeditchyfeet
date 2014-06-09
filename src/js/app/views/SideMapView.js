@@ -44,18 +44,23 @@ define(
 
             var mapOptions = {
               animate: true,
-              dragging: false,
-              touchZoom: false,
-              scrollWheelZoom: false,
-              doubleClickZoom: false,
-              boxZoom: false,
-              tap: false,
-              trackResize: false,
-              keyboard: false,
-              zoomControl: false,
               minZoom: Tileset.options.minZoom || null,
               maxZoom: Tileset.options.maxZoom ? Math.min(Tileset.options.maxZoom, 11) : 11
             };
+
+            if (options.preventZoom) {
+              _.extend(mapOptions, {
+                dragging: false,
+                touchZoom: false,
+                scrollWheelZoom: false,
+                doubleClickZoom: false,
+                boxZoom: false,
+                tap: false,
+                trackResize: false,
+                keyboard: false,
+                zoomControl: false,
+              });
+            }
 
             if (options.marker) {
               mapOptions.layers = [options.marker];

@@ -19,7 +19,7 @@ define(
 
             _.bindAll(this, 'updateMap');
             this.sideMapView = options.sideMapView;
-            this.sideMapView.initMap();
+            this.sideMapView.initMap({preventZoom:true});
 
             this.sideMapView.on('mapSized', this.updateMap);
             $(document).bind('scroll', _.throttle(this.updateMap, 400, {leading: false}));
