@@ -10,6 +10,14 @@ define([], function() {
         attribution: '<a href="http://mapbox.com/about/maps" target="_blank">&copy; Mapbox &copy; OpenStreetMap</a>'
       }
     ),
+    mapboxLeigh: L.tileLayer(
+      'http://{s}.tiles.mapbox.com/v3/{user}.{map}/{z}/{x}/{y}.png',
+      {
+        user: 'nakeditchyfeet',
+        map: 'iff212lb',
+        attribution: '<a href="http://mapbox.com/about/maps" target="_blank">&copy; Mapbox &copy; OpenStreetMap</a>'
+      }
+    ),
     // Thunderforest.Landscape (from http://leaflet-extras.github.io/leaflet-providers/preview/index.html)
     thunderforestLandscape: L.tileLayer('http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
@@ -72,6 +80,7 @@ define([], function() {
   // return tiles.acetateTerrain;
   // return tiles.acetateAll;
   return tiles.openStreetMapHot;
+  // return tiles.mapboxLeigh;
 
 
 });
