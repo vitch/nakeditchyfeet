@@ -104,7 +104,8 @@ img {
 	color: @sidenav-color;
 	overflow: hidden;
 	// border-right: 1px solid #fff;
-	z-index: 1001;
+
+	z-index: 3;
 	background: @sidenav-bg-color;
 	.box-sizing(border-box);
 	.transition(width @sidenav-transition-duration @sidenav-transition-easing);
@@ -229,8 +230,6 @@ img {
 
 	background: #fff;
 	padding: 30px;
-	position: relative; // For the drop shadow... Will it hurt performance?
-	z-index: 10;
 
 	.transition(margin-left @sidenav-transition-duration @sidenav-transition-easing);
 
@@ -276,6 +275,8 @@ img {
 
 	@media (min-width: 850px) {
 		width: 70%;
+		position: relative; // For the drop shadow... Will it hurt performance?
+		z-index: 10;
 		#map-page & {
 			width: auto;
 		}
