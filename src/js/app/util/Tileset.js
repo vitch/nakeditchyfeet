@@ -79,8 +79,8 @@ define([], function() {
   // return tiles.esriNatGeo;
   // return tiles.acetateTerrain;
   // return tiles.acetateAll;
-  return tiles.openStreetMapHot;
-  // return tiles.mapboxLeigh;
+  // return tiles.openStreetMapHot;
+  return tiles.mapboxLeigh;
 
 
 });
