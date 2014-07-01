@@ -51,6 +51,6 @@ So we will be heading back home to the UK where I have already spoken to my GP t
 
  This doesn't mean we are putting a full stop on this trip though! There is some tripping around Europe we'd like to do this summer and who knows  - maybe we'll even make it back out here to finish the South American leg of our journey. 
 
- Coming home also doesn't mean the end for this blog - in fact far from it. We have a massive backlog of stuff to post and hopefully in the UK we'll have the time and the internet speed to catch up so do [follow us](#) to see where we've been and what we've been up to!
+ Coming home also doesn't mean the end for this blog - in fact far from it. We have a massive backlog of stuff to post and hopefully in the UK we'll have the time and the internet speed to catch up so do [follow us](/follow-us/) to see where we've been and what we've been up to!
 
 We are gutted to be leaving Brazil before we've even got started - especially since it was one of the main destinations of our trip - **and** while the world cup is on too! But it's actually quite exciting to think about being back in London. Fourteen months is a long time to have been on the road and of course we miss all of our friends and family back there immensely. Plus we've already started dreaming about all the different foods we're going to eat when we get back - who's up for a kebab at Cirrik soon?
