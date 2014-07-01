@@ -1,0 +1,13 @@
+{
+  "template": "blog-post.html",
+  "templateData": {
+    "title": "An unexpected change of plan",
+    "headerImage": "CT_me.jpg",
+    "author": "Kelvin Luck",
+    "date": "2014-06-12",
+    "content": "index.md",
+    "latitude": -1.4505372, 
+    "longitude": -48.4940447,
+    "tags": ["brazil", "cancer", "insurance"]
+  }
+}
