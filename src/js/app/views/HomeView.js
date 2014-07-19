@@ -48,13 +48,18 @@ define(
               var $li = $(this);
               var domData = $li.data();
               if (!domData.marker) {
-                var icon = $li.find('>.nif-icon').attr('class').split(' ')[1];
+                var icon = $li.find('>.nif-icon');
+                if (icon.length) {
+                  icon = icon.attr('class').split(' ')[1];
+                } else {
+                  icon = 'nif-icon-plane';
+                }
                 var title = $li.find('h1').text().replace(stripSpace, '');
                 var marker;
                 var link;
                 switch (icon) {
                   case 'nif-icon-plane':
-                    marker = new FlightPolyline({airports: $li.find('.list-page-map').data().airports, noPlaneMarkers: true});
+                    marker = new FlightPolyline({airports: $li.find('.boarding-pass').data().airports, noPlaneMarkers: true});
                     break;
                   case 'nif-icon-book':
                   case 'nif-icon-info-circle':
