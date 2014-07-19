@@ -11,39 +11,23 @@ define(
 
     var planeIcon = L.divIcon({className:'map-marker-airplane', iconSize: [30, 30], html: '<span class="nif-icon nif-icon-plane"></span>'});
 
-    var FlightPolyLine = L.FeatureGroup.extend({
+    var FlightPolyLine = L.GeoJSON.extend({
       initialize: function(options) {
-        this._layers = {};
 
         var airportCoordinates = options.airports.split('||').map(function(a) {
           var latLng = a.split('|')[1].split(',')
-          return new L.LatLng(latLng[0], latLng[1]);
+          return {x: latLng[1], y:latLng[0]};
         });
-        this.addLayer(L.polyline(airportCoordinates, {color: '#000', weight: 2, dashArray: '3,3'}));
+        var generator = new arc.GreatCircle(airportCoordinates[0], airportCoordinates[1], {name: 'HELLO!'});
+        var line = generator.Arc(100, {offset: 10});
+        console.log(line.json());
 
-        if (options.noPlaneMarkers) {
-          this.planeMarkers = [];
-        } else {
-          this.planeMarkers = _.range(airportCoordinates.length - 1).map(function(i) {
-            var points = [airportCoordinates[i], airportCoordinates[i+1]];
-            var segment = L.polyline(points);
-            var planeMarker = L.marker(segment.getBounds().getCenter(), {icon: planeIcon, clickable: false, points: points});
-            this.addLayer(planeMarker);
-            return planeMarker;
-          }, this);
-        }
-      },
-      onAdd: function(map) {
-        L.FeatureGroup.prototype.onAdd.call(this, map);
-        this.positionPlanes();
-      },
-      positionPlanes: function() {
-        var map = this._map;
-        this.planeMarkers.forEach(function(planeMarker) {
-          var points = planeMarker.options.points;
-          var lineAngle = computeAngle(map.latLngToLayerPoint(points[0]), map.latLngToLayerPoint(points[1]));
-          planeMarker._icon.firstChild.style[L.DomUtil.TRANSFORM] = 'rotate(' + (lineAngle + 45) + 'deg)';
-        });
+
+        L.setOptions(this, options);
+
+        this._layers = {};
+
+        this.addData(line.json());
       }
     });
 
