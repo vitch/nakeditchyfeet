@@ -120,7 +120,8 @@ module.exports = function(grunt) {
             if (airportCode) {
               airports[airportCode] = {
                 lat: parts[6],
-                lng: parts[7]
+                lng: parts[7],
+                name: parts[1].replace(/"/g, '')
               };
             }
           });
@@ -128,8 +129,11 @@ module.exports = function(grunt) {
             item.date = new Date(item.date);
             item.hasLink = !!item.externalLink;
             if (item.icon === 'plane') {
-              item.showMap = true;
               item.type = 'flight';
+              item.journey = item.airports.split(',').map(function(code) {
+                return airports[code].name;
+              }).join(' - ');
+              item.destinationCode = item.airports.split(',').pop();
               item.airports = item.airports.split(',').map(function(code) {
                 return code + '|' + airports[code].lat + ',' + airports[code].lng;
               }).join('||');

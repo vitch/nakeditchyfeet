@@ -3,35 +3,46 @@
 <ul id="home-list">
 	{% for child in pagesToLoop %}
 		<li class="item-type-{{ child.type }}{% if child.hasLink %} has-link{% endif %}" data-geo="{{ child.geo }}">
-			<i class="nif-icon nif-icon-{{ child.icon }}"> </i>
-			<div class="item">
-				<time datetime="{{ child.date|date('Y-m-d') }}">{{ child.date|date('jS F Y') }}</time>
-				{% if child.target %}<a href="{{ page|linkTo(child.target) }}">{% endif %}
-				{% if child.externalLink %}<a href="{{ child.externalLink }}" target="_blank">{% endif %}
-					<h1>
-						{% if child.target.isDraft -%}<span>[Draft]</span> {% endif %}
-						{{ child.label|raw }}
-					</h1>
-				{% if child.hasLink %}</a>{% endif %}
+			{% if child.type == 'flight' %}
+				<div class="boarding-pass" data-airports="{{ child.airports }}">
+					<div class="lhs">
+						<p class="airline">{{child.airline}}</p>
+						<h1>{{ child.destinationCode }}</h1>
+						<p class="route" title="{{ child.journey }}">{{ child.journey }}</p>
+					</div>
+					<div class="rhs">
+						<time datetime="{{ child.date|date('Y-m-d') }}">{{ child.date|date('jS M Y') }}</time>
+						<p>Flight</p>
+						<p class="flight-no">{{child.flightNumber|raw}}</p>
+					</div>
+				</div>
+			{% else %}
+				<i class="nif-icon nif-icon-{{ child.icon }}"> </i>
+				<div class="item">
+					<time datetime="{{ child.date|date('Y-m-d') }}">{{ child.date|date('jS F Y') }}</time>
+					{% if child.target %}<a href="{{ page|linkTo(child.target) }}">{% endif %}
+					{% if child.externalLink %}<a href="{{ child.externalLink }}" target="_blank">{% endif %}
+						<h1>
+							{% if child.target.isDraft -%}<span>[Draft]</span> {% endif %}
+							{{ child.label|raw }}
+						</h1>
+					{% if child.hasLink %}</a>{% endif %}
 
-				{% if child.image -%}
-					<img src="{{ page|relativePath(child.target) }}{{ child.image }}" class="header-image" alt="{{ child.label }}">
-				{% endif %}
-				{% if child.photosetData %}
-					<div class="photoset side-{{ child.photosetData.side }}">
-						<div class="big" style="background-image: url({{ child.photosetData.big.url_m }});" title="{{ child.photosetData.big.title }}">
-						</div>
-						{% for thumb in child.photosetData.small %}
-							<div class="small" style="background-image: url({{ thumb.url_n }});" title="{{ thumb.title }}">
+					{% if child.image -%}
+						<img src="{{ page|relativePath(child.target) }}{{ child.image }}" class="header-image" alt="{{ child.label }}">
+					{% endif %}
+					{% if child.photosetData %}
+						<div class="photoset side-{{ child.photosetData.side }}">
+							<div class="big" style="background-image: url({{ child.photosetData.big.url_m }});" title="{{ child.photosetData.big.title }}">
 							</div>
-						{% endfor %}
-					</div>
-				{% endif %}
-				{% if child.showMap %}
-					<div class="list-page-map" data-airports="{{ child.airports }}">
-					</div>
-				{% endif %}
-			</div>
+							{% for thumb in child.photosetData.small %}
+								<div class="small" style="background-image: url({{ thumb.url_n }});" title="{{ thumb.title }}">
+								</div>
+							{% endfor %}
+						</div>
+					{% endif %}
+				</div>
+			{% endif %}
 		</li>
 	{% endfor %}
 </ul>
