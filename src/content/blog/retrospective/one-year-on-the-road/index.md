@@ -94,8 +94,8 @@ you will be missing some absolute jewels in the north!
 Mellow waves, warm sea, surf culture everywhere! Hawaii normally gets high marks for big wave and pro surfing but even 
 if you are a white water surfer or still finding your confidence to take it to the green stuff there are incredible spots. Just 
 ensure you take the surf seasons into account as the swell shifts from the north to the south in the spring and summer. Our favourite 
-spot is Hanelei Bay in the Garden Island of [Kauai](/photos/72157642751240453/), right next to the pier. Hawaiian locals can be a little (a lot!) territorial when 
-it comes to their waves, but in Hanelei there was none of that as there are plenty of more challenging breaks around for grumpy surfers.
+spot is Hanalei Bay in the Garden Island of [Kauai](/photos/72157642751240453/), right next to the pier. Hawaiian locals can be a little (a lot!) territorial when 
+it comes to their waves, but in Hanalei there was none of that as there are plenty of more challenging breaks around for grumpy surfers.
 
 
 ###Most surprising culture - Fiji

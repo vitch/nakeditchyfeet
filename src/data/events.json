@@ -199,6 +199,20 @@
     "icon": "dribbble",
     "label": "Brazil vs. Croatia - World cup opener",
     "geo": [-23.544495, -46.474175]
+  },
+  {
+    "date": "2014-07-01",
+    "icon": "plane",
+    "label": "<strong>REC - GRU</strong>",
+    "airports": "REC,GRU",
+    "airline": ""
+  },
+  {
+    "date": "2014-07-04",
+    "icon": "plane",
+    "label": "<strong>GRU - CMN - LHR</strong>",
+    "airports": "GRU,CMN,LHR",
+    "airline": ""
   }
 
 ]
