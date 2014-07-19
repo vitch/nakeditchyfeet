@@ -125,6 +125,7 @@ module.exports = function(grunt) {
               };
             }
           });
+          var count = 0;
           var events = _(grunt.file.readJSON('src/data/events.json')).map(function(item) {
             item.date = new Date(item.date);
             item.hasLink = !!item.externalLink;
@@ -134,6 +135,7 @@ module.exports = function(grunt) {
                 return airports[code].name;
               }).join(' - ');
               item.destinationCode = item.airports.split(',').pop();
+              item.className = 'color-' + (count++)%2;
               item.airports = item.airports.split(',').map(function(code) {
                 return code + '|' + airports[code].lat + ',' + airports[code].lng;
               }).join('||');

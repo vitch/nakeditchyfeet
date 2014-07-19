@@ -4,7 +4,7 @@
 	{% for child in pagesToLoop %}
 		<li class="item-type-{{ child.type }}{% if child.hasLink %} has-link{% endif %}" data-geo="{{ child.geo }}">
 			{% if child.type == 'flight' %}
-				<div class="boarding-pass" data-airports="{{ child.airports }}">
+				<div class="boarding-pass {{child.className}}" data-airports="{{ child.airports }}">
 					<div class="lhs">
 						<p class="airline">{{child.airline}}</p>
 						<h1>{{ child.destinationCode }}</h1>
