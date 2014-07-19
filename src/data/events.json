@@ -238,7 +238,7 @@
     "label": "<strong>BOG - LET</strong>",
     "airports": "BOG,LET",
     "airline": "LAN",
-    "flightNumber": "LA3114"
+    "flightNumber": "3114"
   },
   {
     "date": "2014-05-17 16:00",
@@ -252,7 +252,7 @@
     "label": "<strong>PLL - BEL</strong>",
     "airports": "PLL,BEL",
     "airline": "TAM",
-    "flightNumber": "JJ3741"
+    "flightNumber": "3741"
   },
   {
     "date": "2014-06-12",
