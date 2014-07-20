@@ -11,9 +11,12 @@ define(
 
           var siteContent = $('#site-content');
           this.$el.hover(function() {
-            siteContent.addClass('sidenav-hover');
+            siteContent.css({width: siteContent.outerWidth()}).addClass('sidenav-hover');
           }, function() {
             siteContent.removeClass('sidenav-hover');
+            setTimeout(function() {
+              siteContent.css({width: ''});
+            }, 300);
           });
 
           siteContent.prepend($('<span class="active-marker"></span>').css('top', $('#site-header a.active').position().top + 11));
