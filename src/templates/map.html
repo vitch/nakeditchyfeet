@@ -2,7 +2,15 @@
 {% block bodyContent %}
 
 <div id="map">
-	<p>Loading Map</p>
+	<div id="map-filter" class="leaflet-bottom leaflet-left">
+		<div class="leaflet-bar leaflet-control">
+			{% for control in options.listFilterOptions %}
+				<a href="#" title="{{control.description}}" data-filter="{{control.filter}}">
+					<i class="nif-icon nif-icon-{{control.icon}}"></i>
+				</a>
+			{% endfor %}
+		</div>
+	</div>
 </div>
 
 {% endblock %}

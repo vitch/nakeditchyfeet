@@ -1,9 +1,8 @@
 define(
   [
-    'views/ListFilterView',
     'util/FlightPolyline'
   ],
-  function (ListFilterView,FlightPolyline) {
+  function (FlightPolyline) {
     'use strict';
 
     return Backbone.View.extend(
@@ -14,8 +13,6 @@ define(
         },
         initialize: function (options) {
           if (this.$el.length) {
-
-            this.initFilters();
 
             _.bindAll(this, 'updateMap');
             this.sideMapView = options.sideMapView;
@@ -112,19 +109,6 @@ define(
             }).get();
             this.sideMapView.updateMarkers(markers);
           }
-        },
-        initFilters: function() {
-          this.listFilterView = new ListFilterView();
-          this.listFilterView.on('filterChange', _.bind(this.onFilterChange, this));
-        },
-        onFilterChange: function(filter) {
-          if (filter) {
-            this.$('>li').show().filter(':not(.item-type-' + filter + ')').hide();
-            this.nowMarker.show();
-          } else {
-            this.$('>li').show();
-          }
-          this.updateNowMarkerMargin(true);
         },
         onClickLi: function(e) {
           var link = $(e.currentTarget).find('a');

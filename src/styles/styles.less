@@ -572,7 +572,24 @@ header.content-header {
 #map {
 	width: 100%;
 	height: 200px;
+	position: relative;
+	height: 100%;
 	.map-bg-gradient;
+}
+
+#map-filter {
+	.leaflet-bar a {
+		width: 36px;
+		height: 36px;
+		font-size: 25px;
+		i {
+			margin: 4px 0 0;
+		}
+
+		&.active {
+			color: #f60;
+		}
+	}
 }
 
 #photoset {

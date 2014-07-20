@@ -1,10 +1,10 @@
 define(
   [
-    'views/ListFilterView',
+    'views/MapFilterView',
     'util/FlightPolyline',
     'util/Tileset'
   ],
-  function (ListFilterView, FlightPolyline, Tileset) {
+  function (MapFilterView, FlightPolyline, Tileset) {
     'use strict';
 
     return Backbone.View.extend(
@@ -23,7 +23,7 @@ define(
         },
         initMap: function () {
 
-          var mapContainer = this.$el.empty()[0],
+          var mapContainer = this.$el[0],
               initTooltips = this.initTooltips;
 
           this.leafletMap = L.map(mapContainer, {
@@ -99,8 +99,8 @@ define(
           this.initFilters();
         },
         initFilters: function() {
-          this.listFilterView = new ListFilterView();
-          this.listFilterView.on('filterChange', this.onFilterChange);
+          this.mapFilterView = new MapFilterView();
+          this.mapFilterView.on('filterChange', this.onFilterChange);
         },
         onFilterChange: function(filter) {
           this.mapItemClusters.addLayers(this.hiddenMarkers);

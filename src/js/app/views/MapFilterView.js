@@ -6,23 +6,22 @@ define(
 
     return Backbone.View.extend(
       {
-        el: '#list-filter',
+        el: '#map-filter',
         events: {
           'click a': 'onFilterClicked'
         },
         initialize: function (options) {
-          this.$el.fadeIn();
-          this.$('a').tooltip();
+          this.$('a').tooltip({placement: 'right'});
         },
         onFilterClicked: function(e) {
           var clicked = $(e.currentTarget);
           var chosenFilter = clicked.data('filter');
+          console.log(chosenFilter);
           this.trigger('filterChange', chosenFilter);
           this.$('a.active').removeClass('active');
           if (chosenFilter) {
             clicked.addClass('active');
           }
-          $('#site-header').removeClass('is-open');
           return false;
         }
       }
