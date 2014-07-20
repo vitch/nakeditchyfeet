@@ -20,7 +20,6 @@ define(
         });
         var generator = new arc.GreatCircle(airportCoordinates[0], airportCoordinates[1], {name: 'HELLO!'});
         var line = generator.Arc(100, {offset: 10});
-        console.log(line.json());
 
 
         L.setOptions(this, options);
