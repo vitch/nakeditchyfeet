@@ -16,7 +16,6 @@ define(
         onFilterClicked: function(e) {
           var clicked = $(e.currentTarget);
           var chosenFilter = clicked.data('filter');
-          console.log(chosenFilter);
           this.trigger('filterChange', chosenFilter);
           this.$('a.active').removeClass('active');
           if (chosenFilter) {

@@ -86,10 +86,14 @@ define(
             return marker.getLatLng();
           }));
 
+          var flightLayers = [];
+
           flights.forEach(function(mapItemModel) {
             var flightPolyline = new FlightPolyline({airports: mapItemModel.get('airports')});
-            flightPolyline.addTo(map);
+            flightLayers.push(flightPolyline);
           });
+
+          this.flightLayerGroup = L.layerGroup(flightLayers).addTo(this.leafletMap);
 
           map.addLayer(mapItemClusters);
 
@@ -104,10 +108,16 @@ define(
         },
         onFilterChange: function(filter) {
           this.mapItemClusters.addLayers(this.hiddenMarkers);
+          if (!this.leafletMap.hasLayer(this.flightLayerGroup)) {
+            this.leafletMap.addLayer(this.flightLayerGroup);
+          }
           if (filter) {
             this.hiddenMarkers = this.mapMarkers.filter(function(marker) {
               return marker.options.model.get('type') !== filter;
             });
+            if (filter != 'flight') {
+              this.leafletMap.removeLayer(this.flightLayerGroup);
+            }
           } else {
             this.hiddenMarkers = [];
           }
