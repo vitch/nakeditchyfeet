@@ -231,7 +231,10 @@ img {
 	background: #fff;
 	padding: 30px;
 
-	.transition(margin-left @sidenav-transition-duration @sidenav-transition-easing);
+	// To try and minimise the reflow that happens when you open the side nav on a small screen...
+	// .transition(margin-left @sidenav-transition-duration @sidenav-transition-easing);
+	webkit-transition:  margin-left @sidenav-transition-duration @sidenav-transition-easing, margin-right @sidenav-transition-duration @sidenav-transition-easing;
+	transition: margin-left @sidenav-transition-duration @sidenav-transition-easing, margin-right @sidenav-transition-duration @sidenav-transition-easing;
 
 	.clearfix;
 
@@ -262,6 +265,7 @@ img {
 
 	&.sidenav-hover {
 		margin-left: @sidenav-width-open;
+		margin-right: -@sidenav-width-open;
 
 		.active-marker {
 			left: @sidenav-width-open;
