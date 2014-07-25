@@ -1,3 +1,5 @@
+// Webfont
+@import (inline) "MyFontsWebfontsKit.css";
 
 @import "variables.less";
 @import "mixins.less";
@@ -41,20 +43,6 @@
 	#gradient .vertical-three-colors(@map-gradient-top, @map-gradient-top, 70%, @map-gradient-bottom);
 }
 
-// Fonts
-
-@font-face {
-  font-family: 'Proximanova';
-  src: url('/fonts/proximanova-reg-webfont.eot');
-  src: url('/fonts/proximanova-reg-webfont.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/proximanova-reg-webfont.woff') format('woff'),
-    url('/fonts/proximanova-reg-webfont.ttf') format('truetype'),
-    url('/fonts/proximanova-reg-webfont.svg?#fontawesomeregular') format('svg');
-//  src: url('@{fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
-  font-weight: normal;
-  font-style: normal;
-}
-
 // Override the weird vertical align in the generated font which makes things look weird...
 [class^="icon-"]:before, [class*=" icon-"]:before {
 	vertical-align: top;
@@ -64,7 +52,7 @@
 // Styles
 
 body {
-	font-family: Proximanova, Georgia, Times;
+	font-family: ProximaNova-Regular, Georgia, Times;
 	margin: 0;
 }
 
