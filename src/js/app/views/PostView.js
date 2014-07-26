@@ -18,7 +18,8 @@ define(
                 this.$el.data('geo').split(','),
                 {
                   title: this.$('>h1').text(),
-                  iconClass: 'book' // FIXME - should include the correct icon in the page and grab it from there...
+                  iconClass: 'book', // FIXME - should include the correct icon in the page and grab it from there...
+                  hoverable: false
                 }
               )
             });

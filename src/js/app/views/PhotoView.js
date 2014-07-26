@@ -21,7 +21,8 @@ define(
                 this.$el.data('geo').split(','),
                 {
                   title: img.attr('title'),
-                  iconClass: 'camera-retro'
+                  iconClass: 'camera-retro',
+                  hoverable: false
                 }
               )
             });

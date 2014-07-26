@@ -67,28 +67,8 @@ define(
                   default:
                     marker = new MapMarker(domData.geo.split(','), { 
                       title: title ,
-                      iconClass: icon
-                    });
-
-                    marker.on('mouseover', function() {
-                      $li.addClass('marker-active');
-                      this._icon.className = this._icon.className.replace('darkblue', 'darkred');
-                    });
-                    marker.on('mouseout', function() {
-                      $li.removeClass('marker-active');
-                      this._icon.className = this._icon.className.replace('darkred', 'darkblue');
-                    });
-                    $li.on('mouseover', function() {
-                      if (marker._icon) { // FIXME: This is for if the map isn't shown. A bit messy tho
-                        marker._icon.className = marker._icon.className.replace('darkblue', 'darkred');
-                        marker.setZIndexOffset(1000);
-                      }
-                    });
-                    $li.on('mouseout', function() {
-                      if (marker._icon) {
-                        marker._icon.className = marker._icon.className.replace('darkred', 'darkblue');
-                        marker.setZIndexOffset(0);
-                      }
+                      iconClass: icon,
+                      associatedElement: $li[0]
                     });
                 }
                 if (link) {

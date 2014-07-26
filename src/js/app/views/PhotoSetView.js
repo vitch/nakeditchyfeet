@@ -33,27 +33,12 @@ define(
               data.latLng,
               {
                 title: data.img.attr('title'),
-                iconClass: 'camera-retro'
+                iconClass: 'camera-retro',
+                associatedElement: data.img[0]
               }
             );
-            marker.on('mouseover', function() {
-              data.img.addClass('marker-active');
-              this._icon.className = this._icon.className.replace('darkblue', 'darkred');
-            });
-            marker.on('mouseout', function() {
-              data.img.removeClass('marker-active');
-              this._icon.className = this._icon.className.replace('darkred', 'darkblue');
-            });
             marker.on('click', function() {
               document.location = data.img.parent().attr('href');
-            });
-            data.img.on('mouseover', function() {
-              marker._icon.className = marker._icon.className.replace('darkblue', 'darkred');
-              marker.setZIndexOffset(1000);
-            });
-            data.img.on('mouseout', function() {
-              marker._icon.className = marker._icon.className.replace('darkred', 'darkblue');
-              marker.setZIndexOffset(0);
             });
             return marker;
           });
