@@ -62,9 +62,11 @@ define(
       // TODO: I guess these don't actually need to be different?
       _handleAssociatedElementHoverOn: function() {
         this._handleHoverOn();
+        $(this._icon).tooltip('show');
       },
       _handleAssociatedElementHoverOff: function() {
         this._handleHoverOff();
+        $(this._icon).tooltip('hide');
       }
 
     });
