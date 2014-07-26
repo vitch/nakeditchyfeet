@@ -1,8 +1,8 @@
 define(
   [
+    'util/MapMarker'
   ],
-  function () {
-    'use strict';
+  function (MapMarker) {
 
     return Backbone.View.extend(
       {
@@ -29,16 +29,11 @@ define(
         },
         initMap: function() {
           var markers = _.map(this.imageData, function(data) {
-            var marker = L.marker(
+            marker = new MapMarker(
               data.latLng,
               {
                 title: data.img.attr('title'),
-                icon: L.AwesomeMarkers.icon({
-                  icon: 'camera-retro',
-                  prefix: 'nif-icon',
-                  markerColor: 'darkblue',
-                  className: 'awesome-marker'
-                })
+                iconClass: 'camera-retro'
               }
             );
             marker.on('mouseover', function() {

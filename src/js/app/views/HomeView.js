@@ -1,8 +1,9 @@
 define(
   [
-    'util/FlightPolyline'
+    'util/FlightPolyline',
+    'util/MapMarker'
   ],
-  function (FlightPolyline) {
+  function (FlightPolyline, MapMarker) {
     'use strict';
 
     return Backbone.View.extend(
@@ -64,18 +65,11 @@ define(
                     link = $li.find('a').attr('href');
                     // fall through...
                   default:
-                    marker = L.marker(
-                      domData.geo.split(','),
-                      {
-                        title: title,
-                        icon: L.AwesomeMarkers.icon({
-                          icon: icon,
-                          prefix: 'nif-icon',
-                          markerColor: 'darkblue',
-                          className: 'awesome-marker'
-                        })
-                      }
-                    );
+                    marker = new MapMarker(domData.geo.split(','), { 
+                      title: title ,
+                      iconClass: icon
+                    });
+
                     marker.on('mouseover', function() {
                       $li.addClass('marker-active');
                       this._icon.className = this._icon.className.replace('darkblue', 'darkred');

@@ -1,7 +1,8 @@
 define(
   [
+    'util/MapMarker'
   ],
-  function () {
+  function (MapMarker) {
     'use strict';
 
     return Backbone.View.extend(
@@ -16,16 +17,11 @@ define(
             var img = this.$('a img');
 
             options.sideMapView.initMap({
-              marker: L.marker(
+              marker: new MapMarker(
                 this.$el.data('geo').split(','),
                 {
                   title: img.attr('title'),
-                  icon: L.AwesomeMarkers.icon({
-                    icon: 'camera-retro',
-                    prefix: 'nif-icon',
-                    markerColor: 'darkblue',
-                    className: 'awesome-marker'
-                  })
+                  iconClass: 'camera-retro'
                 }
               )
             });

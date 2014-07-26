@@ -2,9 +2,10 @@ define(
   [
     'views/MapFilterView',
     'util/FlightPolyline',
+    'util/MapMarker',
     'util/Tileset'
   ],
-  function (MapFilterView, FlightPolyline, Tileset) {
+  function (MapFilterView, FlightPolyline, MapMarker, Tileset) {
     'use strict';
 
     return Backbone.View.extend(
@@ -62,19 +63,14 @@ define(
           });
 
           this.mapMarkers = pages.map(function(mapItemModel) {
-            var marker = L.marker(
-                  [mapItemModel.get('latitude'), mapItemModel.get('longitude')],
-                  {
-                    title: mapItemModel.get('title').replace(/&#39;/g, '\''),
-                      icon: L.AwesomeMarkers.icon({
-                        icon: mapItemModel.get('icon'),
-                        prefix: 'nif-icon',
-                        markerColor: 'darkblue',
-                        className: 'awesome-marker'
-                      }),
-                    model: mapItemModel
-                  }
-                );
+            var marker = new MapMarker(
+              [mapItemModel.get('latitude'), mapItemModel.get('longitude')],
+              {
+                title: mapItemModel.get('title').replace(/&#39;/g, '\''),
+                iconClass: mapItemModel.get('icon'),
+                model: mapItemModel
+              }
+            );
             marker.on('click', function(e) {
               document.location.href = '/' + mapItemModel.get('link');
             });
