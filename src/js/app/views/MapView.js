@@ -15,7 +15,7 @@ define(
         },
         initialize: function (options) {
           if (this.$el.length) {
-            _.bindAll(this, 'sizeMap', 'onMapItemsReady', 'initTooltips', 'sizeMap', 'onFilterChange');
+            _.bindAll(this, 'sizeMap', 'onMapItemsReady', 'sizeMap', 'onFilterChange');
 
             this.sizeMap();
             this.mapItems = options.mapItems;
@@ -34,18 +34,7 @@ define(
 
           Tileset.addTo(this.leafletMap);
 
-          this.leafletMap.on('zoomend moveend', function(){
-            _.defer(initTooltips);
-          });
-
           this.mapItems.fetch({success: this.onMapItemsReady});
-        },
-        initTooltips: function()
-        {
-          this.$('.awesome-marker').not('.awesome-marker-shadow').tooltip({
-            container: 'body',
-            html: true
-          });
         },
         onMapItemsReady: function () {
           var map = this.leafletMap;
@@ -95,7 +84,6 @@ define(
 
           $(window).on('resize', _.throttle(this.sizeMap, 200));
 
-          this.initTooltips();
           this.initFilters();
         },
         initFilters: function() {
@@ -118,7 +106,6 @@ define(
             this.hiddenMarkers = [];
           }
           this.mapItemClusters.removeLayers(this.hiddenMarkers);
-          this.initTooltips();
         },
         sizeMap: function() {
           this.$el.height($(window).innerHeight());

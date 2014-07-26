@@ -30,6 +30,12 @@ define(
               .on(this.options.associatedElement, 'mouseout', this._handleAssociatedElementHoverOff, this);
           }
         }
+        if (this.options.title) {
+          $(this._icon).tooltip({
+            container: 'body',
+            html: true
+          });
+        }
       },
       _removeIcon: function() {
         L.Marker.prototype._removeIcon.call(this);

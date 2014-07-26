@@ -86,16 +86,7 @@ define(
                 return _.isFunction(marker.getBounds) ? marker.getBounds() : marker.getLatLng();
               }), this.fitBoundsParams)
             }
-
-            this.initTooltips();
           }
-        },
-        initTooltips: function()
-        {
-          this.$('.awesome-marker').not('.awesome-marker-shadow').tooltip({
-            container: 'body',
-            html: true
-          });
         },
         updateMarkers: function(markers) {
           if (this.initMapOptions) {
@@ -109,7 +100,6 @@ define(
             bounds.push(_.isFunction(m.getBounds) ? m.getBounds() : m.getLatLng());
           }, this);
           this.leafletMap.fitBounds(bounds, this.fitBoundsParams);
-          this.initTooltips();
         },
         handleResize: function() {
           var siteContent = $('#site-content').height('auto');
