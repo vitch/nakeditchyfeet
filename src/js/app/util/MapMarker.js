@@ -32,8 +32,8 @@ define(
         }
         if (this.options.title) {
           $(this._icon).tooltip({
-            container: 'body',
-            html: true
+            html: true,
+            placement: 'auto'
           });
         }
       },
@@ -59,14 +59,18 @@ define(
         }
         this._resetZIndex();
       },
-      // TODO: I guess these don't actually need to be different?
       _handleAssociatedElementHoverOn: function() {
         this._handleHoverOn();
-        $(this._icon).tooltip('show');
+
+        var tt = $(this._icon).data('bs.tooltip');
+        if (tt) {
+          tt.show();
+        }
       },
       _handleAssociatedElementHoverOff: function() {
         this._handleHoverOff();
-        $(this._icon).tooltip('hide');
+        $('.tooltip').remove();
+        // $(this._icon).tooltip('hide'); // Should work!
       }
 
     });
