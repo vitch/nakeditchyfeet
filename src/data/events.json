@@ -2,23 +2,15 @@
   {
     "date": "2013-04-16",
     "icon": "plane",
-    "label": "<strong>LHR - MCT - BKK</strong> And we're off!",
-    "airports": "LHR,MCT",
+    "label": "",
+    "airports": "LHR,MCT,BKK",
     "airline": "Oman Air",
     "flightNumber": "WY102"
   },
   {
-    "date": "2013-04-17",
-    "icon": "plane",
-    "label": "<strong>LHR - MCT - BKK</strong> And we're off!",
-    "airports": "MCT,BKK",
-    "airline": "Oman Air",
-    "flightNumber": "WY815"
-  },
-  {
     "date": "2013-05-06",
     "icon": "plane",
-    "label": "<strong>DMK - RGN</strong> Thailand to Myanmar",
+    "label": "",
     "airports": "DMK,RGN",
     "airline": "Air Asia",
     "flightNumber": "&nbsp;"
@@ -26,34 +18,27 @@
   {
     "date": "2013-05-20 10:00:00",
     "icon": "plane",
+    "label": "",
     "label": "<strong>MDL - DMK</strong>",
     "airports": "MDL,DMK",
     "airline": "Air Asia",
-    "flightNumber": "&nbsp;"
+    "flightNumber": "2755"
   },
   {
     "date": "2013-05-20 16:00:00",
     "icon": "plane",
-    "label": "<strong>BKK - SIN</strong>",
+    "label": "",
     "airports": "BKK,SIN",
     "airline": "Tiger Airways",
-    "flightNumber": "&nbsp;"
+    "flightNumber": "2115"
   },
   {
     "date": "2013-05-21 23:00:00",
     "icon": "plane",
-    "label": "<strong>SIN - CGK - MDC</strong>",
-    "airports": "SIN,CGK",
+    "label": "",
+    "airports": "SIN,CGK,MDC",
     "airline": "Lion Air",
-    "flightNumber": "&nbsp;"
-  },
-  {
-    "date": "2013-05-21 23:00:00",
-    "icon": "plane",
-    "label": "<strong>SIN - CGK - MDC</strong>",
-    "airports": "CGK,MDC",
-    "airline": "Lion Air",
-    "flightNumber": "&nbsp;"
+    "flightNumber": "153"
   },
   {
     "date": "2013-06-19",
@@ -82,7 +67,7 @@
   {
     "date": "2013-08-07 23:00:00",
     "icon": "plane",
-    "label": "<strong>DPS - DRW</strong>",
+    "label": "",
     "airports": "DPS,DRW",
     "airline": "JetStar",
     "flightChanged": "2013-07-16",
@@ -91,18 +76,18 @@
   {
     "date": "2013-09-15 23:00:00",
     "icon": "plane",
-    "label": "<strong>PER - DPS</strong>",
+    "label": "",
     "airports": "PER,DPS",
     "airline": "JetStar",
-    "flightNumber": "&nbsp;"
+    "flightNumber": "JQ108"
   },
   {
     "date": "2013-09-26 23:00:00",
     "icon": "plane",
-    "label": "<strong>LOP - PER</strong>",
+    "label": "",
     "airports": "LOP,PER",
     "airline": "JetStar",
-    "flightNumber": "&nbsp;"
+    "flightNumber": "JQ111"
   },
   {
     "date": "2013-11-23",
@@ -113,14 +98,15 @@
   {
     "date": "2013-11-25",
     "icon": "plane",
-    "label": "<strong>ADL - BNE</strong>",
+    "label": "",
     "airports": "ADL,BNE",
     "airline": "Virgin Australia",
-    "flightNumber": "&nbsp;"
+    "flightNumber": "1407"
   },
   {
     "date": "2013-12-02",
     "icon": "plane",
+    "label": "",
     "label": "<strong>BNE - NAN</strong>",
     "airports": "BNE,NAN",
     "airline": "Air Pacific",
@@ -129,7 +115,7 @@
   {
     "date": "2013-12-09",
     "icon": "plane",
-    "label": "<strong>NAN - AKL</strong>",
+    "label": "",
     "airports": "NAN,AKL",
     "airline": "Air Pacific",
     "flightNumber": "FJ411"
@@ -149,7 +135,7 @@
   {
     "date": "2014-03-09",
     "icon": "plane",
-    "label": "<strong>AKL - HNL</strong>",
+    "label": "",
     "airports": "AKL,HNL2",
     "airline": "Air New Zealand",
     "flightNumber": "NZ10"
@@ -157,7 +143,7 @@
   {
     "date": "2014-03-11",
     "icon": "plane",
-    "label": "<strong>HNL - LIH</strong>",
+    "label": "",
     "airports": "HNL,LIH",
     "airline": "Island Air",
     "flightNumber": "105"
@@ -165,7 +151,7 @@
   {
     "date": "2014-03-16",
     "icon": "plane",
-    "label": "<strong>LIH - HNL</strong>",
+    "label": "",
     "airports": "LIH,HNL",
     "airline": "Island Air",
     "flightNumber": "106"
@@ -173,7 +159,7 @@
   {
     "date": "2014-03-19",
     "icon": "plane",
-    "label": "<strong>HNL - LAX</strong>",
+    "label": "",
     "airports": "HNL,LAX",
     "airline": "American Airlines",
     "flightNumber": "AA162"
@@ -181,32 +167,16 @@
   {
     "date": "2014-03-24",
     "icon": "plane",
-    "label": "<strong>LAX - FLL - BOG</strong>",
-    "airports": "LAX,FLL",
+    "label": "",
+    "airports": "LAX,FLL,BOG",
     "airline": "Jet Blue",
     "flightNumber": "100"
   },
   {
-    "date": "2014-03-25",
-    "icon": "plane",
-    "label": "<strong>LAX - FLL - BOG</strong>",
-    "airports": "FLL,BOG",
-    "airline": "Jet Blue",
-    "flightNumber": "1557"
-  },
-  {
     "date": "2014-04-08 09:25",
     "icon": "plane",
-    "label": "<strong>UIO - GYE - GPS</strong>",
-    "airports": "UIO,GYE",
-    "airline": "LAN",
-    "flightNumber": "1553"
-  },
-  {
-    "date": "2014-04-08 09:25",
-    "icon": "plane",
-    "label": "<strong>UIO - GYE - GPS</strong>",
-    "airports": "GYE,GPS",
+    "label": "",
+    "airports": "UIO,GYE,GPS",
     "airline": "LAN",
     "flightNumber": "1553"
   },
@@ -219,23 +189,15 @@
   {
     "date": "2014-04-23",
     "icon": "plane",
-    "label": "<strong>SCY - GYE - UIO</strong>",
-    "airports": "SCY,GYE",
-    "airline": "Aerogal",
-    "flightNumber": "032"
-  },
-  {
-    "date": "2014-04-23",
-    "icon": "plane",
-    "label": "<strong>SCY - GYE - UIO</strong>",
-    "airports": "GYE,UIO",
+    "label": "",
+    "airports": "SCY,GYE,UIO",
     "airline": "Aerogal",
     "flightNumber": "032"
   },
   {
     "date": "2014-05-13",
     "icon": "plane",
-    "label": "<strong>BOG - LET</strong>",
+    "label": "",
     "airports": "BOG,LET",
     "airline": "LAN",
     "flightNumber": "3114"
@@ -249,7 +211,7 @@
   {
     "date": "2014-05-22",
     "icon": "plane",
-    "label": "<strong>PLL - BEL</strong>",
+    "label": "",
     "airports": "PLL,BEL",
     "airline": "TAM",
     "flightNumber": "3741"
@@ -263,7 +225,7 @@
   {
     "date": "2014-07-01",
     "icon": "plane",
-    "label": "<strong>REC - GRU</strong>",
+    "label": "",
     "airports": "REC,GRU",
     "airline": "Gol",
     "flightNumber": "1293"
@@ -271,18 +233,10 @@
   {
     "date": "2014-07-04",
     "icon": "plane",
-    "label": "<strong>GRU - CMN - LHR</strong>",
-    "airports": "GRU,CMN",
+    "label": "",
+    "airports": "GRU,CMN,LHR",
     "airline": "Royal Maroc Air",
     "flightNumber": "AT214"
-  },
-  {
-    "date": "2014-07-05",
-    "icon": "plane",
-    "label": "<strong>GRU - CMN - LHR</strong>",
-    "airports": "CMN,LHR",
-    "airline": "Royal Maroc Air",
-    "flightNumber": "AT800"
   }
 
 ]

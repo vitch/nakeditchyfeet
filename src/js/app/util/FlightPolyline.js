@@ -18,15 +18,16 @@ define(
           var latLng = a.split('|')[1].split(',')
           return {x: latLng[1], y:latLng[0]};
         });
-        var generator = new arc.GreatCircle(airportCoordinates[0], airportCoordinates[1], {name: 'HELLO!'});
-        var line = generator.Arc(100, {offset: 10});
-
 
         L.setOptions(this, options);
-
         this._layers = {};
 
-        this.addData(line.json());
+        _.each(_.range(0, airportCoordinates.length - 1), function(i) {
+          var generator = new arc.GreatCircle(airportCoordinates[i], airportCoordinates[i+1], {name: 'HELLO!'});
+          var line = generator.Arc(100, {offset: 10});
+          this.addData(line.json());
+        }, this);
+
       }
     });
 
