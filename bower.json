@@ -8,8 +8,7 @@
     "leaflet-dist": "~0.7.2",
     "leaflet.markercluster": "~0.4.0",
     "Leaflet.awesome-markers": "~2.0.0",
-    "requirejs": "~2.1.11",
-    "arc.js": "~0.1.0"
+    "requirejs": "~2.1.11"
   },
   "version": "0.0.1",
   "authors": [
