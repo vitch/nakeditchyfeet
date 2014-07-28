@@ -29,9 +29,8 @@
 @sidenav-arrow-size: 6px;
 
 @home-highlight-colour: #F16522;
-
-@map-gradient-top: #a6dbdd;
-@map-gradient-bottom: #e1e1e1;
+@map-gradient-top: #B4E1E4;
+@map-gradient-bottom: #E9E9E9;
 
 // Mixins
 
@@ -41,7 +40,7 @@
 
 .map-bg-gradient() {
   // Gradient so that when you are zoomed out it looks like the artic ocean and antartica span to the edges of the container
-  #gradient .vertical-three-colors(@map-gradient-top, @map-gradient-top, 70%, @map-gradient-bottom);
+  #gradient .vertical-three-colors(@map-gradient-top, @map-gradient-top, 55%, @map-gradient-bottom);
 }
 
 // Override the weird vertical align in the generated font which makes things look weird...
