@@ -26,7 +26,8 @@ define(
 
           var marker = new MarkerBase(latLng, {
             icon: planeIcon,
-            title: data[0]
+            title: data[0],
+            zIndexOffset: -1000
           });
 
           layers.push(marker);
