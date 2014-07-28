@@ -1,7 +1,8 @@
 define(
   [
+    'util/MarkerBase'
   ],
-  function () {
+  function (MarkerBase) {
     'use strict';
 
     // From http://makinacorpus.github.io/Leaflet.GeometryUtil/leaflet.geometryutil.js.html
@@ -9,21 +10,40 @@ define(
         return (Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI);
     };
 
-    var planeIcon = L.divIcon({className:'map-marker-airplane', iconSize: [30, 30], html: '<span class="nif-icon nif-icon-plane"></span>'});
+    var planeIcon = L.divIcon({className:'map-marker-airplane', iconSize: [4, 4], html: ''});
 
     var FlightPolyLine = L.FeatureGroup.extend({
       initialize: function(options) {
 
-        L.FeatureGroup.prototype.initialize.call(this, options);
+        var layers = [];
 
         var airportCoordinates = options.airports.split('||').map(function(a) {
-          var latLng = a.split('|')[1].split(',')
-          return [parseFloat(latLng[0]), parseFloat(latLng[1])];
-        });
 
-        this.addLayer(L.polyline(airportCoordinates, {
+          var data = a.split('|');
+          var latLng = data[1].split(',').map(function(n) {
+            return parseFloat(n);
+          });
 
+          var marker = new MarkerBase(latLng, {
+            icon: planeIcon,
+            title: data[0]
+          });
+
+          layers.push(marker);
+
+          return latLng
+        }, this);
+
+
+
+        layers.push(L.polyline(airportCoordinates, {
+          color: '#000',
+          opacity: .5,
+          // dashArray: '15, 10, 5, 10, 15',
+          weight: 4
         }));
+
+        L.FeatureGroup.prototype.initialize.call(this, layers);
 
       }
     });
