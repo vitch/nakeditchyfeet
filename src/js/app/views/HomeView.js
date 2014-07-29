@@ -57,7 +57,7 @@ define(
                 var link;
                 switch (icon) {
                   case 'nif-icon-plane':
-                    marker = new FlightPolyline({airports: $li.find('.boarding-pass').data().airports, noPlaneMarkers: true});
+                    marker = new FlightPolyline({airports: $li.find('div[data-airports]').data().airports, noPlaneMarkers: true});
                     break;
                   case 'nif-icon-book':
                   case 'nif-icon-info-circle':
