@@ -281,10 +281,10 @@ img {
 	padding: 0;
 	li {
 		margin: 0 0 25px;
-		position: relative;
 		.box-sizing(border-box);
 		width: 100%;
 		clear: left;
+		position: relative;
 
 		&.is-future {
 			color: @gray-light;
@@ -297,6 +297,23 @@ img {
 			font-size: 36px;
 		}
 
+		.heading {
+			overflow: hidden;
+			position: relative;
+			.transition(padding-left @sidenav-transition-duration @sidenav-transition-easing);
+
+			&:before {
+				.nif-icon();
+				content: "\f113"; // .nif-icon-map-marker
+				position: absolute;
+				top: 0;
+				left: -60px;
+				font-size: 40px;
+				.transition(left @sidenav-transition-duration @sidenav-transition-easing);
+			}
+
+		}
+
 		time {
 			font-size: 15px;
 			text-transform: uppercase;
@@ -304,12 +321,9 @@ img {
 		a {
 			text-decoration: none;
 			color: @headings-color;
-			&:hover {
-				color: @link-hover-color;
-			}
 		}
 		h1 {
-			margin: 0 45px 10px 0;
+			margin: 0 45px 0 0;
 
 			strong {
 				font-family: Arial; // FIXME
@@ -318,7 +332,7 @@ img {
 		}
 
 		.header-image {
-			margin-top: 0;
+			margin-top: 10px;
 			.image-box-shadow();
 		}
 
@@ -334,8 +348,18 @@ img {
 			}
 		}
 
-		&.marker-active {
-			color: @link-hover-color;
+		@media (min-width: 850px) { // We only do these rollover styles where the screen is wide enough that we are showing the map
+			&.marker-active {
+
+				.heading {
+					padding-left: 30px;
+					color: #F16522;
+
+					&:before {
+						left: 0;
+					}
+				}
+			}
 		}
 	}
 }
@@ -343,7 +367,7 @@ img {
 .photoset {
 	@photosetPadding: 2px;
 	overflow: hidden;
-	margin: 0 0 10px;
+	margin: 10px 0;
 	height: 160px;
 
 	div {
