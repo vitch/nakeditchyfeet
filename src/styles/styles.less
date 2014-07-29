@@ -29,6 +29,8 @@
 @sidenav-side-padding: 9px;
 @sidenav-arrow-size: 6px;
 
+@home-highlight-colour: #F16522;
+
 @map-gradient-top: #a6dbdd;
 @map-gradient-bottom: #e1e1e1;
 
@@ -108,7 +110,7 @@ img {
 		position: absolute;
 		left: -40px;
 		height: 87px;
-		webkit-transition: height @sidenav-transition-duration @sidenav-transition-easing, left @sidenav-transition-duration @sidenav-transition-easing;
+		-webkit-transition: height @sidenav-transition-duration @sidenav-transition-easing, left @sidenav-transition-duration @sidenav-transition-easing;
 		transition: height @sidenav-transition-duration @sidenav-transition-easing, left @sidenav-transition-duration @sidenav-transition-easing;
 	}
 
@@ -295,12 +297,14 @@ img {
 			top: 17px;
 			right: 0;
 			font-size: 36px;
+			.transition(@link-fade-transition);
 		}
 
 		.heading {
 			overflow: hidden;
 			position: relative;
-			.transition(padding-left @sidenav-transition-duration @sidenav-transition-easing);
+			-webkit-transition: padding-left @sidenav-transition-duration @sidenav-transition-easing, color @sidenav-transition-duration @sidenav-transition-easing;
+			transition: padding-left @sidenav-transition-duration @sidenav-transition-easing, color @sidenav-transition-duration @sidenav-transition-easing;
 
 			&:before {
 				.nif-icon();
@@ -338,14 +342,6 @@ img {
 
 		&.has-link {
 			cursor: pointer;
-
-			i, time, a {
-				.transition(@link-fade-transition);
-			}
-
-			&:hover {
-				color: @link-hover-color;
-			}
 		}
 
 		@media (min-width: 850px) { // We only do these rollover styles where the screen is wide enough that we are showing the map
@@ -353,11 +349,15 @@ img {
 
 				.heading {
 					padding-left: 30px;
-					color: #F16522;
+					color: @home-highlight-colour;
 
 					&:before {
 						left: 0;
 					}
+				}
+
+				&>i {
+					color: @home-highlight-colour;
 				}
 			}
 		}
