@@ -13,7 +13,9 @@ define(
     var airportIcon = L.divIcon({className:'map-marker-airport', iconSize: [4, 4], html: ''});
 
     var FlightPolyLine = L.FeatureGroup.extend({
+
       initialize: function(options) {
+        L.setOptions(this, options);
 
         var layers = [];
 
@@ -46,6 +48,17 @@ define(
 
         L.FeatureGroup.prototype.initialize.call(this, layers);
 
+        if (this.options.associatedElement) {
+          L.DomEvent
+            .on(this.options.associatedElement, 'mouseover', this._handleAssociatedElementHoverOn, this)
+            .on(this.options.associatedElement, 'mouseout', this._handleAssociatedElementHoverOff, this);
+        }
+      },
+      _handleAssociatedElementHoverOn: function(e) {
+        L.DomUtil.addClass(this.options.associatedElement, 'marker-active');
+      },
+      _handleAssociatedElementHoverOff: function(e) {
+        L.DomUtil.removeClass(this.options.associatedElement, 'marker-active');
       }
     });
 
