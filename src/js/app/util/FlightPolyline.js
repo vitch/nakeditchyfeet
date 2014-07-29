@@ -1,14 +1,10 @@
 define(
   [
-    'util/MarkerBase'
+    'util/MarkerBase',
+    'util/PlaneMarker'
   ],
-  function (MarkerBase) {
+  function (MarkerBase, PlaneMarker) {
     'use strict';
-
-    // From http://makinacorpus.github.io/Leaflet.GeometryUtil/leaflet.geometryutil.js.html
-    var computeAngle = function(a, b) {
-        return (Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI);
-    };
 
     var airportIcon = L.divIcon({className:'map-marker-airport', iconSize: [4, 4], html: ''});
 
@@ -18,8 +14,9 @@ define(
         L.setOptions(this, options);
 
         var layers = [];
+        var titles = [];
 
-        var airportCoordinates = options.airports.split('||').map(function(a) {
+        var airportCoordinates = options.airports.split('||').map(function(a, i) {
 
           var data = a.split('|');
           var latLng = data[1].split(',').map(function(n) {
@@ -34,9 +31,22 @@ define(
 
           layers.push(marker);
 
+          titles.push(data[2]);
+          if (i > 0) {
+            titles[i-1] += ' - ' + data[2];
+          }
+
           return latLng
         }, this);
 
+        _.each(_.range(airportCoordinates.length-1), function(i) {
+          var bounds = new L.LatLngBounds(airportCoordinates[i], airportCoordinates[i+1]);
+          layers.push(new PlaneMarker(bounds.getCenter(), {
+            points:[airportCoordinates[i], airportCoordinates[i+1]],
+            title: titles[i],
+            zIndexOffset: -1000
+          }));
+        }, this);
 
 
         this.line = L.polyline(airportCoordinates, {
