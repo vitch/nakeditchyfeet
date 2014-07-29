@@ -54,6 +54,9 @@ define(
           L.DomEvent
             .on(this.options.associatedElement, 'mouseover', this._handleAssociatedElementHoverOn, this)
             .on(this.options.associatedElement, 'mouseout', this._handleAssociatedElementHoverOff, this);
+          L.DomEvent
+            .on(this.line, 'mouseover', this._handleAssociatedElementHoverOn, this)
+            .on(this.line, 'mouseout', this._handleAssociatedElementHoverOff, this);
         }
       },
       _handleAssociatedElementHoverOn: function(e) {
