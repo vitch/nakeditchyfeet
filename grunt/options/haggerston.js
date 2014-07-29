@@ -200,6 +200,15 @@ module.exports = function(grunt) {
         },
         isBlogActiveClass: function(page) {
           return page.prettyUrl.match(/(^\/$|^\/(blog|photos|tags|travel-tips)+\/)/) ? 'active' : '';
+        },
+        headerIcon: function(page) {
+          var section = page.prettyUrl.match(/^\/([^\/]+)\//)[1];
+          return {
+            blog: 'book',
+            'travel-tips': 'info-circle',
+            'follow-us': 'twitter',
+            'about-us': 'foot'
+          }[section];
         }
       }
     }

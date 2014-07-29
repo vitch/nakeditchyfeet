@@ -392,7 +392,8 @@ img {
 }
 
 header.content-header {
-	padding: 0 0 20px;
+	position: relative;
+	padding: 20px 35px 0 0;
 	time {
 		color: @gray;
 		margin-top: -19px;
@@ -400,7 +401,7 @@ header.content-header {
 		text-transform: uppercase;
 	}
 	h1 {
-		margin: 0 0 10px;
+		margin: 0 0 4px;
 	}
 	ul.tags {
 		list-style: none;
@@ -420,6 +421,13 @@ header.content-header {
 				}
 			}
 		}
+	}
+
+	&>span.nif-icon {
+		position: absolute;
+		top: 20px;
+		right: 0;
+		font-size: 36px;
 	}
 }
 
