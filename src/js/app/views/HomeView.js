@@ -70,7 +70,7 @@ define(
                     // fall through...
                   default:
                     marker = new MapMarker(domData.geo.split(','), { 
-                      title: title ,
+                      title: title,
                       iconClass: icon,
                       associatedElement: $li[0]
                     });

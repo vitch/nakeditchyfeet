@@ -137,7 +137,7 @@ module.exports = function(grunt) {
               item.destinationCode = item.airports.split(',').pop();
               item.className = 'color-' + (count++)%2;
               item.airports = item.airports.split(',').map(function(code) {
-                return code + '|' + airports[code].lat + ',' + airports[code].lng;
+                return code + '|' + airports[code].lat + ',' + airports[code].lng + '|' + airports[code].name;
               }).join('||');
             } 
             return item;

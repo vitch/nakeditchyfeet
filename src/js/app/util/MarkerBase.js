@@ -8,6 +8,16 @@ define(
       options: {
         hoverable: true
       },
+      initialize: function (latlng, options) {
+
+        if (options.title) {
+          // Hacky way to push the tooltips out to a decent width...
+          var t1 = options.title.substr(0, 20);
+          var t2 = options.title.substr(20);
+          options.title = t1.replace(/ /g, '&nbsp;') + t2;
+        }
+        L.Marker.prototype.initialize.call(this, latlng, options);
+      },
       _initIcon: function () {
         L.Marker.prototype._initIcon.call(this);
         if (this.options.hoverable) {

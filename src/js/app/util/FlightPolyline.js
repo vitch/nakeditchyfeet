@@ -28,7 +28,7 @@ define(
 
           var marker = new MarkerBase(latLng, {
             icon: airportIcon,
-            title: data[0],
+            title: data[2],
             zIndexOffset: -1000
           });
 
