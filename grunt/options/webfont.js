@@ -11,6 +11,7 @@ module.exports = {
         classPrefix: 'nif-icon-',
         mixinPrefix: 'nif-icon-'
       },
+      embed: true,
       // fontHeight: 512,
       // descent: 2,
       // ascent: 2,
