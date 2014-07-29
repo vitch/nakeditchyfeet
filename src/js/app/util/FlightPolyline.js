@@ -39,12 +39,14 @@ define(
 
 
 
-        layers.push(L.polyline(airportCoordinates, {
+        this.line = L.polyline(airportCoordinates, {
           color: '#000',
           opacity: .5,
           // dashArray: '15, 10, 5, 10, 15',
           weight: 4
-        }));
+        });
+
+        layers.push(this.line);
 
         L.FeatureGroup.prototype.initialize.call(this, layers);
 
@@ -55,9 +57,11 @@ define(
         }
       },
       _handleAssociatedElementHoverOn: function(e) {
+        this.line.setStyle({color: '#F16522'});
         L.DomUtil.addClass(this.options.associatedElement, 'marker-active');
       },
       _handleAssociatedElementHoverOff: function(e) {
+        this.line.setStyle({color: '#000'});
         L.DomUtil.removeClass(this.options.associatedElement, 'marker-active');
       }
     });
