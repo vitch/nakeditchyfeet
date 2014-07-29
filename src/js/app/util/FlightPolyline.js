@@ -10,7 +10,7 @@ define(
         return (Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI);
     };
 
-    var planeIcon = L.divIcon({className:'map-marker-airplane', iconSize: [4, 4], html: ''});
+    var airportIcon = L.divIcon({className:'map-marker-airport', iconSize: [4, 4], html: ''});
 
     var FlightPolyLine = L.FeatureGroup.extend({
       initialize: function(options) {
@@ -25,7 +25,7 @@ define(
           });
 
           var marker = new MarkerBase(latLng, {
-            icon: planeIcon,
+            icon: airportIcon,
             title: data[0],
             zIndexOffset: -1000
           });
