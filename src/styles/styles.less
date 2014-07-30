@@ -305,13 +305,14 @@ img {
       -webkit-transition: padding-left @sidenav-transition-duration @sidenav-transition-easing, color @sidenav-transition-duration @sidenav-transition-easing;
       transition: padding-left @sidenav-transition-duration @sidenav-transition-easing, color @sidenav-transition-duration @sidenav-transition-easing;
 
+      .nif-icon-map-marker-hole();
+
       &:before {
         .nif-icon();
-        content: "\f113"; // .nif-icon-map-marker-hole
         position: absolute;
-        top: 0;
+        top: -6px;
         left: -60px;
-        font-size: 40px;
+        font-size: 52px;
         .transition(left @sidenav-transition-duration @sidenav-transition-easing);
       }
 
@@ -347,7 +348,7 @@ img {
       &.marker-active {
 
         .heading {
-          padding-left: 30px;
+          padding-left: 40px;
           color: @home-highlight-colour;
 
           &:before {
@@ -647,27 +648,27 @@ header.content-header {
   .nif-icon-map-marker();
 
   width: 30px;
-  height: 46px;
+  height: 40px;
   position:absolute;
   font-size: 50px;
   left:0;
   top:0;
   display: block;
   text-align: center;
-  margin-top: -40px;
+  margin-top: -36px;
   margin-left: -12px;
 
   &:before {
     color: @sidenav-bg-color;
     position: absolute;
-    top: -3px;
+    top: -8px;
     left: 0;
     .nif-icon();
   }
 
   span {
     position: absolute;
-    top: 10px;
+    top: 8px;
     left: 8px;
     color: #fff;
     display: inline-block;
