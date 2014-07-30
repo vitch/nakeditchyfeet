@@ -9,7 +9,6 @@
 @import "tooltip.less";
 @import "nif-icons.less"; // Generated SVG icons
 @import (less) "leaflet.css";
-@import (less) "leaflet.awesome-markers.css";
 @import (less) "MarkerCluster.css";
 @import (less) "MarkerCluster.Default.css";
 
@@ -37,655 +36,679 @@
 // Mixins
 
 .image-box-shadow {
-	.box-shadow(0 0 3px rgba(0, 0, 0, .5));
+  .box-shadow(0 0 3px rgba(0, 0, 0, .5));
 }
 
 .map-bg-gradient() {
-	// Gradient so that when you are zoomed out it looks like the artic ocean and antartica span to the edges of the container
-	#gradient .vertical-three-colors(@map-gradient-top, @map-gradient-top, 70%, @map-gradient-bottom);
+  // Gradient so that when you are zoomed out it looks like the artic ocean and antartica span to the edges of the container
+  #gradient .vertical-three-colors(@map-gradient-top, @map-gradient-top, 70%, @map-gradient-bottom);
 }
 
 // Override the weird vertical align in the generated font which makes things look weird...
 [class^="icon-"]:before, [class*=" icon-"]:before {
-	vertical-align: top;
+  vertical-align: top;
 }
 
 
 // Styles
 
 body {
-	font-family: ProximaNova-Regular, Georgia, Times;
-	margin: 0;
+  font-family: ProximaNova-Regular, Georgia, Times;
+  margin: 0;
 }
 
 h1,h2,h3,h4,h5 {
-	font-weight: normal;
+  font-weight: normal;
 }
 
 h1 {
-	font-size: 26px;
+  font-size: 26px;
 }
 
 a {
-	color: @link-color;
-	&:hover {
-		color: @link-hover-color;
-	}
+  color: @link-color;
+  &:hover {
+    color: @link-hover-color;
+  }
 }
 
 img {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 .muted {
-	.opacity(.3);
+  .opacity(.3);
 }
 
 #site-header {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	padding: 0 @sidenav-side-padding;
-	width: @sidenav-width-closed;
-	color: @sidenav-color;
-	overflow: hidden;
-	// border-right: 1px solid #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding: 0 @sidenav-side-padding;
+  width: @sidenav-width-closed;
+  color: @sidenav-color;
+  overflow: hidden;
+  // border-right: 1px solid #fff;
 
-	z-index: 3;
-	background: @sidenav-bg-color;
-	.box-sizing(border-box);
-	.transition(width @sidenav-transition-duration @sidenav-transition-easing);
+  z-index: 3;
+  background: @sidenav-bg-color;
+  .box-sizing(border-box);
+  .transition(width @sidenav-transition-duration @sidenav-transition-easing);
 
-	&>div {
-		overflow: hidden;
-		width: 27px;
-		.transition(width @sidenav-transition-duration @sidenav-transition-easing);
-		&>div {
-			width: @sidenav-width-open - @sidenav-side-padding - @sidenav-side-padding;
-		}
-	}
+  &>div {
+    overflow: hidden;
+    width: 27px;
+    .transition(width @sidenav-transition-duration @sidenav-transition-easing);
+    &>div {
+      width: @sidenav-width-open - @sidenav-side-padding - @sidenav-side-padding;
+    }
+  }
 
-	&>img {
-		max-width: none;
-		position: absolute;
-		left: -40px;
-		height: 87px;
-		-webkit-transition: height @sidenav-transition-duration @sidenav-transition-easing, left @sidenav-transition-duration @sidenav-transition-easing;
-		transition: height @sidenav-transition-duration @sidenav-transition-easing, left @sidenav-transition-duration @sidenav-transition-easing;
-	}
+  &>img {
+    max-width: none;
+    position: absolute;
+    left: -40px;
+    height: 87px;
+    -webkit-transition: height @sidenav-transition-duration @sidenav-transition-easing, left @sidenav-transition-duration @sidenav-transition-easing;
+    transition: height @sidenav-transition-duration @sidenav-transition-easing, left @sidenav-transition-duration @sidenav-transition-easing;
+  }
 
-	h1 {
-		margin: 0;
-		position: absolute;
-		top: 120px;
-		a {
-			color: @sidenav-color;
-		}
-		&:before {
-			position: absolute;
-			top: -3px;
-			left: -4.3px;
-			font-size: 35px;
-		}
-	}
+  h1 {
+    margin: 0;
+    position: absolute;
+    top: 120px;
+    a {
+      color: @sidenav-color;
+    }
+    &:before {
+      position: absolute;
+      top: -3px;
+      left: -4.3px;
+      font-size: 35px;
+    }
+  }
 
-	#logotype {
-		width: 120px;
-		height: 60px;
-		display: block;
-		.opacity(0);
-		overflow: hidden;
-		.transition(opacity @sidenav-transition-duration @sidenav-transition-easing);
-		&:before {
-			font-size: 121px;
-			line-height: 1;
-			position: relative;
-			top: -6px;
-			left: -4px;
-		}
-	}
+  #logotype {
+    width: 120px;
+    height: 60px;
+    display: block;
+    .opacity(0);
+    overflow: hidden;
+    .transition(opacity @sidenav-transition-duration @sidenav-transition-easing);
+    &:before {
+      font-size: 121px;
+      line-height: 1;
+      position: relative;
+      top: -6px;
+      left: -4px;
+    }
+  }
 
-	nav {
-		margin-top: 190px;
+  nav {
+    margin-top: 190px;
 
-		ul {
-			list-style: none;
-			padding: 0;
-			line-height: 1.3;
-			border-top: 1px solid @sidenav-color;
+    ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.3;
+      border-top: 1px solid @sidenav-color;
 
-			li {
-				border-bottom: 1px solid @sidenav-color;
-				padding: 8px 0 5px 2px;
-			}
+      li {
+        border-bottom: 1px solid @sidenav-color;
+        padding: 8px 0 5px 2px;
+      }
 
-			a {
-				font-size: 19px;
-				color: @sidenav-color;
-				text-decoration: none;
-				padding: 0 0 0 2px;
+      a {
+        font-size: 19px;
+        color: @sidenav-color;
+        text-decoration: none;
+        padding: 0 0 0 2px;
 
-				span {
+        span {
 
-					display: block;
-					float: left;
-					&.nif-icon {
-						padding: 0 5px 0 1px;
-						&:before {
-							font-size: 21px;
-							vertical-align: top;
-						}
-					}
+          display: block;
+          float: left;
+          &.nif-icon {
+            padding: 0 5px 0 1px;
+            &:before {
+              font-size: 21px;
+              vertical-align: top;
+            }
+          }
 
-					&:last-child {
-						.opacity(0);
-						.transition(opacity @sidenav-transition-duration @sidenav-transition-easing);
-					}
-				}
-			}
-		}
-	}
+          &:last-child {
+            .opacity(0);
+            .transition(opacity @sidenav-transition-duration @sidenav-transition-easing);
+          }
+        }
+      }
+    }
+  }
 
-	&:hover {
-		width: @sidenav-width-open;
-		&>div {
-			width: @sidenav-width-open;
-			overflow: hidden;
-		}
-		&>img {
-			left: 0;
-			height: 109px;
-		}
-		#logotype {
-			.opacity(1);
-		}
+  &:hover {
+    width: @sidenav-width-open;
+    &>div {
+      width: @sidenav-width-open;
+      overflow: hidden;
+    }
+    &>img {
+      left: 0;
+      height: 109px;
+    }
+    #logotype {
+      .opacity(1);
+    }
 
-		ul a span:last-child {
-			.opacity(1);
-		}
-	}
+    ul a span:last-child {
+      .opacity(1);
+    }
+  }
 }
 
 #site-content {
-	margin: 0 0 0 @sidenav-width-closed;
+  margin: 0 0 0 @sidenav-width-closed;
 
-	.box-sizing(border-box);
-	min-width: 320 - @sidenav-width-closed;
-	max-width: 860px;
-	width: auto;
+  .box-sizing(border-box);
+  min-width: 320 - @sidenav-width-closed;
+  max-width: 860px;
+  width: auto;
 
-	background: #fff;
-	padding: 30px;
+  background: #fff;
+  padding: 30px;
 
-	.transition(margin-left @sidenav-transition-duration @sidenav-transition-easing);
+  .transition(margin-left @sidenav-transition-duration @sidenav-transition-easing);
 
-	.clearfix;
+  .clearfix;
 
-	#map-page & {
-		padding: 0;
-	}
+  #map-page & {
+    padding: 0;
+  }
 
-	.active-marker{
-		position: fixed;
-		left: @sidenav-width-closed;
-		z-index: 1;
-		.transition(left @sidenav-transition-duration @sidenav-transition-easing);
+  .active-marker{
+    position: fixed;
+    left: @sidenav-width-closed;
+    z-index: 1;
+    .transition(left @sidenav-transition-duration @sidenav-transition-easing);
 
-		&:after {
-			left: 100%;
-			top: 50%;
-			border: solid transparent;
-			content: " ";
-			height: 0;
-			width: 0;
-			position: absolute;
-			pointer-events: none;
-			border-left-color: @sidenav-bg-color;
-			border-width: @sidenav-arrow-size;
-			margin-top: -@sidenav-arrow-size;
-		}
-	}
+    &:after {
+      left: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-left-color: @sidenav-bg-color;
+      border-width: @sidenav-arrow-size;
+      margin-top: -@sidenav-arrow-size;
+    }
+  }
 
-	&.sidenav-hover {
-		margin-left: @sidenav-width-open;
+  &.sidenav-hover {
+    margin-left: @sidenav-width-open;
 
-		.active-marker {
-			left: @sidenav-width-open;
-		}
-	}
+    .active-marker {
+      left: @sidenav-width-open;
+    }
+  }
 
-	@media (min-width: 850px) {
-		width: 70%;
-		position: relative; // For the drop shadow... Will it hurt performance?
-		z-index: 10;
-		#map-page & {
-			width: auto;
-		}
-		.js & {
-			.box-shadow(4px 0 5px rgba(0, 0, 0, 0.4));
-		}
-	}
+  @media (min-width: 850px) {
+    width: 70%;
+    position: relative; // For the drop shadow... Will it hurt performance?
+    z-index: 10;
+    #map-page & {
+      width: auto;
+    }
+    .js & {
+      .box-shadow(4px 0 5px rgba(0, 0, 0, 0.4));
+    }
+  }
 
-	@media (min-width: 1228px) {
-		width: 860px;
-		#map-page & {
-			width: auto;
-		}
-	}
+  @media (min-width: 1228px) {
+    width: 860px;
+    #map-page & {
+      width: auto;
+    }
+  }
 }
 #map-page #site-content {
-	max-width: inherit;
+  max-width: inherit;
 }
 
 #home-list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	li {
-		margin: 0 0 25px;
-		.box-sizing(border-box);
-		width: 100%;
-		clear: left;
-		position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0 0 25px;
+    .box-sizing(border-box);
+    width: 100%;
+    clear: left;
+    position: relative;
 
-		&.is-future {
-			color: @gray-light;
-		}
+    &.is-future {
+      color: @gray-light;
+    }
 
-		&>i {
-			position: absolute;
-			top: 17px;
-			right: 0;
-			font-size: 36px;
-			.transition(@link-fade-transition);
-		}
+    &>i {
+      position: absolute;
+      top: 17px;
+      right: 0;
+      font-size: 36px;
+      .transition(@link-fade-transition);
+    }
 
-		.heading {
-			overflow: hidden;
-			position: relative;
-			-webkit-transition: padding-left @sidenav-transition-duration @sidenav-transition-easing, color @sidenav-transition-duration @sidenav-transition-easing;
-			transition: padding-left @sidenav-transition-duration @sidenav-transition-easing, color @sidenav-transition-duration @sidenav-transition-easing;
+    .heading {
+      overflow: hidden;
+      position: relative;
+      -webkit-transition: padding-left @sidenav-transition-duration @sidenav-transition-easing, color @sidenav-transition-duration @sidenav-transition-easing;
+      transition: padding-left @sidenav-transition-duration @sidenav-transition-easing, color @sidenav-transition-duration @sidenav-transition-easing;
 
-			&:before {
-				.nif-icon();
-				content: "\f113"; // .nif-icon-map-marker
-				position: absolute;
-				top: 0;
-				left: -60px;
-				font-size: 40px;
-				.transition(left @sidenav-transition-duration @sidenav-transition-easing);
-			}
+      &:before {
+        .nif-icon();
+        content: "\f113"; // .nif-icon-map-marker-hole
+        position: absolute;
+        top: 0;
+        left: -60px;
+        font-size: 40px;
+        .transition(left @sidenav-transition-duration @sidenav-transition-easing);
+      }
 
-		}
+    }
 
-		time {
-			font-size: 15px;
-			text-transform: uppercase;
-		}
-		a {
-			text-decoration: none;
-			color: @headings-color;
-		}
-		h1 {
-			margin: 0 45px 0 0;
+    time {
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+    a {
+      text-decoration: none;
+      color: @headings-color;
+    }
+    h1 {
+      margin: 0 45px 0 0;
 
-			strong {
-				font-family: Arial; // FIXME
-				font-weight: bold;
-			}
-		}
+      strong {
+        font-family: Arial; // FIXME
+        font-weight: bold;
+      }
+    }
 
-		.header-image {
-			margin-top: 10px;
-			.image-box-shadow();
-		}
+    .header-image {
+      margin-top: 10px;
+      .image-box-shadow();
+    }
 
-		&.has-link {
-			cursor: pointer;
-		}
+    &.has-link {
+      cursor: pointer;
+    }
 
-		@media (min-width: 850px) { // We only do these rollover styles where the screen is wide enough that we are showing the map
-			&.marker-active {
+    @media (min-width: 850px) { // We only do these rollover styles where the screen is wide enough that we are showing the map
+      &.marker-active {
 
-				.heading {
-					padding-left: 30px;
-					color: @home-highlight-colour;
+        .heading {
+          padding-left: 30px;
+          color: @home-highlight-colour;
 
-					&:before {
-						left: 0;
-					}
-				}
+          &:before {
+            left: 0;
+          }
+        }
 
-				&>i {
-					color: @home-highlight-colour;
-				}
-			}
-		}
-	}
+        &>i {
+          color: @home-highlight-colour;
+        }
+      }
+    }
+  }
 }
 
 .photoset {
-	@photosetPadding: 2px;
-	overflow: hidden;
-	margin: 10px 0;
-	height: 160px;
+  @photosetPadding: 2px;
+  overflow: hidden;
+  margin: 10px 0;
+  height: 160px;
 
-	div {
-		background-size: cover;
-		background-position: 50%;
-		background-repeat: no-repeat;
-		.box-sizing(border-box);
-		border-bottom: @photosetPadding solid #fff;
-		float: left;
-		height: 100%;
-		width: 100%;
-		
-	}
-	@media (min-width: 500px) {
-		.big {
-			width: 50%;
-		}
-		.small {
-			width: 25%;
-			height: 50%;
-			border-left: @photosetPadding solid #fff;
-		}
-	}
+  div {
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    .box-sizing(border-box);
+    border-bottom: @photosetPadding solid #fff;
+    float: left;
+    height: 100%;
+    width: 100%;
+    
+  }
+  @media (min-width: 500px) {
+    .big {
+      width: 50%;
+    }
+    .small {
+      width: 25%;
+      height: 50%;
+      border-left: @photosetPadding solid #fff;
+    }
+  }
 
-	@media (min-width: 530px) {
-		height: 180px;
-	}
+  @media (min-width: 530px) {
+    height: 180px;
+  }
 
-	@media (min-width: 600px) {
-		height: 210px;
-	}
+  @media (min-width: 600px) {
+    height: 210px;
+  }
 
-	@media (min-width: 750px) {
-		height: 250px;
-	}
+  @media (min-width: 750px) {
+    height: 250px;
+  }
 
-	@media (min-width: 830px) {
-		height: 300px;
-	}
+  @media (min-width: 830px) {
+    height: 300px;
+  }
 
-	// &.side-1 {
-	// 	div {
-	// 		float: right;
-	// 	}
-	// }
+  // &.side-1 {
+  //   div {
+  //     float: right;
+  //   }
+  // }
 }
 
 header.content-header {
-	position: relative;
-	padding: 20px 35px 0 0;
-	time {
-		color: @gray;
-		margin-top: -19px;
-		display: block;
-		text-transform: uppercase;
-	}
-	h1 {
-		margin: 0 0 4px;
-	}
-	ul.tags {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		overflow: hidden;
-		li {
-			float: left;
-			margin: 0 10px 0 0;
+  position: relative;
+  padding: 20px 35px 0 0;
+  time {
+    color: @gray;
+    margin-top: -19px;
+    display: block;
+    text-transform: uppercase;
+  }
+  h1 {
+    margin: 0 0 4px;
+  }
+  ul.tags {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    li {
+      float: left;
+      margin: 0 10px 0 0;
 
-			a {
-				text-decoration: none;
-				color: @gray;
+      a {
+        text-decoration: none;
+        color: @gray;
 
-				&:hover {
-					color: @link-hover-color;
-				}
-			}
-		}
-	}
+        &:hover {
+          color: @link-hover-color;
+        }
+      }
+    }
+  }
 
-	&>span.nif-icon {
-		position: absolute;
-		top: 20px;
-		right: 0;
-		font-size: 36px;
-	}
+  &>span.nif-icon {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    font-size: 36px;
+  }
 }
 
 .header-image {
-	margin: 20px 0 0;
-	.image-box-shadow();
+  margin: 20px 0 0;
+  .image-box-shadow();
 }
 .header-image-caption {
-	text-align: right;
-	color: #777;
-	font-size: 90%;
+  text-align: right;
+  color: #777;
+  font-size: 90%;
 }
 #content>p:first-of-type {
-	margin-bottom: @line-height-base;
-	font-size: @font-size-base * 1.5;
-	font-weight: 200;
-	line-height: @line-height-computed * 1.5;
+  margin-bottom: @line-height-base;
+  font-size: @font-size-base * 1.5;
+  font-weight: 200;
+  line-height: @line-height-computed * 1.5;
 }
 
 #content table {
-	.table();
-	.table-striped();
+  .table();
+  .table-striped();
 }
 
 #content blockquote {
-	position: relative;
-	margin: 0 0 0 80px;
+  position: relative;
+  margin: 0 0 0 80px;
 
-	&:before {
-		color: @gray-lighter;
-		position: absolute;
-		left: -70px;
-		font-size: 4em;
-		content: "\f10d";
-		font-family: FontAwesome;
-		font-weight: normal;
-		font-style: normal;
-		text-decoration: inherit;
-		-webkit-font-smoothing: antialiased;
-		*margin-right: .3em; // fixes ie7 issues
-	}
+  &:before {
+    color: @gray-lighter;
+    position: absolute;
+    left: -70px;
+    font-size: 4em;
+    content: "\f10d";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    *margin-right: .3em; // fixes ie7 issues
+  }
 
-	small {
-		display: block;
-		margin: 2px 0 0;
-	}
+  small {
+    display: block;
+    margin: 2px 0 0;
+  }
 }
 
 #content img {
-	margin: 0 0 10px 10px;
-	float: right;
+  margin: 0 0 10px 10px;
+  float: right;
 }
 
 #related-photosets {
-	overflow: hidden;
+  overflow: hidden;
 
-	h1 {
-		margin-bottom: 10px;
-	}
-	.photoset {
-		width: 100%;
-		position: relative;
-	}
+  h1 {
+    margin-bottom: 10px;
+  }
+  .photoset {
+    width: 100%;
+    position: relative;
+  }
 }
 
 #comments {
-	margin: 20px 0 0;
+  margin: 20px 0 0;
 
-	h1 {
-		padding: 0 0 5px;
-		margin: 0 0 20px;
-	}
+  h1 {
+    padding: 0 0 5px;
+    margin: 0 0 20px;
+  }
 }
 
 #map {
-	width: 100%;
-	height: 200px;
-	position: relative;
-	height: 100%;
-	.map-bg-gradient;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  height: 100%;
+  .map-bg-gradient;
 
 }
 
 #map-filter {
-	.leaflet-bar a {
-		width: 36px;
-		height: 36px;
-		font-size: 25px;
-		i {
-			margin: 4px 0 0;
-		}
+  .leaflet-bar a {
+    width: 36px;
+    height: 36px;
+    font-size: 25px;
+    i {
+      margin: 4px 0 0;
+    }
 
-		&.active {
-			color: #f60;
-		}
-	}
+    &.active {
+      color: #f60;
+    }
+  }
 }
 
 #photoset {
-	list-style: none;
-	@photosetPadding: 5px;
-	padding: 0;
-	overflow: hidden;
-	li {
-		margin: 0 @photosetPadding @photosetPadding 0;
-		float: left;
-		img {
-			display: block;
+  list-style: none;
+  @photosetPadding: 5px;
+  padding: 0;
+  overflow: hidden;
+  li {
+    margin: 0 @photosetPadding @photosetPadding 0;
+    float: left;
+    img {
+      display: block;
 
-			&.marker-active {
-				.opacity(.7);
-			}
-		}
-	}
+      &.marker-active {
+        .opacity(.7);
+      }
+    }
+  }
 }
 
 #fullsize-photo {
-	img {
-		margin: 10px auto;
-		display: block;
-		.image-box-shadow();
-	}
+  img {
+    margin: 10px auto;
+    display: block;
+    .image-box-shadow();
+  }
 
-	nav {
-		ul {
-			overflow: hidden;
-			list-style: none;
-			padding: 0;
-			li {
-				float: right;
-				margin: 0 0 0 10px;
+  nav {
+    ul {
+      overflow: hidden;
+      list-style: none;
+      padding: 0;
+      li {
+        float: right;
+        margin: 0 0 0 10px;
 
-			}
-		}
-		a {
-			text-decoration: none;
-			color: @text-color;
-			&:hover {
-				color: @link-hover-color;
-			}
-		}
-		i {
-			font-size: 30px;
-		}
-	}
+      }
+    }
+    a {
+      text-decoration: none;
+      color: @text-color;
+      &:hover {
+        color: @link-hover-color;
+      }
+    }
+    i {
+      font-size: 30px;
+    }
+  }
 }
 
 #follow-links {
-	list-style: none;
-	padding: 0;
+  list-style: none;
+  padding: 0;
 
-	li {
-		float: left;
-		margin: 0 10px 10px 0;
-		a {
-			font-size: 60px;
-			color: @gray;
-			text-decoration: none;
-			.transition(@link-fade-transition);
+  li {
+    float: left;
+    margin: 0 10px 10px 0;
+    a {
+      font-size: 60px;
+      color: @gray;
+      text-decoration: none;
+      .transition(@link-fade-transition);
 
-			.fa-envelope-alt {
-				font-size: 1.09em;
-			}
+      .fa-envelope-alt {
+        font-size: 1.09em;
+      }
 
-			&:hover {
-				color: @link-hover-color;
-			}
-		}
-	}
+      &:hover {
+        color: @link-hover-color;
+      }
+    }
+  }
 }
 
 // Side map stuff
 
 #side-map {
-	display: none;
-	position: fixed;
-	z-index: 9;
-	top: 0;
-	left: 0;
-	
-	.js & {
-		.map-bg-gradient;
-	}
+  display: none;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  
+  .js & {
+    .map-bg-gradient;
+  }
 
-	@media (min-width: 850px) {
-		display: block;
-	}
+  @media (min-width: 850px) {
+    display: block;
+  }
 }
 
 // Map stuff
 
-.map-marker-airport {
-	background: rgba(0,0,0,.7);
-	border: 1px solid #fff;
-	border-radius: 50%;
-}
-.map-marker-airplane {
-	font-size: 20px;
-	.nif-icon {
-		position: relative;
-		top: -10px;
-		left: -3px;
-	}
+.map-marker {
+
+  .nif-icon-map-marker();
+
+  width: 30px;
+  height: 46px;
+  position:absolute;
+  font-size: 50px;
+  left:0;
+  top:0;
+  display: block;
+  text-align: center;
+  margin-top: -40px;
+  margin-left: -12px;
+
+  &:before {
+    color: @sidenav-bg-color;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    .nif-icon();
+  }
+
+  span {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  &.marker-active {
+    &:before {
+      color: @home-highlight-colour;
+    }
+  }
 }
 
-// FIXME: Temp
-.awesome-marker-icon-darkblue.marker-active {
-	.awesome-marker-icon-darkred();
+.map-marker-shadow {
+  background: url('/images/markers-shadow@2x.png') no-repeat 0 0;
+  background-size: 35px 16px;
+  width: 36px;
+  height: 16px;
+  margin-top: -13px;
+  margin-left: -4px;
+}
+
+.map-marker-airport {
+  background: rgba(0,0,0,.7);
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.map-marker-airplane {
+  font-size: 20px;
+  .nif-icon {
+    position: relative;
+    top: -10px;
+    left: -3px;
+  }
 }
 
 // Override leaflet paths
 
 .leaflet-control-layers-toggle {
-	background-image: url(../leaflet/images/layers.png);
+  background-image: url(../leaflet/images/layers.png);
 }
 .leaflet-retina .leaflet-control-layers-toggle {
-	background-image: url(../leaflet/images/layers-2x.png);
+  background-image: url(../leaflet/images/layers-2x.png);
 }
-
-// Override awesome marker paths
-.awesome-marker {
-  background-image: url('../awesome-markers/images/markers-soft.png');
-}
-.awesome-marker-shadow {
-  background-image: url('../awesome-markers/images/markers-shadow.png');
-}
-/* Retina displays */
-@media (min--moz-device-pixel-ratio: 1.5),(-o-min-device-pixel-ratio: 3/2),
-(-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5),(min-resolution: 1.5dppx) {
- .awesome-marker {
-  background-image: url('../awesome-markers/images/markers-soft@2x.png');
- }
- .awesome-marker-shadow {
-  background-image: url('../awesome-markers/images/markers-shadow@2x.png');
- }
-}
-// /overrides

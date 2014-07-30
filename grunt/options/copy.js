@@ -47,16 +47,6 @@ module.exports = {
       }
     ]
   },
-  awesomeMarkers: {
-    files: [
-      {
-        expand: true,
-        cwd: 'vendor/Leaflet.awesome-markers/dist/images',
-        src: ['**'],
-        dest: 'out/awesome-markers/images'
-      }
-    ]
-  },
   leaflet: {
     files: [
       {
