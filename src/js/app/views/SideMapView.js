@@ -37,7 +37,7 @@ define(
               return;
             }
 
-            options = _.extend({}, options, { zoom: 6})
+            options = _.extend({zoom: 6}, options)
             this.handleResize();
 
             var mapContainer = this.$el.empty()[0];

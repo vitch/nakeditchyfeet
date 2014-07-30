@@ -24,7 +24,8 @@ define(
                   iconClass: 'camera-retro',
                   hoverable: false
                 }
-              )
+              ),
+              zoom: 8
             });
 
             // Hacky way to make the height correct once the image has loaded and we know how tall it is.
