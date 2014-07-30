@@ -39,11 +39,7 @@ define(
 
         createShadow: function () {
           var div = document.createElement('div');
-
           div.className = 'map-marker-shadow';
-          // div.style.marginLeft = (-this.options.shadowAnchor[0]) + 'px';
-          // div.style.marginTop = (-this.options.shadowAnchor[1]) + 'px';
-          // div.style.width = shadowSize[0]
           return div;
       }
 
