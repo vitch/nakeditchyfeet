@@ -24,6 +24,9 @@ define(
           L.DomEvent
             .on(this._icon, 'mouseover', this._handleHoverOn, this)
             .on(this._icon, 'mouseout', this._handleHoverOff, this);
+          if (this.options.title) {
+            L.DomEvent.on(this._map, 'movestart zoomstart', this._handleMapMove, this);
+          }
           if (this.options.associatedElement) {
             L.DomEvent
               .on(this.options.associatedElement, 'mouseover', this._handleAssociatedElementHoverOn, this)
@@ -39,10 +42,15 @@ define(
       },
       _removeIcon: function() {
         L.Marker.prototype._removeIcon.call(this);
-        if (this.options.hoverable && this.options.associatedElement) {
-          L.DomEvent
-              .off(this.options.associatedElement, 'mouseover', this._handleAssociatedElementHoverOn)
-              .off(this.options.associatedElement, 'mouseout', this._handleAssociatedElementHoverOff);
+        if (this.options.hoverable) {
+          if (this.options.title) {
+            L.DomEvent.off(this._map, 'movestart zoomstart', this._handleMapMove, this);
+          }
+          if (this.options.associatedElement) {
+            L.DomEvent
+                .off(this.options.associatedElement, 'mouseover', this._handleAssociatedElementHoverOn)
+                .off(this.options.associatedElement, 'mouseout', this._handleAssociatedElementHoverOff);
+          } 
         }
       },
       _handleHoverOn: function() {
@@ -58,6 +66,9 @@ define(
           L.DomUtil.removeClass(this.options.associatedElement, 'marker-active');
         }
         this._resetZIndex();
+      },
+      _handleMapMove: function() {
+        $('.tooltip').remove(); // TODO: Maybe re-attach the tooltip on zoomend/moveend? If you are still over the item??
       },
       _handleAssociatedElementHoverOn: function() {
         this._handleHoverOn();
