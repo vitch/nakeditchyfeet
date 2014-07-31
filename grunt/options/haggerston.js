@@ -131,11 +131,12 @@ module.exports = function(grunt) {
             item.hasLink = !!item.externalLink;
             if (item.icon === 'plane') {
               item.type = 'flight';
-              item.journey = item.airports.split(',').map(function(code) {
+              var codes = item.airports.split(',');
+              item.journey = codes.map(function(code) {
                 return airports[code].name;
               }).join(' - ');
-              item.destinationCode = item.airports.split(',').pop();
-              item.className = 'color-' + (count++)%2;
+              item.label = '<span class="airport-code">' + codes[0] + '</span> ' + item.label + ' <span class="airport-code">' + codes[codes.length-1] + '</span>'
+              item.destinationCode = codes.pop();
               item.airports = item.airports.split(',').map(function(code) {
                 return code + '|' + airports[code].lat + ',' + airports[code].lng + '|' + airports[code].name;
               }).join('||');
