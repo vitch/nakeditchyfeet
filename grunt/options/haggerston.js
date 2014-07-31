@@ -135,7 +135,8 @@ module.exports = function(grunt) {
               item.journey = codes.map(function(code) {
                 return airports[code].name;
               }).join(' - ');
-              item.label = '<span class="airport-code">' + codes[0] + '</span> ' + item.label + ' <span class="airport-code">' + codes[codes.length-1] + '</span>'
+              var labelParts = item.label.split('-');
+              item.label = '<span class="airport-code">' + codes[0] + '</span> ' +  labelParts[0] + ' - <span class="airport-code">' + codes[codes.length-1] + '</span>' + labelParts[1];
               item.destinationCode = codes.pop();
               item.airports = item.airports.split(',').map(function(code) {
                 return code + '|' + airports[code].lat + ',' + airports[code].lng + '|' + airports[code].name;
