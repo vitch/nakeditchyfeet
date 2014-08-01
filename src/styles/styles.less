@@ -356,6 +356,10 @@ img {
           }
         }
 
+        .airport-code {
+          background: @home-highlight-colour;
+        }
+
         &>i {
           color: @home-highlight-colour;
         }
@@ -368,13 +372,14 @@ img {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold;
   font-size: 16px;
-  background: #666;
+  background: #bbb;
   color: #fff;
   border-radius: 3px;
   padding: 4px 5px 3px;
   display: inline-block;
   position: relative;
   top: -3px;
+  .transition(background-color @sidenav-transition-duration @sidenav-transition-easing);
 }
 
 .photoset {
