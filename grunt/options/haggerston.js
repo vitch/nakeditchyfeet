@@ -48,7 +48,7 @@ var generatePhotosetPreview = function(page, i) {
     icon: "camera-retro",
     target: page,
     date: new Date(page.templateData.date),
-    label: "New Photoset: " + page.templateData.title,
+    label: "Photo album: " + page.templateData.title,
     photosetData: {
       big: listPagePhotos[0],
       small: listPagePhotos.slice(1,5),
