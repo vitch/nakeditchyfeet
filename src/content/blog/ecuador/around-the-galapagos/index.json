@@ -1,0 +1,15 @@
+{
+  "template": "blog-post.html",
+  "isDraft": true,
+  "templateData": {
+    "title": "Around the Galapagos by Beagle",
+    "author": "Priscila Santos",
+    "metaDescription": "",
+    "date": "2014-04-20",
+    "headerImage": "",
+    "content": "index.md",
+    "latitude": -0.3839569,
+    "longitude": -90.4513206,
+    "tags": ["wildlife", "ecuador", "galapagos"]
+  }
+}
