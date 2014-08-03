@@ -2,7 +2,7 @@
   "template": "blog-post.html",
   "isDraft": true,
   "templateData": {
-    "title": "Around the Galapagos by Beagle",
+    "title": "Around the Galapagos",
     "author": "Priscila Santos",
     "metaDescription": "",
     "date": "2014-04-20",
