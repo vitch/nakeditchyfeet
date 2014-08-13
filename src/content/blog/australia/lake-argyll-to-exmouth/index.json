@@ -1,0 +1,15 @@
+{
+  "template": "blog-post.html",
+  "isDraft": true,
+  "templateData": {
+    "title": "Western Australia - Lake Argyll to Exmouth",
+    "author": "Priscila Santos",
+    "headerImage": "",
+    "date": "2013-08-30",
+    "content": "index.md",
+    "latitude": -21.2751331,
+    "longitude": 122.9974019,
+    "photosets": ["72157640064949916"],
+    "tags": ["australia", "western australia"]
+  }
+}

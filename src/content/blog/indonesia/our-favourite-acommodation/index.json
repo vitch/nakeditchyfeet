@@ -1,0 +1,15 @@
+{
+  "template": "blog-post.html",
+  "isDraft": true,
+  "templateData": {
+    "title": "Our favourite places to stay in Indonesia",
+    "author": "Kelvin Luck",
+    "date": "2013-08-09",
+    "headerImage": "",
+    "content": "index.md",
+    "latitude": 0,
+    "longitude": 0,
+    "photosets": [],
+    "tags": ["indonesia", "accommodation", "reviews"]
+  }
+}
