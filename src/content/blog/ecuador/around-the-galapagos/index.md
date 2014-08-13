@@ -12,9 +12,9 @@ Full of expectations, we flew from Quito in Ecuador via Guayaquil and onto the i
 The Panga (an inflatable speed boat) awaited us and our naturalist guide for the week - Daniel - led us towards the boat, where we were received by the crew with an amazing welcome pinacolada. After the introductions we were shown our cabins and given some time to settle in. We then had our first three course meal of the week while sailing towards Bachas Beach where we got to see pelicans take flight, sat on the sand watching as two bright pink flamingos tip toed around a lake getting all territorial with each other, and iguanas and Sally Lightfoot crabs populated the surrounding lava rocks. 
 
 
-Finnaly we had that longed for swim while some of us tried snorkelling in murky waters, followed by another cocktail back on board, a snack, shower and a briefing before the three course dinner was served. The briefing was a daily ocurrence and consisted mainly of Daniel explaining what we were due to be doing the following day, which invariably combined snorkeling and hiking around the islands, several three course meals, cocktails and afternoon naps. We just couldn't argue with that.
+Finnaly that longed for swim in tropical waters was followed by another cocktail back on board, a snack, shower and a briefing before the three course dinner was served. The briefing was a daily ocurrence which consisted mainly of Daniel explaining what we were due to be doing the following day, which invariably combined snorkeling and hiking around the islands, several three course meals, cocktails and afternoon naps. We just couldn't argue with that.
 
-We had chosen to do the northern circuit of the Galapagos Islands which included visiting Genovesa, Santiago and Isabella Islands. The northern circuit is less busy than the southern one so for the whole week we saw only a couple of boats, and most of the time the islands and their waters were ours to explore alone.
+We had chosen to do the northern circuit of the Galapagos Islands which included visiting Genovesa, Santiago and Isabella Islands, inhabited by the wild life only. The northern circuit is less busy than the southern which sees the majority of the boat traffic, so for the whole week we saw only a couple of other boats, meaning that most of the time the islands and their waters were ours to explore alone.
 
 <div class="photos-four-up">
 ![?](nascar-boobie-1.jpg)
@@ -23,9 +23,11 @@ We had chosen to do the northern circuit of the Galapagos Islands which included
 ![?](flamingo.jpg)
 </div>
 
-On day two it was Carol's birthday so she got to get up very early to eat a delicious breakfast. Afterwards we visited Genovesa Island where a huge bird colony nests along the cliffs and where there were hundreds of strange birds - red footed boobies, NASCAR boobies and frigate birds - all minding their mating business while we pointed and photgraphed them from so close we could almost touch them. The snorkelling sessions of the day were replete with fur seals and stingrays who similarly to the birds didn't mind our presence or persistence. Not a bad birthday for Carol, after returning to the boat there were more cocktails and even a birthday cake especially baked on board by the talented chef.
+On day two it was Carol's birthday so she got to get up very early to eat a delicious breakfast. Afterwards we visited Genovesa Island where a huge bird colony nests along the cliffs and where there were hundreds of strange birds - red footed boobies, NASCAR boobies and frigate birds - all minding their mating business while we pointed and photgraphed them from so close we could almost touch them. 
 
-On day three of the journey we left Genovesa and sailed to Santiago. In the morning we took the panga to shore and went for a walk along the lava flats and met up with hundreds of marine iguanas. These guys posed forever, and disguised so well against the black rock that we really had to watch our step not to walk on one. They piled on top of each other soaking the sun rays and projected snot a log way away in loud sneezes. It was quite disgusting but nonetheless fascinating stuff.
+The snorkelling sessions of the day were replete with fur seals and stingrays who similarly to the birds didn't mind our presence or persistence. Not a bad birthday for Carol, after returning to the boat there were more cocktails and even a birthday cake especially baked on board by our talented chef.
+
+On day three of the journey we left Genovesa and sailed to Santiago. In the morning we took the panga to shore and went for a walk along the lava flats where met up with hundreds of marine iguanas. These guys posed forever, and disguised so well against the black rock that we really had to watch our step not to walk on one. They piled on top of each other soaking the sun rays and intermitently projecting snot all over each other in loud sneezes. It was quite disgusting, but nonetheless fascinating behaviour.
 
 <div class="photos-four-up">
 ![?](marine-iguana-5.jpg)
@@ -35,20 +37,20 @@ On day three of the journey we left Genovesa and sailed to Santiago. In the morn
 </div>
 
 
-Further along we reached a playing ground for fur seals who used tunnelled sea caves as reverse slides showing up at the surface of the water inside holes in the rock, before being taken away again by the ocean. Others simply twirled and played with each other in the rise and fall of the waves inside cave pools while we watched from above as if looking into a well. But the best, was to watch them surf. You could see their bodies riding inside the glassy wave and it looked perfect, again and again. They must have been having so much fun.
+As we walked further along the coast we reached a playground for fur seals. Here they had fun using the tunneling between sea caves as reverse slides, the surfacing and sinking inside water holes with every wave. Others simply twirled and played with each other in the rise and fall of the waves inside open top cave pools while we watched from above like into a well. But the best, was to watch them surf the powerful green waves, watching their bodies gliding inside through the glassy water, perfect, again and again. They must have been having so much fun.
 
 
-Day four topped it all. Not only we had some very special encounters with fur seals swimming so close up by us and being able to look into their big round eyes, but we also saw Galapagos Penguins as they soaked the sun, as would the northernmost penguins in the world. 
+Day four topped it all. Not only we had some very special encounters with fur seals who allowed us so close up that we were able to look into their big round eyes, and see through them into their seal soul, but we got to see Galapagos Penguins resting and soaking the sun, as would the northernmost penguins in the world. Tiny little birds who swim faster than fish.
 
-We didn't think it could get any better. Maybe if we had seen Giant tortoises on our afternoon hike in Tagus Cove, but the huge Galapagos (after who the islands were named after) are not only shy but very endangered and hide deep inland these days. Still, we had a stunning walk with moonscape panorama views of the interior of the island and the cove where the Beagle anchored waiting for us with some mojitos.
+We didn't think it could get any better. Maybe if we had seen Giant tortoises on our afternoon hike in Tagus Cove, but the huge Galapagos (after who the islands were named after) are not only shy but very endangered and hide deep inland these days. Still, we had a stunning walk with moonscape panorama views of the interior of the island and the cove where the Beagle was anchored with mojitos waiting for us.
 
-The rest of the week brought more barren lava fields, ladie's-finger-banana cactus, snotty iguanas, colouful footed boobies, inflated frigates, lots of hungry sea turtles and we got in a swim with the penguins. These fast swimmers were incredible to watch as they chased their lunch and changed course so suddenly that it would have been hilarious to watch this bunch of snorkellers attempting to keep up with them. 
+The rest of the week brought more barren lava fields, ladie's-finger-banana cactus, snotty iguanas, colouful footed boobies, inflated frigates, lots of hungry sea turtles and we finnaly got to swim with the penguins. These fast swimmers were incredible to watch as they chased their lunch and changed course so suddenly that it would have been hilarious to watch this bunch of snorkellers attempting to keep up with them. 
 
 ![?](penguin-1.jpg)
 
 
 
-The snorkelling in the Galapagos is in a league of its own. It can't be compared to anywhere on earth because nowhere else can be found these unique creatures. The coral is pretty much non-existent, the visibility is poor most of the time, but when it comes to getting up close and being able to interact with these animals, observing them for as long as you like, it is unrivalled.
+The snorkelling in the Galapagos is in a league of its own. It can't be compared to anywhere on earth as far as we've seen, because nowhere else can deliver the close encounters with the wildlife. The coral is pretty much non-existent, the visibility is poor most of the time, but when it comes to getting up close and being able to interact with these animals, observing them for as long as you like, it is unrivalled.
 
 The Beagle ran on motor for most of the week but the wind picked up a couple of times and the sails went up, it was a beautiful very slow sight. We sailed across the equator line twice, first time chasing huge Giant Mola Molas and the second time we were treated to a swim at zero degrees latitude.
 
