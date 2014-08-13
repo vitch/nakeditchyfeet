@@ -16,19 +16,23 @@ Finnaly we had that longed for swim while some of us tried snorkelling in murky 
 
 We had chosen to do the northern circuit of the Galapagos Islands which included visiting Genovesa, Santiago and Isabella Islands. The northern circuit is less busy than the southern one so for the whole week we saw only a couple of boats, and most of the time the islands and their waters were ours to explore alone.
 
+<div class="photos-four-up">
 ![?](nascar-boobie-1.jpg)
+![?](frigging-frigate-3.jpg)
 ![?](birthday-cake.jpg)
 ![?](flamingo.jpg)
-![?](frigging-frigate-3.jpg)
+</div>
 
 On day two it was Carol's birthday so she got to get up very early to eat a delicious breakfast. Afterwards we visited Genovesa Island where a huge bird colony nests along the cliffs and where there were hundreds of strange birds - red footed boobies, NASCAR boobies and frigate birds - all minding their mating business while we pointed and photgraphed them from so close we could almost touch them. The snorkelling sessions of the day were replete with fur seals and stingrays who similarly to the birds didn't mind our presence or persistence. Not a bad birthday for Carol, after returning to the boat there were more cocktails and even a birthday cake especially baked on board by the talented chef.
 
 On day three of the journey we left Genovesa and sailed to Santiago. In the morning we took the panga to shore and went for a walk along the lava flats and met up with hundreds of marine iguanas. These guys posed forever, and disguised so well against the black rock that we really had to watch our step not to walk on one. They piled on top of each other soaking the sun rays and projected snot a log way away in loud sneezes. It was quite disgusting but nonetheless fascinating stuff.
 
+<div class="photos-four-up">
 ![?](marine-iguana-5.jpg)
-![?](ecuator.jpg)
 ![?](sea-lion-1.jpg)
+![?](ecuator.jpg)
 ![?](cactus.jpg)
+</div>
 
 
 Further along we reached a playing ground for fur seals who used tunnelled sea caves as reverse slides showing up at the surface of the water inside holes in the rock, before being taken away again by the ocean. Others simply twirled and played with each other in the rise and fall of the waves inside cave pools while we watched from above as if looking into a well. But the best, was to watch them surf. You could see their bodies riding inside the glassy wave and it looked perfect, again and again. They must have been having so much fun.
