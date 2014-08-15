@@ -70,7 +70,7 @@
 	<div id="side-map">
 	</div>
 	{%- endif %}
-	<script type="text/javascript" src="{{ page|basePath }}js/lib/jquery.js"></script>
+	<script type="text/javascript" src="{{ page|basePath }}js/lib/jquery{% if options.minify %}.min{% endif %}.js"></script>
 	{% for path in options.jsLibs -%}
 	<script src="{{ page|basePath }}{{ path }}"></script>
 	{% endfor %}

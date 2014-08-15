@@ -17,6 +17,10 @@ module.exports = {
     src: 'vendor/jquery/dist/jquery.js',
     dest: 'out/js/lib/jquery.js'
   },
+  jQueryMin: {
+    src: 'vendor/jquery/dist/jquery.min.js',
+    dest: 'out/js/lib/jquery.min.js'
+  },
   js: {
     files: [
       {
