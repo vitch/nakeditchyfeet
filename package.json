@@ -34,7 +34,8 @@
     "async": "~0.2.9",
     "marked": "~0.2.8",
     "load-grunt-config": "~0.7.2",
-    "grunt-notify": "~0.2.20"
+    "grunt-notify": "~0.2.20",
+    "grunt-contrib-imagemin": "~0.8.0"
   },
   "peerDependencies": {},
   "keywords": [
