@@ -17,5 +17,5 @@
 <div class="alert alert-danger" style="margin-top: 20px;"><strong>Warning</strong>: Draft post - will not be visible on live website</div>
 {%- endif %}
 
-{% if headerImageLarge %}<img src="{{ headerImageLarge }}" class="header-image" />{% else if headerImage %}<img src="{{ headerImage }}" class="header-image" />{% endif %}
+{% if headerImageLarge %}<img src="{{ headerImageLarge }}" class="header-image" />{% elseif headerImage %}<img src="{{ headerImage }}" class="header-image" />{% endif %}
 {% if headerImageCaption %}<p class="header-image-caption">{{ headerImageCaption|raw }}</p>{% endif %}

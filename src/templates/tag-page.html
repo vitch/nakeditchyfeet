@@ -4,6 +4,6 @@
 	<header class="content-header">
 	<h1>{{ numSubpages }} post{% if numSubpages > 1 %}s{% endif %} tagged with "{{category}}"</h1>
 	</header>
-	{% set pagesToLoop = subpages|published|listPageIconify|sort('date')|reverse %}
+	{% set pagesToLoop = subpages|published|listPageIconify|sortByKey('date')|reverse %}
 	{% parent %}
 {% endblock %}

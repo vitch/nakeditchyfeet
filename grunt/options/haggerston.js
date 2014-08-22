@@ -211,6 +211,9 @@ module.exports = function(grunt) {
             'follow-us': 'twitter',
             'about-us': 'foot'
           }[section];
+        },
+        length: function(pages) {
+          return pages.length;
         }
       }
     }

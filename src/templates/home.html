@@ -1,6 +1,6 @@
 {% extends 'list-page.html' %}
 {% block bodyContent %}
-	{% set pagesToLoop = pages|published|listPageIconify|intersperseEvents|sort('date')|reverse %}
+	{% set pagesToLoop = pages|published|listPageIconify|intersperseEvents|sortByKey('date')|reverse %}
 	{% parent %}
 	<script type="text/javascript">
 		(function() {
