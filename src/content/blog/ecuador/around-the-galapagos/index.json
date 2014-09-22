@@ -1,6 +1,5 @@
 {
   "template": "blog-post.html",
-  "isDraft": true,
   "templateData": {
     "title": "Cruising the Galapagos Islands",
     "author": "Priscila Santos",
