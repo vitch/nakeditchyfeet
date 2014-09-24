@@ -50,7 +50,7 @@ Day four - topped it all. Not only we had some very special encounters with fur 
 
 We didn't think it could get any better. Maybe if we had seen Giant tortoises on our afternoon hike in Tagus Cove, but the huge Galapagos (after who the islands were named after) are not only shy but very endangered and hide deep inland these days. Still, we had a stunning walk with moonscape panorama views of the interior of the island and the cove where the anchored Beagle awaited us with mojitos.
 
-The rest of the week brought more barren lava fields, ladies-finger-banana cactus, snotty iguanas, colouful footed boobies, inflated frigates, lots of hungry sea turtles and....we finally got to swim with the penguins! These fast swimmers were incredible to watch as they chased their lunch and changed course so suddenly that it would have been hilarious to watch this bunch of snorkellers attempting to keep up with them. 
+The rest of the week brought more barren lava fields, ladies-finger-banana cactus, snotty iguanas, colourful footed boobies, inflated frigates, lots of hungry sea turtles and....we finally got to swim with the penguins! These fast swimmers were incredible to watch as they chased their lunch and changed course so suddenly that it would have been hilarious to watch this bunch of snorkellers attempting to keep up with them. 
 
 
 ![?](penguin-1.jpg)
