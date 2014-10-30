@@ -4,12 +4,12 @@
   "templateData": {
     "title": "Western Australia - Lake Argyll to Exmouth",
     "author": "Priscila Santos",
-    "headerImage": "",
+    "headerImage": "cable-beach.jpg",
     "date": "2013-08-30",
     "content": "index.md",
     "latitude": -21.2751331,
     "longitude": 122.9974019,
-    "photosets": ["72157640064949916"],
+    "photosets": ["72157640064949916", "72157640109723145"],
     "tags": ["australia", "western australia"]
   }
 }
