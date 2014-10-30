@@ -1,0 +1,14 @@
+{
+  "template": "blog-post.html",
+  "isDraft": true,
+  "templateData": {
+    "title": "Hawaii",
+    "headerImage": "",
+    "author": "Priscila Santos",
+    "date": "2014-10-29",
+    "content": "index.md",
+    "latitude": -0.7296117, 
+    "longitude": -48.5153673,
+    "tags": ["hawaii", "pacific", "surf"]
+  }
+}
