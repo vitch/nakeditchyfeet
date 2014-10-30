@@ -17,6 +17,7 @@ module.exports = function(grunt) {
 
   // TODO: Is there a cleaner way to make these variables available in the options files?
   grunt.isProduction = target !== 'dev';
+  grunt.generateDrafts = !grunt.isProduction;
   grunt.jsLibs = [
     'vendor/underscore/underscore.js',
     'vendor/backbone/backbone.js',

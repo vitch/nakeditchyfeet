@@ -63,6 +63,7 @@ module.exports = function(grunt) {
   return {
     options: {
       minify: grunt.isProduction,
+      generateDrafts: !grunt.isProduction,
       jsLibs: grunt.isProduction ? ['js/libs.min.js'] : grunt.jsLibs.map(function(l) {return l.replace('vendor', 'js/lib'); }),
       listFilterOptions: listFilterOptions,
       middleware: [
