@@ -3,12 +3,13 @@
   "isDraft": true,
   "templateData": {
     "title": "Hawaii",
-    "headerImage": "",
+    "headerImage": "header.jpg",
     "author": "Priscila Santos",
     "date": "2014-10-29",
     "content": "index.md",
     "latitude": 20.46,
     "longitude": -157.505,
+    "photosets": ["72157642834539003", "72157642751240453"],
     "tags": ["hawaii", "pacific", "surf"]
   }
 }

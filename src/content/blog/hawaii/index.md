@@ -4,7 +4,16 @@ The opportunity to visit Hawaii presented itself when we were planning how to ge
 
 So of course all we knew about the islands was to do with their reputation of surfing Mecca tropical paradise. We had the idea that it would maybe be similar to Fiji, with it's Polynesian culture and influences, welcoming, but with American standards of customer service and first world comforts, yet at the same time laid back and friendly like tropical places tend to be. But in fact Hawaii proved to be a very complicated place to work out.
 
- On the surface Hawaii looks one thing but deep inside it is another. On the surface it is perfect and beautiful, touristy and welcoming but the more you spend time outside the tourist areas you start to realise that there is a lot going on in Hawaii. That in fact Hawaiian's hate the tourism and that included the tourists, most of the time you are not welcome to wander around their beaches and surf their waves, they resent that their culture has been turned into a theme park and they would rather we left them alone. We thought that Australia and NZ were really expensive but in Hawaii we spent double our OZ and NZ daily budgets.
+On the surface Hawaii looks one thing but deep inside it is another. On the surface it is perfect and beautiful, touristy and welcoming but the more you spend time outside the tourist areas you start to realise that there is a lot going on in Hawaii. That in fact Hawaiian's hate the tourism and that included the tourists, most of the time you are not welcome to wander around their beaches and surf their waves, they resent that their culture has been turned into a theme park and they would rather we left them alone. We thought that Australia and NZ were really expensive but in Hawaii we spent double our OZ and NZ daily budgets.
+
+![](DSCF5019.jpg)
+![](DSCF5022.jpg)
+![](DSCF5120.jpg)
+![](DSCF5131.jpg)
+![](DSCF5137.jpg)
+![](DSCF5388.jpg)
+![](DSCF5493.jpg)
+![](DSCF5494.jpg)
 
 A few numbers and facts paint a better picture of the reality of Hawaii:
 90% of food is imported; 
