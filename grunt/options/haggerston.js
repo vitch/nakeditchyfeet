@@ -56,7 +56,7 @@ var generatePhotosetPreview = function(page, i) {
     },
     geo: page.templateData.latitude + ',' + page.templateData.longitude,
     hasLink: true
-  }
+  };
 };
 
 module.exports = function(grunt) {
@@ -88,7 +88,7 @@ module.exports = function(grunt) {
                 image: page.templateData.headerImage,
                 geo: page.templateData.latitude + ',' + page.templateData.longitude,
                 hasLink: true
-              }
+              };
             });
           var tips = _(pages).filter(function(page) {
             return page.prettyUrl.match(/\/travel-tips\/.+/);
@@ -102,7 +102,7 @@ module.exports = function(grunt) {
   //                  image: page.templateData.headerImage,
                 geo: page.templateData.latitude + ',' + page.templateData.longitude,
                 hasLink: true
-              }
+              };
             });
           var photos = _(pages).filter(function(page) {
             return page.prettyUrl.match(/^\/photos\/.*\/$/) !== null;
@@ -174,7 +174,6 @@ module.exports = function(grunt) {
           switch(item.type) {
             case 'photo':
               return item.target.templateData.description ? item.target.templateData.description : item.label;
-              break;
             case 'post':
             case 'tip':
               var page = item.target;
@@ -184,8 +183,6 @@ module.exports = function(grunt) {
               var $ = cheerio.load(page.renderedTemplate);
               var firstParagraph = $('#content>p').first();
               return firstParagraph.html();
-
-              break;
             default:
               // nothing
           }
