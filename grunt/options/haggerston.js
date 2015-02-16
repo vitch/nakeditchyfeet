@@ -83,6 +83,7 @@ module.exports = function(grunt) {
                 type: 'post',
                 icon: 'book',
                 target: page,
+                // date: new Date(page.templateData.publishedDate || page.templateData.date),
                 date: new Date(page.templateData.date),
                 label: page.templateData.title,
                 image: page.templateData.headerImage,
