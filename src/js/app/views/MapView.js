@@ -15,10 +15,11 @@ define(
         },
         initialize: function (options) {
           if (this.$el.length) {
-            _.bindAll(this, 'sizeMap', 'onMapItemsReady', 'sizeMap', 'onFilterChange');
+            _.bindAll(this, 'sizeMap', 'onMapItemsReady', 'onStaysReady', 'sizeMap', 'onFilterChange');
 
             this.sizeMap();
             this.mapItems = options.mapItems;
+            this.stays = options.stays;
             this.initMap();
           }
         },
@@ -35,6 +36,7 @@ define(
           Tileset.addTo(this.leafletMap);
 
           this.mapItems.fetch({success: this.onMapItemsReady});
+          this.stays.fetch({success: this.onStaysReady});
         },
         onMapItemsReady: function () {
           var map = this.leafletMap;
@@ -85,6 +87,35 @@ define(
           $(window).on('resize', _.throttle(this.sizeMap, 200));
 
           this.initFilters();
+        },
+        onStaysReady: function() {
+          var map = this.leafletMap;
+          var byDates = [];
+          var markers = this.stays.map(function(location) {
+            var latLng = L.latLng(location.get('latitude'), location.get('longitude'));
+            _.each(location.get('dates'), function(date) {
+              byDates.push({
+                date: date,
+                latLng: latLng
+              });
+            });
+            return L.circleMarker(latLng, {
+              radius: 2 + location.get('dates').length,
+              stroke: false,
+              // fillOpacity: 0.8,
+              // fillColor: '#000'
+            }).addTo(map);
+          });
+
+          byDates.sort(function(a, b) {
+            return a.date > b.date ? 1 : -1;
+          });
+
+          var line = L.polyline(byDates.map(function(m) {
+            console.log(m.date);
+            return m.latLng;
+          }));
+          line.addTo(map);
         },
         initFilters: function() {
           this.mapFilterView = new MapFilterView();

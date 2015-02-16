@@ -8,6 +8,7 @@ require.config(
 define(
   [
     'collections/MapItemsCollection',
+    'collections/StaysCollection',
     'views/SideNavView',
     'views/HomeView',
     'views/MapView',
@@ -16,7 +17,7 @@ define(
     'views/PhotoSetView',
     'views/PostView'
   ],
-  function (MapItemsCollection, SideNavView, HomeView, MapView, SideMapView, PhotoView, PhotoSetView, PostView) {
+  function (MapItemsCollection, StaysCollection, SideNavView, HomeView, MapView, SideMapView, PhotoView, PhotoSetView, PostView) {
     'use strict';
     $(function() {
       $('.tt-trigger').tooltip();
@@ -27,7 +28,8 @@ define(
       var photoView = new PhotoView({sideMapView:sideMapView});
       var photoSetView = new PhotoSetView({sideMapView:sideMapView});
       var mapView = new MapView({
-        mapItems: new MapItemsCollection()
+        mapItems: new MapItemsCollection(),
+        stays: new StaysCollection()
       });
     });
   }

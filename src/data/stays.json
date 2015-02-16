@@ -1,5 +1,257 @@
 {
     "stays": [{
+        "id": "7fa10ba2-79f8-0236-f278-28154690b7bd",
+        "date": "2014-07-01T00:00:00.000Z",
+        "location": "a6b3df87-51a1-d354-7596-62c25a4b1ef4"
+    }, {
+        "id": "5188a19d-de38-e847-f1dc-e91f312ea56e",
+        "date": "2014-06-28T00:00:00.000Z",
+        "location": "60f05713-5e3a-e241-dbe6-5b3b2bab123b"
+    }, {
+        "id": "a7d7668b-9677-20ae-cde2-b9be4c65290f",
+        "date": "2014-06-27T00:00:00.000Z",
+        "location": "98e3e9e4-0604-a4bb-4988-c2767d36a1ae"
+    }, {
+        "id": "5df9dd8b-98de-bbe3-50a2-afc553209022",
+        "date": "2014-06-26T00:00:00.000Z",
+        "location": "d887b02d-786c-c60b-38be-6936e748b79d"
+    }, {
+        "id": "9f9d4cda-c11b-bda8-aa7f-0800378a5385",
+        "date": "2014-06-25T00:00:00.000Z",
+        "location": "d8c4bf78-10e8-f54b-c321-5ae52a2d8f65"
+    }, {
+        "id": "938a5bd5-07d8-fa73-ccc2-a9563cad27c4",
+        "date": "2014-06-24T00:00:00.000Z",
+        "location": "d8c4bf78-10e8-f54b-c321-5ae52a2d8f65"
+    }, {
+        "id": "38de622c-7687-7586-d2d2-4056755e9c8e",
+        "date": "2014-06-23T00:00:00.000Z",
+        "location": "d8c4bf78-10e8-f54b-c321-5ae52a2d8f65"
+    }, {
+        "id": "65c84a85-3bc6-a4cd-5d57-acea84b046e6",
+        "date": "2014-06-22T00:00:00.000Z",
+        "location": "d8c4bf78-10e8-f54b-c321-5ae52a2d8f65"
+    }, {
+        "id": "6407ffa2-e645-aa6b-7fbf-8fe39da1891f",
+        "date": "2014-06-21T00:00:00.000Z",
+        "location": "d8c4bf78-10e8-f54b-c321-5ae52a2d8f65"
+    }, {
+        "id": "6127b5b9-452f-727a-4984-96ef8e0edf63",
+        "date": "2014-06-20T00:00:00.000Z",
+        "location": "26a1910c-5451-9222-e464-6ea219100de9"
+    }, {
+        "id": "eb469366-653f-fef8-8032-b8095e27b117",
+        "date": "2014-06-19T00:00:00.000Z",
+        "location": "26a1910c-5451-9222-e464-6ea219100de9"
+    }, {
+        "id": "a320b0d1-23ac-6979-8fcb-e653728aec82",
+        "date": "2014-06-18T00:00:00.000Z",
+        "location": "8aa58fda-1e42-ed1e-32cd-5cca3cb40613"
+    }, {
+        "id": "36ffd0ff-f8f4-3ab9-d483-eb02d5028548",
+        "date": "2014-06-17T00:00:00.000Z",
+        "location": "3472890f-264e-4bc5-6353-bc935464ea78"
+    }, {
+        "id": "f59f64a2-53de-752d-f86f-0bba4cbf10a4",
+        "date": "2014-06-16T00:00:00.000Z",
+        "location": "3ab01e75-0db2-96f0-c4c1-3e36c352d16a"
+    }, {
+        "id": "62ed4438-7ccd-37b2-9b3e-1405242e7d03",
+        "date": "2014-06-15T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "e31a6455-d687-d620-3df0-43a42e69c7a5",
+        "date": "2014-06-14T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "e7527f38-fcb7-a5cf-82e5-4a002e7febc1",
+        "date": "2014-06-13T00:00:00.000Z",
+        "location": "8f0031fd-43bc-dc2c-b38e-a83183a1b5e6"
+    }, {
+        "id": "15044730-4f0c-5b65-ba4f-9a6a1c1c95aa",
+        "date": "2014-06-12T00:00:00.000Z",
+        "location": "8f0031fd-43bc-dc2c-b38e-a83183a1b5e6"
+    }, {
+        "id": "dad94df0-54f5-3990-d740-5f4c6bd0a462",
+        "date": "2014-06-11T00:00:00.000Z",
+        "location": "8f0031fd-43bc-dc2c-b38e-a83183a1b5e6"
+    }, {
+        "id": "5b6620e0-ae5c-9e06-bae3-f11289ed4104",
+        "date": "2014-06-10T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "ac882327-52e2-1f6f-c92b-2f0eee656463",
+        "date": "2014-06-09T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "f1206b9a-be95-a775-1b78-df29f531bcc9",
+        "date": "2014-06-08T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "da45181b-dc17-cc6f-7c6c-51eca11d2dd4",
+        "date": "2014-06-07T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "3dbe42ec-e0a3-656b-592d-615445b19a34",
+        "date": "2014-06-06T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "ee430192-58c1-2891-aeb0-0bff7554c42c",
+        "date": "2014-06-05T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "116de21b-2e16-cf61-879a-512c1b7b9d3d",
+        "date": "2014-06-03T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "94d881b5-8215-411f-6a04-59accbbb27db",
+        "date": "2014-06-02T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "9cd03c08-22c1-c2de-71ce-7763d13e9bc7",
+        "date": "2014-06-01T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "f8c513be-725b-96fc-395e-f8b70e55468e",
+        "date": "2014-05-31T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "0efe5d26-d994-970c-cc36-849339a330ba",
+        "date": "2014-05-30T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "4ca9ffa3-2722-8929-6272-1170c6e355df",
+        "date": "2014-05-29T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "92f74f33-504d-de42-9b65-223d0f713a5d",
+        "date": "2014-05-28T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "26f4848c-17e8-8bdd-5067-2f0691b1582d",
+        "date": "2014-05-27T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "46912285-0b12-3972-6548-684cb509347d",
+        "date": "2014-05-26T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "a984f9d4-a497-83df-fe63-fd47efd4f1f2",
+        "date": "2014-05-25T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "8123ac7f-b920-3538-e5d6-7eeccb810644",
+        "date": "2014-05-24T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "d3a1debb-7cdc-9176-fa86-3f5490ae2596",
+        "date": "2014-05-23T00:00:00.000Z",
+        "location": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "id": "7886d729-0723-a541-a69e-21f1e1c67f7c",
+        "date": "2014-05-22T00:00:00.000Z",
+        "location": "647e41c0-45c5-24fa-6c2e-c9bdf9c6c645"
+    }, {
+        "id": "88c9ca71-31f4-d1e6-6013-e6b9d5e2f8f6",
+        "date": "2014-05-21T00:00:00.000Z",
+        "location": "647e41c0-45c5-24fa-6c2e-c9bdf9c6c645"
+    }, {
+        "id": "7ce4cddd-6e8f-c695-b048-faa6340c526f",
+        "date": "2014-05-20T00:00:00.000Z",
+        "location": "7516bb01-4306-436a-03da-fe66afb8e3a6"
+    }, {
+        "id": "fc129622-972a-16c6-b52c-e005776854de",
+        "date": "2014-05-19T00:00:00.000Z",
+        "location": "d9ac30e9-63fa-455d-2f1d-f85470f64c73"
+    }, {
+        "id": "917e1aa6-4b77-a085-ca6f-a9d040418efa",
+        "date": "2014-05-18T00:00:00.000Z",
+        "location": "cde2daa6-1c4d-5124-c288-84271a041c5d"
+    }, {
+        "id": "14479af5-af7c-0d30-801e-e10b75e3dec2",
+        "date": "2014-05-17T00:00:00.000Z",
+        "location": "34a6241e-100c-729e-4457-25ece57ad3cc"
+    }, {
+        "id": "1028787e-9e3f-9077-ea36-e0bdd3ea7053",
+        "date": "2014-05-16T00:00:00.000Z",
+        "location": "72288c97-460b-be5e-4725-6d19594fde5a"
+    }, {
+        "id": "5a4b3f5b-57a8-e052-d582-32cd56356b3f",
+        "date": "2014-05-15T00:00:00.000Z",
+        "location": "5a3fbbab-a1f4-3dc7-c68f-f6686cc4d6f8"
+    }, {
+        "id": "4f002cff-dba6-5071-0f0f-f41d8e2f2cdf",
+        "date": "2014-05-14T00:00:00.000Z",
+        "location": "72288c97-460b-be5e-4725-6d19594fde5a"
+    }, {
+        "id": "6d631bd3-2e73-8655-8628-129c76848934",
+        "date": "2014-05-13T00:00:00.000Z",
+        "location": "31d66fb2-be57-5f1b-bb4d-6db1db4abb9f"
+    }, {
+        "id": "84838ff1-8643-9c85-56d4-ddf8fb2de4f0",
+        "date": "2014-05-12T00:00:00.000Z",
+        "location": "f2716894-efad-e8b5-a268-a24a31529b52"
+    }, {
+        "id": "bb8d7120-f16b-4615-a445-74afed1cbc24",
+        "date": "2014-05-11T00:00:00.000Z",
+        "location": "f2716894-efad-e8b5-a268-a24a31529b52"
+    }, {
+        "id": "a5d23de0-c01c-9fdc-cbec-e4fe6f194752",
+        "date": "2014-05-10T00:00:00.000Z",
+        "location": "f2716894-efad-e8b5-a268-a24a31529b52"
+    }, {
+        "id": "ebb72cb1-47ca-4600-9a04-8b0810f9a41d",
+        "date": "2014-05-09T00:00:00.000Z",
+        "location": "129ee8bb-110b-c30f-166f-7f72ee73621b"
+    }, {
+        "id": "a672ceb8-8a20-6fc3-9466-a3cfa3cfa81b",
+        "date": "2014-05-08T00:00:00.000Z",
+        "location": "24bbe53b-4298-a382-14d3-968a56187111"
+    }, {
+        "id": "a5da90f9-2b97-8da3-ebea-7127f28e695a",
+        "date": "2014-05-07T00:00:00.000Z",
+        "location": "1a1095e2-7fe6-69f0-d799-3d82985f2625"
+    }, {
+        "id": "287fcc42-be4c-67bf-7d6e-259b5fb439b0",
+        "date": "2014-05-06T00:00:00.000Z",
+        "location": "1a1095e2-7fe6-69f0-d799-3d82985f2625"
+    }, {
+        "id": "238700d3-dedb-2e35-7338-3d1a7cfac1c3",
+        "date": "2014-05-05T00:00:00.000Z",
+        "location": "ffbbe874-8741-8771-ce87-d7eaef3f5c12"
+    }, {
+        "id": "6eff0933-c046-4716-3ef2-0b840a913b27",
+        "date": "2014-05-04T00:00:00.000Z",
+        "location": "79a49f1a-a0c4-72a0-fb73-4b889ca4eb33"
+    }, {
+        "id": "a72f7a18-19b5-12a0-75cb-f41c6373d7a3",
+        "date": "2014-05-03T00:00:00.000Z",
+        "location": "cdc73fcd-410d-52b7-2a7a-054a92e2571b"
+    }, {
+        "id": "733022e0-76fe-91f7-f0c4-bef6d8574f35",
+        "date": "2014-05-02T00:00:00.000Z",
+        "location": "cff8a478-d374-78cf-6a64-2d93275dc1f2"
+    }, {
+        "id": "783133c7-f0ea-3d19-58a5-6a8eda85cd1a",
+        "date": "2014-05-01T00:00:00.000Z",
+        "location": "1f175fec-d517-3975-73bf-e46466295437"
+    }, {
+        "id": "4653c1ee-90c9-d13b-ccb9-1b6f6724184a",
+        "date": "2014-04-30T00:00:00.000Z",
+        "location": "1f175fec-d517-3975-73bf-e46466295437"
+    }, {
+        "id": "c0d54520-46e4-2baa-c52e-849a2b54dbcd",
+        "date": "2014-04-28T00:00:00.000Z",
+        "location": "f3c4d602-e8b9-b8c4-9f27-524b27cb77dd"
+    }, {
+        "id": "6df87d09-fe12-65ae-0fc5-b8ffd6046718",
+        "date": "2014-04-27T00:00:00.000Z",
+        "location": "0d18dfbd-3543-01c5-5d7f-a69dc68ecc42"
+    }, {
+        "id": "ea5e1891-c74a-0fe3-3194-d98286149639",
+        "date": "2014-04-26T00:00:00.000Z",
+        "location": "0d18dfbd-3543-01c5-5d7f-a69dc68ecc42"
+    }, {
         "id": "1d4ad98a-bb74-6f9b-7aff-72bd06e815e6",
         "date": "2014-04-25T00:00:00.000Z",
         "location": "cff8a478-d374-78cf-6a64-2d93275dc1f2"
@@ -2138,5 +2390,155 @@
         "longitude": "-75.167003",
         "name": "Casa Donna Lillia",
         "id": "b9ddc317-8089-e94e-2c64-cef14cb15fc4"
+    }, {
+        "latitude": "-0.5036531",
+        "longitude": "-78.4713845",
+        "name": "Secret Garden Cotopaxi",
+        "id": "0d18dfbd-3543-01c5-5d7f-a69dc68ecc42"
+    }, {
+        "latitude": "-0.932376",
+        "longitude": "-78.6143384",
+        "name": "Hostal Tiana",
+        "id": "f3c4d602-e8b9-b8c4-9f27-524b27cb77dd"
+    }, {
+        "latitude": "-0.4616136",
+        "longitude": "-80.4573724",
+        "name": "Betty Surf & Yoga",
+        "id": "1f175fec-d517-3975-73bf-e46466295437"
+    }, {
+        "latitude": "-0.0537127",
+        "longitude": "-78.777299",
+        "name": "Hostal Jardin de Los Pajaros",
+        "id": "cdc73fcd-410d-52b7-2a7a-054a92e2571b"
+    }, {
+        "latitude": "0.2226349",
+        "longitude": "-78.2620548",
+        "name": "Hostal Chasqui",
+        "id": "79a49f1a-a0c4-72a0-fb73-4b889ca4eb33"
+    }, {
+        "latitude": "2.4412577",
+        "longitude": "-76.6063664",
+        "name": "Park Life Hostel",
+        "id": "ffbbe874-8741-8771-ce87-d7eaef3f5c12"
+    }, {
+        "latitude": "2.4409573",
+        "longitude": "-76.6027371",
+        "name": "Hostel Caracol",
+        "id": "1a1095e2-7fe6-69f0-d799-3d82985f2625"
+    }, {
+        "latitude": "3.4465476",
+        "longitude": "-76.5403071",
+        "name": "Hostal Tostaky",
+        "id": "24bbe53b-4298-a382-14d3-968a56187111"
+    }, {
+        "latitude": "3.4470751",
+        "longitude": "-76.5396181",
+        "name": "Hostal Ruta Sur",
+        "id": "129ee8bb-110b-c30f-166f-7f72ee73621b"
+    }, {
+        "latitude": "4.6363952",
+        "longitude": "-75.5704137",
+        "name": "Hostal Tralala",
+        "id": "f2716894-efad-e8b5-a268-a24a31529b52"
+    }, {
+        "latitude": "4.5971518",
+        "longitude": "-74.0720788",
+        "name": "Swiss Hostal Martinik",
+        "id": "31d66fb2-be57-5f1b-bb4d-6db1db4abb9f"
+    }, {
+        "latitude": "-4.1208889",
+        "longitude": "-69.9512305",
+        "name": "Om Shanty",
+        "id": "72288c97-460b-be5e-4725-6d19594fde5a"
+    }, {
+        "latitude": "-3.7743602",
+        "longitude": "-70.374958",
+        "name": "Cabanas del Friar",
+        "id": "5a3fbbab-a1f4-3dc7-c68f-f6686cc4d6f8"
+    }, {
+        "latitude": "-4.2154523",
+        "longitude": "-69.9373798",
+        "name": "Divino Nino Hotel",
+        "id": "34a6241e-100c-729e-4457-25ece57ad3cc"
+    }, {
+        "latitude": "-3.7151329",
+        "longitude": "-69.4250266",
+        "name": "Voyager III - night 1",
+        "id": "cde2daa6-1c4d-5124-c288-84271a041c5d"
+    }, {
+        "latitude": "-2.4993807",
+        "longitude": "-66.0037897",
+        "name": "Voyager III - Night 2",
+        "id": "d9ac30e9-63fa-455d-2f1d-f85470f64c73"
+    }, {
+        "latitude": "-3.8525602",
+        "longitude": "-62.5550474",
+        "name": "Voyager III - Night 3",
+        "id": "7516bb01-4306-436a-03da-fe66afb8e3a6"
+    }, {
+        "latitude": "-3.1310268",
+        "longitude": "-60.0211568",
+        "name": "Hostel Local",
+        "id": "647e41c0-45c5-24fa-6c2e-c9bdf9c6c645"
+    }, {
+        "latitude": "-1.4504833",
+        "longitude": "-48.494053",
+        "name": "Residencia B&B",
+        "id": "a8bd9174-7800-a08e-5943-94270caa1bb9"
+    }, {
+        "latitude": "-0.7349686",
+        "longitude": "-48.513379",
+        "name": "Posada de canto de Frances",
+        "id": "8f0031fd-43bc-dc2c-b38e-a83183a1b5e6"
+    }, {
+        "latitude": "-2.5727108",
+        "longitude": "-44.236812",
+        "name": "Hotel Luisa",
+        "id": "3ab01e75-0db2-96f0-c4c1-3e36c352d16a"
+    }, {
+        "latitude": "-2.7606437",
+        "longitude": "-42.8283183",
+        "name": "Paraíso do Caju",
+        "id": "3472890f-264e-4bc5-6353-bc935464ea78"
+    }, {
+        "latitude": "-2.570542",
+        "longitude": "-42.7439868",
+        "name": "Pousada do irmão",
+        "id": "8aa58fda-1e42-ed1e-32cd-5cca3cb40613"
+    }, {
+        "latitude": "-2.5716896",
+        "longitude": "-42.7498176",
+        "name": "Alto Atins",
+        "id": "26a1910c-5451-9222-e464-6ea219100de9"
+    }, {
+        "latitude": "-2.7960979",
+        "longitude": "-40.5142549",
+        "name": "Pousada Estrella Dalva ",
+        "id": "d8c4bf78-10e8-f54b-c321-5ae52a2d8f65"
+    }, {
+        "latitude": "-3.3696207",
+        "longitude": "-39.8205036",
+        "name": "Hotel Lunar do Sartao",
+        "id": "d887b02d-786c-c60b-38be-6936e748b79d"
+    }, {
+        "latitude": "-3.0235237",
+        "longitude": "-39.6442455",
+        "name": "Pousada Hibisco",
+        "id": "98e3e9e4-0604-a4bb-4988-c2767d36a1ae"
+    }, {
+        "latitude": "-4.5275473",
+        "longitude": "-37.6994079",
+        "name": "Pousada Colibri",
+        "id": "60f05713-5e3a-e241-dbe6-5b3b2bab123b"
+    }, {
+        "latitude": "-8.0155085",
+        "longitude": "-34.8514879",
+        "name": "",
+        "id": "f6f0433a-d3d4-2212-21e2-8e225254a575"
+    }, {
+        "latitude": "-8.0154627",
+        "longitude": "-34.8513088",
+        "name": "Pousada alquimia olinda",
+        "id": "a6b3df87-51a1-d354-7596-62c25a4b1ef4"
     }]
 }

@@ -19,11 +19,11 @@ module.exports = function(grunt) {
       locations[stay.location].dates.push(stay.date);
     });
 
-    _.reject(locations, function(location) {
-      location.dates.length === 0;
+    locations = _.reject(locations, function(location) {
+      return location.dates.length === 0;
     });
 
-    grunt.file.write(options.out, JSON.stringify(_.toArray(locations)));
+    grunt.file.write(options.out, JSON.stringify(_.toArray(locations), null, 4));
     grunt.log.writeln('OK'.green);
   });
-}
+};
