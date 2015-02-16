@@ -1,10 +1,10 @@
 Hawaii is the quintessential image of paradise for those who dream of visiting the most isolated land mass in the world. But the reality in these perfect looking islands is far from paradise.
 
-The opportunity to visit Hawaii presented itself when we were planning how to get from New Zealand to South America without having to pay for a ridiculously expensive flight straight to Chile, so we devised a plan that would take us via Hawaii, onto LA and from there another cheap flight would take us to Colombia.
+The opportunity to visit Hawaii presented itself when we were planning how to get from New Zealand to South America without having to pay for a ridiculously expensive flight straight to Chile. We figured out that it was cheaper as well as probably more interesting to fly to Hawaii then on to Los Angeles before entering South America via Colombia.
 
 So of course all we knew about the islands was to do with their reputation of surfing Mecca tropical paradise. We had the idea that it would maybe be similar to Fiji, with it's Polynesian culture and influences, welcoming, but with American standards of customer service and first world comforts, yet at the same time laid back and friendly like tropical places tend to be. But in fact Hawaii proved to be a very complicated place to work out.
 
-On the surface Hawaii looks one thing but deep inside it is another. On the surface it is perfect and beautiful, touristy and welcoming but the more you spend time outside the tourist areas you start to realise that there is a lot going on in Hawaii. That in fact Hawaiian's hate the tourism and that included the tourists, most of the time you are not welcome to wander around their beaches and surf their waves, they resent that their culture has been turned into a theme park and they would rather we left them alone. We thought that Australia and NZ were really expensive but in Hawaii we spent double our OZ and NZ daily budgets.
+On the surface Hawaii looks one thing but deep inside it is another. On the surface it is perfect and beautiful, touristy and welcoming but the more you spend time outside the tourist areas you start to realise that there is a lot going on in Hawaii. That in fact Hawaiian's hate the tourism and that included the tourists, most of the time you are not welcome to wander around their beaches and surf their waves, they resent that their culture has been turned into a theme park and they would rather we left them alone. We thought that Australia and NZ were really expensive but in Hawaii we spent double our Oz and NZ daily budgets.
 
 ![](DSCF5019.jpg)
 ![](DSCF5022.jpg)
@@ -18,7 +18,7 @@ On the surface Hawaii looks one thing but deep inside it is another. On the surf
 A few numbers and facts paint a better picture of the reality of Hawaii:
 90% of food is imported; 
 Hawaii's only industry nowadays is tourism;
-Most of the houses and land on the islands are owned by mainland americans or by the American government. This has led to homelessness as people are unable to afford paying tourist prices for housing;
+Most of the houses and land on the islands are owned by mainland Americans or by the American government. This has led to homelessness as people are unable to afford paying tourist prices for housing;
 200 years ago there were 800.000 Hawaiians now only 70.000 of the people living on the island are or have Hawaiian descedance.
 
 Therefore with tourism being the only thing keeping it going, backpacking in Hawaii is virtually an impossible thing to do.
