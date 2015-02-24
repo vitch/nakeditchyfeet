@@ -14,8 +14,8 @@ module.exports = function () {
       var averageLocationData = photosetData.photos.reduce(function(memo, photo) {
         if (photo.geo_is_public) {
           memo.num ++;
-          memo.latitude += photo.latitude;
-          memo.longitude += photo.longitude;
+          memo.latitude += +photo.latitude;
+          memo.longitude += +photo.longitude;
         }
         return memo;
       }, {num: 0, latitude: 0, longitude: 0});
