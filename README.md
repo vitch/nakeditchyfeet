@@ -17,7 +17,7 @@ Then:
 git clone https://github.com/vitch/nakeditchyfeet.git
 cd nakeditchyfeet
 npm install
-grunt serve
+./node_modules/grunt-cli/bin/grunt serve
 ```
 
 And point your browser at [http://localhost:3000]().
