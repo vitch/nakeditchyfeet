@@ -40,5 +40,8 @@
   "peerDependencies": {},
   "keywords": [
     "haggerstonjs"
-  ]
+  ],
+  "volta": {
+    "node": "4.0.0"
+  }
 }
