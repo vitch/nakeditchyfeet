@@ -72,7 +72,7 @@ define([], function() {
   // return tiles.thunderforestLandscape;
   // return tiles.thunderforestOutdoors;
   // return tiles.stamenWatercolor;
-  // return tiles.esriWorldPhysical;
+  return tiles.esriWorldPhysical;
   // return tiles.esriWorldTopoMap;
   // return tiles.esriWorldImagery;
   // return tiles.esriOceanBasemap;
@@ -80,7 +80,7 @@ define([], function() {
   // return tiles.acetateTerrain;
   // return tiles.acetateAll;
   // return tiles.openStreetMapHot;
-  return tiles.mapboxLeigh;
+  // return tiles.mapboxLeigh;
 
 
 });
