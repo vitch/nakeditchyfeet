@@ -8,7 +8,10 @@ interface Props {
 }
 
 const { title, metaDescription, bodyId } = Astro.props;
-const path = Astro.url.pathname.replace(/index\.html$/, '');
+// Normalise to the URL style used in the built site: `/about-us/` (the dev server reports
+// `/about-us`) and `/tags/fiji.html`.
+let path = Astro.url.pathname.replace(/index\.html$/, '');
+if (!path.endsWith('/') && !path.endsWith('.html')) path += '/';
 
 const isBlogActive = /(^\/$|^\/(blog|photos|tags|travel-tips)+\/)/.test(path);
 const navItems = [

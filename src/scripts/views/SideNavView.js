@@ -16,7 +16,10 @@ export default Backbone.View.extend(
         }, 300);
       });
 
-      siteContent.prepend($('<span class="active-marker"></span>').css('top', $('#site-header a.active').position().top + 11));
+      var activeLink = $('#site-header a.active');
+      if (activeLink.length) {
+        siteContent.prepend($('<span class="active-marker"></span>').css('top', activeLink.position().top + 11));
+      }
 
     }
   }
