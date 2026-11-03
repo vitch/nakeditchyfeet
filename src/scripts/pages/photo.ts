@@ -7,12 +7,12 @@ import type { SideMap } from '../map/side-map';
 export function initPhoto(container: HTMLElement, sideMap: SideMap | undefined): void {
   container.querySelectorAll<HTMLElement>('nav a').forEach((link) => tooltip(link, { placement: 'bottom' }));
 
-  // The left / right arrow keys go to the previous / next photo.
+  // The left / right arrow keys go to the previous / next photo, and escape goes back to the photoset.
   document.addEventListener('keydown', (e) => {
     if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
     const target = e.target as HTMLElement;
     if (target.isContentEditable || target.closest('input, textarea, select')) return;
-    const rel = { ArrowRight: 'next', ArrowLeft: 'prev' }[e.key];
+    const rel = { ArrowRight: 'next', ArrowLeft: 'prev', Escape: 'up' }[e.key];
     const link = rel && container.querySelector<HTMLAnchorElement>(`nav a[rel="${rel}"]`);
     if (link) {
       e.preventDefault();
