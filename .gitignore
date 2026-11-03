@@ -1,5 +1,7 @@
 node_modules
-npm-debug.log
-tmp
-out
+.astro
+dist
+src/styles/generated
+.wrangler
+.DS_Store
 *.sublime-*

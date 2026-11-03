@@ -1,16 +1,16 @@
 // Webfont
 @import (inline) "MyFontsWebfontsKit.css";
 
-@import "variables.less";
-@import "mixins.less";
-@import "normalize.less";
-@import "tables.less";
-@import "alerts.less";
-@import "tooltip.less";
-@import "nif-icons.less"; // Generated SVG icons
-@import (less) "leaflet.css";
-@import (less) "MarkerCluster.css";
-@import (less) "MarkerCluster.Default.css";
+@import "bootstrap/less/variables.less";
+@import "bootstrap/less/mixins.less";
+@import "bootstrap/less/normalize.less";
+@import "bootstrap/less/tables.less";
+@import "bootstrap/less/alerts.less";
+@import "bootstrap/less/tooltip.less";
+@import "./generated/nif-icons.less"; // Generated from src/icons/ by scripts/build-icons.ts
+@import (less) "leaflet/dist/leaflet.css";
+@import (less) "leaflet.markercluster/dist/MarkerCluster.css";
+@import (less) "leaflet.markercluster/dist/MarkerCluster.Default.css";
 
 
 // Overrides
@@ -513,7 +513,6 @@ header.content-header {
       font-style: normal;
       text-decoration: inherit;
       -webkit-font-smoothing: antialiased;
-      *margin-right: .3em; // fixes ie7 issues
     }
 
     small {
@@ -745,13 +744,4 @@ header.content-header {
     top: -10px;
     left: -3px;
   }
-}
-
-// Override leaflet paths
-
-.leaflet-control-layers-toggle {
-  background-image: url(../leaflet/images/layers.png);
-}
-.leaflet-retina .leaflet-control-layers-toggle {
-  background-image: url(../leaflet/images/layers-2x.png);
 }

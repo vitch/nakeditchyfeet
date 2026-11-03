@@ -1,0 +1,80 @@
+---
+import Wrapper from '../../../layouts/Wrapper.astro';
+import { getPhotosets, https, type Photo, type Photoset } from '../../../lib/site';
+
+export function getStaticPaths() {
+  return getPhotosets().flatMap((photoset) =>
+    photoset.photos.map((photo, i) => ({
+      params: { set: photoset.id, photo: photo.id },
+      props: {
+        photoset,
+        photo,
+        previous: photoset.photos[i - 1]?.id,
+        next: photoset.photos[i + 1]?.id,
+      },
+    })),
+  );
+}
+
+const { photoset, photo, previous, next } = Astro.props as {
+  photoset: Photoset;
+  photo: Photo;
+  previous?: string;
+  next?: string;
+};
+
+const title = `${photoset.title}: ${photo.title}`;
+const size = photo.url_c ? 'c' : 'z';
+const photoUrl = https(photo[`url_${size}`]);
+const photoCss = `width: ${photo[`width_${size}`]}px; max-height:${photo[`height_${size}`]}px`;
+const nextLink = next && `${next}.html`;
+const previousLink = previous && `${previous}.html`;
+---
+
+<Wrapper title={title}>
+  <div id="fullsize-photo" data-geo={photo.geo}>
+    <nav>
+      <ul>
+        <li>
+          {
+            nextLink ? (
+              <a href={nextLink} rel="next" title="Next photo">
+                <i class="nif-icon nif-icon-chevron-right" />
+              </a>
+            ) : (
+              <i class="nif-icon nif-icon-chevron-right muted" />
+            )
+          }
+        </li>
+        <li>
+          {
+            previousLink ? (
+              <a href={previousLink} rel="prev" title="Previous photo">
+                <i class="nif-icon nif-icon-chevron-left" />
+              </a>
+            ) : (
+              <i class="nif-icon nif-icon-chevron-left muted" />
+            )
+          }
+        </li>
+        <li>
+          <a href={`https://flickr.com/photos/vitch/${photo.id}/in/set-${photoset.id}`} title="View on Flickr" target="_blank">
+            <i class="nif-icon nif-icon-flickr"></i>
+          </a>
+        </li>
+        <li>
+          <a href="./" rel="up" title="Back to photoset"><i class="nif-icon nif-icon-camera-retro"></i></a>
+        </li>
+      </ul>
+    </nav>
+    {
+      nextLink ? (
+        <a href={nextLink}>
+          <img src={photoUrl} style={photoCss} title={title} />
+        </a>
+      ) : (
+        <img src={photoUrl} style={photoCss} title={title} />
+      )
+    }
+  </div>
+</Wrapper>

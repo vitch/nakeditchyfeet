@@ -1,0 +1,47 @@
+---
+import PhotosetPreview from './PhotosetPreview.astro';
+import { formatIsoDate, formatLongDate, type ListItem } from '../lib/site';
+
+interface Props {
+  items: ListItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<ul id="home-list">
+  {
+    items.map((item) => {
+      const href = item.url ?? item.externalLink;
+      const heading = (
+        <h1>
+          {item.isDraft && (
+            <>
+              <span>[Draft]</span>{' '}
+            </>
+          )}
+          <Fragment set:html={item.label} />
+        </h1>
+      );
+      return (
+        <li class:list={[`item-type-${item.type}`, { 'has-link': item.hasLink }]} data-geo={item.geo ?? ''}>
+          <i class={`nif-icon nif-icon-${item.icon}`} />
+          <div class="item" data-airports={item.airports}>
+            <div class="heading">
+              <time datetime={formatIsoDate(item.date)}>{formatLongDate(item.date)}</time>
+              {href ? (
+                <a href={href} target={item.externalLink && !item.url ? '_blank' : undefined}>
+                  {heading}
+                </a>
+              ) : (
+                heading
+              )}
+            </div>
+            {item.image && <img src={`${item.url}${item.image}`} class="header-image" alt={item.title} />}
+            {item.photosetData && <PhotosetPreview data={item.photosetData} />}
+          </div>
+        </li>
+      );
+    })
+  }
+</ul>

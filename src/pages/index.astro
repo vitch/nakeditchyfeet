@@ -1,0 +1,26 @@
+---
+import Wrapper from '../layouts/Wrapper.astro';
+import ItemList from '../components/ItemList.astro';
+import { getEvents, getListItems, newestFirst } from '../lib/site';
+
+const items = newestFirst([...(await getListItems()), ...getEvents()]);
+---
+
+<Wrapper title="Naked Itchy Feet">
+  <ItemList items={items} />
+  <script is:inline>
+    (function() {
+      var now = Date.now();
+      var items = document.getElementById('home-list').getElementsByTagName('li');
+      for (var i = 0; i < items.length; i++) {
+        var li = items[i];
+        var time = li.getElementsByTagName('time')[0];
+        var d = new Date(time.getAttribute('dateTime')).getTime();
+        if (d < now) {
+          break;
+        }
+        li.className += ' is-future';
+      }
+    })();
+  </script>
+</Wrapper>

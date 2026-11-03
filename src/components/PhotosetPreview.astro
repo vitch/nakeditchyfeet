@@ -1,0 +1,15 @@
+---
+import { https, type PhotosetPreviewData } from '../lib/site';
+
+interface Props {
+  data: PhotosetPreviewData;
+  title?: string;
+}
+
+const { data, title } = Astro.props;
+---
+
+<div class:list={['photoset', `side-${data.side}`, { 'tt-trigger': title }]} title={title}>
+  <div class="big" style={`background-image: url(${https(data.big.url_m)});`} title={data.big.title}></div>
+  {data.small.map((thumb) => <div class="small" style={`background-image: url(${https(thumb.url_n)});`} title={thumb.title} />)}
+</div>

@@ -1,0 +1,85 @@
+---
+import { render } from 'astro:content';
+import Wrapper from '../../layouts/Wrapper.astro';
+import ContentHeader from '../../components/ContentHeader.astro';
+import Comments from '../../components/Comments.astro';
+import PhotosetPreview from '../../components/PhotosetPreview.astro';
+import { getContentPages, getPhotosetPreviews, headerIcon, visibleTags, type ContentPage } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const pages = await getContentPages();
+  return pages.map((page) => ({ params: { slug: page.id }, props: { page } }));
+}
+
+const { page } = Astro.props as { page: ContentPage };
+const { data } = page;
+const { Content } = await render(page);
+const tags = await visibleTags(data.tags);
+const headerImage = data.headerImageLarge ?? data.headerImage;
+const photosets = getPhotosetPreviews(data.photosets);
+
+const followLinks = [
+  { href: 'http://feedburner.google.com/fb/a/mailverify?uri=NakedItchyFeet&loc=en_US', title: 'Blog updates by email', icon: 'envelope' },
+  { href: 'http://twitter.com/nakeditchyfeet', title: '@nakeditchyfeet on Twitter', icon: 'twitter-square' },
+  { href: 'http://feeds.feedburner.com/NakedItchyFeet', title: 'This blogs RSS feed', icon: 'rss-square' },
+  { href: 'http://flickr.com/photos/vitch/', title: 'Our Flickr photostream', icon: 'flickr' },
+  { href: 'http://instagram.com/vitch77', title: '@vitch77 on Instagram', icon: 'instagram' },
+  { href: 'http://instagram.com/prixsantos', title: '@prixsantos on Instagram', icon: 'instagram' },
+];
+---
+
+<Wrapper title={data.title} metaDescription={data.metaDescription}>
+  <article id="post" data-geo={`${data.latitude}, ${data.longitude}`}>
+    <ContentHeader title={data.title} date={data.date} tags={tags} icon={headerIcon(page.url)} />
+
+    {
+      data.draft && (
+        <div class="alert alert-danger" style="margin-top: 20px;">
+          <strong>Warning</strong>: Draft post - will not be visible on live website
+        </div>
+      )
+    }
+
+    {
+      !data.hideHeaderInPost && (
+        <>
+          {headerImage && <img src={headerImage} class="header-image" />}
+          {data.headerImageCaption && <p class="header-image-caption" set:html={data.headerImageCaption} />}
+        </>
+      )
+    }
+
+    <div id="content"><Content /></div>
+
+    {
+      photosets.length > 0 && (
+        <div id="related-photosets">
+          <h1>
+            <i class="icon-camera-retro" /> Photos
+          </h1>
+          {photosets.map((photoset) => (
+            <a href={photoset.url}>
+              <PhotosetPreview data={photoset.photosetData!} title={photoset.title} />
+            </a>
+          ))}
+        </div>
+      )
+    }
+
+    {!data.hideComments && <Comments />}
+  </article>
+
+  {
+    data.layout === 'follow-us' && (
+      <ul id="follow-links">
+        {followLinks.map((link) => (
+          <li>
+            <a href={link.href} class="tt-trigger" target="_blank" title={link.title}>
+              <i class={`nif-icon nif-icon-${link.icon}`}> </i>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</Wrapper>
