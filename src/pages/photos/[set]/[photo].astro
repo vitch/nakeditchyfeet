@@ -38,7 +38,7 @@ const previousLink = previous && `${previous}.html`;
         <li>
           {
             nextLink ? (
-              <a href={nextLink} title="Next photo">
+              <a href={nextLink} rel="next" title="Next photo">
                 <i class="nif-icon nif-icon-chevron-right" />
               </a>
             ) : (
@@ -49,7 +49,7 @@ const previousLink = previous && `${previous}.html`;
         <li>
           {
             previousLink ? (
-              <a href={previousLink} title="Previous photo">
+              <a href={previousLink} rel="prev" title="Previous photo">
                 <i class="nif-icon nif-icon-chevron-left" />
               </a>
             ) : (
