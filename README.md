@@ -29,6 +29,15 @@ And point your browser at [http://localhost:4321](http://localhost:4321).
 | `bun run icons`   | Rebuilds the icon font (runs automatically before `dev` and `build`). |
 | `bun run flickr`  | Downloads any new photosets from Flickr into `src/data/photos/`.     |
 
+If the dev server serves old versions of packages after `bun install` (e.g. after switching branches),
+clear Vite's dependency cache and restart it:
+
+```bash
+bun astro dev stop
+rm -rf node_modules/.vite
+bun run dev
+```
+
 ## How it fits together
 
 ```
