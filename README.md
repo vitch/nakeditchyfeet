@@ -42,7 +42,8 @@ src/pages/                Astro routes: the home page, content pages, photosets 
                           tag pages, the map, and the RSS feed / sitemap / JSON data
 src/lib/site.ts           Builds the lists of posts, tips, photosets and events
 src/layouts, components/  The page templates
-src/scripts/              Client side JS (Backbone, Leaflet maps)
+src/scripts/              Client side TypeScript (Leaflet maps, tooltips, photo layout).
+                          main.ts works out which page it's on and sets it up
 src/styles/styles.less    Styles (built on Bootstrap 3's LESS)
 src/icons/                SVGs which are turned into the "nif-icon" icon font
 scripts/                  Build-time helper scripts (icon font, Flickr download)
@@ -85,6 +86,13 @@ this repository with:
 The Node.js version is picked up from `.node-version`.
 
 `public/_headers` sets the content type for the RSS feed.
+
+### Analytics
+
+The site doesn't include any analytics code. To get basic visitor stats, turn on Cloudflare Web
+Analytics for the Pages project (in the Cloudflare dashboard: Workers & Pages → the project →
+Metrics → Web Analytics → Enable). Cloudflare then adds its beacon to every page when it deploys.
+It's free, doesn't use cookies and doesn't track individual visitors, so no cookie banner is needed.
 
 Note that Cloudflare Pages serves `foo.html` files at `/foo` and redirects `/foo.html` there, so
 photo and tag pages (e.g. `/tags/fiji.html`) will redirect to their extension-less URLs. Existing

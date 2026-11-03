@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import { formatShortDate, getEvents, getListItems } from '../lib/site';
 
-/** Data for the markers on the /map/ page (loaded by src/scripts/collections/MapItemsCollection.js). */
+/** Data for the markers on the /map/ page (loaded by src/scripts/pages/map.ts). */
 export const GET: APIRoute = async () => {
   const markers = (await getListItems())
     .filter((item) => item.latitude !== undefined && item.longitude !== undefined)
