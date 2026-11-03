@@ -1,1 +1,0 @@
-Keep up to date with our adventures via:

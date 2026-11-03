@@ -1,0 +1,32 @@
+---
+import { formatIsoDate, formatLongDate, parseDate, tagUrl } from '../lib/site';
+
+interface Props {
+  title: string;
+  date?: string;
+  tags?: string[];
+  icon?: string;
+}
+
+const { title, date, tags = [], icon } = Astro.props;
+const d = date ? parseDate(date) : undefined;
+---
+
+<header class="content-header">
+  {d && <time datetime={formatIsoDate(d)}>{formatLongDate(d)}</time>}
+  <h1>{title}</h1>
+  {
+    tags.length > 0 && (
+      <ul class="tags">
+        {tags.map((tag) => (
+          <li>
+            <a href={tagUrl(tag)} class="label">
+              <i class="nif-icon nif-icon-tag" /> {tag}
+            </a>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+  {icon && <span class={`nif-icon nif-icon-${icon}`} />}
+</header>

@@ -1,0 +1,39 @@
+---
+import { marked } from 'marked';
+import Wrapper from '../../../layouts/Wrapper.astro';
+import { formatIsoDate, formatLongDate, getPhotosets, parseDate, type Photoset } from '../../../lib/site';
+
+export function getStaticPaths() {
+  return getPhotosets().map((photoset) => ({ params: { set: photoset.id }, props: { photoset } }));
+}
+
+const { photoset } = Astro.props as { photoset: Photoset };
+const date = parseDate(photoset.date);
+---
+
+<Wrapper title={photoset.title}>
+  <header class="content-header">
+    <time datetime={formatIsoDate(date)}>{formatLongDate(date)}</time>
+    <h1>Photo album: {photoset.title}</h1>
+    <span class="nif-icon nif-icon-camera-retro"></span>
+  </header>
+  {photoset.description && <div id="content" set:html={marked.parse(photoset.description)} />}
+  <ul id="photoset">
+    {
+      photoset.photos.map((photo) => (
+        <li>
+          <a href={`${photo.id}.html`}>
+            <img
+              src={photo.listPageUrl}
+              data-h={photo.listPageHeight}
+              data-w={photo.listPageWidth}
+              data-geo={photo.geo}
+              alt={photo.title}
+              title={photo.title}
+            />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Wrapper>

@@ -1,1 +1,0 @@
-module.exports = ['out/*', 'src/icons/generated/*'];

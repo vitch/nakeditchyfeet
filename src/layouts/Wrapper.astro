@@ -1,0 +1,83 @@
+---
+import '../styles/styles.less';
+
+interface Props {
+  title: string;
+  metaDescription?: string;
+  bodyId?: string;
+}
+
+const { title, metaDescription, bodyId } = Astro.props;
+const path = Astro.url.pathname.replace(/index\.html$/, '');
+
+const isBlogActive = /(^\/$|^\/(blog|photos|tags|travel-tips)+\/)/.test(path);
+const navItems = [
+  { href: '/', icon: 'blog', label: 'Blog', active: isBlogActive },
+  { href: '/map/', icon: 'globe', label: 'Our Map', active: path === '/map/' },
+  { href: '/about-us/', icon: 'foot', label: 'About Us', active: path === '/about-us/' },
+  { href: '/follow-us/', icon: 'twitter', label: 'Follow Us', active: path === '/follow-us/' },
+];
+---
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="Description" content={metaDescription ?? ''} />
+    <script is:inline>document.documentElement.className += ' js';</script>
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="http://feeds.feedburner.com/NakedItchyFeet" />
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body id={bodyId ? `${bodyId}-page` : undefined}>
+    <header id="site-header">
+      <img src="/images/feet.png" alt="Feet" />
+      <div>
+        <div>
+          <h1 class="nif-icon nif-icon-n">
+            {
+              path === '/' ? (
+                <span id="logotype" class="nif-icon nif-icon-logotype">Naked Itchy Feet</span>
+              ) : (
+                <a href="/">
+                  <span id="logotype" class="nif-icon nif-icon-logotype">Naked Itchy Feet</span>
+                </a>
+              )
+            }
+          </h1>
+          <nav>
+            <ul>
+              {
+                navItems.map((item) => (
+                  <li>
+                    <a href={item.href} class={item.active ? 'active' : undefined}>
+                      <span class={`nif-icon nif-icon-${item.icon}`} />
+                      <span>{item.label}</span>
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div id="site-content">
+      <slot />
+    </div>
+    {bodyId !== 'map' && <div id="side-map" />}
+    <script>
+      import '../scripts/nif.js';
+    </script>
+    <script is:inline>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-41677517-1', 'nakeditchyfeet.com');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

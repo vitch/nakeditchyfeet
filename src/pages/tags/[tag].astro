@@ -1,0 +1,26 @@
+---
+import Wrapper from '../../layouts/Wrapper.astro';
+import ItemList from '../../components/ItemList.astro';
+import { getListItems, getTagCounts, newestFirst, tagSlug } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const counts = await getTagCounts();
+  const items = await getListItems();
+  return [...counts.entries()]
+    .filter(([, count]) => count > 1)
+    .map(([tag]) => ({
+      params: { tag: tagSlug(tag) },
+      props: { tag, items: newestFirst(items.filter((item) => item.tags.includes(tag))) },
+    }));
+}
+
+const { tag, items } = Astro.props;
+const count = items.length;
+---
+
+<Wrapper title={`Tagged with "${tag}"`}>
+  <header class="content-header">
+    <h1>{count} post{count > 1 && 's'} tagged with "{tag}"</h1>
+  </header>
+  <ItemList items={items} />
+</Wrapper>

@@ -1,0 +1,27 @@
+---
+import Wrapper from '../../layouts/Wrapper.astro';
+
+const filters = [
+  { filter: 'post', icon: 'book', description: 'Blog posts' },
+  { filter: 'tip', icon: 'info-circle', description: 'Travel tips' },
+  { filter: 'photo', icon: 'camera-retro', description: 'Photos' },
+  { filter: 'flight', icon: 'plane', description: 'Flights' },
+  { filter: '', icon: 'ban', description: 'Everything' },
+];
+---
+
+<Wrapper title="Our Map" bodyId="map">
+  <div id="map">
+    <div id="map-filter" class="leaflet-bottom leaflet-left">
+      <div class="leaflet-bar leaflet-control">
+        {
+          filters.map((control) => (
+            <a href="#" title={control.description} data-filter={control.filter}>
+              <i class={`nif-icon nif-icon-${control.icon}`} />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Wrapper>

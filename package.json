@@ -1,47 +1,45 @@
 {
-  "name": "NakedItchyFeet",
+  "name": "nakeditchyfeet",
   "description": "Around the world",
-  "version": "0.1.0",
-  "homepage": "http://nakeditchyfeet.com",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "homepage": "https://nakeditchyfeet.com",
   "author": {
     "name": "Kelvin Luck",
     "email": "kelvin+rtw@kelvinluck.com"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://nakeditchyfeet.com/blob/master/LICENSE-MIT"
-    }
-  ],
-  "main": "Gruntfile.js",
-  "engines": {
-    "node": ">= 0.8.0"
+  "license": "MIT",
+  "packageManager": "bun@1.4.4",
+  "scripts": {
+    "icons": "bun scripts/build-icons.ts",
+    "flickr": "bun scripts/fetch-flickr.ts",
+    "predev": "bun run icons",
+    "dev": "astro dev",
+    "prebuild": "bun run icons",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/markdown-satteri": "0.4.6",
+    "astro": "7.4.5",
+    "backbone": "1.1.2",
+    "bootstrap": "3.2.0",
+    "jquery": "1.11.3",
+    "leaflet": "0.7.7",
+    "leaflet.markercluster": "0.4.0",
+    "marked": "^18.1.3",
+    "underscore": "1.6.0"
   },
   "devDependencies": {
-    "underscore": "~1.6.0",
-    "cheerio": "~0.13.1",
-    "grunt": "~0.4.4",
-    "grunt-haggerston": "git://github.com/haggerstonjs/grunt-haggerston.git",
-    "grunt-contrib-clean": "~0.4.0",
-    "grunt-contrib-copy": "~0.5.0",
-    "grunt-contrib-watch": "~0.6.0",
-    "grunt-contrib-connect": "~0.7.1",
-    "grunt-contrib-less": "~0.10.0",
-    "grunt-contrib-requirejs": "~0.4.3",
-    "grunt-contrib-uglify": "~0.4.0",
-    "grunt-webfont": "~0.4.4",
-    "flickr": "~0.2.0",
-    "async": "~0.2.9",
-    "marked": "~0.2.8",
-    "load-grunt-config": "~0.7.2",
-    "grunt-notify": "~0.2.20",
-    "grunt-contrib-imagemin": "~0.8.0"
-  },
-  "peerDependencies": {},
-  "keywords": [
-    "haggerstonjs"
-  ],
-  "volta": {
-    "node": "4.0.0"
+    "@astrojs/check": "^0.9.12",
+    "cheerio": "^1.2.0",
+    "less": "^4.9.1",
+    "svg2ttf": "^6.1.0",
+    "svgicons2svgfont": "^16.0.0",
+    "ttf2woff": "^3.0.0",
+    "typescript": "6"
   }
 }
