@@ -8,7 +8,8 @@ keeping the same URLs, markup, styles and client-side behaviour.
 
 ## Getting started
 
-You need [Bun](https://bun.sh/) (1.4.4 - see `packageManager` in `package.json`). Then:
+You need [Bun](https://bun.sh/) (1.4.4 - see `packageManager` in `package.json`) and
+[Node.js](https://nodejs.org/) 22.23.4 or newer (see `.node-version`), which Astro runs on. Then:
 
 ```bash
 git clone https://github.com/vitch/nakeditchyfeet.git
@@ -80,6 +81,8 @@ this repository with:
 - **Build command:** `bun run build`
 - **Build output directory:** `dist`
 - **Environment variable:** `BUN_VERSION` = `1.4.4`
+
+The Node.js version is picked up from `.node-version`.
 
 `public/_headers` sets the content type for the RSS feed.
 
